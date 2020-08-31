@@ -1,2 +1,2 @@
-# ProejctCustomer
-Proejct custormer, Block 2.1
+# ProjectCustomer
+Project custormer, Block 2.1
