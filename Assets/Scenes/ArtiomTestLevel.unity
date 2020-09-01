@@ -220,8 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 897214575}
-  sensitivity: 15
-  cameraSensitivity: 15
+  RotationSensitivity: 1
 --- !u!1 &897214571
 GameObject:
   m_ObjectHideFlags: 0
