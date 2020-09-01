@@ -11,23 +11,27 @@ public class CameraRotation : MonoBehaviour
     [SerializeField]
     float RotationSensitivity = 200;
 
+    [SerializeField]
+    float ScrollingSpeed = 500;
+
     bool MousePressed = false;
 
     float MouseXAxis;
     float MouseYAxis;
+    float ScrollAxis;
 
 
-    Quaternion initialRotation;
-    Vector3 positionOffset;
-    Vector3 initialPosition;
+    //Quaternion initialRotation;
+    //Vector3 positionOffset;
+    //Vector3 initialPosition;
 
     private void Awake()
     {
         transform.LookAt(target);
 
-        initialPosition = this.transform.position;
-        initialRotation = transform.rotation;
-        positionOffset = transform.position - target.position;
+        //initialPosition = this.transform.position;
+        //initialRotation = transform.rotation;
+        //positionOffset = transform.position - target.position;
     }
 
     void Update()
@@ -43,6 +47,7 @@ public class CameraRotation : MonoBehaviour
 
     void ReadInput()
     {
+        ScrollAxis = Input.GetAxis("Mouse ScrollWheel");
         MouseXAxis = Input.GetAxis("Mouse X");
         MouseYAxis = Input.GetAxis("Mouse Y");
 
@@ -55,6 +60,9 @@ public class CameraRotation : MonoBehaviour
         {
             MousePressed = false;
         }
+
+
+        transform.position += transform.forward * ScrollAxis * ScrollingSpeed;
     }
 
 
@@ -62,11 +70,8 @@ public class CameraRotation : MonoBehaviour
     {
         if (MousePressed)
         {
-            //target.transform.Rotate(new Vector3(MouseYAxis * RotationSensitivity* Time.deltaTime, -MouseXAxis * RotationSensitivity * Time.deltaTime,0));
-
             transform.RotateAround(target.transform.position,transform.up, MouseXAxis* RotationSensitivity);
             transform.RotateAround(target.transform.position, transform.right, -MouseYAxis * RotationSensitivity);
-
 
             transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
         }
