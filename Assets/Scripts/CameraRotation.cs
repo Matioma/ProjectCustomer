@@ -6,13 +6,14 @@ using UnityEngine;
 public class CameraRotation : MonoBehaviour
 {
     [SerializeField]
-    Transform target;
+    Planet SelectedPlanet;
 
     [SerializeField]
     float RotationSensitivity = 200;
-
     [SerializeField]
     float ScrollingSpeed = 500;
+
+
 
     bool MousePressed = false;
 
@@ -21,31 +22,53 @@ public class CameraRotation : MonoBehaviour
     float ScrollAxis;
 
 
-    //Quaternion initialRotation;
-    //Vector3 positionOffset;
-    //Vector3 initialPosition;
+    [SerializeField]
+    float maxCloseUp = 100;
 
+
+
+    public event Action OnSelectPlanet;
     private void Awake()
     {
-        transform.LookAt(target);
+        transform.LookAt(SelectedPlanet.transform);
 
-        //initialPosition = this.transform.position;
-        //initialRotation = transform.rotation;
-        //positionOffset = transform.position - target.position;
+        OnSelectPlanet += () =>
+        {
+            transform.LookAt(SelectedPlanet.transform);
+        };
     }
 
     void Update()
     {
-        
+        readInput();
 
-
-
-
-        ReadInput();
-        RotateAroundThePlanet();
+        zoomingIn();
+        rotateAroundThePlanet();
     }
 
-    void ReadInput()
+    void selectPlanet()
+    {
+        RaycastHit hitResult;
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hitResult, Mathf.Infinity))
+        {
+            Planet hitPlanet = hitResult.transform.GetComponent<Planet>();
+
+            Debug.Log(hitPlanet.transform.name);
+
+            if (hitPlanet != null && hitPlanet!=SelectedPlanet) {
+               
+                SelectedPlanet = hitPlanet;
+                OnSelectPlanet?.Invoke();
+            }
+        }
+    }
+
+
+
+
+    void readInput()
     {
         ScrollAxis = Input.GetAxis("Mouse ScrollWheel");
         MouseXAxis = Input.GetAxis("Mouse X");
@@ -53,42 +76,43 @@ public class CameraRotation : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            //MousePressed = IsPlanetPressed();
+            selectPlanet();
             MousePressed = true;
         }
         if (Input.GetMouseButtonUp(0))
         {
             MousePressed = false;
         }
-
-
-        transform.position += transform.forward * ScrollAxis * ScrollingSpeed;
     }
 
 
-    void RotateAroundThePlanet()
+    void zoomingIn() {
+        if (ScrollAxis > 0)
+        {
+            if ((transform.position - SelectedPlanet.transform.position).sqrMagnitude <= maxCloseUp * maxCloseUp)
+            {
+                return;
+            }
+            else
+            {
+                transform.position += transform.forward * ScrollAxis * ScrollingSpeed;
+            }
+        }
+        else
+        {
+            transform.position += transform.forward * ScrollAxis * ScrollingSpeed;
+        }
+    }
+
+    void rotateAroundThePlanet()
     {
         if (MousePressed)
         {
-            transform.RotateAround(target.transform.position,transform.up, MouseXAxis* RotationSensitivity);
-            transform.RotateAround(target.transform.position, transform.right, -MouseYAxis * RotationSensitivity);
+            transform.RotateAround(SelectedPlanet.transform.position,transform.up, MouseXAxis* RotationSensitivity);
+            transform.RotateAround(SelectedPlanet.transform.position, transform.right, -MouseYAxis * RotationSensitivity);
 
             transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
         }
     }
 
-    bool IsPlanetPressed()
-    {
-        RaycastHit hitResult;
-
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hitResult, 100))
-        {
-            if (hitResult.transform == target)
-            {
-                return true;
-            }
-        }
-        return false;
-    }
 }
