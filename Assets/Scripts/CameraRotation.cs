@@ -29,7 +29,7 @@ public class CameraRotation : MonoBehaviour
         transform.LookAt(SelectedPlanet.transform);
     }
 
-    void Update()
+    void LateUpdate()
     {
         readInput();
         zoomingIn();
@@ -107,3 +107,5 @@ public class CameraRotation : MonoBehaviour
         transform.position = SelectedPlanet.transform.position + directionTowardsPlayer * SelectedPlanet.GetDistance();
     }
 }
+
+
