@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class Planet : MonoBehaviour
 {
-    public float radius;
+
+    public float MinCameraDistFromPlanet;
+
+    public float GetDistance() {
+
+        return MinCameraDistFromPlanet;
+    }
     void Start()
     {
         

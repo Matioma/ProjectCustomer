@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CameraRotation : MonoBehaviour
 {
+    public event Action OnSelectPlanet;
+
     [SerializeField]
     Planet SelectedPlanet;
 
@@ -22,26 +24,14 @@ public class CameraRotation : MonoBehaviour
     float ScrollAxis;
 
 
-    [SerializeField]
-    float maxCloseUp = 100;
-
-
-
-    public event Action OnSelectPlanet;
     private void Awake()
     {
         transform.LookAt(SelectedPlanet.transform);
-
-        OnSelectPlanet += () =>
-        {
-            transform.LookAt(SelectedPlanet.transform);
-        };
     }
 
     void Update()
     {
         readInput();
-
         zoomingIn();
         rotateAroundThePlanet();
     }
@@ -55,11 +45,10 @@ public class CameraRotation : MonoBehaviour
         {
             Planet hitPlanet = hitResult.transform.GetComponent<Planet>();
 
-            Debug.Log(hitPlanet.transform.name);
-
             if (hitPlanet != null && hitPlanet!=SelectedPlanet) {
-               
                 SelectedPlanet = hitPlanet;
+                transform.LookAt(SelectedPlanet.transform);
+                zoomAsCloseAsPossible();
                 OnSelectPlanet?.Invoke();
             }
         }
@@ -86,21 +75,16 @@ public class CameraRotation : MonoBehaviour
     }
 
 
+
     void zoomingIn() {
+        transform.position += transform.forward * ScrollAxis * ScrollingSpeed;
+
         if (ScrollAxis > 0)
         {
-            if ((transform.position - SelectedPlanet.transform.position).sqrMagnitude <= maxCloseUp * maxCloseUp)
+            if ((transform.position - SelectedPlanet.transform.position).sqrMagnitude < SelectedPlanet.GetDistance() * SelectedPlanet.GetDistance())
             {
-                return;
+                zoomAsCloseAsPossible();
             }
-            else
-            {
-                transform.position += transform.forward * ScrollAxis * ScrollingSpeed;
-            }
-        }
-        else
-        {
-            transform.position += transform.forward * ScrollAxis * ScrollingSpeed;
         }
     }
 
@@ -108,11 +92,18 @@ public class CameraRotation : MonoBehaviour
     {
         if (MousePressed)
         {
+
             transform.RotateAround(SelectedPlanet.transform.position,transform.up, MouseXAxis* RotationSensitivity);
             transform.RotateAround(SelectedPlanet.transform.position, transform.right, -MouseYAxis * RotationSensitivity);
 
+            //Make Sure that Z axis rotation is 0
             transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
         }
     }
 
+
+    void zoomAsCloseAsPossible() {
+        Vector3 directionTowardsPlayer = (transform.position - SelectedPlanet.transform.position).normalized;
+        transform.position = SelectedPlanet.transform.position + directionTowardsPlayer * SelectedPlanet.GetDistance();
+    }
 }
