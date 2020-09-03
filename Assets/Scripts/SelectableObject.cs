@@ -1,0 +1,46 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SelectableObject : MonoBehaviour
+{
+    public event Action OnSelected;
+    public event Action OnDeselected;
+
+    bool isSelected;
+    public bool IsSelected
+    {
+        get { return isSelected; }
+        set
+        {
+            if (value == isSelected)
+            {
+                return;
+            }
+            isSelected = value;
+            if (isSelected)
+            {
+                OnSelected?.Invoke();
+            }
+            else
+            {
+                OnDeselected?.Invoke();
+            }
+        }
+    }
+
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}

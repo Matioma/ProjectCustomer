@@ -22,13 +22,13 @@ public class PlanetUIController : MonoBehaviour
     {
         targetCamera = CameraRotation.Instance.transform;
 
-        PlanetManager planetManager = transform.parent.GetComponent<PlanetManager>();
 
+        PlanetManager planetManager = transform.parent.GetComponent<PlanetManager>();
 
         if (planetManager != null)
         {
-            transform.parent.GetComponent<PlanetManager>().OnPlanetSelected += OpenUI;
-            transform.parent.GetComponent<PlanetManager>().OnPlanetDeselected += CloseUI;
+            transform.parent.GetComponent<PlanetManager>().OnSelected += OpenUI;
+            transform.parent.GetComponent<PlanetManager>().OnDeselected += CloseUI;
         }
         else {
             Debug.Log("Parent does not have PlanetManager Component make sure it is present");
