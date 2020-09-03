@@ -30,6 +30,15 @@ public class SelectableObject : MonoBehaviour
         }
     }
 
+    public void Deselect()
+    {
+        IsSelected = false;
+    }
+    public void Select()
+    {
+        IsSelected = true;
+    }
+
 
 
     // Start is called before the first frame update

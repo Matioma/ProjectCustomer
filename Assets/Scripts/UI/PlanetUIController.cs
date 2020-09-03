@@ -5,9 +5,7 @@ using UnityEngine;
 
 public class PlanetUIController : MonoBehaviour
 {
-    [SerializeField]
     Transform targetCamera;
-
 
     PlanetStatsUI planetStats;
 
@@ -21,7 +19,6 @@ public class PlanetUIController : MonoBehaviour
     private void Start()
     {
         targetCamera = CameraRotation.Instance.transform;
-
 
         PlanetManager planetManager = transform.parent.GetComponent<PlanetManager>();
 
@@ -37,7 +34,10 @@ public class PlanetUIController : MonoBehaviour
 
     void Update()
     {
-        transform.LookAt(targetCamera);
+        if (transform.parent.GetComponent<PlanetManager>().IsSelected) {
+            transform.LookAt(targetCamera);
+        }
+       
     }
 
     void OpenUI() {

@@ -86,7 +86,7 @@ public class CameraRotation : MonoBehaviour
 
                 if (SelectedZone != null)
                 {
-                    SelectedZone.GetComponent<ZoneSelection>().IsSelected = false;
+                    SelectedZone.GetComponent<ZoneSelection>().Deselect();
                 }
                 zoomAsCloseAsPossible();
 
@@ -111,11 +111,11 @@ public class CameraRotation : MonoBehaviour
                 //Deselect Previous Zone
                 if (SelectedZone != null)
                 {
-                    SelectedZone.GetComponent<ZoneSelection>().IsSelected = false;
+                    SelectedZone.GetComponent<ZoneSelection>().Deselect();
                 }
 
                 SelectedZone = newSelectedZone;
-                newSelectedZone.GetComponent<ZoneSelection>().IsSelected = true;
+                newSelectedZone.GetComponent<ZoneSelection>().Select();
 
                 MoveCameraToZone();
                 OnSelectZone?.Invoke();

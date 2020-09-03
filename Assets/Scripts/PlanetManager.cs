@@ -5,10 +5,4 @@ using UnityEngine;
 
 public class PlanetManager : SelectableObject
 {
-    public void Deselect() {
-        IsSelected = false;
-    }
-    public void Select() {
-        IsSelected = true;
-    }
 }
