@@ -18,7 +18,6 @@ public class Zone : MonoBehaviour
         return parentPlanet;
     }
 
-
     [SerializeField]
     List<PosibleActions> ZoneActionsList;
 

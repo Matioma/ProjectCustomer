@@ -7,12 +7,24 @@ public class PlanetUIController : MonoBehaviour
 {
     Transform targetCamera;
 
-    PlanetStatsUI planetStats;
+    [SerializeField]
+    PlanetStatsUI PlanetUI;
+
+
+
+    [SerializeField]
+    GameObject RegionUI;
+
+
+    GameObject OpenedUI;
+
+
+
 
     private void Awake()
     {
-        planetStats = transform.GetComponentInChildren<PlanetStatsUI>();
-        planetStats.gameObject.SetActive(false);
+        PlanetUI = transform.GetComponentInChildren<PlanetStatsUI>();
+        PlanetUI.gameObject.SetActive(false);
     }
 
     private void Start()
@@ -36,7 +48,7 @@ public class PlanetUIController : MonoBehaviour
         }
         foreach (ZoneSelection zone in transform.parent.GetComponentsInChildren<ZoneSelection>())
         {
-            zone.OnDeselected += closeZoneUI;
+            //zone.OnDeselected += closeZoneUI;
         }
     }
 
@@ -50,40 +62,17 @@ public class PlanetUIController : MonoBehaviour
 
     void OpenUI()
     {
-        planetStats.gameObject.SetActive(true);
+        PlanetUI.gameObject.SetActive(true);
     }
 
     void CloseUI()
     {
-        planetStats.gameObject.SetActive(false);
+        PlanetUI.gameObject.SetActive(false);
     }
 
     void openZoneUI()
     {
-        RegionUI selectedRegion = GetComponentInChildren<RegionUI>();
-
-        CameraRotation camera = CameraRotation.Instance;
-
-        if (camera.SelectedZone != null)
-        {
-            selectedRegion.regionName.text = camera.SelectedZone.name;
-        }
-        else
-        {
-            selectedRegion.regionName.text = "";
-        }
-    }
-
-    void closeZoneUI()
-    {
-        RegionUI selectedRegion = GetComponentInChildren<RegionUI>();
-
-        CameraRotation camera = CameraRotation.Instance;
-
-        if (camera.SelectedZone != null)
-        {
-            selectedRegion.regionName.text = "";
-        }
+        Debug.Log("Make visible");
     }
 
 }

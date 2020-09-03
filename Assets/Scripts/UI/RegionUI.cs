@@ -7,18 +7,20 @@ using UnityEngine.Video;
 
 public class RegionUI : MonoBehaviour
 {
+
     [SerializeField]
     public TextMeshProUGUI regionName;
 
+    [SerializeField]
+    public TextMeshProUGUI description;
     
 
 
-    void UpdateUI() { 
     
     
+    void UpdateUI() {
     }
-    
-    
+
 
 
 
