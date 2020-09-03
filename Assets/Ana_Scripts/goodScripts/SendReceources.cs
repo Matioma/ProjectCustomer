@@ -16,9 +16,19 @@ public class SendReceources : MonoBehaviour
     {
         amount = newAmount;
     }
-    public void ChangeDestination(string newName)
+    public void ChangeDestination(int index)
     {
-        destination = newName;
+        switch (index)
+        {
+            case 0:
+                destination = "planetB";
+                break;
+            case 1:
+                Debug.Log("namechange");
+                destination = "planetB";
+                break;
+        }
+        
     }
 
     public void Send()

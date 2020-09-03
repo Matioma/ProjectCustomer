@@ -14,8 +14,8 @@ public class Ena : MonoBehaviour
     void Update()
     {
         var scr = GetComponent<PlanetReceources>();
-        Debug.Log("planetB");
-        Debug.Log("seeds="+scr.GetReceouceNumber(Receources.SEEDS));
+       // Debug.Log("planetB");
+       // Debug.Log("seeds="+scr.GetReceouceNumber(Receources.SEEDS));
         ///Debug.Log("water="+scr.GetReceouceNumber(Receources.WATER));
        // Debug.Log("money="+scr.GetReceouceNumber(Receources.MONEY));
     }

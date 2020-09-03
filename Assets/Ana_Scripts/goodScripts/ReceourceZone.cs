@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class ReceourceZone : MonoBehaviour
+public class ReceourceZone : MonoBehaviour, IEnablable<Receources>
 {
     [SerializeField]
     Receources typeOfReceource;
     [SerializeField]
+    Receources[] receourcesToWork;
+    [SerializeField]
     float productivityTime=5;
     [SerializeField]
-    int productionNumber = 1;
+    int productionNumber = 15;
     float timer;
 
     private void Awake()
@@ -25,6 +28,10 @@ public class ReceourceZone : MonoBehaviour
     {
         if (timer < 0)
         {
+            for (int i = 0; i < receourcesToWork.Length; i++)
+            {
+                //if(receourcesToWork)
+            }
             var addition = GetComponentInParent<IReceourceAddition<Receources, int>>();
             addition.AddReceource(typeOfReceource, productionNumber);
             timer = productivityTime;
@@ -42,5 +49,21 @@ public class ReceourceZone : MonoBehaviour
     public void ChangeProductivityNumber(int amount)
     {
         productionNumber += amount;
+    }
+
+    public void Enable(Receources rec)
+    {
+        if (rec == typeOfReceource)
+        {
+            this.enabled = true;
+        }
+    }
+
+    public void Disable(Receources rec)
+    {
+        if (rec == typeOfReceource)
+        {
+            this.enabled = false;
+        }
     }
 }
