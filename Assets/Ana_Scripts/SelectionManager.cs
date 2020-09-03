@@ -11,8 +11,6 @@ public class SelectionManager : MonoBehaviour
     Material highlightMaterial;
     [SerializeField]
     string selectableTag = "Selectable";
-    [SerializeField]
-    Material changeMaterial;
     Transform currentSelection;
     bool selected = false;
     void Update()
