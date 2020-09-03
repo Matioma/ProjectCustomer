@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+enum PosibleActions
+{
+    Buy,
+    AnotherAction,
+    ToDoAction
+}
 public class Zone : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    List<PosibleActions> ZoneActionsList;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public string Name;
+
+
+    void Awake() {
     }
 }

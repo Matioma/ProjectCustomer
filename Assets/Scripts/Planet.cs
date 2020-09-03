@@ -11,6 +11,8 @@ public class Planet : MonoBehaviour
 
         return MinCameraDistFromPlanet;
     }
+
+    public string Name;
     void Start()
     {
         

@@ -31,7 +31,11 @@ public class CameraRotation : MonoBehaviour
     [SerializeField]
     Planet SelectedPlanet;
     [SerializeField]
-    Zone SelectedZone;
+    public Zone SelectedZone;
+
+    public Zone GetSelectedZone() {
+        return SelectedZone;
+    }
 
     [SerializeField]
     float RotationSensitivity = 200;
