@@ -39,8 +39,8 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int
     void Update()
     {
         Debug.Log("seeds: " + receourcesNumber[Receources.SEEDS]);
-        Debug.Log("water: " + receourcesNumber[Receources.WATER]);
-        Debug.Log("money: " + receourcesNumber[Receources.MONEY]);
+        //Debug.Log("water: " + receourcesNumber[Receources.WATER]);
+       // Debug.Log("money: " + receourcesNumber[Receources.MONEY]);
     }
 
 }
