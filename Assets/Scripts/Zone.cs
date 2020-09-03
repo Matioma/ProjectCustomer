@@ -13,6 +13,13 @@ enum PosibleActions
 public class Zone : MonoBehaviour
 {
     [SerializeField]
+    Planet parentPlanet;
+    public Planet PlanetContainingContinent() {
+        return parentPlanet;
+    }
+
+
+    [SerializeField]
     List<PosibleActions> ZoneActionsList;
 
     public string Name;

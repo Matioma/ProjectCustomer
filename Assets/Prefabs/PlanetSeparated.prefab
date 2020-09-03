@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1840041206319711913}
   - component: {fileID: 8915508466609229516}
   - component: {fileID: 7872146719840547627}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlanetSeparated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 479ea9a9f37ddba4d8b8f84d88e140c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinCameraDistFromPlanet: 150
+  MinCameraDistFromPlanet: 200
   Name: Planet1
 --- !u!114 &8915508466609229516
 MonoBehaviour:
@@ -72,7 +72,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 21.76
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1010289429571158145
 GameObject:
@@ -212,7 +212,7 @@ Transform:
   m_GameObject: {fileID: 1448231491055158182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5, y: -19.316, z: 0.2}
-  m_LocalScale: {x: 0.00019476355, y: 0.00019476355, z: 0.00019476355}
+  m_LocalScale: {x: 0.00013505488, y: 0.00013505488, z: 0.00013505488}
   m_Children:
   - {fileID: 6972695528300953470}
   - {fileID: 1524620900897251738}
@@ -262,6 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83d2768f02151548a4a45a8732aeed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentPlanet: {fileID: 1840041206319711913}
   ZoneActionsList: 
   Name: zone2
 --- !u!64 &3976679922672027561
@@ -290,6 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83d2768f02151548a4a45a8732aeed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentPlanet: {fileID: 1840041206319711913}
   ZoneActionsList: 
   Name: zone4
 --- !u!114 &8189290392568087467
@@ -346,6 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83d2768f02151548a4a45a8732aeed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentPlanet: {fileID: 1840041206319711913}
   ZoneActionsList: 
   Name: Zone1
 --- !u!64 &8173849635518019437
@@ -374,6 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83d2768f02151548a4a45a8732aeed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentPlanet: {fileID: 1840041206319711913}
   ZoneActionsList: 
   Name: zone3
 --- !u!114 &8668024260167117016
@@ -460,6 +464,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 724ab54f84199244b8cb943dc461e7ef, type: 3}
       propertyPath: m_Name
       value: continent2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2866621852552652557, guid: 724ab54f84199244b8cb943dc461e7ef, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 724ab54f84199244b8cb943dc461e7ef, type: 3}
@@ -652,6 +660,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: continent4
       objectReference: {fileID: 0}
+    - target: {fileID: 2866621852552652557, guid: 7f62e61ecda23b4489520a4513e1990e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f62e61ecda23b4489520a4513e1990e, type: 3}
 --- !u!4 &2277926141420212522 stripped
@@ -735,6 +747,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: planet1ocean
       objectReference: {fileID: 0}
+    - target: {fileID: 2866621852552652557, guid: ca556fae08f648148ae3106a629bf650, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca556fae08f648148ae3106a629bf650, type: 3}
 --- !u!4 &2661541643814982430 stripped
@@ -812,6 +828,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0ec460728c9b43c49870077ffdff419a, type: 3}
       propertyPath: m_Name
       value: Continent1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2866621852552652557, guid: 0ec460728c9b43c49870077ffdff419a, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ec460728c9b43c49870077ffdff419a, type: 3}
@@ -1001,6 +1021,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 33393da7c33903a459ae0df79ecef9ab, type: 3}
       propertyPath: m_Name
       value: continent3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2866621852552652557, guid: 33393da7c33903a459ae0df79ecef9ab, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33393da7c33903a459ae0df79ecef9ab, type: 3}

@@ -546,6 +546,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planet
       objectReference: {fileID: 0}
+    - target: {fileID: 1765253284056026346, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1840041206319711913, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
       propertyPath: MinCameraDistFromPlanet
       value: 150

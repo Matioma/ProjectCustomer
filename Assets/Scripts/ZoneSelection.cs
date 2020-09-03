@@ -25,14 +25,14 @@ public class ZoneSelection : SelectableObject
     }
 
     void OnMouseOver() {
-        if (!IsSelected)
+        if (!IsSelected && GetComponent<Zone>().PlanetContainingContinent() == CameraRotation.Instance.GetSelectedPlanet())
         {
             renderer.material = selectedMaterial;
         }
     }
 
     void OnMouseExit() {
-        if (!IsSelected)
+        if (!IsSelected && GetComponent<Zone>().PlanetContainingContinent() == CameraRotation.Instance.GetSelectedPlanet())
         {
             renderer.material = defaultMaterial;
         }

@@ -36,6 +36,10 @@ public class CameraRotation : MonoBehaviour
     public Zone GetSelectedZone() {
         return SelectedZone;
     }
+    public Planet GetSelectedPlanet()
+    {
+        return SelectedPlanet;
+    }
 
     [SerializeField]
     float RotationSensitivity = 200;
@@ -70,8 +74,9 @@ public class CameraRotation : MonoBehaviour
     void selectPlanet(){
         RaycastHit hitResult;
 
+        LayerMask layerMask = LayerMask.GetMask("Planet");
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hitResult, Mathf.Infinity))
+        if (Physics.Raycast(ray, out hitResult, Mathf.Infinity, layerMask))
         {
             Planet newSelectedPlanet = hitResult.transform.GetComponent<Planet>();
 
@@ -102,15 +107,20 @@ public class CameraRotation : MonoBehaviour
 
     void selectZone() {
         RaycastHit hitResult;
+        LayerMask layerMask = LayerMask.GetMask("Continent");
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hitResult, Mathf.Infinity))
+        if (Physics.Raycast(ray, out hitResult, Mathf.Infinity, layerMask))
         {
             Zone newSelectedZone = hitResult.transform.GetComponent<Zone>();
 
             // If Clicked on a zone and it is different from already Selected Zone
             if (newSelectedZone != null && newSelectedZone != SelectedPlanet)
             {
+                if (newSelectedZone.PlanetContainingContinent() != null && newSelectedZone.PlanetContainingContinent() != SelectedPlanet)
+                {
+                    return;
+                }
 
                 //Deselect Previous Zone
                 if (SelectedZone != null)
@@ -121,7 +131,7 @@ public class CameraRotation : MonoBehaviour
                 SelectedZone = newSelectedZone;
                 newSelectedZone.GetComponent<ZoneSelection>().Select();
 
-                MoveCameraToZone();
+                //MoveCameraToZone();
                 OnSelectZone?.Invoke();
             }
         }
