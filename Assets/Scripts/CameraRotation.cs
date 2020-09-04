@@ -27,14 +27,14 @@ public class CameraRotation : MonoBehaviour
 
 
     [SerializeField]
-    Planet SelectedPlanet;
+    PlanetManager SelectedPlanet;
     [SerializeField]
     public Zone SelectedZone;
 
     public Zone GetSelectedZone() {
         return SelectedZone;
     }
-    public Planet GetSelectedPlanet()
+    public PlanetManager GetSelectedPlanet()
     {
         return SelectedPlanet;
     }
@@ -85,7 +85,7 @@ public class CameraRotation : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hitResult, Mathf.Infinity, layerMask))
         {
-            Planet newSelectedPlanet = hitResult.transform.GetComponent<Planet>();
+            PlanetManager newSelectedPlanet = hitResult.transform.GetComponent<PlanetManager>();
 
             // If Clicked on a planet and it is different from already Selected Planet
             if (newSelectedPlanet != null && newSelectedPlanet!=SelectedPlanet)
@@ -95,7 +95,7 @@ public class CameraRotation : MonoBehaviour
         }
     }
 
-    private void SelectPlanet(Planet newSelectedPlanet)
+    private void SelectPlanet(PlanetManager newSelectedPlanet)
     {
         //Deselect pevious planet if any planet was selected
         if (SelectedPlanet != null)

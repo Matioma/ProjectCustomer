@@ -204,6 +204,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+--- !u!114 &708272763 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8915508466609229516, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+  m_PrefabInstance: {fileID: 2268604533165904877}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a358b3126e70a3e42a2ca32ca4217247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &961335965
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,17 +633,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &1615651243 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1840041206319711913, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
-  m_PrefabInstance: {fileID: 2268604533165904877}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 479ea9a9f37ddba4d8b8f84d88e140c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2268604533165904877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -834,7 +834,11 @@ PrefabInstance:
     - target: {fileID: 2662853383638204979, guid: 997f4e46273d8294da291ee2693b9ed8, type: 3}
       propertyPath: SelectedPlanet
       value: 
-      objectReference: {fileID: 1615651243}
+      objectReference: {fileID: 708272763}
+    - target: {fileID: 2662853383638204979, guid: 997f4e46273d8294da291ee2693b9ed8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2662853383638204983, guid: 997f4e46273d8294da291ee2693b9ed8, type: 3}
       propertyPath: m_Name
       value: PlayerCamera

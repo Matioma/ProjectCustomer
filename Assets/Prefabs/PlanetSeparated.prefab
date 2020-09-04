@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3186220992520656017}
-  - component: {fileID: 1840041206319711913}
   - component: {fileID: 8915508466609229516}
   - component: {fileID: 7872146719840547627}
   - component: {fileID: 7286143093287913449}
@@ -36,20 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1840041206319711913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 960105557966936106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 479ea9a9f37ddba4d8b8f84d88e140c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinCameraDistFromPlanet: 200
-  Name: Planet1
 --- !u!114 &8915508466609229516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,39 +44,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 960105557966936106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a358b3126e70a3e42a2ca32ca4217247, type: 3}
+  m_Script: {fileID: 11500000, guid: 6319a943366a9e04f846a86bad90aefd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   OnSelected:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   OnDeselected:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: set_isStatic
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  MinCameraDistFromPlanet: 150
+  rotationVelocity: {x: 0, y: 0, z: 0}
 --- !u!135 &7872146719840547627
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -244,58 +207,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnSelected:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   OnDeselected:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   defaultMaterial: {fileID: 0}
   selectedMaterial: {fileID: 2100000, guid: 4670a99df6d211447aaed697f7d946ee, type: 2}
 --- !u!114 &4430656356848845509
@@ -310,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83d2768f02151548a4a45a8732aeed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentPlanet: {fileID: 1840041206319711913}
+  parentPlanet: {fileID: 0}
   ZoneActionsList: 
   Name: zone2
 --- !u!64 &3976679922672027561
@@ -352,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83d2768f02151548a4a45a8732aeed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentPlanet: {fileID: 1840041206319711913}
+  parentPlanet: {fileID: 0}
   ZoneActionsList: 
   Name: zone4
 --- !u!114 &8189290392568087467
@@ -369,58 +284,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnSelected:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   OnDeselected:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   defaultMaterial: {fileID: 0}
   selectedMaterial: {fileID: 2100000, guid: 4670a99df6d211447aaed697f7d946ee, type: 2}
 --- !u!64 &1873188565828492117
@@ -451,58 +318,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnSelected:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   OnDeselected:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   defaultMaterial: {fileID: 0}
   selectedMaterial: {fileID: 2100000, guid: 4670a99df6d211447aaed697f7d946ee, type: 2}
 --- !u!114 &6621118290065347796
@@ -530,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83d2768f02151548a4a45a8732aeed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentPlanet: {fileID: 1840041206319711913}
+  parentPlanet: {fileID: 0}
   ZoneActionsList: 
   Name: Zone1
 --- !u!64 &8173849635518019437
@@ -559,7 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83d2768f02151548a4a45a8732aeed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentPlanet: {fileID: 1840041206319711913}
+  parentPlanet: {fileID: 0}
   ZoneActionsList: 
   Name: zone3
 --- !u!114 &5620191880993446562
@@ -589,58 +408,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnSelected:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   OnDeselected:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   defaultMaterial: {fileID: 0}
   selectedMaterial: {fileID: 2100000, guid: 4670a99df6d211447aaed697f7d946ee, type: 2}
 --- !u!114 &3844935686507009027
@@ -761,14 +532,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 724ab54f84199244b8cb943dc461e7ef, type: 3}
   m_PrefabInstance: {fileID: 1342692662412609137}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3849023795979706748 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2866621852552652557, guid: 724ab54f84199244b8cb943dc461e7ef, type: 3}
-  m_PrefabInstance: {fileID: 1342692662412609137}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1524620900897251738 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 724ab54f84199244b8cb943dc461e7ef, type: 3}
+  m_PrefabInstance: {fileID: 1342692662412609137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3849023795979706748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2866621852552652557, guid: 724ab54f84199244b8cb943dc461e7ef, type: 3}
   m_PrefabInstance: {fileID: 1342692662412609137}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1735689866505680577
@@ -1030,14 +801,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ec460728c9b43c49870077ffdff419a, type: 3}
---- !u!4 &6972695528300953470 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0ec460728c9b43c49870077ffdff419a, type: 3}
-  m_PrefabInstance: {fileID: 7442555582263351445}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7748492702444250564 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ec460728c9b43c49870077ffdff419a, type: 3}
+  m_PrefabInstance: {fileID: 7442555582263351445}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6972695528300953470 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0ec460728c9b43c49870077ffdff419a, type: 3}
   m_PrefabInstance: {fileID: 7442555582263351445}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &4648011398762053528 stripped
@@ -1126,11 +897,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33393da7c33903a459ae0df79ecef9ab, type: 3}
---- !u!1 &6569078726354297819 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2866621852552652557, guid: 33393da7c33903a459ae0df79ecef9ab, type: 3}
-  m_PrefabInstance: {fileID: 8998833273084413142}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8080353829169969543 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 33393da7c33903a459ae0df79ecef9ab, type: 3}
@@ -1139,5 +905,10 @@ GameObject:
 --- !u!4 &8892637094088074045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 33393da7c33903a459ae0df79ecef9ab, type: 3}
+  m_PrefabInstance: {fileID: 8998833273084413142}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6569078726354297819 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2866621852552652557, guid: 33393da7c33903a459ae0df79ecef9ab, type: 3}
   m_PrefabInstance: {fileID: 8998833273084413142}
   m_PrefabAsset: {fileID: 0}
