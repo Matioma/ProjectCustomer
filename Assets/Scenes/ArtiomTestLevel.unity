@@ -738,7 +738,6 @@ MonoBehaviour:
   SelectedPlanet: {fileID: 708272763}
   SelectedZone: {fileID: 0}
   RotationSensitivity: 5
-  ScrollingSpeed: 500
 --- !u!1001 &2268604533165904877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -785,6 +784,14 @@ PrefabInstance:
     - target: {fileID: 2802820787230319709, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825063385439883650, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825063385439883650, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+      propertyPath: VectorLength
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3186220992520656017, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
       propertyPath: m_LocalPosition.x
