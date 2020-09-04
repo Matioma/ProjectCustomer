@@ -6,16 +6,24 @@ using UnityEngine.UI;
 public class BuyZone : MonoBehaviour
 {
     [SerializeField]
-    int price = 10;
+    int seedsNeededToBuy = 10;
+    [SerializeField]
+    int WaterNeededToBuy = 10;
+    [SerializeField]
+    int MoneyNeededToBuy = 10;
     [SerializeField]
     GameObject buyButton;
 
     public void Buy()
     {
-        if (GetComponentInParent<PlanetReceources>().GetReceouceNumber(Receources.MONEY) > price)
+        if (GetComponentInParent<PlanetReceources>().GetReceouceNumber(Receources.SEEDS) > seedsNeededToBuy&&
+            GetComponentInParent<PlanetReceources>().GetReceouceNumber(Receources.WATER) > WaterNeededToBuy &&
+            GetComponentInParent<PlanetReceources>().GetReceouceNumber(Receources.MONEY) > MoneyNeededToBuy)
         {
             GetComponent<ReceourceZone>().enabled = true;
-            GetComponentInParent<IReceourceAddition<Receources, int>>().AddReceource(Receources.MONEY,-price);
+            GetComponentInParent<IReceourceAddition<Receources, int>>().AddReceource(Receources.SEEDS,-seedsNeededToBuy);
+            GetComponentInParent<IReceourceAddition<Receources, int>>().AddReceource(Receources.WATER,-WaterNeededToBuy);
+            GetComponentInParent<IReceourceAddition<Receources, int>>().AddReceource(Receources.MONEY,-MoneyNeededToBuy);
             buyButton.SetActive(false);
         }
     }
