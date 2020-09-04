@@ -20,19 +20,22 @@ public class ZoneSelection : SelectableObject
         renderer = GetComponent<Renderer>();
         defaultMaterial = renderer.material;
 
-        OnSelected += () => { renderer.material = selectedMaterial; };
-        OnDeselected += () => { renderer.material = defaultMaterial; };
+
+        OnSelected.AddListener(() => { renderer.material = selectedMaterial; });
+        OnDeselected.AddListener(() => { renderer.material = defaultMaterial; });
+        //OnSelected += () => { renderer.material = selectedMaterial; };
+        //OnDeselected += () => { renderer.material = defaultMaterial; };
     }
 
     void OnMouseOver() {
-        if (!IsSelected && GetComponent<Zone>().PlanetContainingContinent() == CameraRotation.Instance.GetSelectedPlanet())
+        if (!IsSelected)
         {
             renderer.material = selectedMaterial;
         }
     }
 
     void OnMouseExit() {
-        if (!IsSelected && GetComponent<Zone>().PlanetContainingContinent() == CameraRotation.Instance.GetSelectedPlanet())
+        if (!IsSelected)
         {
             renderer.material = defaultMaterial;
         }

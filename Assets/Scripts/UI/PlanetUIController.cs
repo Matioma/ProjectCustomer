@@ -34,8 +34,9 @@ public class PlanetUIController : MonoBehaviour
         PlanetManager planetManager = transform.parent.GetComponent<PlanetManager>();
         if (planetManager != null)
         {
-            transform.parent.GetComponent<PlanetManager>().OnSelected += OpenUI;
-            transform.parent.GetComponent<PlanetManager>().OnDeselected += CloseUI;
+            transform.parent.GetComponent<PlanetManager>().OnSelected.AddListener(OpenUI);
+            transform.parent.GetComponent<PlanetManager>().OnDeselected.AddListener(CloseUI);
+            //transform.parent.GetComponent<PlanetManager>().OnDeselected += CloseUI;
         }
         else
         {
@@ -44,7 +45,8 @@ public class PlanetUIController : MonoBehaviour
         // Subscribing to Zones
         foreach (ZoneSelection zone in transform.parent.GetComponentsInChildren<ZoneSelection>())
         {
-            zone.OnSelected += openZoneUI;
+            zone.OnSelected.AddListener(openZoneUI);
+            //zone.OnSelected += openZoneUI;
         }
         foreach (ZoneSelection zone in transform.parent.GetComponentsInChildren<ZoneSelection>())
         {

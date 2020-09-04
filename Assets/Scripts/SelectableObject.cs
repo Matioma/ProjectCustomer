@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class SelectableObject : MonoBehaviour
 {
-    public event Action OnSelected;
-    public event Action OnDeselected;
+    public UnityEngine.Events.UnityEvent OnSelected;
+    public UnityEngine.Events.UnityEvent OnDeselected;
+
+    //public event Action OnSelected;
+    //public event Action OnDeselected;
 
     bool isSelected;
     public bool IsSelected
