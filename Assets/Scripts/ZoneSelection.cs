@@ -23,8 +23,6 @@ public class ZoneSelection : SelectableObject
 
         OnSelected.AddListener(() => { renderer.material = selectedMaterial; });
         OnDeselected.AddListener(() => { renderer.material = defaultMaterial; });
-        //OnSelected += () => { renderer.material = selectedMaterial; };
-        //OnDeselected += () => { renderer.material = defaultMaterial; };
     }
 
     void OnMouseOver() {
