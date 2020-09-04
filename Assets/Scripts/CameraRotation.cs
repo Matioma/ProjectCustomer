@@ -20,8 +20,6 @@ public class CameraRotation : MonoBehaviour
     
     }
 
-
-
     public event Action OnSelectPlanet;
     public event Action OnDeselectPlanet;
     public event Action OnSelectZone;
@@ -57,9 +55,18 @@ public class CameraRotation : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
 
-        transform.LookAt(SelectedPlanet.transform);
-        
+
+    private void Start()
+    {
+        SelectPlanet(SelectedPlanet);
+        //zoomAsCloseAsPossible();
+
+        //transform.LookAt(SelectedPlanet.transform);
+        //SelectedPlanet.GetComponent<PlanetManager>().Select();
+        //SelectedPlanet.GetComponentInChildren<PlanetStatsUI>().gameObject.SetActive(true);
+        //OnSelectPlanet?.Invoke();
     }
 
     void Update()
@@ -71,7 +78,7 @@ public class CameraRotation : MonoBehaviour
 
 
     
-    void selectPlanet(){
+    void TrySelectPlanet(){
         RaycastHit hitResult;
 
         LayerMask layerMask = LayerMask.GetMask("Planet");
@@ -81,28 +88,36 @@ public class CameraRotation : MonoBehaviour
             Planet newSelectedPlanet = hitResult.transform.GetComponent<Planet>();
 
             // If Clicked on a planet and it is different from already Selected Planet
-            if (newSelectedPlanet != null && newSelectedPlanet!=SelectedPlanet) {
-
-                //Deselect the planet if any planet was selected
-                if (SelectedPlanet != null) {
-                    SelectedPlanet.GetComponent<PlanetManager>().Deselect();
-                    OnDeselectPlanet?.Invoke();
-                }
-
-                SelectedPlanet = newSelectedPlanet;
-               
-                transform.LookAt(SelectedPlanet.transform);
-
-                if (SelectedZone != null)
-                {
-                    SelectedZone.GetComponent<ZoneSelection>().Deselect();
-                }
-                zoomAsCloseAsPossible();
-
-                SelectedPlanet.GetComponent<PlanetManager>().Select();
-                OnSelectPlanet?.Invoke();
+            if (newSelectedPlanet != null && newSelectedPlanet!=SelectedPlanet)
+            {
+                SelectPlanet(newSelectedPlanet);
             }
         }
+    }
+
+    private void SelectPlanet(Planet newSelectedPlanet)
+    {
+        //Deselect pevious planet if any planet was selected
+        if (SelectedPlanet != null)
+        {
+            SelectedPlanet.GetComponent<PlanetManager>().Deselect();
+            OnDeselectPlanet?.Invoke();
+        }
+        SelectedPlanet = newSelectedPlanet;
+        transform.LookAt(SelectedPlanet.transform);
+
+
+        //If any zone was selected
+        if (SelectedZone != null)
+        {
+            //Delelect it
+            SelectedZone.GetComponent<ZoneSelection>().Deselect();
+        }
+        zoomAsCloseAsPossible();
+
+        
+        SelectedPlanet.GetComponent<PlanetManager>().Select(); //Inform the planet that it was selected
+        OnSelectPlanet?.Invoke();
     }
 
     void selectZone() {
@@ -159,7 +174,7 @@ public class CameraRotation : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             MousePressed = true;
-            selectPlanet();
+            TrySelectPlanet();
             selectZone();
         }
         if (Input.GetMouseButtonUp(0))

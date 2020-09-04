@@ -25,10 +25,9 @@ public class PlanetUIController : MonoBehaviour
     {
         PlanetUI = transform.GetComponentInChildren<PlanetStatsUI>();
         PlanetUI.gameObject.SetActive(false);
-    }
 
-    private void Start()
-    {
+
+
         targetCamera = CameraRotation.Instance.transform;
 
         PlanetManager planetManager = transform.parent.GetComponent<PlanetManager>();
@@ -36,7 +35,6 @@ public class PlanetUIController : MonoBehaviour
         {
             transform.parent.GetComponent<PlanetManager>().OnSelected.AddListener(OpenUI);
             transform.parent.GetComponent<PlanetManager>().OnDeselected.AddListener(CloseUI);
-            //transform.parent.GetComponent<PlanetManager>().OnDeselected += CloseUI;
         }
         else
         {
@@ -46,12 +44,18 @@ public class PlanetUIController : MonoBehaviour
         foreach (ZoneSelection zone in transform.parent.GetComponentsInChildren<ZoneSelection>())
         {
             zone.OnSelected.AddListener(openZoneUI);
-            //zone.OnSelected += openZoneUI;
         }
         foreach (ZoneSelection zone in transform.parent.GetComponentsInChildren<ZoneSelection>())
         {
             //zone.OnDeselected += closeZoneUI;
         }
+    }
+
+    private void Start()
+    {
+
+
+       
     }
 
     void Update()
