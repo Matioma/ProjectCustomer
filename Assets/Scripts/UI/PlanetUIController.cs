@@ -28,7 +28,7 @@ public class PlanetUIController : MonoBehaviour
 
 
 
-        targetCamera = CameraRotation.Instance.transform;
+        targetCamera = CameraController.Instance.transform;
 
         PlanetManager planetManager = transform.parent.GetComponent<PlanetManager>();
         if (planetManager != null)

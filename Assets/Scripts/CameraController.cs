@@ -3,15 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraRotation : MonoBehaviour
-{
-    static CameraRotation _instance;
 
-    public static CameraRotation Instance {
+enum CameraState { 
+    OnPlanet,
+    WatchingWorld
+}
+
+public class CameraController : MonoBehaviour
+{
+    static CameraController _instance;
+
+    public static CameraController Instance {
         get { return _instance; }
         set {
             if (_instance != null) {
-                Debug.LogError("Second Camera Rotation Created, it is being deleted");
+                Debug.LogError(" Only one Camera Controller allowed, it is being deleted");
                 Destroy(value.gameObject);
             }
             else
@@ -19,9 +25,7 @@ public class CameraRotation : MonoBehaviour
                 _instance = value;
             }
         }
-    
     }
-
     [SerializeField]
     Transform worldViewTransform;
 
@@ -34,48 +38,31 @@ public class CameraRotation : MonoBehaviour
 
     bool isCameraTransitioning;
 
-
-
-
-
+    CameraState cameraState = CameraState.OnPlanet;
 
     public event Action OnSelectPlanet;
     public event Action OnDeselectPlanet;
     public event Action OnSelectZone;
 
-
-
     [SerializeField]
     PlanetManager SelectedPlanet;
     [SerializeField]
-    public Zone SelectedZone;
-
-    public Zone GetSelectedZone() {
-        return SelectedZone;
-    }
-    public PlanetManager GetSelectedPlanet()
-    {
-        return SelectedPlanet;
-    }
+    Zone SelectedZone;
+    
 
     [SerializeField]
     float RotationSensitivity = 200;
-    [SerializeField]
-    float ScrollingSpeed = 500;
 
     bool MousePressed;
-
 
     float MouseXAxis;
     float MouseYAxis;
     float ScrollAxis;
 
-
     private void Awake()
     {
         Instance = this;
     }
-
 
     private void Start()
     {
@@ -84,25 +71,20 @@ public class CameraRotation : MonoBehaviour
 
     void Update()
     {
+        readInput();
         if (isCameraTransitioning)
         {
             LerpTransform(initialTransform, targetTransform, transitionTime);
         }
         else {
-            readInput();
             zoomingCamera();
             rotateAroundThePlanet();
         }
-
-
-       
     }
-
 
     
     void TrySelectPlanet(){
         RaycastHit hitResult;
-
         LayerMask layerMask = LayerMask.GetMask("Planet");
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hitResult, Mathf.Infinity, layerMask))
@@ -127,20 +109,18 @@ public class CameraRotation : MonoBehaviour
         }
         SelectedPlanet = newSelectedPlanet;
        
-        //transform.LookAt(SelectedPlanet.transform);
-
-
         //If any zone was selected
         if (SelectedZone != null)
         {
             //Delelect it
             SelectedZone.GetComponent<ZoneSelection>().Deselect();
         }
-        zoomAsCloseAsPossible();
+        ZoomToPlanet();
 
         
         SelectedPlanet.GetComponent<PlanetManager>().Select(); //Inform the planet that it was selected
         OnSelectPlanet?.Invoke();
+        cameraState = CameraState.OnPlanet;
     }
     private void deselectPlanet() {
         deselectZone();
@@ -171,8 +151,8 @@ public class CameraRotation : MonoBehaviour
             // If Clicked on a zone and it is different from already Selected Zone
             if (newSelectedZone != null && newSelectedZone != SelectedPlanet)
             {
-                if (newSelectedZone.PlanetContainingContinent() != null && newSelectedZone.PlanetContainingContinent() != SelectedPlanet)
-                {
+                // Make sure the user does not select zone From Another Planet
+                if (newSelectedZone.GetComponentInParent<PlanetManager>() != SelectedPlanet) {
                     return;
                 }
 
@@ -185,7 +165,9 @@ public class CameraRotation : MonoBehaviour
                 SelectedZone = newSelectedZone;
                 newSelectedZone.GetComponent<ZoneSelection>().Select();
 
-                //MoveCameraToZone();
+                //hitResult.normal
+                ZoomToRegion(hitResult);
+                
                 OnSelectZone?.Invoke();
             }
         }
@@ -199,12 +181,18 @@ public class CameraRotation : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            
             MousePressed = true;
-            TrySelectPlanet();
-            TrySelectZone();
+           
         }
         if (Input.GetMouseButtonUp(0))
         {
+            if (cameraState == CameraState.WatchingWorld)
+            {
+                TrySelectPlanet();
+            }
+
+            TrySelectZone();
             MousePressed = false;
         }
     }
@@ -212,7 +200,8 @@ public class CameraRotation : MonoBehaviour
     void zoomingCamera() {
         if(ScrollAxis <0){
             deselectPlanet();
-            StartTransition(new MyTransform(worldViewTransform));
+            StartCameraTransition(new MyTransform(worldViewTransform));
+            cameraState = CameraState.WatchingWorld;
         }
     }
 
@@ -229,7 +218,7 @@ public class CameraRotation : MonoBehaviour
         }
     }
 
-    void zoomAsCloseAsPossible() {
+    void ZoomToPlanet() {
         Vector3 directionTowardsPlayer = (transform.position - SelectedPlanet.transform.position).normalized;
 
 
@@ -241,11 +230,20 @@ public class CameraRotation : MonoBehaviour
         MyTransform myTransform = new MyTransform(position, lookAtRotation, new Vector3(1,1,1));
 
 
-        StartTransition(myTransform);
-       
+        StartCameraTransition(myTransform);
     }
 
-    void StartTransition(MyTransform target)
+
+    void ZoomToRegion(RaycastHit hitResult) {
+        Vector3 position = SelectedPlanet.transform.position + hitResult.normal * SelectedPlanet.GetDistance();
+        Quaternion lookAtRotation = Quaternion.LookRotation((SelectedPlanet.transform.position - position).normalized);
+
+        MyTransform myTransform = new MyTransform(position, lookAtRotation, new Vector3(1, 1, 1));
+        StartCameraTransition(myTransform);
+
+    }
+
+    void StartCameraTransition(MyTransform target)
     {
 
         initialTransform =new MyTransform(transform);
@@ -254,23 +252,19 @@ public class CameraRotation : MonoBehaviour
         isCameraTransitioning = true;
     }
   
-
-
-
-    void LerpTransform(MyTransform initialTransform, MyTransform finalTransform, float speed) {
-
+    void LerpTransform(MyTransform initialTransform, MyTransform targetTransform, float speed) {
         progress += 1/speed* Time.deltaTime;
 
-        transform.position = Vector3.Lerp(initialTransform.position, finalTransform.position, progress);
-        transform.rotation = Quaternion.Lerp(initialTransform.rotation, finalTransform.rotation, progress);
+        transform.position = Vector3.Lerp(initialTransform.position, targetTransform.position, progress);
+        transform.rotation = Quaternion.Lerp(initialTransform.rotation, targetTransform.rotation, progress);
 
         if (progress >= 1f) {
-            transitionTo(finalTransform);
+            SetCameraTransorm(targetTransform);
             isCameraTransitioning = false;
         }
     }
 
-    void transitionTo(MyTransform target)
+    void SetCameraTransorm(MyTransform target)
     {
         this.transform.position = target.position;
         this.transform.rotation = target.rotation;
