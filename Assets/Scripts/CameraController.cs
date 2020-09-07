@@ -48,6 +48,14 @@ public class CameraController : MonoBehaviour
     PlanetManager SelectedPlanet;
     [SerializeField]
     Zone SelectedZone;
+
+
+    public PlanetManager GetSelectedPlanet() {
+        return SelectedPlanet;
+    }
+
+    
+
     
 
     [SerializeField]
@@ -59,6 +67,9 @@ public class CameraController : MonoBehaviour
     float MouseYAxis;
     float ScrollAxis;
 
+
+
+    float MovementX, MovementY;
     private void Awake()
     {
         Instance = this;
@@ -96,8 +107,6 @@ public class CameraController : MonoBehaviour
             {
                 selectPlanet(newSelectedPlanet);
             }
-
-           
         }
     }
 
@@ -143,8 +152,9 @@ public class CameraController : MonoBehaviour
         SelectedZone = null;
     }
     void TrySelectZone() {
+
         RaycastHit hitResult;
-        LayerMask layerMask = LayerMask.GetMask("Continent");
+        LayerMask layerMask = LayerMask.GetMask("Continent", "Planet");
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hitResult, Mathf.Infinity, layerMask))
@@ -155,8 +165,7 @@ public class CameraController : MonoBehaviour
             if (newSelectedZone != null && newSelectedZone != SelectedPlanet)
             {
                 // Make sure the user does not select zone From Another Planet
-                if (SelectedPlanet == null || newSelectedZone.GetComponentInParent<PlanetManager>() != SelectedPlanet)
-                {
+                if (SelectedPlanet ==null || newSelectedZone.GetComponentInParent<PlanetManager>() != SelectedPlanet) {
                     return;
                 }
 
@@ -171,12 +180,9 @@ public class CameraController : MonoBehaviour
 
                 //hitResult.normal
                 ZoomToRegion(hitResult);
-
+                
                 OnSelectZone?.Invoke();
             }
-        }
-        else {
-            deselectZone();
         }
     }
 
@@ -186,28 +192,46 @@ public class CameraController : MonoBehaviour
         MouseXAxis = Input.GetAxis("Mouse X");
         MouseYAxis = Input.GetAxis("Mouse Y");
 
+        RegisterMouseMovements();
+
         if (Input.GetMouseButtonDown(0))
         {
-            
             MousePressed = true;
-           
+            ResetMouseMovements();
         }
         if (Input.GetMouseButtonUp(0))
         {
+            Debug.Log(MovementX + " : " + MovementY);
+           
+            if (MovementX == 0 && MovementY == 0) {
+                TrySelectZone();
+                Debug.Log("Select zone only if the user had an intent to click");
+            }
+           
             if (cameraState == CameraState.WatchingWorld)
             {
                 TrySelectPlanet();
             }
-
-            TrySelectZone();
             MousePressed = false;
         }
     }
 
+
+    void ResetMouseMovements() {
+        MovementX = 0;
+        MovementY = 0;
+    }
+    void RegisterMouseMovements() {
+        MovementX += Math.Abs(MouseXAxis);
+        MovementY += Math.Abs(MouseYAxis);
+    }
+
+
     void zoomingCamera() {
         if(ScrollAxis <0){
-            deselectZone();
+             deselectZone();
             deselectPlanet();
+           
             StartCameraTransition(new MyTransform(worldViewTransform));
             cameraState = CameraState.WatchingWorld;
         }

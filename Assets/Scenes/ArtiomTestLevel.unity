@@ -198,10 +198,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 098f5685f8c60ad4bb3ea02dfa096e6a, type: 2}
-    - target: {fileID: 7872146719840547627, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
-      propertyPath: m_Radius
-      value: 17.14
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
 --- !u!114 &708272763 stripped
@@ -356,10 +352,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4670a99df6d211447aaed697f7d946ee, type: 2}
-    - target: {fileID: 7872146719840547627, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
-      propertyPath: m_Radius
-      value: 17.14
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
 --- !u!1001 &1086335650
@@ -437,10 +429,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 098f5685f8c60ad4bb3ea02dfa096e6a, type: 2}
-    - target: {fileID: 7872146719840547627, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
-      propertyPath: m_Radius
-      value: 17.14
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
 --- !u!1 &1237278036
@@ -737,7 +725,7 @@ MonoBehaviour:
   transitionTime: 1
   SelectedPlanet: {fileID: 708272763}
   SelectedZone: {fileID: 0}
-  RotationSensitivity: 5
+  RotationSensitivity: 10
 --- !u!1001 &2268604533165904877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -862,10 +850,6 @@ PrefabInstance:
     - target: {fileID: 4116517773448958037, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7872146719840547627, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
-      propertyPath: m_Radius
-      value: 17.14
       objectReference: {fileID: 0}
     - target: {fileID: 7940998180352426103, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
       propertyPath: m_IsActive
