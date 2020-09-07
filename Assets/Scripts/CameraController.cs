@@ -26,14 +26,14 @@ public class CameraController : MonoBehaviour
             }
         }
     }
-    [SerializeField]
+    [SerializeField, Tooltip("Position of the camera when zoomed out to view the world")]
     Transform worldViewTransform;
 
     MyTransform initialTransform;
     MyTransform targetTransform;
     float progress=0;
 
-    [SerializeField, Range(0,10)]
+    [SerializeField, Range(0,10), Tooltip("Time required for the camera to zoom in to a planet")]
     float transitionTime=1.0f;
 
     bool isCameraTransitioning;
@@ -54,11 +54,7 @@ public class CameraController : MonoBehaviour
         return SelectedPlanet;
     }
 
-    
-
-    
-
-    [SerializeField]
+    [SerializeField, Tooltip("Sensitivity of the camera rotating around planets")]
     float RotationSensitivity = 200;
 
     bool MousePressed;
@@ -72,10 +68,8 @@ public class CameraController : MonoBehaviour
     float MovementX, MovementY;
 
 
-
-
     Vector2 rotationYSpeed;
-    [SerializeField, Range(0,1)]
+    [SerializeField, Range(0,1), Tooltip("Increase the value to make the planet stop slower")]
     float planetInertia=0.95f;
     
     private void Awake()
@@ -190,6 +184,7 @@ public class CameraController : MonoBehaviour
                 //hitResult.normal
                 ZoomToRegion(hitResult);
 
+
                 OnSelectZone?.Invoke();
             }
             else if(newSelectedZone == null)
@@ -258,10 +253,6 @@ public class CameraController : MonoBehaviour
         {
             rotationYSpeed.x = MouseXAxis * RotationSensitivity;
             rotationYSpeed.y = MouseYAxis * RotationSensitivity;
-
-            //transform.RotateAround(SelectedPlanet.transform.position, transform.right, -MouseYAxis * RotationSensitivity);s
-            //transform.RotateAround(SelectedPlanet.transform.position,transform.up, MouseXAxis* RotationSensitivity);
-
         }
         else{
             rotationYSpeed.x *= planetInertia;
@@ -296,7 +287,18 @@ public class CameraController : MonoBehaviour
 
 
     void ZoomToRegion(RaycastHit hitResult) {
-        Vector3 position = SelectedPlanet.transform.position + hitResult.normal * SelectedPlanet.GetDistance();
+        var continentDirection =hitResult.transform.GetComponent<ContinentDirection>();
+
+
+        Vector3 directionVector = hitResult.normal;
+
+        if (continentDirection != null) {
+            directionVector = continentDirection.getDirection().normalized;
+        }
+
+        Vector3 position = SelectedPlanet.transform.position + directionVector * SelectedPlanet.GetDistance();
+
+        //Vector3 position = SelectedPlanet.transform.position + hitResult.normal * SelectedPlanet.GetDistance();
         Quaternion lookAtRotation = Quaternion.LookRotation((SelectedPlanet.transform.position - position).normalized);
 
         MyTransform myTransform = new MyTransform(position, lookAtRotation, new Vector3(1, 1, 1));
@@ -306,7 +308,6 @@ public class CameraController : MonoBehaviour
 
     void StartCameraTransition(MyTransform target)
     {
-
         initialTransform =new MyTransform(transform);
         targetTransform = target;
         progress = 0;
