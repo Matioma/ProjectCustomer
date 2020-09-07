@@ -10,9 +10,11 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     private RectTransform rectTransform;
     private RectTransform startposition;
     private Vector2 parentPosition;
+    private CanvasGroup canvasGroup;
 
     private void Awake()
     {
+        canvasGroup = GetComponent<CanvasGroup>();
         rectTransform = GetComponent<RectTransform>();
         startposition = GetComponentInParent<RectTransform>();
         parentPosition = new Vector2(startposition.anchoredPosition.x, startposition.anchoredPosition.y);
@@ -20,6 +22,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("IBeginDragHandler");
+        canvasGroup.blocksRaycasts = false;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -31,7 +34,8 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("IEndDragHandler");
-       // rectTransform.anchoredPosition = startposition.anchoredPosition;
+        canvasGroup.blocksRaycasts = true;
+
     }
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -41,9 +45,6 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        //RectTransform delta = new RectTransform();
-        //delta.anchoredPosition = rectTransform.anchoredPosition - startposition.anchoredPosition;
-        //rectTransform.anchoredPosition += delta.anchoredPosition;
         rectTransform.anchoredPosition = parentPosition;
         Debug.Log("onDrop" + rectTransform.anchoredPosition);
     }

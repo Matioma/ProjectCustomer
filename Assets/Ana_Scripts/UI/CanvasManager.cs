@@ -9,30 +9,12 @@ using TMPro;
 public enum CanvasType
 {
     NoZone,
-    PlanetAGeneral,
-    PlanetAFarmZone,
-    PlanetAWaterZone,
-    PlanetAMineralZone,
-    PlanetAIndustrialZoneInvest,
-    PlanetAIndustrialZoneTransport,
-    PlanetBGeneral,
-    PlanetBFarmZone,
-    PlanetBWaterZone,
-    PlanetBMineralZone,
-    PlanetBIndustrialZoneInvest,
-    PlanetBIndustrialZoneTransport,
-    PlanetCGeneral,
-    PlanetCFarmZone,
-    PlanetCWaterZone,
-    PlanetCMineralZone,
-    PlanetCIndustrialZoneInvest,
-    PlanetCIndustrialZoneTransport,
-    PlanetDGeneral,
-    PlanetDFarmZone,
-    PlanetDWaterZone,
-    PlanetDMineralZone,
-    PlanetDIndustrialZoneInvest,
-    PlanetDIndustrialZoneTransport,
+    General,
+    FarmZone,
+    WaterZone,
+    MineralZone,
+    InvestmentZone,
+    TransportZone
 }
 public class CanvasManager : MonoBehaviour
 {

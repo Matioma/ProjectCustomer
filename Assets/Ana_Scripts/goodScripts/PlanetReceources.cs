@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int>, IEnablable<Receources>
 {
@@ -22,12 +23,34 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int
     float seedTimer;
     Dictionary<Receources, int> receourcesNumber;
 
+
+    [System.Serializable]
+    public class Rec
+    {
+        public Receources type;
+        public int amount;
+    }
+    [SerializeField]
+    List<Rec> recs;
+   
+    public Dictionary<Receources,int> GetResouses()
+    {
+        return receourcesNumber;
+    }
+
     void Start()
     {
+        
         receourcesNumber = new Dictionary<Receources, int>();
-        receourcesNumber.Add(Receources.MONEY, moneynumber);
-        receourcesNumber.Add(Receources.SEEDS, seednumber);
-        receourcesNumber.Add(Receources.WATER, waternumber);
+        receourcesNumber.Add(Receources.MONEY, 0);
+        receourcesNumber.Add(Receources.SEEDS, 0);
+        receourcesNumber.Add(Receources.WATER, 0);
+        for (int i = 0; i < recs.Count; i++)
+        {
+            receourcesNumber[recs[i].type]= recs[i].amount;
+        }
+
+
         seedTimer = seedConsumptionTime;
         waterTimer = waterConsumtionAmount;
     }
@@ -42,9 +65,11 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int
     public void AddReceource(Receources rec, int amount)
     {
         receourcesNumber[rec]+=amount;
+        var addition = GetComponentInParent<UIInformation>();
+        addition.AddReceource(rec, amount);
         Debug.Log(rec+"   "+ receourcesNumber[rec]);
-
     }
+
 
     public int GetReceouceNumber(Receources type)
     {
@@ -54,8 +79,6 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int
     {
         seedConsumption();
         waterConsumption();
-        //Debug.Log("water: " + receourcesNumber[Receources.WATER]);
-       // Debug.Log("money: " + receourcesNumber[Receources.MONEY]);
     }
 
     private void waterConsumption()
@@ -98,10 +121,6 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int
         }
     }
 
-    void conditionsForZones()
-    {
-
-    }
 
     public void Enable(Receources rec)
     {
@@ -117,5 +136,47 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int
         {
             this.enabled = false;
         }
+    }
+
+    public void ChangeConsumptionAmountSeeds(int amount)
+    {
+        seedConsumptionAmount += amount;
+        var addition = GetComponentInParent<UIInformation>();
+        addition.ChangeConsumptionAmountSeeds( amount);
+    }
+    public void ChangeConsumptionTimeSeeds(int amount)
+    {
+        seedConsumptionTime += amount;
+        var addition = GetComponentInParent<UIInformation>();
+        addition.ChangeConsumptionTimeSeeds( amount);
+    }
+    public void ChangeConsumptionAmountWater(int amount)
+    {
+        waterConsumtionAmount += amount;
+        var addition = GetComponentInParent<UIInformation>();
+        addition.ChangeConsumptionAmountWater( amount);
+    }
+    public void ChangeConsumptionTimeWater(int amount)
+    {
+        waterConsumtionTime += amount;
+        var addition = GetComponentInParent<UIInformation>();
+        addition.ChangeConsumptionTimeWater( amount);
+    }
+
+    public int getSeedComsumptionAmount()
+    {
+        return seedConsumptionAmount;
+    }
+    public int getSeedComsumptionTime()
+    {
+        return seedConsumptionTime;
+    }
+    public int getWaterComsumptionAmount()
+    {
+        return waterConsumtionAmount;
+    }
+    public int getWaterComsumptionTime()
+    {
+        return waterConsumtionTime;
     }
 }

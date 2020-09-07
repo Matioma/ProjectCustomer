@@ -12,7 +12,7 @@ public class CanvasSwitcher : MonoBehaviour
         canvasManager = GameObject.FindObjectOfType<CanvasManager>();
     }
 
-    void OnScreenChange()
+    public void OnScreenChange()
     {
         canvasManager.SwitchCanvas(desiredCanvasType);
     }

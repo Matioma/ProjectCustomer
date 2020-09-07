@@ -861,6 +861,8 @@ GameObject:
   - component: {fileID: 289099703}
   - component: {fileID: 289099707}
   - component: {fileID: 289099708}
+  - component: {fileID: 289099709}
+  - component: {fileID: 289099710}
   m_Layer: 0
   m_Name: planetA
   m_TagString: Selectable
@@ -983,6 +985,60 @@ MonoBehaviour:
   seedConsumptionTime: 10
   waterConsumtionAmount: 10
   waterConsumtionTime: 10
+  OnRecChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 289099709}
+        m_TargetAssemblyTypeName: UIInformation, Assembly-CSharp
+        m_MethodName: updateRecNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  recs:
+  - type: 0
+    amount: 400
+  - type: 1
+    amount: 400
+  - type: 2
+    amount: 400
+--- !u!114 &289099709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289099702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68c2e769f79717043a8a1ff940925b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionGeneral: 
+  descriptionFarmingZone: 
+  descriptionWaterZone: 
+  descriptionMineralZone: 
+  descriptionIndZoneInvest: 
+  descriptionIndZoneTransport: 
+--- !u!114 &289099710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289099702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9c81e6863c88a644bcfd546d514d804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToUpdate:
+  - {fileID: 289099702}
 --- !u!1 &316892921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,7 +1175,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
+  seedsNeededToBuy: 10
+  WaterNeededToBuy: 10
+  MoneyNeededToBuy: 10
   buyButton: {fileID: 12496327}
 --- !u!114 &419909571
 MonoBehaviour:
@@ -2282,7 +2340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1049384894
 Transform:
   m_ObjectHideFlags: 0
@@ -3152,7 +3210,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
+  seedsNeededToBuy: 10
+  WaterNeededToBuy: 10
+  MoneyNeededToBuy: 10
   buyButton: {fileID: 5908547}
 --- !u!114 &1322034289
 MonoBehaviour:
@@ -3280,7 +3340,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
+  seedsNeededToBuy: 10
+  WaterNeededToBuy: 10
+  MoneyNeededToBuy: 10
   buyButton: {fileID: 1941394063}
 --- !u!114 &1423312121
 MonoBehaviour:
@@ -3382,7 +3444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1627429977
 Transform:
   m_ObjectHideFlags: 0
@@ -3413,6 +3475,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3335c59d54cc5d04cbcc8bd773d4d9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  recs:
+  - type: 0
+    amount: 0
+  - type: 0
+    amount: 0
 --- !u!114 &1627429979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3432,6 +3499,16 @@ MonoBehaviour:
   seedConsumptionTime: 10
   waterConsumtionAmount: 10
   waterConsumtionTime: 10
+  OnRecChange:
+    m_PersistentCalls:
+      m_Calls: []
+  recs:
+  - type: 0
+    amount: 400
+  - type: 1
+    amount: 400
+  - type: 2
+    amount: 400
 --- !u!114 &1627429980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3820,7 +3897,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
+  seedsNeededToBuy: 10
+  WaterNeededToBuy: 10
+  MoneyNeededToBuy: 10
   buyButton: {fileID: 134946225}
 --- !u!1 &1761434564
 GameObject:
@@ -3944,7 +4023,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
+  seedsNeededToBuy: 10
+  WaterNeededToBuy: 10
+  MoneyNeededToBuy: 10
   buyButton: {fileID: 146681783}
 --- !u!114 &1808370527
 MonoBehaviour:
@@ -4162,7 +4243,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
+  seedsNeededToBuy: 10
+  WaterNeededToBuy: 10
+  MoneyNeededToBuy: 10
   buyButton: {fileID: 949213964}
 --- !u!114 &1885655429
 MonoBehaviour:

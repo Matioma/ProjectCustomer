@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ReceourceZone : MonoBehaviour, IEnablable<Receources>
+public class ReceourceZone : MonoBehaviour
 {
     [SerializeField]
     Receources typeOfReceource;
@@ -28,10 +28,6 @@ public class ReceourceZone : MonoBehaviour, IEnablable<Receources>
     {
         if (timer < 0)
         {
-            for (int i = 0; i < receourcesToWork.Length; i++)
-            {
-                //if(receourcesToWork)
-            }
             var addition = GetComponentInParent<IReceourceAddition<Receources, int>>();
             addition.AddReceource(typeOfReceource, productionNumber);
             timer = productivityTime;
