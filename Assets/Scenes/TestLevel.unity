@@ -422,6 +422,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 6.2290626
       objectReference: {fileID: 0}
+    - target: {fileID: 4577470125203534665, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+      propertyPath: mainUI
+      value: 
+      objectReference: {fileID: 1237278039}
     - target: {fileID: 5464712381363795185, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -792,6 +796,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.0735
       objectReference: {fileID: 0}
+    - target: {fileID: 4577470125203534665, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+      propertyPath: mainUI
+      value: 
+      objectReference: {fileID: 1237278039}
     - target: {fileID: 5464712381363795185, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -873,6 +881,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 6.2290626
       objectReference: {fileID: 0}
+    - target: {fileID: 4577470125203534665, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+      propertyPath: mainUI
+      value: 
+      objectReference: {fileID: 1237278039}
     - target: {fileID: 5464712381363795185, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1694,6 +1706,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4577470125203534665, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+      propertyPath: mainUI
+      value: 
+      objectReference: {fileID: 1237278039}
     - target: {fileID: 7872146719840547627, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
       propertyPath: m_Radius
       value: 17.14
@@ -1706,8 +1722,47 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8915508466609229516, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+      propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915508466609229516, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+      propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915508466609229516, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+      propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915508466609229516, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+      propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2268604533165904878}
+    - target: {fileID: 8915508466609229516, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+      propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CanvasSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915508466609229516, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+      propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnScreenChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915508466609229516, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+      propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+--- !u!114 &2268604533165904878 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4839684649985373481, guid: 3bed5d98da9e2d34f9164b73f3c5d1d2, type: 3}
+  m_PrefabInstance: {fileID: 2268604533165904877}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965645321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5560767393f5554ea98074d022b349c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2662853383784809908
 PrefabInstance:
   m_ObjectHideFlags: 0
