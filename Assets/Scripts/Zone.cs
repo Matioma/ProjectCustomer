@@ -2,17 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+enum PosibleActions
+{
+    Buy,
+    AnotherAction,
+    ToDoAction
+}
 public class Zone : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField]
+    PlanetManager parentPlanet;
+    public PlanetManager PlanetContainingContinent() {
+        return parentPlanet;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    [SerializeField]
+    List<PosibleActions> ZoneActionsList;
+
+    public string Name;
+
+
+    void Awake() {
     }
 }

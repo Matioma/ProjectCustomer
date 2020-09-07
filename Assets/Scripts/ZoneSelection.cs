@@ -11,26 +11,43 @@ public class ZoneSelection : SelectableObject
     Material selectedMaterial;
 
 
+
     bool MouseOver = false;
 
     Renderer renderer;
+
+
+
+    PlanetManager parentPlanetManager;
 
     void Awake() {
         renderer = GetComponent<Renderer>();
         defaultMaterial = renderer.material;
 
-        OnSelected += () => { renderer.material = selectedMaterial; };
-        OnDeselected += () => { renderer.material = defaultMaterial; };
+
+        parentPlanetManager = GetComponentInParent<PlanetManager>();
+
+
+        OnSelected.AddListener(() => { renderer.material = selectedMaterial; });
+        OnDeselected.AddListener(() => { renderer.material = defaultMaterial; });
     }
 
     void OnMouseOver() {
-        if (!IsSelected)
+        if (parentPlanetManager != CameraController.Instance.GetSelectedPlanet()) {
+            return;
+        }
+
+        if (!IsSelected )
         {
             renderer.material = selectedMaterial;
         }
     }
 
     void OnMouseExit() {
+        if (parentPlanetManager != CameraController.Instance.GetSelectedPlanet())
+        {
+            return;
+        }
         if (!IsSelected)
         {
             renderer.material = defaultMaterial;

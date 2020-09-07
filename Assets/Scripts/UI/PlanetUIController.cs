@@ -7,45 +7,78 @@ public class PlanetUIController : MonoBehaviour
 {
     Transform targetCamera;
 
-    PlanetStatsUI planetStats;
+    [SerializeField]
+    PlanetStatsUI PlanetUI;
+
+
+
+    [SerializeField]
+    GameObject RegionUI;
+
+
+    GameObject OpenedUI;
+
+
+
 
     private void Awake()
     {
-        planetStats = transform.GetComponentInChildren<PlanetStatsUI>();
-        planetStats.gameObject.SetActive(false);
-    }
+        PlanetUI = transform.GetComponentInChildren<PlanetStatsUI>();
+        PlanetUI.gameObject.SetActive(false);
 
+
+
+        targetCamera = CameraController.Instance.transform;
+
+        PlanetManager planetManager = transform.parent.GetComponent<PlanetManager>();
+        if (planetManager != null)
+        {
+            transform.parent.GetComponent<PlanetManager>().OnSelected.AddListener(OpenUI);
+            transform.parent.GetComponent<PlanetManager>().OnDeselected.AddListener(CloseUI);
+        }
+        else
+        {
+            Debug.Log("Parent does not have PlanetManager Component make sure it is present");
+        }
+        // Subscribing to Zones
+        foreach (ZoneSelection zone in transform.parent.GetComponentsInChildren<ZoneSelection>())
+        {
+            zone.OnSelected.AddListener(openZoneUI);
+        }
+        foreach (ZoneSelection zone in transform.parent.GetComponentsInChildren<ZoneSelection>())
+        {
+            //zone.OnDeselected += closeZoneUI;
+        }
+    }
 
     private void Start()
     {
-        targetCamera = CameraRotation.Instance.transform;
 
-        PlanetManager planetManager = transform.parent.GetComponent<PlanetManager>();
 
-        if (planetManager != null)
-        {
-            transform.parent.GetComponent<PlanetManager>().OnSelected += OpenUI;
-            transform.parent.GetComponent<PlanetManager>().OnDeselected += CloseUI;
-        }
-        else {
-            Debug.Log("Parent does not have PlanetManager Component make sure it is present");
-        }
+       
     }
 
     void Update()
     {
-        if (transform.parent.GetComponent<PlanetManager>().IsSelected) {
+        if (transform.parent.GetComponent<PlanetManager>().IsSelected)
+        {
             transform.LookAt(targetCamera);
         }
-       
     }
 
-    void OpenUI() {
-        planetStats.gameObject.SetActive(true);
+    void OpenUI()
+    {
+        PlanetUI.gameObject.SetActive(true);
     }
 
-    void CloseUI() {
-        planetStats.gameObject.SetActive(false);
+    void CloseUI()
+    {
+        PlanetUI.gameObject.SetActive(false);
+    }
+
+    void openZoneUI()
+    {
+        Debug.Log("Make visible");
     }
 
 }
