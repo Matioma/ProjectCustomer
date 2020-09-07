@@ -96,6 +96,8 @@ public class CameraController : MonoBehaviour
             {
                 selectPlanet(newSelectedPlanet);
             }
+
+           
         }
     }
 
@@ -138,6 +140,7 @@ public class CameraController : MonoBehaviour
             //Delelect it
             SelectedZone.GetComponent<ZoneSelection>().Deselect();
         }
+        SelectedZone = null;
     }
     void TrySelectZone() {
         RaycastHit hitResult;
@@ -152,7 +155,8 @@ public class CameraController : MonoBehaviour
             if (newSelectedZone != null && newSelectedZone != SelectedPlanet)
             {
                 // Make sure the user does not select zone From Another Planet
-                if (newSelectedZone.GetComponentInParent<PlanetManager>() != SelectedPlanet) {
+                if (SelectedPlanet == null || newSelectedZone.GetComponentInParent<PlanetManager>() != SelectedPlanet)
+                {
                     return;
                 }
 
@@ -167,9 +171,12 @@ public class CameraController : MonoBehaviour
 
                 //hitResult.normal
                 ZoomToRegion(hitResult);
-                
+
                 OnSelectZone?.Invoke();
             }
+        }
+        else {
+            deselectZone();
         }
     }
 
@@ -199,6 +206,7 @@ public class CameraController : MonoBehaviour
 
     void zoomingCamera() {
         if(ScrollAxis <0){
+            deselectZone();
             deselectPlanet();
             StartCameraTransition(new MyTransform(worldViewTransform));
             cameraState = CameraState.WatchingWorld;
@@ -207,6 +215,9 @@ public class CameraController : MonoBehaviour
 
     void rotateAroundThePlanet()
     {
+        if (SelectedPlanet == null) {
+            return;
+        }
         if (MousePressed)
         {
 
