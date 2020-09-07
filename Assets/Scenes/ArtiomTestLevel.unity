@@ -725,7 +725,8 @@ MonoBehaviour:
   transitionTime: 1
   SelectedPlanet: {fileID: 708272763}
   SelectedZone: {fileID: 0}
-  RotationSensitivity: 10
+  RotationSensitivity: 3
+  planetInertia: 0.936
 --- !u!1001 &2268604533165904877
 PrefabInstance:
   m_ObjectHideFlags: 0

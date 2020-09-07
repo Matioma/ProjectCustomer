@@ -70,6 +70,14 @@ public class CameraController : MonoBehaviour
 
 
     float MovementX, MovementY;
+
+
+
+
+    Vector2 rotationYSpeed;
+    [SerializeField, Range(0,1)]
+    float planetInertia=0.95f;
+    
     private void Awake()
     {
         Instance = this;
@@ -245,29 +253,44 @@ public class CameraController : MonoBehaviour
         if (SelectedPlanet == null) {
             return;
         }
+
         if (MousePressed)
         {
+            rotationYSpeed.x = MouseXAxis * RotationSensitivity;
+            rotationYSpeed.y = MouseYAxis * RotationSensitivity;
 
-            transform.RotateAround(SelectedPlanet.transform.position,transform.up, MouseXAxis* RotationSensitivity);
-            transform.RotateAround(SelectedPlanet.transform.position, transform.right, -MouseYAxis * RotationSensitivity);
+            //transform.RotateAround(SelectedPlanet.transform.position, transform.right, -MouseYAxis * RotationSensitivity);s
+            //transform.RotateAround(SelectedPlanet.transform.position,transform.up, MouseXAxis* RotationSensitivity);
+
+        }
+        else{
+            rotationYSpeed.x *= planetInertia;
+            rotationYSpeed.y = 0;
+        }
+
+        if (rotationYSpeed.sqrMagnitude > 0) {
+            transform.RotateAround(SelectedPlanet.transform.position, transform.up, rotationYSpeed.x);
+            transform.RotateAround(SelectedPlanet.transform.position, transform.right, -rotationYSpeed.y * RotationSensitivity);
 
             //Make Sure that Z axis rotation is 0
             transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
         }
+      
     }
 
+
+    /// <summary>
+    /// Zooms the Camera To the selected Planet
+    /// </summary>
     void ZoomToPlanet() {
         Vector3 directionTowardsPlayer = (transform.position - SelectedPlanet.transform.position).normalized;
 
-
-        Vector3 position = SelectedPlanet.transform.position + directionTowardsPlayer * SelectedPlanet.GetDistance();
+        Vector3 newPosition = SelectedPlanet.transform.position + directionTowardsPlayer * SelectedPlanet.GetDistance();
         Quaternion lookAtRotation = Quaternion.LookRotation((SelectedPlanet.transform.position - transform.position ).normalized);
 
 
-
-        MyTransform myTransform = new MyTransform(position, lookAtRotation, new Vector3(1,1,1));
-
-
+        //Struct info about target transform
+        MyTransform myTransform = new MyTransform(newPosition, lookAtRotation, new Vector3(1,1,1));
         StartCameraTransition(myTransform);
     }
 
