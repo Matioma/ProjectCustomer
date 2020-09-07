@@ -8,7 +8,12 @@ public class ContinentDirection : MonoBehaviour
     Vector3 VectorStart;
 
     [SerializeField]
-    Vector3 VectorDirection;
+    Vector3 vectorDirection;
+    public Vector3 getDirection() {
+        return transform.rotation*vectorDirection.normalized;
+    }
+
+
     [SerializeField]
     float VectorLength;
 
@@ -29,8 +34,7 @@ public class ContinentDirection : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(transform.position + VectorStart, 3.0f);
 
-        //Ray ray = new Ray(VectorStart,VectorDirection*VectorLength);
-        Gizmos.DrawRay(transform.position + VectorStart, VectorDirection * VectorLength);
+        Gizmos.DrawRay(transform.position + VectorStart, transform.rotation*vectorDirection * VectorLength);
         //Gizmos.DrawRay(ray);
     }
 
