@@ -165,7 +165,8 @@ public class CameraController : MonoBehaviour
             if (newSelectedZone != null && newSelectedZone != SelectedPlanet)
             {
                 // Make sure the user does not select zone From Another Planet
-                if (SelectedPlanet ==null || newSelectedZone.GetComponentInParent<PlanetManager>() != SelectedPlanet) {
+                if (SelectedPlanet == null || newSelectedZone.GetComponentInParent<PlanetManager>() != SelectedPlanet)
+                {
                     return;
                 }
 
@@ -180,10 +181,15 @@ public class CameraController : MonoBehaviour
 
                 //hitResult.normal
                 ZoomToRegion(hitResult);
-                
+
                 OnSelectZone?.Invoke();
             }
+            else if(newSelectedZone == null)
+            {
+                deselectZone();
+            }
         }
+       
     }
 
     void readInput()
@@ -201,11 +207,8 @@ public class CameraController : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
-            Debug.Log(MovementX + " : " + MovementY);
-           
             if (MovementX == 0 && MovementY == 0) {
                 TrySelectZone();
-                Debug.Log("Select zone only if the user had an intent to click");
             }
            
             if (cameraState == CameraState.WatchingWorld)
