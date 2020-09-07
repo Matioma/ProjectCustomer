@@ -163,6 +163,7 @@ public class CameraController : MonoBehaviour
         {
             Zone newSelectedZone = hitResult.transform.GetComponent<Zone>();
 
+
             // If Clicked on a zone and it is different from already Selected Zone
             if (newSelectedZone != null && newSelectedZone != SelectedPlanet)
             {
@@ -178,6 +179,7 @@ public class CameraController : MonoBehaviour
                     SelectedZone.GetComponent<ZoneSelection>().Deselect();
                 }
 
+                
                 SelectedZone = newSelectedZone;
                 newSelectedZone.GetComponent<ZoneSelection>().Select();
 
