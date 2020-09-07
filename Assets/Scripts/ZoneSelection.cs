@@ -33,8 +33,6 @@ public class ZoneSelection : SelectableObject
         initialScale = transform.localScale;
         initialPosition = transform.localPosition;
         
-
-
         parentPlanetManager = GetComponentInParent<PlanetManager>();
 
 
@@ -42,8 +40,16 @@ public class ZoneSelection : SelectableObject
         {
             renderer.material = selectedMaterial;
             ScaleRegion(scaleRegion);
-            transform.localPosition += GetComponent<ContinentDirection>().getDirection().normalized* (-moveBack);
+            ContinentDirection direction = GetComponent<ContinentDirection>();
+            if (direction != null)
+            {
+                transform.localPosition += direction.getDirection().normalized * (-moveBack);
+            }
+            else {
+                Debug.Log("Zone does not have Continent Direction Attached");
+            }
         });
+
         OnDeselected.AddListener(() =>
         {
             renderer.material = defaultMaterial;
