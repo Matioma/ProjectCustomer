@@ -14,6 +14,9 @@ public class CanvasSwitcher : MonoBehaviour
 
     public void OnScreenChange()
     {
+        if (canvasManager == null ) {
+            return;
+        }
         canvasManager.SwitchCanvas(desiredCanvasType);
     }
 }
