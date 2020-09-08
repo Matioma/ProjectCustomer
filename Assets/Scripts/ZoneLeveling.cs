@@ -11,12 +11,20 @@ public class ZoneLeveling : MonoBehaviour
 
     private void Start()
     {
+        if (LevelsPrefabs.Count == 0)
+        {
+            return;
+        }
+
         RemoveOldPrefabs();
         ChangePrefab();
     }
 
     public void Upgrade()
     {
+        if (LevelsPrefabs.Count == 0) {
+            return;
+        }
         if (CurrentLevel < LevelsPrefabs.Count)
         {
             CurrentLevel++;
