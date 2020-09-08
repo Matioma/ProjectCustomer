@@ -494,6 +494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8472323235849995993}
   - component: {fileID: 8472323235849995994}
+  - component: {fileID: 8099331830692139017}
   m_Layer: 5
   m_Name: ResourceButtons
   m_TagString: Untagged
@@ -538,6 +539,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb744c3b6afacdf4f8e1a26c6a27b788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 0}
+--- !u!114 &8099331830692139017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8472323235849995992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abca02dc3048247449f797c308a575b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seeds: {fileID: 8472323235343045911}
+  water: {fileID: 8472323236061604204}
+  money: {fileID: 8472323235697532898}
 --- !u!1 &8472323236061604202
 GameObject:
   m_ObjectHideFlags: 0
