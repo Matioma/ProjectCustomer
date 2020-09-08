@@ -722,6 +722,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planet3
       objectReference: {fileID: 0}
+    - target: {fileID: 4169599832934733028, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5823344980390693480, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7156505865939975605, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: resourceButtons
       value: 
@@ -1753,6 +1761,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planet1
       objectReference: {fileID: 0}
+    - target: {fileID: 4169599832934733028, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5823344980390693480, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7156505865939975605, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: resourceButtons
       value: 
@@ -2517,6 +2533,14 @@ PrefabInstance:
     - target: {fileID: 3977515067236964067, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_Name
       value: Planet5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169599832934733028, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5823344980390693480, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7156505865939975605, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: resourceButtons
@@ -3291,6 +3315,14 @@ PrefabInstance:
     - target: {fileID: 3977515067236964067, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_Name
       value: Planet4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169599832934733028, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5823344980390693480, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7156505865939975605, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: resourceButtons
@@ -4456,6 +4488,14 @@ PrefabInstance:
     - target: {fileID: 3977515067236964067, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_Name
       value: Planet2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169599832934733028, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5823344980390693480, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7156505865939975605, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: resourceButtons
