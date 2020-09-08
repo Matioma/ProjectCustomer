@@ -274,6 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 5
+  canvasManager: {fileID: 0}
 --- !u!1 &961335965
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 5
+  canvasManager: {fileID: 0}
 --- !u!114 &1122488816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,6 +663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 5
+  canvasManager: {fileID: 0}
 --- !u!114 &1498633245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,7 +818,7 @@ MonoBehaviour:
   transitionTime: 1
   SelectedPlanet: {fileID: 1961523688}
   SelectedZone: {fileID: 0}
-  RotationSensitivity: 3
+  RotationSensitivity: 6.56
   planetInertia: 0.936
 --- !u!114 &1961523688 stripped
 MonoBehaviour:
@@ -967,6 +970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 5
+  canvasManager: {fileID: 0}
 --- !u!114 &2109453748
 MonoBehaviour:
   m_ObjectHideFlags: 0
