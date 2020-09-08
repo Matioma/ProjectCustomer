@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class ResourcesButtonsUpdater : MonoBehaviour
 {
     [SerializeField]
-    Text seeds;
+    TextMeshProUGUI seeds;
     [SerializeField]
-    Text water;
+    TextMeshProUGUI water;
     [SerializeField]
-    Text money;
+    TextMeshProUGUI money;
     int seedsNumber;
     int waterNumber;
     int moneyNumber;
@@ -19,16 +21,19 @@ public class ResourcesButtonsUpdater : MonoBehaviour
         switch (rec)
         {
             case Receources.SEEDS:
-                seedsNumber += amount;
+                seedsNumber = amount;
                 seeds.text = seedsNumber.ToString();
+                Debug.Log(seeds.text+"text");
                 break;
             case Receources.WATER:
+                
+                waterNumber = amount;
                 water.text = waterNumber.ToString();
-                waterNumber += amount;
+                Debug.Log(water.text + "text");
                 break;
             case Receources.MONEY:
+                moneyNumber = amount;
                 money.text = moneyNumber.ToString();
-                moneyNumber += amount;
                 break;
         }
     }

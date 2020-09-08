@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
-public class ChangeAmount : MonoBehaviour
+public class ChangePlanetButtons : MonoBehaviour
 {
     [SerializeField]
     Button buyButton;
-    [SerializeField]
-    int amount;
+
     GameObject planet;
+    GameObject newPlanet;
 
     private void Start()
     {
@@ -29,6 +29,6 @@ public class ChangeAmount : MonoBehaviour
             }
         }
 
-        rightZone.GetComponent<SendReceources>().ChangeAmount(amount);
+        rightZone.GetComponent<SendReceources>().ChangeDestination(newPlanet);
     }
 }

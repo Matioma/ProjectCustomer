@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 5420733362619861966}
   - component: {fileID: 4677749744282146922}
   - component: {fileID: 1686229059205628561}
+  - component: {fileID: 1893436097914777025}
   m_Layer: 9
   m_Name: Zone1
   m_TagString: Untagged
@@ -227,3 +228,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ZoneActionsList: 
+--- !u!114 &1893436097914777025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850364755483372749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a3634034c007cd42b43c6ce83ed5ce5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentLevel: 0
+  Levels:
+  - {fileID: 2228159955735391266, guid: 259c8e7264d0b634f83030999aebaec3, type: 3}
+  - {fileID: 2558803938620945362, guid: 28cc1b17bea63094a885201253decee0, type: 3}

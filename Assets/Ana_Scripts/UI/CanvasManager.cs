@@ -15,10 +15,13 @@ public enum CanvasType
     MineralZone,
     InvestmentZone,
     TransportZone,
-    ResourseButtons
 }
+
+
 public class CanvasManager : MonoBehaviour
 {
+    [SerializeField]
+    GameObject resourceButtons;
     List<CanvasController> canvasControllerList;
     CanvasController lastActiveCanvs;
     private void Awake()
@@ -26,13 +29,14 @@ public class CanvasManager : MonoBehaviour
         canvasControllerList = GetComponentsInChildren<CanvasController>().ToList();
         foreach (CanvasController item in canvasControllerList)
         {
-            item.gameObject.SetActive(false); 
+            item.gameObject.SetActive(false);
         }
         SwitchCanvas(CanvasType.NoZone);
     }
 
     public void SwitchCanvas(CanvasType _type)
     {
+        
         if (lastActiveCanvs != null)
         {
             lastActiveCanvs.gameObject.SetActive(false);
@@ -43,5 +47,22 @@ public class CanvasManager : MonoBehaviour
             desiredScreen.gameObject.SetActive(true);
             lastActiveCanvs = desiredScreen;
         }
+        Debug.Log("switch zone" + desiredScreen);
+    }
+
+    public void EnableResourceButtons()
+    {
+        //if (resourceButtons.activeSelf == false)
+        //{
+            resourceButtons.SetActive(true);
+
+        //}
+    }
+    public void DisableableResourceButtons()
+    {
+        //if (resourceButtons.activeSelf == true)
+        //{
+            resourceButtons.SetActive(false);
+       // }
     }
 }
