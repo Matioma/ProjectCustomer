@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 482365367576749919, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockWaterZoneButton
+      objectReference: {fileID: 0}
     - target: {fileID: 482365367580816550, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -342,6 +346,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 482365368109396931, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockMineralZoneButton
+      objectReference: {fileID: 0}
     - target: {fileID: 482365368170756806, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -530,6 +538,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 482365368904480388, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockInvestmentZoneButton
+      objectReference: {fileID: 0}
     - target: {fileID: 482365368960821025, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -557,6 +569,10 @@ PrefabInstance:
     - target: {fileID: 482365368960821025, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365369167016194, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockGeneralZoneButton
       objectReference: {fileID: 0}
     - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -609,6 +625,10 @@ PrefabInstance:
     - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365369674125930, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockFarmZoneButton
       objectReference: {fileID: 0}
     - target: {fileID: 1903319840352701381, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -694,6 +714,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2625323068332244310, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cf535819e0018cf4a82147041ae39d49, type: 3}
     - target: {fileID: 3977515067236964067, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_Name
       value: Planet3
@@ -1143,7 +1167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 482365367576749919, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_Name
-      value: UnlockWaterZone
+      value: UnlockWaterZoneButton
       objectReference: {fileID: 0}
     - target: {fileID: 482365367580816550, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_AnchorMin.y
@@ -1307,7 +1331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 482365368109396931, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_Name
-      value: UnlockMineralZone
+      value: UnlockMineralZoneButton
       objectReference: {fileID: 0}
     - target: {fileID: 482365368155987444, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: type
@@ -1547,7 +1571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 482365368904480388, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_Name
-      value: UnlockInvestmentZone
+      value: UnlockInvestmentZoneButton
       objectReference: {fileID: 0}
     - target: {fileID: 482365368960821025, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1583,7 +1607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 482365369167016194, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_Name
-      value: UnlockGeneralZone
+      value: UnlockGeneralZoneButton
       objectReference: {fileID: 0}
     - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1639,7 +1663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 482365369674125930, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_Name
-      value: UnlockFarmZone
+      value: UnlockFarmZoneButton
       objectReference: {fileID: 0}
     - target: {fileID: 1903319840352701381, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1906,6 +1930,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 482365367576749919, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockWaterZoneButton
+      objectReference: {fileID: 0}
     - target: {fileID: 482365367580816550, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -2065,6 +2093,10 @@ PrefabInstance:
     - target: {fileID: 482365368109396929, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365368109396931, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockMineralZoneButton
       objectReference: {fileID: 0}
     - target: {fileID: 482365368155987444, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: type
@@ -2302,6 +2334,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 482365368904480388, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockInvestmentZoneButton
+      objectReference: {fileID: 0}
     - target: {fileID: 482365368960821025, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2333,6 +2369,10 @@ PrefabInstance:
     - target: {fileID: 482365368973356400, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: type
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365369167016194, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockGeneralZoneButton
       objectReference: {fileID: 0}
     - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2385,6 +2425,10 @@ PrefabInstance:
     - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365369674125930, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockFarmZoneButton
       objectReference: {fileID: 0}
     - target: {fileID: 1903319840352701381, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2712,6 +2756,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 482365367576749919, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockWaterZoneButton
+      objectReference: {fileID: 0}
     - target: {fileID: 482365367580816550, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -2872,6 +2920,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 482365368109396931, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockMineralZoneButton
+      objectReference: {fileID: 0}
     - target: {fileID: 482365368170756806, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -3060,6 +3112,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 482365368904480388, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockInvestmentZoneButton
+      objectReference: {fileID: 0}
     - target: {fileID: 482365368960821025, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3087,6 +3143,10 @@ PrefabInstance:
     - target: {fileID: 482365368960821025, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365369167016194, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockGeneralZoneButton
       objectReference: {fileID: 0}
     - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -3139,6 +3199,10 @@ PrefabInstance:
     - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365369674125930, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockFarmZoneButton
       objectReference: {fileID: 0}
     - target: {fileID: 1903319840352701381, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3857,6 +3921,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 482365367576749919, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockWaterZoneButton
+      objectReference: {fileID: 0}
     - target: {fileID: 482365367580816550, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -4017,6 +4085,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 482365368109396931, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockMineralZoneButton
+      objectReference: {fileID: 0}
     - target: {fileID: 482365368170756806, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -4205,6 +4277,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 482365368904480388, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockInvestmentZoneButton
+      objectReference: {fileID: 0}
     - target: {fileID: 482365368960821025, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -4232,6 +4308,10 @@ PrefabInstance:
     - target: {fileID: 482365368960821025, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365369167016194, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockGeneralZoneButton
       objectReference: {fileID: 0}
     - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -4284,6 +4364,10 @@ PrefabInstance:
     - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365369674125930, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_Name
+      value: UnlockFarmZoneButton
       objectReference: {fileID: 0}
     - target: {fileID: 1903319840352701381, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_LocalPosition.x
