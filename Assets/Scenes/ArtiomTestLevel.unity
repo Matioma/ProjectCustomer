@@ -1080,6 +1080,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1778345993941588047, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
+      propertyPath: CurrentLevel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4226864059862069096, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
       propertyPath: vectorDirection.y
       value: -1.4
