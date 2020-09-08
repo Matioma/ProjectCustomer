@@ -26,6 +26,7 @@ public class CameraController : MonoBehaviour
             }
         }
     }
+
     [SerializeField, Tooltip("Position of the camera when zoomed out to view the world")]
     Transform worldViewTransform;
 
@@ -49,26 +50,21 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     Zone SelectedZone;
 
-
     public PlanetManager GetSelectedPlanet() {
         return SelectedPlanet;
     }
 
     [SerializeField, Tooltip("Sensitivity of the camera rotating around planets")]
-    float RotationSensitivity = 200;
+    float RotationSensitivity = 50;
 
     bool MousePressed;
-
     float MouseXAxis;
     float MouseYAxis;
     float ScrollAxis;
 
-
-
-    float MovementX, MovementY;
-
-
+    Vector2 movement;
     Vector2 rotationYSpeed;
+
     [SerializeField, Range(0,1), Tooltip("Increase the value to make the planet stop slower")]
     float planetInertia=0.95f;
     
@@ -76,12 +72,37 @@ public class CameraController : MonoBehaviour
     {
         Instance = this;
     }
-
     private void Start()
     {
         selectPlanet(SelectedPlanet);
     }
+    void readInput()
+    {
+        ScrollAxis = Input.GetAxis("Mouse ScrollWheel");
+        MouseXAxis = Input.GetAxis("Mouse X");
+        MouseYAxis = Input.GetAxis("Mouse Y");
 
+        RegisterMouseMovements();
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            MousePressed = true;
+            ResetMouseMovements();
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (movement.x == 0 && movement.y == 0)
+            {
+                TrySelectZone();
+            }
+
+            if (cameraState == CameraState.WatchingWorld)
+            {
+                TrySelectPlanet();
+            }
+            MousePressed = false;
+        }
+    }
     void Update()
     {
         readInput();
@@ -114,29 +135,17 @@ public class CameraController : MonoBehaviour
 
     private void selectPlanet(PlanetManager newSelectedPlanet)
     {
-        //Deselect pevious planet if any planet was selected
-        if (SelectedPlanet != null)
-        {
-            SelectedPlanet.GetComponent<PlanetManager>().Deselect();
-            OnDeselectPlanet?.Invoke();
-        }
+        deselectLastPlanet();
         SelectedPlanet = newSelectedPlanet;
-       
-        //If any zone was selected
-        if (SelectedZone != null)
-        {
-            //Delelect it
-            SelectedZone.GetComponent<ZoneSelection>().Deselect();
-        }
         ZoomToPlanet();
 
-        
         SelectedPlanet.GetComponent<PlanetManager>().Select(); //Inform the planet that it was selected
         OnSelectPlanet?.Invoke();
+
         cameraState = CameraState.OnPlanet;
     }
-    private void deselectPlanet() {
-        deselectZone();
+    private void deselectLastPlanet() {
+        deselectLastZone();
         if (SelectedPlanet != null)
         {
             SelectedPlanet.GetComponent<PlanetManager>().Deselect();
@@ -144,7 +153,7 @@ public class CameraController : MonoBehaviour
         }
         SelectedPlanet = null;
     }
-    private void deselectZone() {
+    private void deselectLastZone() {
         //If any zone was selected
         if (SelectedZone != null)
         {
@@ -154,7 +163,6 @@ public class CameraController : MonoBehaviour
         SelectedZone = null;
     }
     void TrySelectZone() {
-
         RaycastHit hitResult;
         LayerMask layerMask = LayerMask.GetMask("Continent", "Planet");
 
@@ -191,60 +199,26 @@ public class CameraController : MonoBehaviour
             }
             else if(newSelectedZone == null)
             {
-                deselectZone();
+                deselectLastZone();
             }
         }
        
     }
-
-    void readInput()
-    {
-        ScrollAxis = Input.GetAxis("Mouse ScrollWheel");
-        MouseXAxis = Input.GetAxis("Mouse X");
-        MouseYAxis = Input.GetAxis("Mouse Y");
-
-        RegisterMouseMovements();
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            MousePressed = true;
-            ResetMouseMovements();
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            if (MovementX == 0 && MovementY == 0) {
-                TrySelectZone();
-            }
-           
-            if (cameraState == CameraState.WatchingWorld)
-            {
-                TrySelectPlanet();
-            }
-            MousePressed = false;
-        }
-    }
-
-
     void ResetMouseMovements() {
-        MovementX = 0;
-        MovementY = 0;
+        movement = new Vector2(0, 0);
     }
     void RegisterMouseMovements() {
-        MovementX += Math.Abs(MouseXAxis);
-        MovementY += Math.Abs(MouseYAxis);
+        movement += new Vector2(Math.Abs(MouseXAxis), Math.Abs(MouseYAxis));
     }
-
-
     void zoomingCamera() {
         if(ScrollAxis <0){
-             deselectZone();
-            deselectPlanet();
+            deselectLastZone();
+            deselectLastPlanet();
            
-            StartCameraTransition(new MyTransform(worldViewTransform));
+            StartTransitionTo(new MyTransform(worldViewTransform));
             cameraState = CameraState.WatchingWorld;
         }
     }
-
     void rotateAroundThePlanet()
     {
         if (SelectedPlanet == null) {
@@ -263,15 +237,12 @@ public class CameraController : MonoBehaviour
 
         if (rotationYSpeed.sqrMagnitude > 0) {
             transform.RotateAround(SelectedPlanet.transform.position, transform.up, rotationYSpeed.x);
-            transform.RotateAround(SelectedPlanet.transform.position, transform.right, -rotationYSpeed.y * RotationSensitivity);
+            transform.RotateAround(SelectedPlanet.transform.position, transform.right, -rotationYSpeed.y);
 
             //Make Sure that Z axis rotation is 0
             transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
         }
-      
     }
-
-
     /// <summary>
     /// Zooms the Camera To the selected Planet
     /// </summary>
@@ -283,39 +254,30 @@ public class CameraController : MonoBehaviour
 
 
         //Struct info about target transform
-        MyTransform myTransform = new MyTransform(newPosition, lookAtRotation, new Vector3(1,1,1));
-        StartCameraTransition(myTransform);
+        MyTransform targetTransform = new MyTransform(newPosition, lookAtRotation, new Vector3(1,1,1));
+        StartTransitionTo(targetTransform);
     }
-
-
     void ZoomToRegion(RaycastHit hitResult) {
         var continentDirection =hitResult.transform.GetComponent<ContinentDirection>();
 
-
         Vector3 directionVector = hitResult.normal;
-
         if (continentDirection != null) {
             directionVector = continentDirection.getDirection().normalized;
         }
 
         Vector3 position = SelectedPlanet.transform.position + directionVector * SelectedPlanet.GetDistance();
-
-        //Vector3 position = SelectedPlanet.transform.position + hitResult.normal * SelectedPlanet.GetDistance();
         Quaternion lookAtRotation = Quaternion.LookRotation((SelectedPlanet.transform.position - position).normalized);
 
-        MyTransform myTransform = new MyTransform(position, lookAtRotation, new Vector3(1, 1, 1));
-        StartCameraTransition(myTransform);
-
+        MyTransform targetTransform = new MyTransform(position, lookAtRotation, new Vector3(1, 1, 1));
+        StartTransitionTo(targetTransform);
     }
-
-    void StartCameraTransition(MyTransform target)
+    void StartTransitionTo(MyTransform target)
     {
         initialTransform =new MyTransform(transform);
         targetTransform = target;
         progress = 0;
         isCameraTransitioning = true;
     }
-  
     void LerpTransform(MyTransform initialTransform, MyTransform targetTransform, float speed) {
         progress += 1/speed* Time.deltaTime;
 
@@ -327,7 +289,6 @@ public class CameraController : MonoBehaviour
             isCameraTransitioning = false;
         }
     }
-
     void SetCameraTransorm(MyTransform target)
     {
         this.transform.position = target.position;
