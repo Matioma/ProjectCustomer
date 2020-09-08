@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Selectable
   - Planet
+  - FarmZone
+  - WaterZone
+  - MineralZone
+  - InvestmentZone
   layers:
   - Default
   - TransparentFX

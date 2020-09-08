@@ -14,7 +14,8 @@ public enum CanvasType
     WaterZone,
     MineralZone,
     InvestmentZone,
-    TransportZone
+    TransportZone,
+    ResourseButtons
 }
 public class CanvasManager : MonoBehaviour
 {

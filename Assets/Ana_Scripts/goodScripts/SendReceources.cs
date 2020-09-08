@@ -8,17 +8,17 @@ public class SendReceources : MonoBehaviour
     int amount = 10;
     string destination="planetB";
 
-    public void ChangeTypeOfReceource(int i)
+    public void ChangeTypeOfReceource(Receources rec)
     {
-        switch (i)
+        switch (rec)
         {
-            case 1:
+            case Receources.SEEDS:
                 typeOfReceurce = Receources.SEEDS;
                 break;
-            case 2:
+            case Receources.WATER:
                 typeOfReceurce = Receources.WATER;
                 break;
-            case 3:
+            case Receources.MONEY:
                 typeOfReceurce = Receources.MONEY;
                 break;
         }

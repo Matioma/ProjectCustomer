@@ -7,7 +7,19 @@ public class UIPlanetManager : MonoBehaviour
     [SerializeField]
     List<GameObject> planets;
     [SerializeField]
-    List<GameObject> screens;
+    GameObject General;
+    [SerializeField]
+    GameObject FarmZone;
+    [SerializeField]
+    GameObject WaterZone;
+    [SerializeField]
+    GameObject MineralZone;
+    [SerializeField]
+    GameObject InvestmentZone;
+    [SerializeField]
+    GameObject TransportZone;
+    [SerializeField]
+    GameObject ResouceButtons;
 
     GameObject currentPlanet;
 
@@ -16,9 +28,19 @@ public class UIPlanetManager : MonoBehaviour
         currentPlanet = newPlanet;
     }
 
-    public void ChangeUI()
+    public GameObject GetCurrentPlanet()
     {
+        return currentPlanet;
+    }
 
+    public void UpdateAllScrreens()
+    {
+        UpdateGeneral();
+        UpdateFarmZone();
+        UpdateWaterZone();
+        UpdateMineralZone();
+        UpdateInvestmentZone();
+        UpdateTransportZone();
     }
 
     public void UpdateGeneral()
@@ -39,9 +61,20 @@ public class UIPlanetManager : MonoBehaviour
     {
 
     }
-
-    public void UpdateResourceButtons()
+    public void UpdateInvestmentZone()
     {
 
+    }
+    public void UpdateTransportZone()
+    {
+
+    }
+
+    public void UpdateResourceButtons(Receources rec, int amount)
+    {
+        if (ResouceButtons.activeSelf)
+        {
+            ResouceButtons.GetComponent<ResourcesButtonsUpdater>().ChangeAmount(rec, amount);
+        }
     }
 }

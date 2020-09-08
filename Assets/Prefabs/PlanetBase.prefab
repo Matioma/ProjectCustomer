@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 3186220992520656017}
   - component: {fileID: 8915508466609229516}
   - component: {fileID: 7872146719840547627}
-  - component: {fileID: 2775933803374895419}
   - component: {fileID: 4577470125203534665}
   - component: {fileID: 6440944392335169392}
   - component: {fileID: 4839684649985373481}
+  - component: {fileID: 2053789184292505859}
   m_Layer: 8
-  m_Name: PlanetSeparated
+  m_Name: PlanetBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,10 +51,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnSelected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4839684649985373481}
+        m_TargetAssemblyTypeName: CanvasSwitcher, Assembly-CSharp
+        m_MethodName: OnScreenChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CanvasSwitcher, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDeselected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 960105557966936106}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   MinCameraDistFromPlanet: 150
   rotationVelocity: {x: 0, y: 0, z: 0}
 --- !u!135 &7872146719840547627
@@ -70,22 +118,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 12.1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2775933803374895419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 960105557966936106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  seedsNeededToBuy: 10
-  WaterNeededToBuy: 10
-  MoneyNeededToBuy: 10
-  buyButton: {fileID: 0}
 --- !u!114 &4577470125203534665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +169,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 1
+--- !u!114 &2053789184292505859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960105557966936106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5560767393f5554ea98074d022b349c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiredCanvasType: 0
 --- !u!1 &1448231491055158182
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,6 +244,22 @@ MonoBehaviour:
     amount: 0
   - type: 0
     amount: 0
+--- !u!114 &1442059235034277479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501670569108425616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seedsNeededToBuy: 10
+  WaterNeededToBuy: 10
+  MoneyNeededToBuy: 10
+  buyButton: {fileID: 0}
 --- !u!114 &5340717293895582875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +301,22 @@ MonoBehaviour:
   receourcesToWork: 
   productivityTime: 5
   productionNumber: 15
+--- !u!114 &1886831795531625787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2189692856613845792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seedsNeededToBuy: 10
+  WaterNeededToBuy: 10
+  MoneyNeededToBuy: 10
+  buyButton: {fileID: 0}
 --- !u!114 &4964944637284562170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +389,10 @@ MonoBehaviour:
       m_Calls: []
   defaultMaterial: {fileID: 0}
   selectedMaterial: {fileID: 2100000, guid: 4670a99df6d211447aaed697f7d946ee, type: 2}
+  scaleRegion: 0.1
+  initialScale: {x: 0, y: 0, z: 0}
+  initialPosition: {x: 0, y: 0, z: 0}
+  moveBack: 15
 --- !u!114 &4430656356848845509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,6 +482,10 @@ MonoBehaviour:
       m_Calls: []
   defaultMaterial: {fileID: 0}
   selectedMaterial: {fileID: 2100000, guid: 4670a99df6d211447aaed697f7d946ee, type: 2}
+  scaleRegion: 0.1
+  initialScale: {x: 0, y: 0, z: 0}
+  initialPosition: {x: 0, y: 0, z: 0}
+  moveBack: 15
 --- !u!64 &1873188565828492117
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -447,6 +532,10 @@ MonoBehaviour:
       m_Calls: []
   defaultMaterial: {fileID: 0}
   selectedMaterial: {fileID: 2100000, guid: 4670a99df6d211447aaed697f7d946ee, type: 2}
+  scaleRegion: 0.1
+  initialScale: {x: 0, y: 0, z: 0}
+  initialPosition: {x: 0, y: 0, z: 0}
+  moveBack: 15
 --- !u!114 &6334328383360464485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,7 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VectorStart: {x: 9.69, y: 42.47, z: -38.6}
-  VectorDirection: {x: 5.49, y: 0.7, z: -24.74}
+  vectorDirection: {x: 0, y: 0, z: 0}
   VectorLength: 5
 --- !u!114 &6621118290065347796
 MonoBehaviour:
@@ -564,6 +653,26 @@ MonoBehaviour:
       m_Calls: []
   defaultMaterial: {fileID: 0}
   selectedMaterial: {fileID: 2100000, guid: 4670a99df6d211447aaed697f7d946ee, type: 2}
+  scaleRegion: 0.1
+  initialScale: {x: 0, y: 0, z: 0}
+  initialPosition: {x: 0, y: 0, z: 0}
+  moveBack: 15
+--- !u!114 &175386396935677734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7748492702444250564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seedsNeededToBuy: 10
+  WaterNeededToBuy: 10
+  MoneyNeededToBuy: 10
+  buyButton: {fileID: 0}
 --- !u!114 &2412541275699246805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,6 +702,22 @@ MonoBehaviour:
   receourcesToWork: 
   productivityTime: 5
   productionNumber: 15
+--- !u!114 &940413187777518273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8080353829169969543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seedsNeededToBuy: 10
+  WaterNeededToBuy: 10
+  MoneyNeededToBuy: 10
+  buyButton: {fileID: 0}
 --- !u!114 &1478860825743334720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,6 +818,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: continent2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 724ab54f84199244b8cb943dc461e7ef, type: 3}
+      propertyPath: m_TagString
+      value: WaterZone
+      objectReference: {fileID: 0}
     - target: {fileID: 2866621852552652557, guid: 724ab54f84199244b8cb943dc461e7ef, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -703,11 +832,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 724ab54f84199244b8cb943dc461e7ef, type: 3}
---- !u!1 &3849023795979706748 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2866621852552652557, guid: 724ab54f84199244b8cb943dc461e7ef, type: 3}
-  m_PrefabInstance: {fileID: 1342692662412609137}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1524620900897251738 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 724ab54f84199244b8cb943dc461e7ef, type: 3}
@@ -716,6 +840,11 @@ Transform:
 --- !u!1 &2189692856613845792 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 724ab54f84199244b8cb943dc461e7ef, type: 3}
+  m_PrefabInstance: {fileID: 1342692662412609137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3849023795979706748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2866621852552652557, guid: 724ab54f84199244b8cb943dc461e7ef, type: 3}
   m_PrefabInstance: {fileID: 1342692662412609137}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1735689866505680577
@@ -789,6 +918,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: continent4
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7f62e61ecda23b4489520a4513e1990e, type: 3}
+      propertyPath: m_TagString
+      value: InvestmentZone
+      objectReference: {fileID: 0}
     - target: {fileID: 2866621852552652557, guid: 7f62e61ecda23b4489520a4513e1990e, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -804,14 +937,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7f62e61ecda23b4489520a4513e1990e, type: 3}
   m_PrefabInstance: {fileID: 1735689866505680577}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2277926141420212522 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7f62e61ecda23b4489520a4513e1990e, type: 3}
-  m_PrefabInstance: {fileID: 1735689866505680577}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4602153114229084620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2866621852552652557, guid: 7f62e61ecda23b4489520a4513e1990e, type: 3}
+  m_PrefabInstance: {fileID: 1735689866505680577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2277926141420212522 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7f62e61ecda23b4489520a4513e1990e, type: 3}
   m_PrefabInstance: {fileID: 1735689866505680577}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2550457388834305269
@@ -967,6 +1100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Continent1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ec460728c9b43c49870077ffdff419a, type: 3}
+      propertyPath: m_TagString
+      value: FarmZone
+      objectReference: {fileID: 0}
     - target: {fileID: 2866621852552652557, guid: 0ec460728c9b43c49870077ffdff419a, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -977,9 +1114,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ec460728c9b43c49870077ffdff419a, type: 3}
---- !u!1 &7748492702444250564 stripped
+--- !u!1 &4648011398762053528 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ec460728c9b43c49870077ffdff419a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2866621852552652557, guid: 0ec460728c9b43c49870077ffdff419a, type: 3}
   m_PrefabInstance: {fileID: 7442555582263351445}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &6972695528300953470 stripped
@@ -987,9 +1124,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0ec460728c9b43c49870077ffdff419a, type: 3}
   m_PrefabInstance: {fileID: 7442555582263351445}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4648011398762053528 stripped
+--- !u!1 &7748492702444250564 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2866621852552652557, guid: 0ec460728c9b43c49870077ffdff419a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ec460728c9b43c49870077ffdff419a, type: 3}
   m_PrefabInstance: {fileID: 7442555582263351445}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8998833273084413142
@@ -1062,6 +1199,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 33393da7c33903a459ae0df79ecef9ab, type: 3}
       propertyPath: m_Name
       value: continent3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33393da7c33903a459ae0df79ecef9ab, type: 3}
+      propertyPath: m_TagString
+      value: MineralZone
       objectReference: {fileID: 0}
     - target: {fileID: 2866621852552652557, guid: 33393da7c33903a459ae0df79ecef9ab, type: 3}
       propertyPath: m_Layer

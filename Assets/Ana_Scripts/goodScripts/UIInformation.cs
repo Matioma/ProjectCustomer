@@ -50,7 +50,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources, int>
         resourcesNumber[rec] += amount;
         if (selected)
         {
-            mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons();
+            mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(rec,amount);
         }
     }
 
@@ -59,7 +59,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources, int>
         seedConsumptionAmount += amount;
         if (selected)
         {
-            mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(); // Replace
+            //mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(); // Replace
         }
     }
     public void ChangeConsumptionTimeSeeds(int amount)
@@ -67,7 +67,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources, int>
         seedConsumptionTime += amount;
         if (selected)
         {
-            mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(); // Replace
+            //mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(); // Replace
         }
     }
     public void ChangeConsumptionAmountWater(int amount)
@@ -75,7 +75,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources, int>
         waterConsumtionAmount += amount;
         if (selected)
         {
-            mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(); // Replace
+           // mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(); // Replace
         }
     }
     public void ChangeConsumptionTimeWater(int amount)
@@ -83,7 +83,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources, int>
         waterConsumtionTime += amount;
         if (selected)
         {
-            mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(); // Replace
+           // mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(); // Replace
         }
     }
     public int getSeedComsumptionAmount()
