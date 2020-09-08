@@ -5,5 +5,6 @@ public enum Receources
     SEEDS,
     WATER,
     MONEY,
-    ALL
+    ALL,
+    INDUSTRIAL
 }

@@ -12,6 +12,7 @@ public enum PlanetType
     Planet2,
     Planet3,
     Planet4,
+    Planet5,
     NoPlanet
 }
 
