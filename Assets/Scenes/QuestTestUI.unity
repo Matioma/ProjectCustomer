@@ -889,7 +889,7 @@ RectTransform:
   - {fileID: 1157204783}
   - {fileID: 682806738}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -949,7 +949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5319158110676492873, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5319158110676492873, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1230,7 +1230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5319158110676492873, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5319158110676492873, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3511,7 +3511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2662853383638204978, guid: 997f4e46273d8294da291ee2693b9ed8, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2662853383638204978, guid: 997f4e46273d8294da291ee2693b9ed8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3603,7 +3603,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1348041581
 PrefabInstance:
@@ -3670,7 +3670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7139615286648104475, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7139615286648104475, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3683,6 +3683,86 @@ PrefabInstance:
     - target: {fileID: 7139615286648104475, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: unlockZoneGoals.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: increaseProdGoals.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: unlockZoneGoals.Array.data[0].ZoneID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: unlockZoneGoals.Array.data[0].description
+      value: Unlock the mines, so they start producing money
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: unlockZoneGoals.Array.data[1].ZoneID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: unlockZoneGoals.Array.data[1].description
+      value: Unlock the water resources, so they start producing water
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: unlockZoneGoals.Array.data[1].goalIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: unlockZoneGoals.Array.data[2].description
+      value: Unlock the farms, so they start producing seeds
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: unlockZoneGoals.Array.data[2].goalIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: unlockZoneGoals.Array.data[3].ZoneID
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: unlockZoneGoals.Array.data[3].description
+      value: Unlock the industrial zone, so you can start upgrading
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: unlockZoneGoals.Array.data[3].goalIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: increaseProdGoals.Array.data[0].description
+      value: Invest in fertilizers to upgrade the farms
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: increaseProdGoals.Array.data[0].requiredAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: increaseProdGoals.Array.data[1].description
+      value: Invest in drain pipes to upgrade the water sources
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: increaseProdGoals.Array.data[1].requiredAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: increaseProdGoals.Array.data[1].goalIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: increaseProdGoals.Array.data[2].description
+      value: Invest in pikes to upgrade the mines
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: increaseProdGoals.Array.data[2].requiredAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: increaseProdGoals.Array.data[2].goalIndex
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287463492116, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: desiredCanvasType
@@ -3937,7 +4017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5319158110676492873, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5319158110676492873, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4724,7 +4804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5319158110676492873, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5319158110676492873, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
