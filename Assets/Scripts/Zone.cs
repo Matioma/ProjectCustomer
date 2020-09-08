@@ -23,7 +23,6 @@ public class Zone : MonoBehaviour
 
     public string Name;
 
-
     void Awake() {
     }
 }
