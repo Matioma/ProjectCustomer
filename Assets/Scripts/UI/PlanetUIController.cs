@@ -30,11 +30,11 @@ public class PlanetUIController : MonoBehaviour
 
         targetCamera = CameraController.Instance.transform;
 
-        PlanetManager planetManager = transform.parent.GetComponent<PlanetManager>();
+        Planet planetManager = transform.parent.GetComponent<Planet>();
         if (planetManager != null)
         {
-            transform.parent.GetComponent<PlanetManager>().OnSelected.AddListener(OpenUI);
-            transform.parent.GetComponent<PlanetManager>().OnDeselected.AddListener(CloseUI);
+            transform.parent.GetComponent<Planet>().OnSelected.AddListener(OpenUI);
+            transform.parent.GetComponent<Planet>().OnDeselected.AddListener(CloseUI);
         }
         else
         {
@@ -60,7 +60,7 @@ public class PlanetUIController : MonoBehaviour
 
     void Update()
     {
-        if (transform.parent.GetComponent<PlanetManager>().IsSelected)
+        if (transform.parent.GetComponent<Planet>().IsSelected)
         {
             transform.LookAt(targetCamera);
         }

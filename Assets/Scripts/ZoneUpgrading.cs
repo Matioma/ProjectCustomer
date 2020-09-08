@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZoneLeveling : MonoBehaviour
+public class ZoneUpgrading : MonoBehaviour
 {
     [SerializeField]
     int CurrentLevel=0;
@@ -41,7 +41,7 @@ public class ZoneLeveling : MonoBehaviour
     }
 
     void RemoveOldPrefabs() {
-        foreach (Transform child in this.transform)
+        foreach (Transform child in transform)
         {
             child.gameObject.SetActive(false);
         }

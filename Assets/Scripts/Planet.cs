@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PlanetManager : SelectableObject
+public class Planet : SelectableObject
 {
     public float MinCameraDistFromPlanet;
     public float GetDistance() {

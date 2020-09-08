@@ -820,30 +820,12 @@ MonoBehaviour:
   SelectedZone: {fileID: 0}
   RotationSensitivity: 6.56
   planetInertia: 0.936
---- !u!1 &1948720506 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5319158110676492874, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
-  m_PrefabInstance: {fileID: 5319158112100866987}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1948720507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948720506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8a13e27b52912e4f937a9aadb876a29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationVelocity: {x: 10, y: 0, z: 0}
 --- !u!114 &1961523688 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5319158110676492867, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
   m_PrefabInstance: {fileID: 5319158112100866987}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948720506}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6319a943366a9e04f846a86bad90aefd, type: 3}

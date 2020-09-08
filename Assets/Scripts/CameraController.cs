@@ -46,11 +46,11 @@ public class CameraController : MonoBehaviour
     public event Action OnSelectZone;
 
     [SerializeField]
-    PlanetManager SelectedPlanet;
+    Planet SelectedPlanet;
     [SerializeField]
-    Zone SelectedZone;
+    ZoneSelection SelectedZone;
 
-    public PlanetManager GetSelectedPlanet() {
+    public Planet GetSelectedPlanet() {
         return SelectedPlanet;
     }
 
@@ -115,15 +115,13 @@ public class CameraController : MonoBehaviour
             rotateAroundThePlanet();
         }
     }
-
-    
     void TrySelectPlanet(){
         RaycastHit hitResult;
         LayerMask layerMask = LayerMask.GetMask("Planet");
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hitResult, Mathf.Infinity, layerMask))
         {
-            PlanetManager newSelectedPlanet = hitResult.transform.GetComponent<PlanetManager>();
+            Planet newSelectedPlanet = hitResult.transform.GetComponent<Planet>();
 
             // If Clicked on a planet and it is different from already Selected Planet
             if (newSelectedPlanet != null && newSelectedPlanet!=SelectedPlanet)
@@ -132,14 +130,13 @@ public class CameraController : MonoBehaviour
             }
         }
     }
-
-    private void selectPlanet(PlanetManager newSelectedPlanet)
+    private void selectPlanet(Planet newSelectedPlanet)
     {
         deselectLastPlanet();
         SelectedPlanet = newSelectedPlanet;
         ZoomToPlanet();
 
-        SelectedPlanet.GetComponent<PlanetManager>().Select(); //Inform the planet that it was selected
+        SelectedPlanet.GetComponent<Planet>().Select(); //Inform the planet that it was selected
         OnSelectPlanet?.Invoke();
 
         cameraState = CameraState.OnPlanet;
@@ -148,7 +145,7 @@ public class CameraController : MonoBehaviour
         deselectLastZone();
         if (SelectedPlanet != null)
         {
-            SelectedPlanet.GetComponent<PlanetManager>().Deselect();
+            SelectedPlanet.GetComponent<Planet>().Deselect();
             OnDeselectPlanet?.Invoke();
         }
         SelectedPlanet = null;
@@ -169,14 +166,14 @@ public class CameraController : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hitResult, Mathf.Infinity, layerMask))
         {
-            Zone newSelectedZone = hitResult.transform.GetComponent<Zone>();
+            ZoneSelection newSelectedZone = hitResult.transform.GetComponent<ZoneSelection>();
 
 
             // If Clicked on a zone and it is different from already Selected Zone
             if (newSelectedZone != null && newSelectedZone != SelectedPlanet)
             {
                 // Make sure the user does not select zone From Another Planet
-                if (SelectedPlanet == null || newSelectedZone.GetComponentInParent<PlanetManager>() != SelectedPlanet)
+                if (SelectedPlanet == null || newSelectedZone.GetComponentInParent<Planet>() != SelectedPlanet)
                 {
                     return;
                 }
@@ -296,24 +293,3 @@ public class CameraController : MonoBehaviour
         transform.localScale = target.localScale;
     }
 }
-
-struct MyTransform {
-    public Vector3 position;
-    public Quaternion rotation;
-    public Vector3 localScale;
-
-    
-    public MyTransform(Vector3 position, Quaternion rotation, Vector3 scale){
-        this.position = position;
-        this.rotation = rotation;
-        this.localScale = scale;
-    }
-
-    public MyTransform(Transform tranform) {
-        this.position = tranform.position;
-        this.rotation = tranform.rotation;
-        this.localScale = tranform.localScale;
-    }
-}
-
-

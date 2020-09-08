@@ -5,26 +5,21 @@ using UnityEngine;
 
 public class ZoneSelection : SelectableObject
 {
-    [SerializeField]
     Material defaultMaterial;
     [SerializeField]
     Material selectedMaterial;
 
-
-
-    bool MouseOver = false;
-
     Renderer renderer;
 
-
-
-    PlanetManager parentPlanetManager;
+    Planet parentPlanetManager;
 
     public float scaleRegion = 0.1f;
 
-    public Vector3 initialScale;
-    public Vector3 initialPosition;
-    public float moveBack = 15f;
+    Vector3 initialScale;
+    Vector3 initialPosition;
+    
+    [SerializeField]
+    float ZoneDisplacement = 15f;
 
     void Awake() {
         renderer = GetComponent<Renderer>();
@@ -33,8 +28,7 @@ public class ZoneSelection : SelectableObject
         initialScale = transform.localScale;
         initialPosition = transform.localPosition;
         
-        parentPlanetManager = GetComponentInParent<PlanetManager>();
-
+        parentPlanetManager = GetComponentInParent<Planet>();
 
         OnSelected.AddListener(() =>
         {
@@ -43,13 +37,12 @@ public class ZoneSelection : SelectableObject
             ContinentDirection direction = GetComponent<ContinentDirection>();
             if (direction != null)
             {
-                transform.localPosition += direction.getDirection().normalized * (-moveBack);
+                transform.localPosition += direction.getDirection().normalized * (-ZoneDisplacement);
             }
             else {
                 Debug.Log("Zone does not have Continent Direction Attached");
             }
         });
-
         OnDeselected.AddListener(() =>
         {
             renderer.material = defaultMaterial;
@@ -57,19 +50,15 @@ public class ZoneSelection : SelectableObject
             transform.localScale = initialScale;
         });
     }
-
     void OnMouseOver() {
         if (parentPlanetManager != CameraController.Instance.GetSelectedPlanet()) {
             return;
         }
-
         if (!IsSelected )
         {
             renderer.material = selectedMaterial;
-
         }
     }
-
     void OnMouseExit() {
         if (parentPlanetManager != CameraController.Instance.GetSelectedPlanet())
         {

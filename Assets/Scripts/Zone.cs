@@ -13,8 +13,8 @@ enum PosibleActions
 public class Zone : MonoBehaviour
 {
     [SerializeField]
-    PlanetManager parentPlanet;
-    public PlanetManager PlanetContainingContinent() {
+    Planet parentPlanet;
+    public Planet PlanetContainingContinent() {
         return parentPlanet;
     }
 
