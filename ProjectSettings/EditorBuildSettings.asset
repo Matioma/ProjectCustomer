@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ArtiomTestLevel.unity
+    path: Assets/Scenes/marintest.unity
     guid: 41b0cb8dc47837f4498d4c37615fb4cc
   m_configObjects: {}

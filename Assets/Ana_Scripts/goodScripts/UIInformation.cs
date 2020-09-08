@@ -27,6 +27,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources, int>
     int seedConsumptionTime;
     int waterConsumtionAmount;
     int waterConsumtionTime;
+    [SerializeField]
     bool selected=false;
 
     Dictionary<Receources, int> resourcesNumber;
@@ -48,11 +49,11 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources, int>
     public void AddReceource(Receources rec, int amount)
     {
         resourcesNumber[rec] += amount;
-        Debug.Log(rec + resourcesNumber[rec]);
+        Debug.Log(selected);
         if (selected)
         {
-            //Debug.Log(rec+ resourcesNumber[rec]);
-            mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(rec,amount);
+            Debug.Log("change buttons");
+            mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(rec, resourcesNumber[rec]);
         }
     }
 
