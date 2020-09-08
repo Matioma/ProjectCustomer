@@ -18,7 +18,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources, int>
     [SerializeField]
     string descriptionIndZoneTransport;
     [SerializeField]
-    Canvas mainUI;
+    GameObject mainUI;
     [SerializeField]
     List<GameObject> zones;
     List<GameObject> planets;
@@ -48,8 +48,10 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources, int>
     public void AddReceource(Receources rec, int amount)
     {
         resourcesNumber[rec] += amount;
+        Debug.Log(rec + resourcesNumber[rec]);
         if (selected)
         {
+            //Debug.Log(rec+ resourcesNumber[rec]);
             mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(rec,amount);
         }
     }

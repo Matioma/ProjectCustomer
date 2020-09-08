@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4577470125203534665}
   - component: {fileID: 6440944392335169392}
   - component: {fileID: 4839684649985373481}
-  - component: {fileID: 2053789184292505859}
+  - component: {fileID: 723728432395195444}
   m_Layer: 8
   m_Name: PlanetBase
   m_TagString: Untagged
@@ -64,13 +64,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CanvasSwitcher, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 723728432395195444}
+        m_TargetAssemblyTypeName: PlanetSwitcher, Assembly-CSharp
+        m_MethodName: OnScreenChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4577470125203534665}
+        m_TargetAssemblyTypeName: UIInformation, Assembly-CSharp
+        m_MethodName: PlanetIsSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -79,20 +91,20 @@ MonoBehaviour:
   OnDeselected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 960105557966936106}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 4577470125203534665}
+        m_TargetAssemblyTypeName: UIInformation, Assembly-CSharp
+        m_MethodName: PlanetIsDeselected
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: UIInformation, Assembly-CSharp
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -169,7 +181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 1
---- !u!114 &2053789184292505859
+  canvasManager: {fileID: 0}
+--- !u!114 &723728432395195444
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,7 +191,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 960105557966936106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5560767393f5554ea98074d022b349c, type: 3}
+  m_Script: {fileID: 11500000, guid: e45f058b8fa30444f88fc53b48e0bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 0
@@ -285,6 +298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 5
+  canvasManager: {fileID: 0}
 --- !u!114 &1788230427369462930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 3
+  canvasManager: {fileID: 0}
 --- !u!64 &1656460127695698566
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -686,6 +701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 2
+  canvasManager: {fileID: 0}
 --- !u!114 &3844935686507009027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -747,6 +763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 4
+  canvasManager: {fileID: 0}
 --- !u!1001 &1342692662412609137
 PrefabInstance:
   m_ObjectHideFlags: 0

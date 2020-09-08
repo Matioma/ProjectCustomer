@@ -7,6 +7,7 @@ public class SendReceources : MonoBehaviour
     Receources typeOfReceurce=Receources.SEEDS;
     int amount = 10;
     string destination="planetB";
+    GameObject planetToSend;
 
     public void ChangeTypeOfReceource(Receources rec)
     {
@@ -27,18 +28,9 @@ public class SendReceources : MonoBehaviour
     {
         amount += newAmount;
     }
-    public void ChangeDestination(int index)
+    public void ChangeDestination(GameObject newPlanet)
     {
-        switch (index)
-        {
-            case 0:
-                destination = "planetB";
-                break;
-            case 1:
-                Debug.Log("namechange");
-                destination = "planetB";
-                break;
-        }
+        planetToSend = newPlanet;
         
     }
 
@@ -48,8 +40,7 @@ public class SendReceources : MonoBehaviour
         if (currentPlanet.GetReceouceNumber(typeOfReceurce) > amount)
         {
             currentPlanet.GetComponent<IReceourceAddition<Receources, int>>().AddReceource(typeOfReceurce, -amount);
-            GameObject newPlanet = GameObject.Find(destination);
-            newPlanet.GetComponent<IReceourceAddition<Receources, int>>().AddReceource(typeOfReceurce,amount);
+            planetToSend.GetComponent<IReceourceAddition<Receources, int>>().AddReceource(typeOfReceurce,amount);
         }
     }
 }
