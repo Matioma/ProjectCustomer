@@ -692,6 +692,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abca02dc3048247449f797c308a575b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seeds: {fileID: 0}
-  water: {fileID: 0}
-  money: {fileID: 0}
+  seeds: {fileID: 751167232179523644}
+  water: {fileID: 1292918053097044890}
+  money: {fileID: 8146065659715322137}
