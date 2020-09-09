@@ -11,6 +11,22 @@ public class SendReceources : MonoBehaviour
     [SerializeField]
     GameObject planetToSend;
 
+    public void ChangeTypeOfReceource(int i)
+    {
+        switch (i)
+        {
+            case 1:
+                typeOfReceurce = Receources.SEEDS;
+                break;
+            case 2:
+                typeOfReceurce = Receources.WATER;
+                break;
+            case 3:
+                typeOfReceurce = Receources.MONEY;
+                break;
+        }
+    }
+
     public void ChangeTypeOfReceource(Receources rec)
     {
         switch (rec)
@@ -27,8 +43,6 @@ public class SendReceources : MonoBehaviour
         }
     }
 
-
-    
     public void ChangeAmount(float newAmount)
     {
         amount = newAmount;

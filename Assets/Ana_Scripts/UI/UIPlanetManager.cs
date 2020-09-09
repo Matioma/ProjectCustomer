@@ -75,6 +75,7 @@ public class UIPlanetManager : MonoBehaviour
        // if (ResouceButtons.activeSelf)
        // {
             ResouceButtons.GetComponent<ResourcesButtonsUpdater>().ChangeAmount(rec, amount);
+        TransportZone.GetComponentInChildren<ChangeMaxValue>().ChangeValue(rec,amount);
        // }
     }
 }

@@ -27,6 +27,10 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources, int>
     int seedConsumptionTime;
     int waterConsumtionAmount;
     int waterConsumtionTime;
+    int seedProductionAmount;
+    int seedProductionTime;
+    int waterProductionAmount;
+    int waterProductionTime;
     [SerializeField]
     bool selected=false;
 
