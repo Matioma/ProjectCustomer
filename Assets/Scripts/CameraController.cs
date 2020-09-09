@@ -67,7 +67,11 @@ public class CameraController : MonoBehaviour
 
     [SerializeField, Range(0,1), Tooltip("Increase the value to make the planet stop slower")]
     float planetInertia=0.95f;
-    
+
+
+
+    [SerializeField, Tooltip("How much movement is allowed until the user is still selecting the planet")]
+    float maxMovementMagnitute = 0;
     private void Awake()
     {
         Instance = this;
@@ -91,7 +95,7 @@ public class CameraController : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
-            if (movement.x == 0 && movement.y == 0)
+            if (movement.sqrMagnitude <= maxMovementMagnitute)
             {
                 TrySelectZone();
             }

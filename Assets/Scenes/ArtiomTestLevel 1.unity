@@ -208,6 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfafbd5160ea7c4184e6f7357560fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planetToSend: {fileID: 0}
 --- !u!114 &391714448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlanetJungle
       objectReference: {fileID: 0}
+    - target: {fileID: 6173796089580408681, guid: c94530a15f657e346989dfa8567f599d, type: 3}
+      propertyPath: planetToSend
+      value: 
+      objectReference: {fileID: 1189141833}
     - target: {fileID: 8889643515201030342, guid: c94530a15f657e346989dfa8567f599d, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -406,6 +411,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1189141833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7139615286648104472, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+  m_PrefabInstance: {fileID: 1584404693}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1237278036
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,6 +514,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1417280361 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4810768850512914735, guid: c94530a15f657e346989dfa8567f599d, type: 3}
+  m_PrefabInstance: {fileID: 556699322}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6319a943366a9e04f846a86bad90aefd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1418450896 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7139615286648104465, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
@@ -766,21 +787,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldViewTransform: {fileID: 1432442782}
   transitionTime: 1
-  SelectedPlanet: {fileID: 1961523688}
+  SelectedPlanet: {fileID: 1417280361}
   SelectedZone: {fileID: 0}
   RotationSensitivity: 6.56
   planetInertia: 0.936
---- !u!114 &1961523688 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5319158110676492867, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
-  m_PrefabInstance: {fileID: 5319158112100866987}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6319a943366a9e04f846a86bad90aefd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  maxMovementMagnitute: 2
 --- !u!1001 &2662853383784809908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -806,7 +817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2662853383638204978, guid: 997f4e46273d8294da291ee2693b9ed8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 265
+      value: 246
       objectReference: {fileID: 0}
     - target: {fileID: 2662853383638204978, guid: 997f4e46273d8294da291ee2693b9ed8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -814,7 +825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2662853383638204978, guid: 997f4e46273d8294da291ee2693b9ed8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1107
+      value: -1032
       objectReference: {fileID: 0}
     - target: {fileID: 2662853383638204978, guid: 997f4e46273d8294da291ee2693b9ed8, type: 3}
       propertyPath: m_LocalRotation.x
