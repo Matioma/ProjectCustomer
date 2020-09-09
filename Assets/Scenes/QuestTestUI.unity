@@ -1408,6 +1408,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlanetJungle
       objectReference: {fileID: 0}
+    - target: {fileID: 4810768850512914726, guid: c94530a15f657e346989dfa8567f599d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4810768850512914735, guid: c94530a15f657e346989dfa8567f599d, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2329,7 +2333,7 @@ PrefabInstance:
       objectReference: {fileID: 1348041593}
     - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: WaterIsConsumed
+      value: FarmZoneIsBought
       objectReference: {fileID: 0}
     - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -3676,6 +3680,10 @@ PrefabInstance:
     - target: {fileID: 3841707436505670036, guid: 72c2d6a7716b36c4e90c7c46cf060cec, type: 3}
       propertyPath: m_Name
       value: PlatWar
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841707436505670036, guid: 72c2d6a7716b36c4e90c7c46cf060cec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3841707436505670038, guid: 72c2d6a7716b36c4e90c7c46cf060cec, type: 3}
       propertyPath: canvasManager
@@ -6682,6 +6690,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlanetDesert
       objectReference: {fileID: 0}
+    - target: {fileID: 5262235129502589644, guid: abdfd05c213f37945a96f4c679447de9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5262235129502589646, guid: abdfd05c213f37945a96f4c679447de9, type: 3}
       propertyPath: canvasManager
       value: 
@@ -6948,6 +6960,10 @@ PrefabInstance:
     - target: {fileID: 3192582621924008255, guid: e1834c65b5d58854d8be8e8994556da6, type: 3}
       propertyPath: m_Name
       value: PlanetIsland
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192582621924008255, guid: e1834c65b5d58854d8be8e8994556da6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3869013374503375384, guid: e1834c65b5d58854d8be8e8994556da6, type: 3}
       propertyPath: canvasManager
