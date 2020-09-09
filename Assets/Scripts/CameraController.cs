@@ -44,6 +44,7 @@ public class CameraController : MonoBehaviour
     public event Action OnSelectPlanet;
     public event Action OnDeselectPlanet;
     public event Action OnSelectZone;
+    public event Action OnZoomToWorldView;
 
     [SerializeField]
     Planet SelectedPlanet;
@@ -67,7 +68,11 @@ public class CameraController : MonoBehaviour
 
     [SerializeField, Range(0,1), Tooltip("Increase the value to make the planet stop slower")]
     float planetInertia=0.95f;
-    
+
+
+
+    [SerializeField, Tooltip("How much movement is allowed until the user is still selecting the planet")]
+    float maxMovementMagnitute = 0;
     private void Awake()
     {
         Instance = this;
@@ -86,12 +91,13 @@ public class CameraController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            MousePressed = true;
+            MousePressed = isHitingPlanet();
+            //MousePressed = true;
             ResetMouseMovements();
         }
         if (Input.GetMouseButtonUp(0))
         {
-            if (movement.x == 0 && movement.y == 0)
+            if (movement.sqrMagnitude <= maxMovementMagnitute)
             {
                 TrySelectZone();
             }
@@ -190,8 +196,6 @@ public class CameraController : MonoBehaviour
 
                 //hitResult.normal
                 ZoomToRegion(hitResult);
-
-
                 OnSelectZone?.Invoke();
             }
             else if(newSelectedZone == null)
@@ -207,6 +211,19 @@ public class CameraController : MonoBehaviour
     void RegisterMouseMovements() {
         movement += new Vector2(Math.Abs(MouseXAxis), Math.Abs(MouseYAxis));
     }
+
+    bool isHitingPlanet() {
+        RaycastHit hitResult;
+        LayerMask layerMask = LayerMask.GetMask("Planet");
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hitResult, Mathf.Infinity, layerMask))
+        {
+            return true;
+        }
+        return false;
+    }
+
     void zoomingCamera() {
         if(ScrollAxis <0){
             deselectLastZone();
@@ -214,10 +231,12 @@ public class CameraController : MonoBehaviour
            
             StartTransitionTo(new MyTransform(worldViewTransform));
             cameraState = CameraState.WatchingWorld;
+            OnZoomToWorldView?.Invoke();
         }
     }
     void rotateAroundThePlanet()
     {
+
         if (SelectedPlanet == null) {
             return;
         }

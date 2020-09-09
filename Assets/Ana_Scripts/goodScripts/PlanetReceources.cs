@@ -1,16 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int>, IEnablable<Receources>
 {
-    [SerializeField]
-    int moneynumber = 100;
-    [SerializeField]
-    int seednumber = 100;
-    [SerializeField]
-    int waternumber = 100;
+    //[SerializeField]
+    //int moneynumber = 100;
+    //[SerializeField]
+    //int seednumber = 100;
+    //[SerializeField]
+    //int waternumber = 100;
+
     [SerializeField]
     int seedConsumptionAmount = 1;
     [SerializeField]
@@ -22,6 +24,9 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int
     float waterTimer;
     float seedTimer;
     Dictionary<Receources, int> receourcesNumber;
+
+    bool isWaterConsuming = false;
+    bool isFarmZoneBought = false;
 
 
     [System.Serializable]
@@ -38,9 +43,8 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int
         return receourcesNumber;
     }
 
-    void Start()
+    void Awake()
     {
-        
         receourcesNumber = new Dictionary<Receources, int>();
         receourcesNumber.Add(Receources.MONEY, 0);
         receourcesNumber.Add(Receources.SEEDS, 0);
@@ -52,7 +56,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int
 
 
         seedTimer = seedConsumptionTime;
-        waterTimer = waterConsumtionAmount;
+        waterTimer = waterConsumtionTime;
     }
 
     bool isEnoughReceourse(Receources type)
@@ -64,21 +68,57 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int
 
     public void AddReceource(Receources rec, int amount)
     {
+        if (amount == 0) {
+            return;
+        }
         receourcesNumber[rec]+=amount;
         var addition = GetComponentInParent<UIInformation>();
-        addition.AddReceource(rec, amount);
-        Debug.Log(rec+"   "+ receourcesNumber[rec]);
+        if (addition == null) {
+            Debug.LogWarning(transform.name + " planet resources resources has no UIINFORMATION component");
+        }
+
+        addition?.AddReceource(rec, amount);
     }
+
 
 
     public int GetReceouceNumber(Receources type)
     {
         return receourcesNumber[type];
     }
-    void Update()
+    void FixedUpdate()
     {
         seedConsumption();
-        waterConsumption();
+        if (isWaterConsuming==true)
+        {
+            Debug.Log(isWaterConsuming);
+            waterConsumption();
+        }
+        if(isFarmZoneBought == true)
+        {
+            checkFarmZoneWorking();
+        }
+        
+        //Debug.Log(isWaterConsuming);
+    }
+    public void FarmZoneIsBought()
+    {
+        isWaterConsuming = true;
+        isFarmZoneBought = true;
+    }
+
+    private void checkFarmZoneWorking()
+    {
+        if (receourcesNumber[Receources.WATER] < waterConsumtionAmount)
+        {
+            GetComponentInChildren<EnableZone>().DisableZone();
+            isWaterConsuming = false;
+        }
+        else
+        {
+            GetComponentInChildren<EnableZone>().UnlockZone();
+            isWaterConsuming = true;
+        }
     }
 
     private void waterConsumption()

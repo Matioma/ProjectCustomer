@@ -7,6 +7,8 @@ public class SendReceources : MonoBehaviour
     Receources typeOfReceurce=Receources.SEEDS;
     float amount = 0;
     string destination="planetB";
+
+    [SerializeField]
     GameObject planetToSend;
 
     public void ChangeTypeOfReceource(Receources rec)
@@ -24,6 +26,9 @@ public class SendReceources : MonoBehaviour
                 break;
         }
     }
+
+
+    
     public void ChangeAmount(float newAmount)
     {
         amount = newAmount;
@@ -36,13 +41,51 @@ public class SendReceources : MonoBehaviour
         
     }
 
+
+    //private void Start()
+    //{
+    //    Send(planetToSend);
+    //}
+
     public void Send()
     {
+
+        //var currentPlanet = GetComponentInParent<PlanetReceources>();
+        //if (currentPlanet.GetReceouceNumber(typeOfReceurce) > amount)
+        //{
+        //    currentPlanet.GetComponent<IReceourceAddition<Receources, int>>().AddReceource(typeOfReceurce, (int)(-amount));
+        //    planetToSend.GetComponent<IReceourceAddition<Receources, int>>().AddReceource(typeOfReceurce, (int)(amount));
+
+        //    //Notify SpaceShipManager to send a ship
+        //    SpaceShipManager.Instance.SendShip(currentPlanet.GetComponentInParent<Planet>(), planetToSend.GetComponentInParent<Planet>(), typeOfReceurce, (int)amount);
+        //}
+
+
         var currentPlanet = GetComponentInParent<PlanetReceources>();
+        SpaceShipManager.Instance.SendShip(currentPlanet.GetComponentInParent<Planet>(), planetToSend.GetComponentInParent<Planet>(), typeOfReceurce, (int)amount);
+
         if (currentPlanet.GetReceouceNumber(typeOfReceurce) > amount)
         {
             currentPlanet.GetComponent<IReceourceAddition<Receources, int>>().AddReceource(typeOfReceurce, (int)(-amount));
-            planetToSend.GetComponent<IReceourceAddition<Receources, int>>().AddReceource(typeOfReceurce, (int)(amount));
+            //planetToSend.GetComponent<IReceourceAddition<Receources, int>>().AddReceource(typeOfReceurce, (int)(amount));
+
+            //Notify SpaceShipManager to send a ship
+            SpaceShipManager.Instance.SendShip(currentPlanet.GetComponentInParent<Planet>(), planetToSend.GetComponentInParent<Planet>(), typeOfReceurce, (int)amount);
+        }
+    }
+
+    public void Send(GameObject planetToSend)
+    {
+        var currentPlanet = GetComponentInParent<PlanetReceources>();
+        SpaceShipManager.Instance.SendShip(currentPlanet.GetComponentInParent<Planet>(), planetToSend.GetComponentInParent<Planet>(), typeOfReceurce, (int)amount);
+
+        if (currentPlanet.GetReceouceNumber(typeOfReceurce) > amount)
+        {
+            currentPlanet.GetComponent<IReceourceAddition<Receources, int>>().AddReceource(typeOfReceurce, (int)(-amount));
+            //planetToSend.GetComponent<IReceourceAddition<Receources, int>>().AddReceource(typeOfReceurce, (int)(amount));
+
+            //Notify SpaceShipManager to send a ship
+            SpaceShipManager.Instance.SendShip(currentPlanet.GetComponentInParent<Planet>(), planetToSend.GetComponentInParent<Planet>(), typeOfReceurce, (int)amount);
         }
     }
 }

@@ -43,3 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481f1fad56214f94a9fea5a2a7ca661c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpaceShipPrefab: {fileID: 3549744117627452489, guid: 3c9aac5f418bc454695514ef305177b4, type: 3}
+  sendingPlanet: {fileID: 0}
+  targetPlanet: {fileID: 0}

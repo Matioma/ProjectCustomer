@@ -48,11 +48,13 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources, int>
 
     public void AddReceource(Receources rec, int amount)
     {
-        resourcesNumber[rec] += amount;
-        Debug.Log(selected);
+        //resourcesNumber[rec] += amount;
+
+
+        //Debug.Log(selected);
         if (selected)
         {
-            Debug.Log("change buttons");
+
             mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(rec, resourcesNumber[rec]);
         }
     }

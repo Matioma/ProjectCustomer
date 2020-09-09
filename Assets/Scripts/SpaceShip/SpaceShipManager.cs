@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class SpaceShipManager : MonoBehaviour
 {
-    SpaceShipManager _instance;
+    static SpaceShipManager _instance;
 
-    public SpaceShipManager Instance
+    public static  SpaceShipManager Instance
     {
         get {
             if (_instance == null) {
@@ -44,14 +44,15 @@ public class SpaceShipManager : MonoBehaviour
     [SerializeField]
     Planet targetPlanet;
 
-    public void SendShip(Planet from, Planet to) {
+    public void SendShip(Planet from, Planet to, Receources resource, int amount) {
         GameObject spaceShipRef =Instantiate(SpaceShipPrefab, from.transform.position, Quaternion.identity);
         spaceShipRef.GetComponent<SpaceShipController>()?.SetTargetPlanet(to);
+        spaceShipRef.GetComponent<PlanetReceources>()?.AddReceource(resource, amount);
     }
     void Start()
     {
         if (sendingPlanet != null && targetPlanet != null) {
-            SendShip(sendingPlanet, targetPlanet);
+            SendShip(sendingPlanet, targetPlanet, Receources.MONEY,50);
         }
     }
 }

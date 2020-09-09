@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfafbd5160ea7c4184e6f7357560fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planetToSend: {fileID: 0}
 --- !u!114 &8308410031421547196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9586,9 +9587,23 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.015596557
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: -8679921383154817045, guid: c46b8ef3f93dc114a9f951c962ec9ff4, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.015596558
+=======
+    - target: {fileID: 5513988969109085172, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4864056309639282896, guid: 06a3f5508d9acdb4da89d233ae3f91ae, type: 3}
+    - target: {fileID: 6429520626093868331, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4864056309639282896, guid: 21cde4f8c95eab949b6a5e72f161352d, type: 3}
+    - target: {fileID: 7933437628813003782, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+>>>>>>> c4c1117fe076228c2792ccd5af6a7f2fa588b83e
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c46b8ef3f93dc114a9f951c962ec9ff4, type: 3}
       propertyPath: m_LocalScale.z

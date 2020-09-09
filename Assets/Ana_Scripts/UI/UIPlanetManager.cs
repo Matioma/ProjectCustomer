@@ -75,7 +75,6 @@ public class UIPlanetManager : MonoBehaviour
        // if (ResouceButtons.activeSelf)
        // {
             ResouceButtons.GetComponent<ResourcesButtonsUpdater>().ChangeAmount(rec, amount);
-        Debug.Log("textchange");
        // }
     }
 }
