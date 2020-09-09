@@ -1510,6 +1510,10 @@ PrefabInstance:
       propertyPath: canvasManager
       value: 
       objectReference: {fileID: 1258297479}
+    - target: {fileID: 4810768849131042092, guid: c94530a15f657e346989dfa8567f599d, type: 3}
+      propertyPath: vectorDirection.x
+      value: -0.52
+      objectReference: {fileID: 0}
     - target: {fileID: 4810768850512914722, guid: c94530a15f657e346989dfa8567f599d, type: 3}
       propertyPath: mainUI
       value: 
@@ -2008,6 +2012,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 482365367816393605, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 482365367972456353, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -2090,19 +2098,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 482365368109396928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.82
+      value: 0.7035
       objectReference: {fileID: 0}
     - target: {fileID: 482365368109396928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.82
+      value: 0.7035
       objectReference: {fileID: 0}
     - target: {fileID: 482365368109396928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.82
+      value: 0.7035
       objectReference: {fileID: 0}
     - target: {fileID: 482365368109396928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -57
+      value: 193.3
       objectReference: {fileID: 0}
     - target: {fileID: 482365368109396929, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2547,6 +2555,14 @@ PrefabInstance:
     - target: {fileID: 482365369167016194, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_Name
       value: UnlockGeneralZoneButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365369167016194, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365369173136512, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 482365369499562097, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_AnchorMin.y
@@ -3382,7 +3398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 482365368155987446, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 482365368170756806, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_AnchorMin.y
@@ -3795,6 +3811,10 @@ PrefabInstance:
     - target: {fileID: 482365369674125930, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_Name
       value: UnlockFarmZoneButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365369674125931, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 193.3
       objectReference: {fileID: 0}
     - target: {fileID: 529690180523570312, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_LocalPosition.x
