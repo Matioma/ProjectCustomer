@@ -25,7 +25,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int
     float seedTimer;
     Dictionary<Receources, int> receourcesNumber;
 
-
+    bool isWaterConsuming = false;
 
 
     [System.Serializable]
@@ -55,7 +55,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int
 
 
         seedTimer = seedConsumptionTime;
-        waterTimer = waterConsumtionAmount;
+        waterTimer = waterConsumtionTime;
     }
 
     bool isEnoughReceourse(Receources type)
@@ -85,10 +85,32 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int
     {
         return receourcesNumber[type];
     }
-    void Update()
+    void FixedUpdate()
     {
         seedConsumption();
-        waterConsumption();
+        if (isWaterConsuming)
+        {
+            waterConsumption();
+        }
+        checkFarmZoneWorking();
+    }
+    public void WaterIsConsumed()
+    {
+        isWaterConsuming = true;
+    }
+
+    private void checkFarmZoneWorking()
+    {
+        if (receourcesNumber[Receources.WATER] < waterConsumtionAmount)
+        {
+            GetComponentInChildren<EnableZone>().DisableZone();
+            isWaterConsuming = false;
+        }
+        else
+        {
+            GetComponentInChildren<EnableZone>().UnlockZone();
+            isWaterConsuming = true;
+        }
     }
 
     private void waterConsumption()
