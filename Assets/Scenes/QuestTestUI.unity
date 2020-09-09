@@ -4819,9 +4819,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldViewTransform: {fileID: 1707757964}
   transitionTime: 1
-  SelectedPlanet: {fileID: 7139615286648104465, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+  SelectedPlanet: {fileID: 1348041612}
   SelectedZone: {fileID: 0}
-  RotationSensitivity: 5
+  RotationSensitivity: 1.5
   planetInertia: 0.95
   maxMovementMagnitute: 0
 --- !u!1 &1284005019 stripped
@@ -5208,7 +5208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: seedConsumptionAmount
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: seedConsumptionTime
@@ -5455,6 +5455,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 0
+--- !u!114 &1348041612 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7139615286648104465, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+  m_PrefabInstance: {fileID: 1348041581}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348041592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6319a943366a9e04f846a86bad90aefd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1472915861 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1630043061501184022, guid: abdfd05c213f37945a96f4c679447de9, type: 3}
