@@ -90,7 +90,8 @@ public class CameraController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            MousePressed = true;
+            MousePressed = isHitingPlanet();
+            //MousePressed = true;
             ResetMouseMovements();
         }
         if (Input.GetMouseButtonUp(0))
@@ -211,6 +212,19 @@ public class CameraController : MonoBehaviour
     void RegisterMouseMovements() {
         movement += new Vector2(Math.Abs(MouseXAxis), Math.Abs(MouseYAxis));
     }
+
+    bool isHitingPlanet() {
+        RaycastHit hitResult;
+        LayerMask layerMask = LayerMask.GetMask("Planet");
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hitResult, Mathf.Infinity, layerMask))
+        {
+            return true;
+        }
+        return false;
+    }
+
     void zoomingCamera() {
         if(ScrollAxis <0){
             deselectLastZone();
@@ -222,6 +236,7 @@ public class CameraController : MonoBehaviour
     }
     void rotateAroundThePlanet()
     {
+
         if (SelectedPlanet == null) {
             return;
         }
