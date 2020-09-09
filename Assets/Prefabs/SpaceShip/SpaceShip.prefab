@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 293999331355873650}
   - component: {fileID: 4825762765594090736}
+  - component: {fileID: 3716826734792407612}
+  - component: {fileID: 7669282737638590081}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
@@ -46,6 +48,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlanet: {fileID: 0}
   speed: 10
+--- !u!54 &3716826734792407612
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3549744117627452489}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &7669282737638590081
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3549744117627452489}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6091381232216991481
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,7 +88,6 @@ GameObject:
   - component: {fileID: 7448107233217167376}
   - component: {fileID: 1081420530643018889}
   - component: {fileID: 3883924046990885691}
-  - component: {fileID: 4876696223565978480}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
@@ -128,16 +158,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4876696223565978480
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6091381232216991481}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
