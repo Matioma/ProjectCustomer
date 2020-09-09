@@ -5,7 +5,7 @@ using UnityEngine;
 public class SendReceources : MonoBehaviour
 {
     Receources typeOfReceurce=Receources.SEEDS;
-    int amount = 10;
+    float amount = 0;
     string destination="planetB";
     GameObject planetToSend;
 
@@ -24,10 +24,12 @@ public class SendReceources : MonoBehaviour
                 break;
         }
     }
-    public void ChangeAmount(int newAmount)
+    public void ChangeAmount(float newAmount)
     {
-        amount += newAmount;
+        amount = newAmount;
     }
+
+
     public void ChangeDestination(GameObject newPlanet)
     {
         planetToSend = newPlanet;
@@ -39,8 +41,8 @@ public class SendReceources : MonoBehaviour
         var currentPlanet = GetComponentInParent<PlanetReceources>();
         if (currentPlanet.GetReceouceNumber(typeOfReceurce) > amount)
         {
-            currentPlanet.GetComponent<IReceourceAddition<Receources, int>>().AddReceource(typeOfReceurce, -amount);
-            planetToSend.GetComponent<IReceourceAddition<Receources, int>>().AddReceource(typeOfReceurce,amount);
+            currentPlanet.GetComponent<IReceourceAddition<Receources, int>>().AddReceource(typeOfReceurce, (int)(-amount));
+            planetToSend.GetComponent<IReceourceAddition<Receources, int>>().AddReceource(typeOfReceurce, (int)(amount));
         }
     }
 }

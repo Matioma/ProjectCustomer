@@ -1,5 +1,95 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &2814611227493863331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4148120228414800065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seedsNeededToBuy: 10
+  WaterNeededToBuy: 10
+  MoneyNeededToBuy: 10
+  buyButton: {fileID: 0}
+--- !u!114 &5424536484643031259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2492034704327148787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seedsNeededToBuy: 10
+  WaterNeededToBuy: 10
+  MoneyNeededToBuy: 10
+  buyButton: {fileID: 0}
+--- !u!114 &6407412202282389380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5397759007028646377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seedsNeededToBuy: 10
+  WaterNeededToBuy: 10
+  MoneyNeededToBuy: 10
+  buyButton: {fileID: 0}
+--- !u!114 &5287925575511354131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922516531170639988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfafbd5160ea7c4184e6f7357560fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6327141424506459559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922516531170639988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5560767393f5554ea98074d022b349c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiredCanvasType: 5
+  canvasManager: {fileID: 0}
+--- !u!114 &8423587551596840263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922516531170639988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seedsNeededToBuy: 10
+  WaterNeededToBuy: 10
+  MoneyNeededToBuy: 10
+  buyButton: {fileID: 0}
 --- !u!1001 &8971467951599715294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7,6 +97,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4226864059862069100, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
+      propertyPath: typeOfReceource
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4226864059862069102, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
+      propertyPath: desiredCanvasType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5319158110676492873, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -53,7 +151,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5319158110676492874, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
       propertyPath: m_Name
-      value: BasePlanet
+      value: PlatWar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091949781510587306, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
+--- !u!1 &4148120228414800065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4976508164328506143, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
+  m_PrefabInstance: {fileID: 8971467951599715294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2492034704327148787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6779169566170449709, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
+  m_PrefabInstance: {fileID: 8971467951599715294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5397759007028646377 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3920875671730819639, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
+  m_PrefabInstance: {fileID: 8971467951599715294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &922516531170639988 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8091949781510587306, guid: dd9c2f3665b5eb543a0f158a88603c5c, type: 3}
+  m_PrefabInstance: {fileID: 8971467951599715294}
+  m_PrefabAsset: {fileID: 0}

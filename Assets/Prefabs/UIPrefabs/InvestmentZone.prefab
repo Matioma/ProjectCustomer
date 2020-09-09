@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 7471611243875809810}
   - component: {fileID: 7471611243875809811}
   - component: {fileID: 7471611243875809812}
+  - component: {fileID: 6619932251095000116}
   m_Layer: 5
   m_Name: TransferButton
   m_TagString: Untagged
@@ -151,7 +152,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7471611243875809811}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6619932251095000116}
+        m_TargetAssemblyTypeName: CanvasSwitcher, Assembly-CSharp
+        m_MethodName: OnScreenChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6619932251095000116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7471611243875809814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5560767393f5554ea98074d022b349c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiredCanvasType: 6
+  canvasManager: {fileID: 0}
 --- !u!1 &7471611243884647699
 GameObject:
   m_ObjectHideFlags: 0
@@ -1766,7 +1793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1120cad3044e749a46edf182502e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 6
+  type: 5
 --- !u!1 &7471611245374843933
 GameObject:
   m_ObjectHideFlags: 0
