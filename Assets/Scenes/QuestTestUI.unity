@@ -1838,6 +1838,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 4
+--- !u!114 &884021730 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 157250133012360823, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+  m_PrefabInstance: {fileID: 1035658458}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1035658458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1848,15 +1859,15 @@ PrefabInstance:
     - target: {fileID: 235474451799080807, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: money
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 884021730}
     - target: {fileID: 235474451799080807, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: water
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1434561505}
     - target: {fileID: 235474451799080807, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: seeds
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1776851279}
     - target: {fileID: 482365367576749917, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -2156,6 +2167,10 @@ PrefabInstance:
     - target: {fileID: 482365368155987444, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: type
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365368155987446, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 482365368170756806, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_AnchorMin.y
@@ -2476,6 +2491,10 @@ PrefabInstance:
     - target: {fileID: 482365368973356400, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: type
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365368973356402, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 482365368973356403, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5520,9 +5539,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldViewTransform: {fileID: 1707757964}
   transitionTime: 1
-  SelectedPlanet: {fileID: 7139615286648104465, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+  SelectedPlanet: {fileID: 1348041609}
   SelectedZone: {fileID: 0}
-  RotationSensitivity: 5
+  RotationSensitivity: 1.5
   planetInertia: 0.95
   maxMovementMagnitute: 0
 --- !u!1 &1284005019 stripped
@@ -5581,11 +5600,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1183503525224180542, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: productivityTime
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1183503525224180542, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: productionNumber
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1183503525224180542, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: m_Enabled
@@ -5909,7 +5928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: seedConsumptionAmount
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: seedConsumptionTime
@@ -5921,7 +5940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: waterConsumtionTime
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: recs.Array.data[1].type
@@ -5957,7 +5976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8651814300453633572, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: productivityTime
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8651814300453633572, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: productionNumber
@@ -6119,6 +6138,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c2e769f79717043a8a1ff940925b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1348041609 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7139615286648104465, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+  m_PrefabInstance: {fileID: 1348041581}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348041592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6319a943366a9e04f846a86bad90aefd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1348041610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6132,6 +6162,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 0
+--- !u!114 &1434561505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7121131888383317236, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+  m_PrefabInstance: {fileID: 1035658458}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1472915861 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1630043061501184022, guid: abdfd05c213f37945a96f4c679447de9, type: 3}
@@ -7299,6 +7340,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5560767393f5554ea98074d022b349c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1776851279 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8741107791298297682, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+  m_PrefabInstance: {fileID: 1035658458}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1803794712
