@@ -24,6 +24,9 @@ public class SendReceources : MonoBehaviour
                 break;
         }
     }
+
+
+    
     public void ChangeAmount(float newAmount)
     {
         amount = newAmount;
@@ -43,6 +46,10 @@ public class SendReceources : MonoBehaviour
         {
             currentPlanet.GetComponent<IReceourceAddition<Receources, int>>().AddReceource(typeOfReceurce, (int)(-amount));
             planetToSend.GetComponent<IReceourceAddition<Receources, int>>().AddReceource(typeOfReceurce, (int)(amount));
+
+
+            //Notify SpaceShipManager to send a ship
+            SpaceShipManager.Instance.SendShip(currentPlanet.GetComponentInParent<Planet>(), planetToSend.GetComponentInParent<Planet>(), typeOfReceurce, (int)amount);
         }
     }
 }

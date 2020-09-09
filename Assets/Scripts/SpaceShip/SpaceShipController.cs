@@ -26,12 +26,23 @@ public class SpaceShipController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == targetPlanet.gameObject) {
-            UnloadTheShip();
+            UnloadTheShip(other.gameObject.GetComponentInChildren<PlanetReceources>());
         }
     }
-    void UnloadTheShip()
+    void UnloadTheShip(IReceourceAddition<Receources, int> planetReceources)
     {
-        Debug.Log("Unload the ship, reached the destination");
+        PlanetReceources thisShipResources = GetComponent<PlanetReceources>();
+
+        if (planetReceources != null)
+        {
+            foreach (var resource in thisShipResources.GetResouses())
+            {
+                planetReceources.AddReceource(resource.Key, resource.Value);
+            }
+        }
+        else {
+            Debug.Log("The target planet has no PlanetResources component");
+        }
         Destroy(this.gameObject);
     }
 
