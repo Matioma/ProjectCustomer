@@ -23,13 +23,12 @@ public class ResourcesButtonsUpdater : MonoBehaviour
             case Receources.SEEDS:
                 seedsNumber = amount;
                 seeds.text = seedsNumber.ToString();
-                Debug.Log(seeds.text+"text");
                 break;
             case Receources.WATER:
                 
                 waterNumber = amount;
                 water.text = waterNumber.ToString();
-                Debug.Log(water.text + "text");
+
                 break;
             case Receources.MONEY:
                 moneyNumber = amount;

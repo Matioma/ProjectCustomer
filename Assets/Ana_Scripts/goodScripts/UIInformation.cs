@@ -54,7 +54,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources, int>
         //Debug.Log(selected);
         if (selected)
         {
-            Debug.Log("change buttons");
+
             mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(rec, resourcesNumber[rec]);
         }
     }

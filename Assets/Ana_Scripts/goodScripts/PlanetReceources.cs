@@ -26,6 +26,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int
     Dictionary<Receources, int> receourcesNumber;
 
     bool isWaterConsuming = false;
+    bool isFarmZoneBought = false;
 
 
     [System.Serializable]
@@ -88,15 +89,22 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int
     void FixedUpdate()
     {
         seedConsumption();
-        if (isWaterConsuming)
+        if (isWaterConsuming==true)
         {
+            Debug.Log(isWaterConsuming);
             waterConsumption();
         }
-        checkFarmZoneWorking();
+        if(isFarmZoneBought == true)
+        {
+            checkFarmZoneWorking();
+        }
+        
+        //Debug.Log(isWaterConsuming);
     }
-    public void WaterIsConsumed()
+    public void FarmZoneIsBought()
     {
         isWaterConsuming = true;
+        isFarmZoneBought = true;
     }
 
     private void checkFarmZoneWorking()

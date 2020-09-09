@@ -2261,7 +2261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -2309,6 +2309,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PlanetReceources, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1348041593}
+    - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: WaterIsConsumed
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 482365369674125930, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
@@ -4791,6 +4815,7 @@ MonoBehaviour:
   SelectedZone: {fileID: 0}
   RotationSensitivity: 5
   planetInertia: 0.95
+  maxMovementMagnitute: 0
 --- !u!1 &1284005019 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 482365368109396931, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
@@ -5279,6 +5304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfafbd5160ea7c4184e6f7357560fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planetToSend: {fileID: 0}
 --- !u!114 &1348041587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5362,6 +5388,30 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7139615286648104472, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
   m_PrefabInstance: {fileID: 1348041581}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1348041593 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+  m_PrefabInstance: {fileID: 1348041581}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d110b2aaa5ecd3d47b3405b7cda3e870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1348041594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348041584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc536075609758e4b81d3e2edd83b9b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zone: {fileID: 1348041584}
 --- !u!114 &1348041605 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7139615286648104474, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
