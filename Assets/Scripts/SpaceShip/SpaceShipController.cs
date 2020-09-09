@@ -23,4 +23,17 @@ public class SpaceShipController : MonoBehaviour
         transform.LookAt(targetPlanet.transform);
         transform.position += transform.forward * speed * Time.deltaTime;
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == targetPlanet.gameObject) {
+            UnloadTheShip();
+        }
+    }
+    void UnloadTheShip()
+    {
+        Debug.Log("Unload the ship, reached the destination");
+        Destroy(this.gameObject);
+    }
+
+
 }

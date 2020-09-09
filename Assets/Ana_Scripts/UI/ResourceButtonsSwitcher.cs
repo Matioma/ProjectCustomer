@@ -6,7 +6,8 @@ using UnityEngine.UIElements;
 public class ResourceButtonsSwitcher : MonoBehaviour
 {
 
-    //[SerializeField]
+    [SerializeField]
+    GameObject planet;
     //List<Button> resourcesButtons;
 
     private void Awake()
@@ -17,8 +18,8 @@ public class ResourceButtonsSwitcher : MonoBehaviour
     public void Enable()
     {
         this.gameObject.SetActive(true);
-        var m = GetComponentInParent<UIPlanetManager>().GetCurrentPlanet();
-        var p = m.GetComponent<UIInformation>();
+        //var m = GetComponentInParent<UIPlanetManager>().GetCurrentPlanet();
+        var p = planet.GetComponent<UIInformation>();
         GetComponent<ResourcesButtonsUpdater>().ResetButtons( p.GetReceouceNumber(Receources.SEEDS), p.GetReceouceNumber(Receources.WATER), p.GetReceouceNumber(Receources.MONEY));
     }
 
