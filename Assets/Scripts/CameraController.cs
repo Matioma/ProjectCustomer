@@ -44,6 +44,7 @@ public class CameraController : MonoBehaviour
     public event Action OnSelectPlanet;
     public event Action OnDeselectPlanet;
     public event Action OnSelectZone;
+    public event Action OnZoomToWorldView;
 
     [SerializeField]
     Planet SelectedPlanet;
@@ -195,8 +196,6 @@ public class CameraController : MonoBehaviour
 
                 //hitResult.normal
                 ZoomToRegion(hitResult);
-
-
                 OnSelectZone?.Invoke();
             }
             else if(newSelectedZone == null)
@@ -232,6 +231,7 @@ public class CameraController : MonoBehaviour
            
             StartTransitionTo(new MyTransform(worldViewTransform));
             cameraState = CameraState.WatchingWorld;
+            OnZoomToWorldView?.Invoke();
         }
     }
     void rotateAroundThePlanet()

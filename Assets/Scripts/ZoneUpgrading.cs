@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ public class ZoneUpgrading : MonoBehaviour
     int CurrentLevel=0;
 
     public List<GameObject> LevelsPrefabs;
+
+    public event Action OnUpgrade;
 
     private void Start()
     {
@@ -30,6 +33,7 @@ public class ZoneUpgrading : MonoBehaviour
             CurrentLevel++;
             RemoveOldPrefabs();
             ChangePrefab();
+            OnUpgrade?.Invoke();
         }
         else{
             Debug.Log("Tried to Upgrade region out of it max capacity");
