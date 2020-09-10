@@ -6981,11 +6981,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: seedConsumptionAmount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: seedConsumptionTime
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: waterConsumtionAmount
@@ -7181,7 +7181,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d9d059f51457784ba521c4a8ff0a4f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrades: []
+  upgrades:
+  - productivityIncrease: 0
+    price: 0
   button: {fileID: 1668340655}
 --- !u!114 &1348041594
 MonoBehaviour:
@@ -7195,7 +7197,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d9d059f51457784ba521c4a8ff0a4f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrades: []
+  upgrades:
+  - productivityIncrease: 0
+    price: 0
   button: {fileID: 1589859362}
 --- !u!114 &1348041595
 MonoBehaviour:
@@ -7210,8 +7214,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrades:
-  - productivityIncrease: 0
-    price: 0
   - productivityIncrease: 0
     price: 0
   button: {fileID: 1668340655}
