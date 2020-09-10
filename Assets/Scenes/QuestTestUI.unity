@@ -365,6 +365,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: JunglePlanet
       objectReference: {fileID: 0}
+    - target: {fileID: 6602431170377263407, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: Farm
+      value: 
+      objectReference: {fileID: 119743508}
+    - target: {fileID: 6602431170377263407, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: Water
+      value: 
+      objectReference: {fileID: 119743511}
+    - target: {fileID: 6602431170377263407, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: Mine
+      value: 
+      objectReference: {fileID: 119743510}
+    - target: {fileID: 6602431170377263407, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: Invest
+      value: 
+      objectReference: {fileID: 119743509}
+    - target: {fileID: 6602431170377263407, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: mainUI
+      value: 
+      objectReference: {fileID: 1258297484}
     - target: {fileID: 6602431171779622181, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -3178,6 +3198,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1348041593}
@@ -3193,6 +3217,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1348041584}
     - target: {fileID: 482365368854147923, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -7497,6 +7525,22 @@ PrefabInstance:
       propertyPath: mainUI
       value: 
       objectReference: {fileID: 1035658481}
+    - target: {fileID: 7139615286648104476, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: Farm
+      value: 
+      objectReference: {fileID: 1348041584}
+    - target: {fileID: 7139615286648104476, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: Mine
+      value: 
+      objectReference: {fileID: 1348041585}
+    - target: {fileID: 7139615286648104476, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: Invest
+      value: 
+      objectReference: {fileID: 1348041582}
+    - target: {fileID: 7139615286648104476, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: Water
+      value: 
+      objectReference: {fileID: 1348041583}
     - target: {fileID: 7139615286648104477, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: unlockZoneGoals.Array.size
       value: 4
@@ -9872,6 +9916,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 972326741785980961, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: typeOfReceource
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 972326741785980963, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: desiredCanvasType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1122840356776993044, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -9888,6 +9940,22 @@ PrefabInstance:
       propertyPath: mainUI
       value: 
       objectReference: {fileID: 2115017622}
+    - target: {fileID: 9081440942916320515, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: Farm
+      value: 
+      objectReference: {fileID: 1778123539}
+    - target: {fileID: 9081440942916320515, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: Water
+      value: 
+      objectReference: {fileID: 1778123538}
+    - target: {fileID: 9081440942916320515, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: Mine
+      value: 
+      objectReference: {fileID: 1778123537}
+    - target: {fileID: 9081440942916320515, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: Invest
+      value: 
+      objectReference: {fileID: 1778123536}
     - target: {fileID: 9081440942916320516, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.788424
@@ -10044,8 +10112,36 @@ PrefabInstance:
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: resouces.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: seedConsumptionTime
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+--- !u!1 &1778123536 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5159666149407366375, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+  m_PrefabInstance: {fileID: 1778123535}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1778123537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 125836721115434362, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+  m_PrefabInstance: {fileID: 1778123535}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1778123538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7620867645454096480, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+  m_PrefabInstance: {fileID: 1778123535}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1778123539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8270486596576631890, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+  m_PrefabInstance: {fileID: 1778123535}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1803794712
 GameObject:
   m_ObjectHideFlags: 0
