@@ -6985,7 +6985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: seedConsumptionTime
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: waterConsumtionAmount
@@ -7182,9 +7182,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrades:
-  - productivityIncrease: 0
-    price: 0
-  button: {fileID: 1668340655}
+  - productivityIncrease: 1
+    price: 100
+  - productivityIncrease: 2
+    price: 200
+  - productivityIncrease: 4
+    price: 350
+  button: {fileID: 1493862218}
 --- !u!114 &1348041594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7198,8 +7202,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrades:
-  - productivityIncrease: 0
-    price: 0
+  - productivityIncrease: 2
+    price: 100
+  - productivityIncrease: 2
+    price: 200
+  - productivityIncrease: 2
+    price: 350
   button: {fileID: 1589859362}
 --- !u!114 &1348041595
 MonoBehaviour:
@@ -7214,8 +7222,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrades:
-  - productivityIncrease: 0
-    price: 0
+  - productivityIncrease: 5
+    price: 100
+  - productivityIncrease: 7
+    price: 200
+  - productivityIncrease: 10
+    price: 350
   button: {fileID: 1668340655}
 --- !u!114 &1348041596
 MonoBehaviour:
@@ -7307,6 +7319,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1493862218 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+  m_PrefabInstance: {fileID: 1035658458}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1552936041 stripped
