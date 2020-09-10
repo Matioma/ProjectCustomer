@@ -20,17 +20,23 @@ public class BuyUpgrade : MonoBehaviour
     int upgradeIndex = 0;
     public void Buy()
     {
-        if (GetComponentInParent<PlanetReceources>().GetReceouceNumber(Receources.MONEY) >= upgrades[upgradeIndex].price)
+        if (upgradeIndex < upgrades.Length)
         {
-            GetComponent<ReceourceZone>().ChangeProductivityNumber(upgrades[upgradeIndex].productivityIncrease);
-            upgradeIndex++;
+            if (GetComponentInParent<PlanetReceources>().GetReceouceNumber(Receources.MONEY) >= upgrades[upgradeIndex].price)
+            {
+                Debug.Log(" listeners");
+                GetComponent<ReceourceZone>().ChangeProductivityNumber(upgrades[upgradeIndex].productivityIncrease);
+                upgradeIndex++;
+            }
         }
 
         if (upgradeIndex >= upgrades.Length)
         {
-            button.onClick.RemoveAllListeners();
-            var text = button.GetComponent<TextMeshProUGUI>();
-            text.text="Sold Out";
+            Debug.Log("remove listeners");
+           // button.onClick.RemoveAllListeners();
+            button.interactable = false;
+            //var text = button.GetComponent<TextMeshProUGUI>();
+           // text.text="Sold Out";
         }
     }
 }
