@@ -291,6 +291,7 @@ GameObject:
   - component: {fileID: 5319158110676492878}
   - component: {fileID: 5319158110676492879}
   - component: {fileID: 5319158110676492872}
+  - component: {fileID: 4054243692379111001}
   m_Layer: 8
   m_Name: BasePlanet
   m_TagString: Untagged
@@ -399,6 +400,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredCanvasType: 1
   canvasManager: {fileID: 0}
+--- !u!114 &4054243692379111001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5319158110676492874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a13e27b52912e4f937a9aadb876a29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationVelocity: {x: 10, y: 0, z: 0}
 --- !u!1 &5319158111791132458
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +423,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5319158111791132457}
   - component: {fileID: 5319158111791132456}
-  - component: {fileID: 4234030863896856729}
   m_Layer: 0
   m_Name: PlanetMeshGEO
   m_TagString: Untagged
@@ -459,19 +472,6 @@ MonoBehaviour:
     amount: 0
   - type: 0
     amount: 0
---- !u!114 &4234030863896856729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5319158111791132458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8a13e27b52912e4f937a9aadb876a29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationVelocity: {x: 10, y: 0, z: 0}
 --- !u!64 &2491673038475388402
 MeshCollider:
   m_ObjectHideFlags: 0
