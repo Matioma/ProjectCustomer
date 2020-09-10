@@ -16,14 +16,14 @@ public class CanvasSwitcher : MonoBehaviour
             return;
         }
         canvasManager.SwitchCanvas(desiredCanvasType);
-        Debug.Log("canvasSwitcher");
-        if(desiredCanvasType== CanvasType.InvestmentZone|| desiredCanvasType == CanvasType.TransportZone)
-        {
-            canvasManager.DisableableResourceButtons();
-        }
-        else
-        {
-            canvasManager.EnableResourceButtons();
-        }
+        //Debug.Log("canvasSwitcher");
+        //if(desiredCanvasType== CanvasType.InvestmentZone|| desiredCanvasType == CanvasType.TransportZone)
+        //{
+        //    canvasManager.DisableableResourceButtons();
+        //}
+        //else
+        //{
+        //    canvasManager.EnableResourceButtons();
+        //}
     }
 }
