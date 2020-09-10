@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources,int>, IEnablable<Receources>
+public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, IEnablable<Receources>
 {
     //[SerializeField]
     //int moneynumber = 100;

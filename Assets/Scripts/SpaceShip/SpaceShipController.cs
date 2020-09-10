@@ -29,7 +29,7 @@ public class SpaceShipController : MonoBehaviour
             UnloadTheShip(other.gameObject.GetComponentInChildren<PlanetReceources>());
         }
     }
-    void UnloadTheShip(IReceourceAddition<Receources, int> planetReceources)
+    void UnloadTheShip(IReceourceAddition<Receources> planetReceources)
     {
         PlanetReceources thisShipResources = GetComponent<PlanetReceources>();
 
