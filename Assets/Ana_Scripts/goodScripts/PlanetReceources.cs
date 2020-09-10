@@ -13,6 +13,8 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     [SerializeField]
     int waterConsumtionAmountPerSeed = 1;
     [SerializeField]
+    int waterConsumtionAmount = 1;
+    [SerializeField]
     int waterConsumtionTime = 10;
     [SerializeField]
     int population = 10;
@@ -50,8 +52,8 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
 
 
 
-   
-    public Dictionary<Receources,int> GetResouses()
+
+    public Dictionary<Receources, int> GetResouses()
     {
         return receourcesNumber;
     }
@@ -69,7 +71,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         receourcesNumber.Add(Receources.WATER, 0);
         for (int i = 0; i < resouces.Count; i++)
         {
-            receourcesNumber[resouces[i].type]= resouces[i].amount;
+            receourcesNumber[resouces[i].type] = resouces[i].amount;
         }
 
         calculateConsumptionSeedAmount();
@@ -85,9 +87,10 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         seedConsumptionAmount = population * seedConsumptionAmountPerPerson;
     }
 
-    void calculateConsumptionWaterAmount(int prod)
+    void calculateConsumptionWaterAmount()
     {
-        seedConsumptionAmount = prod * waterConsumtionAmountPerSeed;
+        var productivity = GetComponentInParent<UIInformation>().getSeedProductionAmount();
+        waterConsumtionAmount = productivity  * waterConsumtionAmountPerSeed;
     }
 
     bool isEnoughReceourse(Receources type)
@@ -99,12 +102,14 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
 
     public void AddReceource(Receources rec, int amount)
     {
-        if (amount == 0) {
+        if (amount == 0)
+        {
             return;
         }
-        receourcesNumber[rec]+=amount;
+        receourcesNumber[rec] += amount;
         var addition = GetComponentInParent<UIInformation>();
-        if (addition == null) {
+        if (addition == null)
+        {
             Debug.LogWarning(transform.name + " planet resources resources has no UIINFORMATION component");
         }
 
@@ -120,11 +125,11 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     void FixedUpdate()
     {
         seedConsumption();
-        if (isWaterConsuming==true)
+        if (isWaterConsuming == true)
         {
             waterConsumption();
         }
-        if(isFarmZoneBought == true)
+        if (isFarmZoneBought == true)
         {
             checkFarmZoneWorking();
         }
@@ -152,10 +157,10 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
             {
                 if (deathTimer > 0)
                 {
-                    int peopleToDie = (seedConsumptionAmount- receourcesNumber[Receources.SEEDS])/2;
-                    int deathRate=(peopleToDie*deathRateForTimer)/peopleDeathTimer;
+                    int peopleToDie = (seedConsumptionAmount - receourcesNumber[Receources.SEEDS]) / 2;
+                    int deathRate = (peopleToDie * deathRateForTimer) / peopleDeathTimer;
 
-                    if (deathTimer % deathRateForTimer==0)
+                    if (deathTimer % deathRateForTimer == 0)
                     {
                         population -= deathRate;
                         calculateConsumptionSeedAmount();
@@ -264,25 +269,25 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     {
         seedConsumptionAmountPerPerson += amount;
         var addition = GetComponentInParent<UIInformation>();
-        addition.ChangeConsumptionAmountSeeds( amount);
+        addition.ChangeConsumptionAmountSeeds(amount);
     }
     public void ChangeConsumptionTimeSeeds(int amount)
     {
         seedConsumptionTime += amount;
         var addition = GetComponentInParent<UIInformation>();
-        addition.ChangeConsumptionTimeSeeds( amount);
+        addition.ChangeConsumptionTimeSeeds(amount);
     }
     public void ChangeConsumptionAmountWater(int amount)
     {
         waterConsumtionAmountPerSeed += amount;
         var addition = GetComponentInParent<UIInformation>();
-        addition.ChangeConsumptionAmountWater( amount);
+        addition.ChangeConsumptionAmountWater(amount);
     }
     public void ChangeConsumptionTimeWater(int amount)
     {
         waterConsumtionTime += amount;
         var addition = GetComponentInParent<UIInformation>();
-        addition.ChangeConsumptionTimeWater( amount);
+        addition.ChangeConsumptionTimeWater(amount);
     }
 
     public int getSeedComsumptionAmount()

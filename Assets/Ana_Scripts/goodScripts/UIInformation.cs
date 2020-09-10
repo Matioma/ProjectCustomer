@@ -20,7 +20,13 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
     [SerializeField]
     GameObject mainUI;
     [SerializeField]
-    List<GameObject> zones;
+    GameObject Farm;
+    [SerializeField]
+    GameObject Water;
+    [SerializeField]
+    GameObject Mine;
+    [SerializeField]
+    GameObject Invest;
     List<GameObject> planets;
     List<Goal> planetGoals;
     int seedConsumptionAmount;
@@ -31,6 +37,8 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
     int seedProductionTime;
     int waterProductionAmount;
     int waterProductionTime;
+    int moneyProductionAmount;
+    int moneyProductionTime;
     [SerializeField]
     bool selected=false;
 
@@ -45,10 +53,16 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
 
 
         resourcesNumber = planetReceources.GetResouses();
+
         seedConsumptionAmount= planetReceources.getSeedComsumptionAmount();
         seedConsumptionTime = planetReceources.getSeedComsumptionTime();
         waterConsumtionAmount = planetReceources.getWaterComsumptionAmount();
-        waterConsumtionTime = planetReceources.getWaterComsumptionTime(); ;
+        waterConsumtionTime = planetReceources.getWaterComsumptionTime();
+
+        seedProductionAmount = Farm.GetComponent<ReceourceZone>().GetProductivity();
+        waterProductionAmount = Water.GetComponent<ReceourceZone>().GetProductivity();
+        moneyProductionAmount = Mine.GetComponent<ReceourceZone>().GetProductivity();
+
         planetGoals = GetComponent<Quest>().getGoalList();
 
     }
@@ -67,6 +81,21 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         }
     }
 
+    public void ChangeProductivity(Receources rec, int amount)
+    {
+        switch (rec)
+        {
+            case Receources.SEEDS:
+                seedProductionAmount += amount;
+                break;
+            case Receources.WATER:
+                waterProductionAmount += amount;
+                break;
+            case Receources.MONEY:
+                moneyProductionAmount += amount;
+                break;
+        }
+    }
     public void ChangeConsumptionAmountSeeds(int amount)
     {
         seedConsumptionAmount += amount;
@@ -116,7 +145,10 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
     {
         return waterConsumtionTime;
     }
-
+    public int getSeedProductionAmount()
+    {
+        return seedProductionAmount;
+    }
     public int GetReceouceNumber(Receources type)
     {
         return resourcesNumber[type];

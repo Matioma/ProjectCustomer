@@ -45,4 +45,9 @@ public class BuyUpgrade : MonoBehaviour
            // text.text="Sold Out";
         }
     }
+
+    public int GetUpgrade()
+    {
+        return upgrades[upgradeIndex].productivityIncrease;
+    }
 }
