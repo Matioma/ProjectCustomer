@@ -161,6 +161,10 @@ PrefabInstance:
       propertyPath: typeOfReceource
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2943428096448963597, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2943428096448963599, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: canvasManager
       value: 
@@ -169,6 +173,10 @@ PrefabInstance:
       propertyPath: canvasManager
       value: 
       objectReference: {fileID: 1258297479}
+    - target: {fileID: 4658099882840076567, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6602431170377263394, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -344,6 +352,10 @@ PrefabInstance:
     - target: {fileID: 6602431170377263403, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: m_Name
       value: JunglePlanet
+      objectReference: {fileID: 0}
+    - target: {fileID: 6602431171779622181, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6602431171779622183, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: canvasManager
@@ -545,6 +557,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 3
+--- !u!114 &119743524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119743508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc536075609758e4b81d3e2edd83b9b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zone: {fileID: 119743508}
 --- !u!114 &125797554 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 482365368051224836, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
@@ -4961,6 +4986,10 @@ PrefabInstance:
       propertyPath: buyButton
       value: 
       objectReference: {fileID: 1615124641}
+    - target: {fileID: 3338316922668235176, guid: 72c2d6a7716b36c4e90c7c46cf060cec, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3338316922668235178, guid: 72c2d6a7716b36c4e90c7c46cf060cec, type: 3}
       propertyPath: canvasManager
       value: 
@@ -5105,6 +5134,10 @@ PrefabInstance:
       propertyPath: canvasManager
       value: 
       objectReference: {fileID: 1615124637}
+    - target: {fileID: 3841707437250575770, guid: 72c2d6a7716b36c4e90c7c46cf060cec, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5055810539072433328, guid: 72c2d6a7716b36c4e90c7c46cf060cec, type: 3}
       propertyPath: desiredCanvasType
       value: 4
@@ -5116,6 +5149,10 @@ PrefabInstance:
     - target: {fileID: 5055810539072433330, guid: 72c2d6a7716b36c4e90c7c46cf060cec, type: 3}
       propertyPath: typeOfReceource
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5055810539072433330, guid: 72c2d6a7716b36c4e90c7c46cf060cec, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5424536484643031259, guid: 72c2d6a7716b36c4e90c7c46cf060cec, type: 3}
       propertyPath: buyButton
@@ -5276,6 +5313,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 1
+--- !u!114 &1179088916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179088908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc536075609758e4b81d3e2edd83b9b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zone: {fileID: 1179088908}
 --- !u!1001 &1258297473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7165,6 +7215,19 @@ MonoBehaviour:
   - productivityIncrease: 0
     price: 0
   button: {fileID: 1668340655}
+--- !u!114 &1348041596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348041584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc536075609758e4b81d3e2edd83b9b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zone: {fileID: 1348041584}
 --- !u!114 &1348041605 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7139615286648104474, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
@@ -8776,10 +8839,18 @@ PrefabInstance:
       propertyPath: canvasManager
       value: 
       objectReference: {fileID: 1157204787}
+    - target: {fileID: 4214967454484819946, guid: abdfd05c213f37945a96f4c679447de9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5262235129211469504, guid: abdfd05c213f37945a96f4c679447de9, type: 3}
       propertyPath: canvasManager
       value: 
       objectReference: {fileID: 1157204787}
+    - target: {fileID: 5262235129211469506, guid: abdfd05c213f37945a96f4c679447de9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5262235129502589637, guid: abdfd05c213f37945a96f4c679447de9, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -8920,6 +8991,10 @@ PrefabInstance:
       propertyPath: buyButton
       value: 
       objectReference: {fileID: 169222270}
+    - target: {fileID: 5909672666509376240, guid: abdfd05c213f37945a96f4c679447de9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5909672666509376242, guid: abdfd05c213f37945a96f4c679447de9, type: 3}
       propertyPath: canvasManager
       value: 
@@ -9032,6 +9107,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 4
+--- !u!114 &1886787966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886787958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc536075609758e4b81d3e2edd83b9b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zone: {fileID: 1886787958}
 --- !u!114 &1907736615 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 482365369499562110, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
@@ -9073,6 +9161,10 @@ PrefabInstance:
     - target: {fileID: 1806557260255542663, guid: e1834c65b5d58854d8be8e8994556da6, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnScreenChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192582621598317873, guid: e1834c65b5d58854d8be8e8994556da6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3192582621598317875, guid: e1834c65b5d58854d8be8e8994556da6, type: 3}
       propertyPath: canvasManager
@@ -9226,10 +9318,18 @@ PrefabInstance:
       propertyPath: canvasManager
       value: 
       objectReference: {fileID: 342978564}
+    - target: {fileID: 3984064956787636483, guid: e1834c65b5d58854d8be8e8994556da6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5024859432956069126, guid: e1834c65b5d58854d8be8e8994556da6, type: 3}
       propertyPath: buyButton
       value: 
       objectReference: {fileID: 342978563}
+    - target: {fileID: 6861217075452357657, guid: e1834c65b5d58854d8be8e8994556da6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6861217075452357659, guid: e1834c65b5d58854d8be8e8994556da6, type: 3}
       propertyPath: canvasManager
       value: 
@@ -9389,6 +9489,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 2
+--- !u!114 &2064010367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064010359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc536075609758e4b81d3e2edd83b9b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zone: {fileID: 2064010359}
 --- !u!1 &2115017622 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3977515067236964067, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
