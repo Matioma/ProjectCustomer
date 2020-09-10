@@ -29,6 +29,8 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     int peopleDeathTimer = 10;
     [SerializeField]
     int deathRateForTimer = 10;
+
+
     int seedConsumptionAmount;
     float waterTimer;
     float seedTimer;
@@ -134,7 +136,8 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
                 if (deathTimer > 0)
                 {
                     int peopleToDie = (seedConsumptionAmount- receourcesNumber[Receources.SEEDS])/2;
-                    int deathRate = peopleToDie / peopleDeathTimer;
+                    int deathRate=(peopleToDie*deathRateForTimer)/peopleDeathTimer;
+
                     if (deathTimer % deathRateForTimer==0)
                     {
                         population -= deathRate;
@@ -282,3 +285,5 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         return waterConsumtionTime;
     }
 }
+
+
