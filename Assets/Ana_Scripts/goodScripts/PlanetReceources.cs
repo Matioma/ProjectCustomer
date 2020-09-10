@@ -196,7 +196,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
 
     private void checkFarmZoneWorking()
     {
-        if (receourcesNumber[Receources.WATER] < waterConsumtionAmountPerSeed)
+        if (receourcesNumber[Receources.WATER] < waterConsumtionAmount)
         {
             GetComponentInChildren<EnableZone>().DisableZone();
             isWaterConsuming = false;
@@ -212,9 +212,9 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     {
         if (waterTimer < 0 && receourcesNumber[Receources.WATER] > 0)
         {
-            if (receourcesNumber[Receources.WATER] > waterConsumtionAmountPerSeed)
+            if (receourcesNumber[Receources.WATER] > waterConsumtionAmount)
             {
-                AddReceource(Receources.WATER, -waterConsumtionAmountPerSeed);
+                AddReceource(Receources.WATER, -waterConsumtionAmount);
             }
             else
             {
@@ -279,7 +279,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     }
     public void ChangeConsumptionAmountWater(int amount)
     {
-        waterConsumtionAmountPerSeed += amount;
+        waterConsumtionAmount += amount;
         var addition = GetComponentInParent<UIInformation>();
         addition.ChangeConsumptionAmountWater(amount);
     }
@@ -300,7 +300,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     }
     public int getWaterComsumptionAmount()
     {
-        return waterConsumtionAmountPerSeed;
+        return waterConsumtionAmount;
     }
     public int getWaterComsumptionTime()
     {
