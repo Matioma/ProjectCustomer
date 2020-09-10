@@ -14,15 +14,26 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     //int waternumber = 100;
 
     [SerializeField]
-    int seedConsumptionAmount = 1;
+    int seedConsumptionAmountPerPerson = 1;
     [SerializeField]
     int seedConsumptionTime = 10;
     [SerializeField]
     int waterConsumtionAmount = 1;
     [SerializeField]
     int waterConsumtionTime = 10;
+    [SerializeField]
+    int population = 10;
+    [SerializeField]
+    int hungerWarningTimer = 10;
+    [SerializeField]
+    int peopleDeathTimer = 10;
+    [SerializeField]
+    int deathRateForTimer = 10;
+    int seedConsumptionAmount;
     float waterTimer;
     float seedTimer;
+    float hungerTimer;
+    float deathTimer;
     Dictionary<Receources, int> receourcesNumber;
 
     bool isWaterConsuming = false;
@@ -36,11 +47,16 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         public int amount;
     }
     [SerializeField]
-    List<Rec> recs;
+    List<Rec> resouces;
    
     public Dictionary<Receources,int> GetResouses()
     {
         return receourcesNumber;
+    }
+
+    public void OnValidate()
+    {
+        calculateConsumptionAmount();
     }
 
     void Awake()
@@ -49,14 +65,21 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         receourcesNumber.Add(Receources.MONEY, 0);
         receourcesNumber.Add(Receources.SEEDS, 0);
         receourcesNumber.Add(Receources.WATER, 0);
-        for (int i = 0; i < recs.Count; i++)
+        for (int i = 0; i < resouces.Count; i++)
         {
-            receourcesNumber[recs[i].type]= recs[i].amount;
+            receourcesNumber[resouces[i].type]= resouces[i].amount;
         }
 
+        calculateConsumptionAmount();
 
         seedTimer = seedConsumptionTime;
         waterTimer = waterConsumtionTime;
+        hungerTimer = hungerWarningTimer;
+        deathTimer = peopleDeathTimer;
+    }
+    void calculateConsumptionAmount()
+    {
+        seedConsumptionAmount = population * seedConsumptionAmountPerPerson;
     }
 
     bool isEnoughReceourse(Receources type)
@@ -98,8 +121,47 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         {
             checkFarmZoneWorking();
         }
-        
+        CheckHunger();
         //Debug.Log(isWaterConsuming);
+    }
+
+    void CheckHunger()
+    {
+        if (receourcesNumber[Receources.SEEDS] < seedConsumptionAmount)
+        {
+            if (hungerTimer < 0)
+            {
+                if (deathTimer > 0)
+                {
+                    int peopleToDie = (seedConsumptionAmount- receourcesNumber[Receources.SEEDS])/2;
+                    int deathRate = peopleToDie / peopleDeathTimer;
+                    if (deathTimer % deathRateForTimer==0)
+                    {
+                        population -= deathRate;
+                        calculateConsumptionAmount();
+                    }
+                    deathTimer -= Time.fixedDeltaTime;
+                }
+                else
+                {
+                    population = 0;
+                    calculateConsumptionAmount();
+                }
+            }
+            else
+            {
+                hungerTimer -= Time.fixedDeltaTime;
+            }
+        }
+        else
+        {
+            resetHungerDeathTimers();
+        }
+    }
+    public void resetHungerDeathTimers()
+    {
+        deathTimer = peopleDeathTimer;
+        hungerTimer = hungerWarningTimer;
     }
     public void FarmZoneIsBought()
     {
@@ -145,9 +207,9 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     {
         if (seedTimer < 0 && receourcesNumber[Receources.SEEDS] > 0)
         {
-            if (receourcesNumber[Receources.SEEDS] > seedConsumptionAmount)
+            if (receourcesNumber[Receources.SEEDS] > seedConsumptionAmountPerPerson)
             {
-                AddReceource(Receources.SEEDS, -seedConsumptionAmount);
+                AddReceource(Receources.SEEDS, -seedConsumptionAmountPerPerson);
             }
             else
             {
@@ -180,7 +242,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
 
     public void ChangeConsumptionAmountSeeds(int amount)
     {
-        seedConsumptionAmount += amount;
+        seedConsumptionAmountPerPerson += amount;
         var addition = GetComponentInParent<UIInformation>();
         addition.ChangeConsumptionAmountSeeds( amount);
     }
@@ -205,7 +267,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
 
     public int getSeedComsumptionAmount()
     {
-        return seedConsumptionAmount;
+        return seedConsumptionAmountPerPerson;
     }
     public int getSeedComsumptionTime()
     {
