@@ -28,7 +28,7 @@ public class ReceourceZone : MonoBehaviour
     {
         if (timer < 0)
         {
-            var addition = GetComponentInParent<IReceourceAddition<Receources, int>>();
+            var addition = GetComponentInParent<IReceourceAddition<Receources>>();
             addition.AddReceource(typeOfReceource, productionNumber);
             timer = productivityTime;
         }

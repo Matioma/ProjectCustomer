@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResourseUpdater : MonoBehaviour, IReceourceAddition<Receources, int>
+public class ResourseUpdater : MonoBehaviour, IReceourceAddition<Receources>
 {
     [SerializeField]
     List<GameObject> objectsToUpdate;
@@ -11,7 +11,7 @@ public class ResourseUpdater : MonoBehaviour, IReceourceAddition<Receources, int
     {
         foreach (var item in objectsToUpdate)
         {
-            var addition = GetComponent<IReceourceAddition<Receources, int>>();
+            var addition = GetComponent<IReceourceAddition<Receources>>();
             addition.AddReceource(rec, amount);
         }
     }
@@ -20,7 +20,7 @@ public class ResourseUpdater : MonoBehaviour, IReceourceAddition<Receources, int
     {
         foreach (var item in objectsToUpdate)
         {
-            var addition = GetComponent<IReceourceAddition<Receources, int>>();
+            var addition = GetComponent<IReceourceAddition<Receources>>();
             addition.ChangeConsumptionAmountSeeds(amount);
         }
     }
@@ -28,7 +28,7 @@ public class ResourseUpdater : MonoBehaviour, IReceourceAddition<Receources, int
     {
         foreach (var item in objectsToUpdate)
         {
-            var addition = GetComponent<IReceourceAddition<Receources, int>>();
+            var addition = GetComponent<IReceourceAddition<Receources>>();
             addition.ChangeConsumptionTimeSeeds(amount);
         }
     }
@@ -36,7 +36,7 @@ public class ResourseUpdater : MonoBehaviour, IReceourceAddition<Receources, int
     {
         foreach (var item in objectsToUpdate)
         {
-            var addition = GetComponent<IReceourceAddition<Receources, int>>();
+            var addition = GetComponent<IReceourceAddition<Receources>>();
             addition.ChangeConsumptionAmountWater(amount);
         }
     }
@@ -44,7 +44,7 @@ public class ResourseUpdater : MonoBehaviour, IReceourceAddition<Receources, int
     {
         foreach (var item in objectsToUpdate)
         {
-            var addition = GetComponent<IReceourceAddition<Receources, int>>();
+            var addition = GetComponent<IReceourceAddition<Receources>>();
             addition.ChangeConsumptionTimeWater(amount);
         }
     }

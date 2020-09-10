@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIInformation : MonoBehaviour, IReceourceAddition<Receources, int>
+public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
 {
 
     [SerializeField]
@@ -40,11 +40,15 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources, int>
     void Start()
     {
         resourcesNumber = new Dictionary<Receources, int>();
-        resourcesNumber = GetComponentInChildren<PlanetReceources>().GetResouses();
-        seedConsumptionAmount= GetComponentInChildren<PlanetReceources>().getSeedComsumptionAmount();
-        seedConsumptionTime = GetComponentInChildren<PlanetReceources>().getSeedComsumptionTime();
-        waterConsumtionAmount = GetComponentInChildren<PlanetReceources>().getWaterComsumptionAmount();
-        waterConsumtionTime = GetComponentInChildren<PlanetReceources>().getWaterComsumptionTime(); ;
+
+        PlanetReceources planetReceources = GetComponentInChildren<PlanetReceources>();
+
+
+        resourcesNumber = planetReceources.GetResouses();
+        seedConsumptionAmount= planetReceources.getSeedComsumptionAmount();
+        seedConsumptionTime = planetReceources.getSeedComsumptionTime();
+        waterConsumtionAmount = planetReceources.getWaterComsumptionAmount();
+        waterConsumtionTime = planetReceources.getWaterComsumptionTime(); ;
         planetGoals = GetComponent<Quest>().getGoalList();
 
     }

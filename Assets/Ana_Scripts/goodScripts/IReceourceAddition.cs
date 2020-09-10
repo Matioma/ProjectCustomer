@@ -1,13 +1,13 @@
-﻿public interface IReceourceAddition<EnumType, T>
+﻿using Unity;
+using System.Collections;
+using System.Collections.Generic;
+
+public interface IReceourceAddition<ResourceType>
 {
-    void AddReceource(EnumType type, T t = default);
-
-    void ChangeConsumptionAmountSeeds(T amount);
-
-    void ChangeConsumptionTimeSeeds(T amount);
-
-    void ChangeConsumptionAmountWater(T amount);
-
-    void ChangeConsumptionTimeWater(T amount);
+    void AddReceource(ResourceType type,  int amount);
+    void ChangeConsumptionAmountSeeds(int amount);
+    void ChangeConsumptionTimeSeeds(int amount);
+    void ChangeConsumptionAmountWater(int amount);
+    void ChangeConsumptionTimeWater(int amount);
 
 }

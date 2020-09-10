@@ -25,9 +25,15 @@ public class BuyZone : MonoBehaviour
             {
                 GetComponent<ReceourceZone>().enabled = true;
             }
-            GetComponentInParent<IReceourceAddition<Receources, int>>().AddReceource(Receources.SEEDS, -seedsNeededToBuy);
-            GetComponentInParent<IReceourceAddition<Receources, int>>().AddReceource(Receources.WATER, -WaterNeededToBuy);
-            GetComponentInParent<IReceourceAddition<Receources, int>>().AddReceource(Receources.MONEY, -MoneyNeededToBuy);
+            IReceourceAddition<Receources> AddResource = GetComponentInParent<IReceourceAddition<Receources>>();
+
+            AddResource.AddReceource(Receources.SEEDS, - seedsNeededToBuy);
+            AddResource.AddReceource(Receources.WATER, - WaterNeededToBuy);
+            AddResource.AddReceource(Receources.MONEY, - MoneyNeededToBuy);
+
+            //GetComponentInParent<IReceourceAddition>().AddReceource(Receources.SEEDS, -seedsNeededToBuy);
+            //GetComponentInParent<IReceourceAddition>().AddReceource(Receources.WATER, -WaterNeededToBuy);
+            //GetComponentInParent<IReceourceAddition>().AddReceource(Receources.MONEY, -MoneyNeededToBuy);
             buyButton.gameObject.SetActive(false);
         }
 
