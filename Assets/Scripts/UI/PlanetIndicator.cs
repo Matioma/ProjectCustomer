@@ -2,11 +2,7 @@
 
 public class PlanetIndicator : MonoBehaviour
 {
-
-
     CameraController player;
-
-
     Camera camera;
 
     // Start is called before the first frame update
