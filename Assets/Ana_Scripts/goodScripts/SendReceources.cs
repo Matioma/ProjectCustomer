@@ -76,7 +76,7 @@ public class SendReceources : MonoBehaviour
 
 
         var currentPlanet = GetComponentInParent<PlanetReceources>();
-        SpaceShipManager.Instance.SendShip(currentPlanet.GetComponentInParent<Planet>(), planetToSend.GetComponentInParent<Planet>(), typeOfReceurce, (int)amount);
+       // SpaceShipManager.Instance.SendShip(currentPlanet.GetComponentInParent<Planet>(), planetToSend.GetComponentInParent<Planet>(), typeOfReceurce, (int)amount);
 
         if (currentPlanet.GetReceouceNumber(typeOfReceurce) > amount)
         {
