@@ -26,12 +26,10 @@ public class PlanetIndicator : MonoBehaviour
 
     void ShowUI() {
         gameObject.SetActive(true);
-        Debug.Log("Show UI");
     }
 
     void HideUI() {
         gameObject.SetActive(false);
-        Debug.Log("Hide UI");
     }
 
     private void OnDestroy()

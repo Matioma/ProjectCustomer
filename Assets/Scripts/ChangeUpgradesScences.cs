@@ -13,6 +13,12 @@ public class ChangeUpgradesScences : MonoBehaviour
 
     private void Start()
     {
+        BuyUpgrade buyUpgradeScript = GetComponentInParent<BuyUpgrade>();
+        if (buyUpgradeScript != null) { 
+            buyUpgradeScript.OnZoneUpgrade += Upgrade;
+        }
+       
+
         if (LevelsPrefabs.Count == 0)
         {
             return;
@@ -24,6 +30,7 @@ public class ChangeUpgradesScences : MonoBehaviour
 
     public void Upgrade()
     {
+        Debug.Log("Upgrade ZonePrefabs");
         if (LevelsPrefabs.Count == 0) {
             return;
         }

@@ -116,7 +116,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         seedConsumption();
         if (isWaterConsuming==true)
         {
-            Debug.Log(isWaterConsuming);
+            //Debug.Log(isWaterConsuming);
             waterConsumption();
         }
         if(isFarmZoneBought == true)
