@@ -39,12 +39,30 @@ public class CameraController : MonoBehaviour
 
     bool isCameraTransitioning;
 
+
     CameraState cameraState = CameraState.OnPlanet;
+    CameraState CurrentCameraState {
+        get { return cameraState; }
+        set {
+            if (value != cameraState && value==CameraState.OnPlanet) {
+                OnZoomToPlanet?.Invoke();
+            }
+            if (value != cameraState && value == CameraState.WatchingWorld)
+            {
+                OnZoomToWorldView?.Invoke();
+            }
+            cameraState = value;
+        }
+    } 
+    
+
+
 
     public event Action OnSelectPlanet;
     public event Action OnDeselectPlanet;
     public event Action OnSelectZone;
     public event Action OnZoomToWorldView;
+    public event Action OnZoomToPlanet;
 
     [SerializeField]
     Planet SelectedPlanet;
@@ -102,7 +120,7 @@ public class CameraController : MonoBehaviour
                 TrySelectZone();
             }
 
-            if (cameraState == CameraState.WatchingWorld)
+            if (CurrentCameraState == CameraState.WatchingWorld)
             {
                 TrySelectPlanet();
             }
@@ -145,7 +163,7 @@ public class CameraController : MonoBehaviour
         SelectedPlanet.GetComponent<Planet>().Select(); //Inform the planet that it was selected
         OnSelectPlanet?.Invoke();
 
-        cameraState = CameraState.OnPlanet;
+        CurrentCameraState = CameraState.OnPlanet;
     }
     private void deselectLastPlanet() {
         deselectLastZone();
@@ -230,7 +248,7 @@ public class CameraController : MonoBehaviour
             deselectLastPlanet();
            
             StartTransitionTo(new MyTransform(worldViewTransform));
-            cameraState = CameraState.WatchingWorld;
+            CurrentCameraState = CameraState.WatchingWorld;
             OnZoomToWorldView?.Invoke();
         }
     }
