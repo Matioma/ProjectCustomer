@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -18,6 +19,10 @@ public class BuyUpgrade : MonoBehaviour
     [SerializeField]
     Button button;
     int upgradeIndex = 0;
+
+
+
+    public event Action OnZoneUpgrade;
     public void Buy()
     {
         if (upgradeIndex < upgrades.Length)
@@ -27,6 +32,7 @@ public class BuyUpgrade : MonoBehaviour
                 Debug.Log(" listeners");
                 GetComponent<ReceourceZone>().ChangeProductivityNumber(upgrades[upgradeIndex].productivityIncrease);
                 upgradeIndex++;
+                OnZoneUpgrade?.Invoke();
             }
         }
 
