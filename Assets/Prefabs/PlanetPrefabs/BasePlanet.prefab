@@ -411,6 +411,20 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4864056309639282896, guid: eabee1fb35f488b41ba33b3658fe4a4a, type: 3}
+--- !u!114 &3862329702785412009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7933437630445328707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183bba98246846e4a8e77785dca307a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentLevel: 0
+  LevelsPrefabs: []
 --- !u!64 &6429520626093868331
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -492,7 +506,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1893436097914777025, guid: 32415d59dda1ce54fa1792d65631ddf7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 32415d59dda1ce54fa1792d65631ddf7, type: 3}
 --- !u!1 &7933437630445328707 stripped
 GameObject:
@@ -591,17 +606,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5420733362619861967, guid: 32415d59dda1ce54fa1792d65631ddf7, type: 3}
+    - {fileID: 0}
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 32415d59dda1ce54fa1792d65631ddf7, type: 3}
---- !u!1 &8438991983945604465 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7850364755483372749, guid: 32415d59dda1ce54fa1792d65631ddf7, type: 3}
-  m_PrefabInstance: {fileID: 1868795218265338300}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6151814153994165655 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5526173172122889259, guid: 32415d59dda1ce54fa1792d65631ddf7, type: 3}
+  m_PrefabInstance: {fileID: 1868795218265338300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8438991983945604465 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7850364755483372749, guid: 32415d59dda1ce54fa1792d65631ddf7, type: 3}
   m_PrefabInstance: {fileID: 1868795218265338300}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4014775312089937211
@@ -664,7 +679,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5420733362619861967, guid: 32415d59dda1ce54fa1792d65631ddf7, type: 3}
+    - {fileID: 0}
     - {fileID: 5420733362619861962, guid: 32415d59dda1ce54fa1792d65631ddf7, type: 3}
     - {fileID: 5420733362619861960, guid: 32415d59dda1ce54fa1792d65631ddf7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 32415d59dda1ce54fa1792d65631ddf7, type: 3}

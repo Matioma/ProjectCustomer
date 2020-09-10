@@ -65,8 +65,8 @@ public class AudioManager : MonoBehaviour
         };
 
         //Subscribe to ZoneUpgrading Sound
-        foreach (var obj in Resources.FindObjectsOfTypeAll<ZoneUpgrading>()) {
-            obj.OnUpgrade += () =>
+        foreach (var obj in Resources.FindObjectsOfTypeAll<BuyUpgrade>()) {
+            obj.OnZoneUpgrade += () =>
             {
                 if (SelectZoneSound != null)
                 {

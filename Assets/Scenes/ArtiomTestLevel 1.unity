@@ -647,6 +647,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 782511945364247342, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: LevelsPrefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 782511945364247342, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: CurrentLevel
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 782511945364247342, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: LevelsPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1513722861}
+    - target: {fileID: 782511945364247342, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: LevelsPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1513722860}
+    - target: {fileID: 782511945364247342, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: LevelsPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1513722859}
+    - target: {fileID: 1629488400363582932, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875616889298084040, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: LevelsPrefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875616889298084040, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: LevelsPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1513722861}
+    - target: {fileID: 2875616889298084040, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: LevelsPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1513722860}
+    - target: {fileID: 2875616889298084040, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: LevelsPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1513722859}
     - target: {fileID: 6602431170377263400, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 516
@@ -695,8 +735,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: JunglePlanet
       objectReference: {fileID: 0}
+    - target: {fileID: 7702232205853603654, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706282605666717401, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+--- !u!1 &1513722859 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7706282605666717401, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+  m_PrefabInstance: {fileID: 1513722858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1513722860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1629488400363582932, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+  m_PrefabInstance: {fileID: 1513722858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1513722861 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7702232205853603654, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+  m_PrefabInstance: {fileID: 1513722858}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1584404693
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 2
+  canvasManager: {fileID: 0}
 --- !u!114 &5420733362619861962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,12 +180,9 @@ MonoBehaviour:
   OnDeselected:
     m_PersistentCalls:
       m_Calls: []
-  defaultMaterial: {fileID: 0}
   selectedMaterial: {fileID: 2100000, guid: 4670a99df6d211447aaed697f7d946ee, type: 2}
   scaleRegion: 0.1
-  initialScale: {x: 0, y: 0, z: 0}
-  initialPosition: {x: 0, y: 0, z: 0}
-  moveBack: 15
+  ZoneDisplacement: 15
 --- !u!114 &5420733362619861966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,10 +235,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7850364755483372749}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a3634034c007cd42b43c6ce83ed5ce5, type: 3}
+  m_Script: {fileID: 11500000, guid: 183bba98246846e4a8e77785dca307a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentLevel: 0
-  Levels:
-  - {fileID: 2228159955735391266, guid: 259c8e7264d0b634f83030999aebaec3, type: 3}
-  - {fileID: 2558803938620945362, guid: 28cc1b17bea63094a885201253decee0, type: 3}
+  LevelsPrefabs: []
