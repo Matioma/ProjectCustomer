@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Timer : MonoBehaviour
+public class TimerIndicatorPlanet : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
