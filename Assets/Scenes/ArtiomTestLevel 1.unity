@@ -188,7 +188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4397491208869768595, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: m_Name
-      value: JunglePlanet (1)
+      value: JunglePlanet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
@@ -221,7 +221,7 @@ Transform:
   m_Children:
   - {fileID: 1692861072}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &961335965
 GameObject:
@@ -287,7 +287,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1237278036
 GameObject:
@@ -380,13 +380,82 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &1260765641
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1153
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 92
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2671
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.17285
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.17285
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.17285
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528658, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_Name
+      value: DesertPlanet
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
 --- !u!1001 &1334999541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -541,7 +610,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1460421415
 GameObject:
@@ -633,7 +702,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1692861070
 GameObject:
