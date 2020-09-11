@@ -340,6 +340,10 @@ PrefabInstance:
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: selectedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 098f5685f8c60ad4bb3ea02dfa096e6a, type: 2}
     - target: {fileID: 2566920544029782689, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: desiredCanvasType
       value: 4
@@ -520,6 +524,10 @@ PrefabInstance:
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: selectedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 78a3da90f9aab0840a5354d8568600d7, type: 2}
     - target: {fileID: 4411870845720569306, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -652,6 +660,10 @@ PrefabInstance:
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: selectedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 2034cc700a7e297489d066065f5b13c2, type: 2}
     - target: {fileID: 2566920544029782689, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: desiredCanvasType
       value: 3
