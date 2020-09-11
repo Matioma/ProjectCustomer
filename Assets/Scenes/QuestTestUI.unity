@@ -174,9 +174,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 809283179966466753, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
+      propertyPath: LevelUpgradeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0f89541c640b3a048a4b181598936a8e, type: 3}
+    - target: {fileID: 809283179966466753, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
+      propertyPath: SelectZoneSound
+      value: 
+      objectReference: {fileID: 8300000, guid: dbcca89a7ba8cec4fa354fc9340cb540, type: 3}
     - target: {fileID: 809283179966466759, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444489871651145811, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
+      propertyPath: m_Volume
+      value: 0.506
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
@@ -254,6 +266,18 @@ PrefabInstance:
       propertyPath: buyButton
       value: 
       objectReference: {fileID: 2100430539}
+    - target: {fileID: 2448139194147951892, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2448139194147951892, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2448139194147951892, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: MoneyNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2600900888091662678, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: m_Name
       value: IndustrialZone
@@ -290,6 +314,18 @@ PrefabInstance:
       propertyPath: buyButton
       value: 
       objectReference: {fileID: 1463141643}
+    - target: {fileID: 4250800613337403686, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: MoneyNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250800613337403686, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250800613337403686, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4658099882840076564, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: selectedMaterial
       value: 
@@ -306,6 +342,18 @@ PrefabInstance:
       propertyPath: buyButton
       value: 
       objectReference: {fileID: 83778620}
+    - target: {fileID: 5297434702538358798, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5297434702538358798, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5297434702538358798, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: MoneyNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5504961116460387404, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: m_Name
       value: WaterZone
@@ -533,6 +581,10 @@ PrefabInstance:
     - target: {fileID: 6602431171416400969, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: resouces.Array.data[2].type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6602431171416400969, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: hungerWarningTimer
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6602431171779622181, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: m_Enabled
@@ -4170,6 +4222,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1886787957}
+    - target: {fileID: 5153313885387108555, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_text
+      value: 'tractors
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 5809644190412740309, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -4249,6 +4307,10 @@ PrefabInstance:
     - target: {fileID: 6181600275014706080, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568481332292176866, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_text
+      value: drain pipes
       objectReference: {fileID: 0}
     - target: {fileID: 6812328344040075926, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_AnchorMin.y
@@ -7504,6 +7566,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 164503223567867413, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 164503223567867413, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 164503223567867413, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: MoneyNeededToBuy
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1183503525224180540, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: desiredCanvasType
       value: 3
@@ -7512,6 +7586,10 @@ PrefabInstance:
       propertyPath: canvasManager
       value: 
       objectReference: {fileID: 1035658463}
+    - target: {fileID: 1183503525224180541, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: scaleRegion
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1183503525224180542, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: typeOfReceource
       value: 1
@@ -7551,6 +7629,10 @@ PrefabInstance:
     - target: {fileID: 6217633792168393376, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnScreenChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217633792168393376, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: scaleRegion
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 6523482941755246584, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: m_Name
@@ -7844,6 +7926,10 @@ PrefabInstance:
       propertyPath: canvasManager
       value: 
       objectReference: {fileID: 1035658463}
+    - target: {fileID: 7139615287463492117, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: scaleRegion
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7139615287463492118, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: typeOfReceource
       value: 2
@@ -7882,7 +7968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: seedConsumptionTime
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: waterConsumtionAmount
@@ -7890,7 +7976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: waterConsumtionTime
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: recs.Array.data[1].type
@@ -7928,6 +8014,30 @@ PrefabInstance:
       propertyPath: resouces.Array.data[2].amount
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: population
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: birthRateTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: peopleDeathTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: hungerWarningTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: seedConsumptionAmountPerPerson
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: birthRateNumber
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7626797192092882802, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: rotationVelocity.x
       value: 5
@@ -7950,11 +8060,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8651814300453633572, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: productivityTime
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8651814300453633572, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: productionNumber
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8651814300453633572, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: receourcesToWork.Array.data[0]
@@ -7972,7 +8082,12 @@ PrefabInstance:
       propertyPath: canvasManager
       value: 
       objectReference: {fileID: 1035658463}
-    m_RemovedComponents: []
+    - target: {fileID: 8651814300453633575, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: scaleRegion
+      value: 1.1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7693091842912168655, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
 --- !u!1 &1348041582 stripped
 GameObject:
@@ -8035,7 +8150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seedsNeededToBuy: 0
   WaterNeededToBuy: 0
-  MoneyNeededToBuy: 5
+  MoneyNeededToBuy: 10
   buyButton: {fileID: 1035658466}
 --- !u!114 &1348041589
 MonoBehaviour:
@@ -8051,7 +8166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seedsNeededToBuy: 0
   WaterNeededToBuy: 0
-  MoneyNeededToBuy: 5
+  MoneyNeededToBuy: 10
   buyButton: {fileID: 1035658476}
 --- !u!114 &1348041590
 MonoBehaviour:
@@ -8067,7 +8182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seedsNeededToBuy: 0
   WaterNeededToBuy: 0
-  MoneyNeededToBuy: 5
+  MoneyNeededToBuy: 50
   buyButton: {fileID: 1035658459}
 --- !u!114 &1348041591
 MonoBehaviour:
@@ -8083,7 +8198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seedsNeededToBuy: 0
   WaterNeededToBuy: 0
-  MoneyNeededToBuy: 5
+  MoneyNeededToBuy: 80
   buyButton: {fileID: 1035658477}
 --- !u!1 &1348041592 stripped
 GameObject:
@@ -8103,12 +8218,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrades:
-  - productivityIncrease: 1
-    price: 100
   - productivityIncrease: 2
-    price: 200
+    price: 100
   - productivityIncrease: 4
-    price: 350
+    price: 200
+  - productivityIncrease: 8
+    price: 300
   button: {fileID: 1493862218}
 --- !u!114 &1348041594
 MonoBehaviour:
@@ -8123,12 +8238,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrades:
-  - productivityIncrease: 2
+  - productivityIncrease: 3
     price: 100
-  - productivityIncrease: 2
+  - productivityIncrease: 5
     price: 200
-  - productivityIncrease: 2
-    price: 350
+  - productivityIncrease: 10
+    price: 300
   button: {fileID: 1589859362}
 --- !u!114 &1348041595
 MonoBehaviour:
@@ -8145,10 +8260,10 @@ MonoBehaviour:
   upgrades:
   - productivityIncrease: 5
     price: 100
-  - productivityIncrease: 7
+  - productivityIncrease: 5
     price: 200
-  - productivityIncrease: 10
-    price: 350
+  - productivityIncrease: 5
+    price: 300
   button: {fileID: 1668340655}
 --- !u!114 &1348041596
 MonoBehaviour:
@@ -9840,7 +9955,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707757963}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 42, y: 2854, z: -1366}
+  m_LocalPosition: {x: 42, y: 1374, z: -1278.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10525,6 +10640,10 @@ PrefabInstance:
     - target: {fileID: 9081440944751468810, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnScreenChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081440944751468810, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: scaleRegion
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 9081440944751468811, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: canvasManager
