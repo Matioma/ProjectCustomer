@@ -61,6 +61,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
 
         seedProductionAmount = Farm.GetComponent<ReceourceZone>().GetProductivity();
         waterProductionAmount = Water.GetComponent<ReceourceZone>().GetProductivity();
+        if (Mine != null)
         moneyProductionAmount = Mine.GetComponent<ReceourceZone>().GetProductivity();
 
         planetGoals = GetComponent<Quest>().getGoalList();
