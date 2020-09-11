@@ -66,7 +66,6 @@ public class CameraController : MonoBehaviour
 
     [SerializeField]
     Planet SelectedPlanet;
-    [SerializeField]
     ZoneSelection SelectedZone;
 
     public Planet GetSelectedPlanet() {
