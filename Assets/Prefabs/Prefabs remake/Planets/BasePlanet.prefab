@@ -57,7 +57,7 @@ MonoBehaviour:
   OnDeselected:
     m_PersistentCalls:
       m_Calls: []
-  MinCameraDistFromPlanet: 250
+  MinCameraDistFromPlanet: 1000
 --- !u!135 &5319158110676492876
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -318,7 +318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -412,7 +412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

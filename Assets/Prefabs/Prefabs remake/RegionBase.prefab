@@ -119,7 +119,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   selectedMaterial: {fileID: 2100000, guid: 4670a99df6d211447aaed697f7d946ee, type: 2}
-  scaleRegion: 0.1
+  scaleRegion: 1.1
   ZoneDisplacement: 15
 --- !u!114 &4892118430223474494
 MonoBehaviour:
