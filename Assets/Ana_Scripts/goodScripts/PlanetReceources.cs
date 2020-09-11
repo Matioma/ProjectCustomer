@@ -141,6 +141,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         }
 
         calculateConsumptionSeedAmount();
+        calculateConsumptionWaterAmount();
 
         seedTimer = seedConsumptionTime;
         waterTimer = waterConsumtionTime;
