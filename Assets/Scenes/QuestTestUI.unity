@@ -3504,7 +3504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3525,7 +3525,19 @@ PrefabInstance:
     - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1348041584}
+      objectReference: {fileID: 2125619779}
+    - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlanetReceources, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: calculateConsumptionWaterAmount
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 482365368854147923, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -5051,6 +5063,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1778123546}
+    - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlanetReceources, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: calculateConsumptionWaterAmount
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 482365368869906366, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
@@ -6701,6 +6729,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 869723779}
+    - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlanetReceources, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: calculateConsumptionWaterAmount
+      objectReference: {fileID: 0}
+    - target: {fileID: 482365368841923029, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 482365368869906366, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
@@ -10774,6 +10818,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrades: []
   button: {fileID: 108484892}
+--- !u!114 &1778123546 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+  m_PrefabInstance: {fileID: 1778123535}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d110b2aaa5ecd3d47b3405b7cda3e870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1778123547 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2259310464998016266, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
