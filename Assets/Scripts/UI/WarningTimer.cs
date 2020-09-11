@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TimerVisialization : MonoBehaviour
+[RequireComponent(typeof(Image))]
+public class WarningTimer : MonoBehaviour
 {
     float progress;
-
     public float Value{
         get{
             return progress;
@@ -19,12 +19,18 @@ public class TimerVisialization : MonoBehaviour
             }
         }
     }
-    //[SerializeField, Range(0, 1)]
-    //float test;
 
+    PlanetReceources planetReceources;
+
+
+    private void Start()
+    {
+        planetReceources = GetComponentInParent<Planet>()?.GetComponentInChildren<PlanetReceources>();
+        
+    }
     void Update()
     {
-        //Value = test;
+        SetValue(planetReceources.GetHungerFractionLeft());
     }
     void SetValue(float fraction) {
         GetComponent<Image>().fillAmount = fraction;

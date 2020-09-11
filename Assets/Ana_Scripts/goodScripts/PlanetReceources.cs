@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -43,6 +44,8 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     float seedTimer;
     float birthRateTimer;
     float hungerTimer;
+
+
     float deathTimer;
 
     Dictionary<Receources, int> receourcesNumber;
@@ -51,9 +54,10 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     bool isFarmZoneBought = false;
 
 
-
-
-
+    public float GetHungerFractionLeft()
+    {
+        return hungerTimer/ hungerWarningTimer;
+    }
 
 
     public event Action OnPeopleStartLackFood;
@@ -91,7 +95,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         set {
             if (value != peopleAreDying) {
                 //If people dying
-                if (value)
+                if (!value)
                 {
                     OnPeopleStopDying?.Invoke();
                 }
@@ -208,8 +212,10 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     {
         if (receourcesNumber[Receources.SEEDS] < seedConsumptionAmount)
         {
+            PeopleLackFood = true;
             if (hungerTimer < 0)
             {
+                PeopleAreDying = true;
                 if (deathTimer > 0)
                 {
                     int peopleToDie = (seedConsumptionAmount - receourcesNumber[Receources.SEEDS]) / 2;
@@ -236,6 +242,8 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         else
         {
             resetHungerDeathTimers();
+            PeopleLackFood = false;
+            peopleAreDying = false;
         }
     }
     public void resetHungerDeathTimers()
