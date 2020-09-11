@@ -34,7 +34,7 @@ public class ContinentDirection : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(transform.position + VectorStart, 3.0f);
 
-        Gizmos.DrawRay(transform.position + VectorStart, transform.rotation*vectorDirection * VectorLength);
+        Gizmos.DrawRay(transform.position + VectorStart, transform.rotation*vectorDirection.normalized * VectorLength);
         //Gizmos.DrawRay(ray);
     }
 
