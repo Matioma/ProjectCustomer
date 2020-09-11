@@ -90,20 +90,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d110b2aaa5ecd3d47b3405b7cda3e870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneynumber: 10
-  seednumber: 10
-  waternumber: 10
-  seedConsumptionAmount: 0
+  seedConsumptionAmountPerPerson: 1
   seedConsumptionTime: 0
+  waterConsumtionAmountPerSeed: 1
   waterConsumtionAmount: 0
   waterConsumtionTime: 0
-  recs:
-  - type: 0
-    amount: 0
-  - type: 2
-    amount: 0
-  - type: 1
-    amount: 0
+  population: 10
+  hungerWarningTimer: 10
+  peopleDeathTimer: 10
+  deathRateForTimer: 10
+  birthRateNumber: 10
+  birthRateTime: 10
+  resouces: []
 --- !u!1 &6091381232216991481
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,7 +129,7 @@ Transform:
   m_GameObject: {fileID: 6091381232216991481}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 11.164926, y: 6.0957146, z: 25.625767}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 293999331355873650}
   m_RootOrder: 0
@@ -143,7 +141,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6091381232216991481}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -1226817584057097758, guid: b12fd4e09e5fdf54db925ea0329370da, type: 3}
 --- !u!23 &3883924046990885691
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -163,7 +161,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: -205629353262513385, guid: b12fd4e09e5fdf54db925ea0329370da, type: 3}
+  - {fileID: 4625029334336817969, guid: b12fd4e09e5fdf54db925ea0329370da, type: 3}
+  - {fileID: -183530207247392898, guid: b12fd4e09e5fdf54db925ea0329370da, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

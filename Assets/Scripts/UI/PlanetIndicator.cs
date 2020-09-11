@@ -5,6 +5,15 @@ public class PlanetIndicator : MonoBehaviour
     CameraController player;
     Camera camera;
 
+
+    [SerializeField]
+    GameObject exclamationMark;
+
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +39,7 @@ public class PlanetIndicator : MonoBehaviour
 
     void HideUI() {
         gameObject.SetActive(false);
+        
     }
 
     private void OnDestroy()
@@ -39,5 +49,14 @@ public class PlanetIndicator : MonoBehaviour
             player.OnZoomToWorldView -= ShowUI;
             player.OnZoomToPlanet -= HideUI;
         }
+    }
+
+    void ShowExclamationMark() {
+        exclamationMark.SetActive(true);
+    }
+
+    void HideExclamationMark()
+    {
+        exclamationMark.SetActive(false);
     }
 }
