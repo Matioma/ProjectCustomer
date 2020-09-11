@@ -16,13 +16,17 @@ public class BuyZone : MonoBehaviour
 
     public void Buy()
     {
-
+        Debug.Log("bought?????");
         if (GetComponentInParent<PlanetReceources>().GetReceouceNumber(Receources.SEEDS) >= seedsNeededToBuy &&
             GetComponentInParent<PlanetReceources>().GetReceouceNumber(Receources.WATER) >= WaterNeededToBuy &&
             GetComponentInParent<PlanetReceources>().GetReceouceNumber(Receources.MONEY) >= MoneyNeededToBuy)
         {
+            Debug.Log("maybe bought");
+            Debug.Log(GetComponent<ReceourceZone>());
+
             if (GetComponent<ReceourceZone>() != null)
             {
+                Debug.Log("bought");
                 GetComponent<ReceourceZone>().enabled = true;
             }
             IReceourceAddition<Receources> AddResource = GetComponentInParent<IReceourceAddition<Receources>>();
