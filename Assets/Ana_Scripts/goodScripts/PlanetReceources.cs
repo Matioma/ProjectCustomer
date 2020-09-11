@@ -53,6 +53,61 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
 
 
 
+
+
+
+    public event Action OnPeopleStartLackFood;
+    public event Action OnPeopleStopLackFood;
+    public event Action OnPeopleStartDying;
+    public event Action OnPeopleStopDying;
+
+
+    private bool peopleLackFood = false;
+    private bool peopleAreDying = false;
+    private bool PeopleLackFood {
+        get { return peopleLackFood; }
+        set {
+            if (value != peopleLackFood) {
+                //No food
+                if (value)
+                {
+                    OnPeopleStartLackFood?.Invoke();
+                }
+                //Enough Food
+                else {
+                    //Stop invoke method that people no longer Die
+                    if (peopleAreDying) OnPeopleStopDying?.Invoke();
+                    OnPeopleStopLackFood?.Invoke();
+                }
+                peopleLackFood = value;
+            }
+        }
+    }
+
+    private bool PeopleAreDying {
+        get {
+            return peopleAreDying;
+        }
+        set {
+            if (value != peopleAreDying) {
+                //If people dying
+                if (value)
+                {
+                    OnPeopleStopDying?.Invoke();
+                }
+                // If people no longer die
+                else {
+                    OnPeopleStartDying?.Invoke();
+                }
+                peopleAreDying = value;
+            }
+        }
+    }
+
+
+
+
+
     public Dictionary<Receources, int> GetResouses()
     {
         return receourcesNumber;
