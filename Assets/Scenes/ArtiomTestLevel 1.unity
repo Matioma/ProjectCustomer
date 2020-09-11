@@ -454,6 +454,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: DesertPlanet
       objectReference: {fileID: 0}
+    - target: {fileID: 1455921413982851759, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455921413982851759, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_fontSize
+      value: 76.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455921413982851759, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 76.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832255536995987762, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6955931959440104277, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1612
+      objectReference: {fileID: 0}
+    - target: {fileID: 6955931959440104277, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
 --- !u!1001 &1334999541

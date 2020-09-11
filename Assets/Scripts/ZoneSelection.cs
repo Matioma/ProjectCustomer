@@ -37,7 +37,7 @@ public class ZoneSelection : SelectableObject
             ContinentDirection direction = GetComponent<ContinentDirection>();
             if (direction != null)
             {
-                transform.localPosition += direction.getDirection().normalized * (-ZoneDisplacement);
+                transform.localPosition += direction.getWorldDirection().normalized * (-ZoneDisplacement);
             }
             else {
                 Debug.Log("Zone does not have Continent Direction Attached");
