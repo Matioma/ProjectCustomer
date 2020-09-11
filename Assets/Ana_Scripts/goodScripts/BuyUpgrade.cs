@@ -10,6 +10,7 @@ public class BuyUpgrade : MonoBehaviour
     [System.Serializable]
     public class Upgrades
     {
+        public string description;
         public int productivityIncrease;
         public int price;
     }

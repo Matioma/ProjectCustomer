@@ -48,6 +48,9 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
 
     float deathTimer;
 
+    int peopleToDie;
+    int deathRate;
+
     Dictionary<Receources, int> receourcesNumber;
 
     bool isWaterConsuming = false;
@@ -218,8 +221,8 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
                 PeopleAreDying = true;
                 if (deathTimer > 0)
                 {
-                    int peopleToDie = (seedConsumptionAmount - receourcesNumber[Receources.SEEDS]) / 2;
-                    int deathRate = (peopleToDie * deathRateForTimer) / peopleDeathTimer;
+                     peopleToDie = (seedConsumptionAmount - receourcesNumber[Receources.SEEDS]) / 2;
+                     deathRate = (peopleToDie * deathRateForTimer) / peopleDeathTimer;
 
                     if (deathTimer % deathRateForTimer == 0)
                     {

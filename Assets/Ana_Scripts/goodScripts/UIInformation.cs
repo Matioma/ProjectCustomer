@@ -6,17 +6,9 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
 {
 
     [SerializeField]
-    string descriptionGeneral;
+    string planetName;
     [SerializeField]
-    string descriptionFarmingZone;
-    [SerializeField]
-    string descriptionWaterZone;
-    [SerializeField]
-    string descriptionMineralZone;
-    [SerializeField]
-    string descriptionIndZoneInvest;
-    [SerializeField]
-    string descriptionIndZoneTransport;
+    string planetDescription;
     [SerializeField]
     GameObject mainUI;
     [SerializeField]
@@ -27,22 +19,39 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
     GameObject Mine;
     [SerializeField]
     GameObject Invest;
-    List<GameObject> planets;
+
     List<Goal> planetGoals;
+
+    int planetPopulation;
+    int hungryPeople;
+    int deadthRateNumber;
+    int deathRateTime;
+    int birthRateNumber;
+    int birthRateTime;
+
+    Dictionary<Receources, int> resourcesNumber;
+
     int seedConsumptionAmount;
     int seedConsumptionTime;
     int waterConsumtionAmount;
     int waterConsumtionTime;
+
     int seedProductionAmount;
     int seedProductionTime;
     int waterProductionAmount;
     int waterProductionTime;
     int moneyProductionAmount;
     int moneyProductionTime;
+
+    bool isFarmUnlocked = false;
+    bool isWaterUnlocked = false;
+    bool isMineUnlocked = false;
+    bool isInvestmentUnlocked = false;
+
     [SerializeField]
     bool selected=false;
 
-    Dictionary<Receources, int> resourcesNumber;
+    
 
     // Start is called before the first frame update
     void Start()
