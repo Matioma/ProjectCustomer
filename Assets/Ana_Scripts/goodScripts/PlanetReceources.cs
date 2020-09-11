@@ -38,15 +38,22 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     [SerializeField]
     List<Rec> resouces;
 
-    int seedConsumptionAmount;
+    
 
     float waterTimer;
     float seedTimer;
+    [SerializeField]
     float birthRateTimer;
+    [SerializeField]
     float hungerTimer;
-
-
+    [SerializeField]
     float deathTimer;
+    [SerializeField]
+    int peopleToDie;
+    [SerializeField]
+    int deathRate;
+    [SerializeField]
+    int seedConsumptionAmount;
 
     Dictionary<Receources, int> receourcesNumber;
 
@@ -219,8 +226,8 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
                 PeopleAreDying = true;
                 if (deathTimer > 0)
                 {
-                    int peopleToDie = (seedConsumptionAmount - receourcesNumber[Receources.SEEDS]) / 2;
-                    int deathRate = (peopleToDie * deathRateForTimer) / peopleDeathTimer;
+                     peopleToDie = (seedConsumptionAmount - receourcesNumber[Receources.SEEDS]) / 2;
+                     deathRate = (peopleToDie * deathRateForTimer) / peopleDeathTimer;
 
                     if (deathTimer % deathRateForTimer == 0)
                     {
