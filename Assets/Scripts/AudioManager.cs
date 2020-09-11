@@ -79,7 +79,7 @@ public class AudioManager : MonoBehaviour
         {
             obj.onClick.AddListener(() =>
                 {
-                    Debug.Log("buttonClicked");
+                    //Debug.Log("buttonClicked");
                     if (ClickingButton != null)
                     {
 

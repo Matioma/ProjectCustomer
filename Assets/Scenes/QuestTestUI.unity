@@ -4676,7 +4676,7 @@ PrefabInstance:
     - target: {fileID: 482365368109396929, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1778123549}
+      objectReference: {fileID: 1778123561}
     - target: {fileID: 482365368109396929, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: BuyZone, Assembly-CSharp
@@ -10034,6 +10034,14 @@ PrefabInstance:
       propertyPath: buyButton
       value: 
       objectReference: {fileID: 1284005019}
+    - target: {fileID: 314908820199227704, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 314908820199227704, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 972326741785980961, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: typeOfReceource
       value: 2
@@ -10078,10 +10086,30 @@ PrefabInstance:
       propertyPath: buyButton
       value: 
       objectReference: {fileID: 169222270}
+    - target: {fileID: 2259310464998016266, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2259310464998016266, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3028341302868264383, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: buyButton
       value: 
       objectReference: {fileID: 1652018580}
+    - target: {fileID: 3028341302868264383, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: MoneyNeededToBuy
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028341302868264383, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028341302868264383, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3650564793098786826, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: zone
       value: 
@@ -10142,6 +10170,14 @@ PrefabInstance:
       propertyPath: buyButton
       value: 
       objectReference: {fileID: 1157204790}
+    - target: {fileID: 7792083379357930530, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792083379357930530, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8270486596576631890, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: m_Name
       value: WaterZone
@@ -10153,19 +10189,19 @@ PrefabInstance:
     - target: {fileID: 9081440942916320515, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: Farm
       value: 
-      objectReference: {fileID: 1778123539}
+      objectReference: {fileID: 1778123536}
     - target: {fileID: 9081440942916320515, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: Water
       value: 
-      objectReference: {fileID: 1778123538}
+      objectReference: {fileID: 1778123539}
     - target: {fileID: 9081440942916320515, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: Mine
       value: 
-      objectReference: {fileID: 1778123537}
+      objectReference: {fileID: 1778123538}
     - target: {fileID: 9081440942916320515, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: Invest
       value: 
-      objectReference: {fileID: 1778123536}
+      objectReference: {fileID: 1778123537}
     - target: {fileID: 9081440942916320516, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.788424
@@ -10342,6 +10378,14 @@ PrefabInstance:
       propertyPath: resouces.Array.data[2].amount
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: resouces.Array.data[1].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: resouces.Array.data[2].type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9081440944751468809, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -10369,6 +10413,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 972326741785980961, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
     - {fileID: 3650564793098786826, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+    - {fileID: 7278849915780998459, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
 --- !u!1 &1778123536 stripped
 GameObject:
@@ -10429,9 +10474,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seedsNeededToBuy: 10
-  WaterNeededToBuy: 10
-  MoneyNeededToBuy: 10
+  seedsNeededToBuy: 0
+  WaterNeededToBuy: 0
+  MoneyNeededToBuy: 0
   buyButton: {fileID: 1652018580}
 --- !u!114 &1778123543
 MonoBehaviour:
@@ -10459,9 +10504,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seedsNeededToBuy: 10
-  WaterNeededToBuy: 10
-  MoneyNeededToBuy: 10
+  seedsNeededToBuy: 0
+  WaterNeededToBuy: 0
+  MoneyNeededToBuy: 0
   buyButton: {fileID: 1157204790}
 --- !u!114 &1778123545
 MonoBehaviour:
@@ -10477,22 +10522,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrades: []
   button: {fileID: 108484892}
---- !u!114 &1778123546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778123538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  seedsNeededToBuy: 10
-  WaterNeededToBuy: 10
-  MoneyNeededToBuy: 10
-  buyButton: {fileID: 1284005019}
 --- !u!114 &1778123547 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2259310464998016266, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
@@ -10601,6 +10630,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typeOfReceource: 0
+  receourcesToWork: 
+  productivityTime: 5
+  productionNumber: 15
+--- !u!114 &1778123561 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 314908820199227704, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+  m_PrefabInstance: {fileID: 1778123535}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778123538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1778123562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778123538}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8678ba6872a426e4ab2a2d97b11448bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeOfReceource: 2
   receourcesToWork: 
   productivityTime: 5
   productionNumber: 15
