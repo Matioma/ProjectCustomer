@@ -149,11 +149,12 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         hungerTimer = hungerWarningTimer;
         deathTimer = peopleDeathTimer;
     }
-
+    int initialFoodProd;
     void Start()
     {
         calculateConsumptionSeedAmount();
         calculateConsumptionWaterAmount();
+        initialFoodProd= GetComponentInParent<UIInformation>().getSeedProductionAmount(); 
     }
     void calculateConsumptionSeedAmount()
     {
@@ -164,7 +165,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     {
         var productivity = GetComponentInParent<UIInformation>().getSeedProductionAmount();
         Debug.Log("rec   "+productivity);
-        waterConsumtionAmount = productivity  * waterConsumtionAmountPerSeed;
+        waterConsumtionAmount = productivity/initialFoodProd  * waterConsumtionAmountPerSeed;
     }
 
     bool isEnoughReceourse(Receources type)
