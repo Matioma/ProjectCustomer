@@ -19847,6 +19847,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2540817853737639666, guid: bd23efb7315694c4689a2a97873fb3da, type: 3}
+    - target: {fileID: 5206445700582333252, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5319158110676492873, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

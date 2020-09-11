@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7376160781853261248}
   - component: {fileID: 949025872003974378}
   - component: {fileID: 4892118430223474494}
-  - component: {fileID: 4418519635442605313}
   - component: {fileID: 645499200074312296}
   m_Layer: 9
   m_Name: RegionMesh
@@ -136,21 +135,6 @@ MonoBehaviour:
   VectorStart: {x: 0, y: 0, z: 0}
   vectorDirection: {x: -0.48, y: 1, z: -0.78}
   VectorLength: 79.94
---- !u!114 &4418519635442605313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204175325857284251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f83d2768f02151548a4a45a8732aeed0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentPlanet: {fileID: 0}
-  ZoneActionsList: 
-  Name: Zone1
 --- !u!114 &645499200074312296
 MonoBehaviour:
   m_ObjectHideFlags: 0
