@@ -54,7 +54,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
 
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         resourcesNumber = new Dictionary<Receources, int>();
 
@@ -68,7 +68,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         waterConsumtionAmount = planetReceources.getWaterComsumptionAmount();
         waterConsumtionTime = planetReceources.getWaterComsumptionTime();
 
-        seedProductionAmount = Farm.GetComponent<ReceourceZone>().GetProductivity();
+        
         waterProductionAmount = Water.GetComponent<ReceourceZone>().GetProductivity();
         if (Mine != null)
         moneyProductionAmount = Mine.GetComponent<ReceourceZone>().GetProductivity();
@@ -76,7 +76,13 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         planetGoals = GetComponent<Quest>().getGoalList();
 
         Debug.Log("prod  "+seedProductionAmount);
+        
 
+    }
+
+    void Awake()
+    {
+        seedProductionAmount = Farm.GetComponent<ReceourceZone>().GetProductivity();
     }
 
 
@@ -88,8 +94,20 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         //Debug.Log(selected);
         if (selected)
         {
+            if (mainUI.GetComponent<UIPlanetManager>() == null)
+            {
+                Debug.Log("is null");
+            }
+            else
+            {
+                if (mainUI != null)
+                {
+                    mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(rec, resourcesNumber[rec]);
+                    Debug.Log("is not null");
+                }
+            }
+            
 
-            mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(rec, resourcesNumber[rec]);
         }
     }
 
