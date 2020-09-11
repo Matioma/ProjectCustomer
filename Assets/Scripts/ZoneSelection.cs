@@ -70,6 +70,6 @@ public class ZoneSelection : SelectableObject
         }
     }
     void ScaleRegion(float value) {
-        transform.localScale +=new Vector3(value,value,value);
+        transform.localScale *=value;
     }
 }
