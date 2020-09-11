@@ -7968,7 +7968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: seedConsumptionTime
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: waterConsumtionAmount
@@ -8016,7 +8016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: population
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: birthRateTime
@@ -8064,7 +8064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8651814300453633572, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: productionNumber
-      value: 2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8651814300453633572, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: receourcesToWork.Array.data[0]
@@ -8218,12 +8218,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrades:
-  - productivityIncrease: 2
-    price: 100
-  - productivityIncrease: 4
-    price: 200
-  - productivityIncrease: 8
-    price: 300
+  - description: 
+    productivityIncrease: 20
+    price: 1
+  - description: 
+    productivityIncrease: 40
+    price: 1
+  - description: 
+    productivityIncrease: 80
+    price: 1
   button: {fileID: 1493862218}
 --- !u!114 &1348041594
 MonoBehaviour:
@@ -8238,12 +8241,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrades:
-  - productivityIncrease: 3
-    price: 100
-  - productivityIncrease: 5
-    price: 200
-  - productivityIncrease: 10
-    price: 300
+  - description: 
+    productivityIncrease: 3
+    price: 1
+  - description: 
+    productivityIncrease: 5
+    price: 1
+  - description: 
+    productivityIncrease: 10
+    price: 1
   button: {fileID: 1589859362}
 --- !u!114 &1348041595
 MonoBehaviour:
@@ -8258,12 +8264,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrades:
-  - productivityIncrease: 5
-    price: 100
-  - productivityIncrease: 5
-    price: 200
-  - productivityIncrease: 5
-    price: 300
+  - description: 
+    productivityIncrease: 5
+    price: 1
+  - description: 
+    productivityIncrease: 5
+    price: 1
+  - description: 
+    productivityIncrease: 5
+    price: 1
   button: {fileID: 1668340655}
 --- !u!114 &1348041596
 MonoBehaviour:
