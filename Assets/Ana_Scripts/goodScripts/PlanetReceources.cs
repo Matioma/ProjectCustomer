@@ -202,6 +202,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         {
             population += birthRateNumber;
             birthRateTimer = birthRateTime;
+            calculateConsumptionSeedAmount();
         }
         else
         {
@@ -295,9 +296,9 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     {
         if (seedTimer < 0 && receourcesNumber[Receources.SEEDS] > 0)
         {
-            if (receourcesNumber[Receources.SEEDS] > seedConsumptionAmountPerPerson)
+            if (receourcesNumber[Receources.SEEDS] > seedConsumptionAmount)
             {
-                AddReceource(Receources.SEEDS, -seedConsumptionAmountPerPerson);
+                AddReceource(Receources.SEEDS, -seedConsumptionAmount);
             }
             else
             {

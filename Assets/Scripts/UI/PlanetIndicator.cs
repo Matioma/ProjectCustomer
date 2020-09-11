@@ -62,6 +62,7 @@ public class PlanetIndicator : MonoBehaviour
     }
     void ShowExplamationMark()
     {
+        Debug.Log("Planet Is Dying");
         exclamationMark.SetActive(true);
         IsIndicatorVisible isIndicatorVisible = exclamationMark.GetComponent<IsIndicatorVisible>();
         isIndicatorVisible.Visible = true;
