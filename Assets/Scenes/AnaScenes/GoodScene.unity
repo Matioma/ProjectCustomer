@@ -2589,7 +2589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &398256599
 Transform:
   m_ObjectHideFlags: 0
@@ -3478,7 +3478,7 @@ GameObject:
   - component: {fileID: 538045698}
   - component: {fileID: 538045697}
   m_Layer: 5
-  m_Name: MoneyImage
+  m_Name: PlanetGaabulIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3493,14 +3493,14 @@ RectTransform:
   m_GameObject: {fileID: 538045695}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.97007346, y: 0.3364435, z: 0.58269364}
+  m_LocalScale: {x: 1.4732989, y: 0.4163825, z: 0.5826935}
   m_Children: []
   m_Father: {fileID: 165514054}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2567444, y: 0.8320751}
+  m_AnchoredPosition: {x: -3.8959312, y: 0.83206844}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &538045697
@@ -3523,7 +3523,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cf535819e0018cf4a82147041ae39d49, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c03a9db596cad64e8dd17c0c5a94f7c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3574,7 +3574,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4551,7 +4551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &699128349
 Transform:
   m_ObjectHideFlags: 0
@@ -7957,7 +7957,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11243,7 +11243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2003897703
 Transform:
   m_ObjectHideFlags: 0
@@ -11272,7 +11272,7 @@ GameObject:
   - component: {fileID: 2017172350}
   - component: {fileID: 2017172349}
   m_Layer: 5
-  m_Name: MoneyImage
+  m_Name: PlanetDolhaIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11287,14 +11287,14 @@ RectTransform:
   m_GameObject: {fileID: 2017172347}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.97007346, y: 0.3364435, z: 0.58269364}
+  m_LocalScale: {x: 1.345977, y: 0.35747126, z: 0.5826935}
   m_Children: []
   m_Father: {fileID: 1125765827}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2567444, y: 0.8320751}
+  m_AnchoredPosition: {x: -3.3878918, y: 0.83206844}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2017172349
@@ -11317,7 +11317,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cf535819e0018cf4a82147041ae39d49, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d79e4936b102d44ba9aa415c6d092d5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11707,6 +11707,10 @@ PrefabInstance:
     - target: {fileID: 809283179966466759, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 809283179966466759, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
