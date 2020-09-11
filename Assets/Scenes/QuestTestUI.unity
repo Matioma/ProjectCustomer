@@ -542,6 +542,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JunglePlanet
       objectReference: {fileID: 0}
+    - target: {fileID: 6602431170377263403, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6602431170377263407, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: Farm
       value: 
@@ -3766,6 +3770,10 @@ PrefabInstance:
       propertyPath: planet
       value: 
       objectReference: {fileID: 1348041592}
+    - target: {fileID: 482365369087044022, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 482365369087044023, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
@@ -7688,7 +7696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7139615286648104465, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7139615286648104465, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -7813,6 +7821,10 @@ PrefabInstance:
     - target: {fileID: 7139615286648104472, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: m_Name
       value: Planetearth
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615286648104472, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7139615286648104474, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: canvasManager
@@ -10538,6 +10550,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DesertPlanet
       objectReference: {fileID: 0}
+    - target: {fileID: 9081440942916320519, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9081440942916320526, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -10652,7 +10668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: resouces.Array.data[0].amount
-      value: 100
+      value: 100000
       objectReference: {fileID: 0}
     - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: resouces.Array.data[1].amount
@@ -10676,6 +10692,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: population
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: waterConsumtionAmountPerSeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: seedConsumptionAmount
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 9081440944751468809, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
@@ -10786,7 +10810,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d9d059f51457784ba521c4a8ff0a4f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrades: []
+  upgrades:
+  - description: 
+    productivityIncrease: 3
+    price: 5
   button: {fileID: 564738235}
 --- !u!114 &1778123544
 MonoBehaviour:
