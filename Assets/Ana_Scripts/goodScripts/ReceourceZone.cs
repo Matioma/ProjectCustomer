@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -15,6 +16,16 @@ public class ReceourceZone : MonoBehaviour
     int productionNumber = 15;
     float timer;
 
+
+    public Receources GetResourceType(){ 
+        return typeOfReceource;
+    }
+    public int GetProductionAmount() {
+        return productionNumber;
+    }
+    public event Action onEndProductionCycle;
+
+
     private void Awake()
     {
         this.enabled = false;
@@ -30,6 +41,7 @@ public class ReceourceZone : MonoBehaviour
         {
             var addition = GetComponentInParent<IReceourceAddition<Receources>>();
             addition.AddReceource(typeOfReceource, productionNumber);
+            onEndProductionCycle?.Invoke();
             timer = productivityTime;
         }
         else
