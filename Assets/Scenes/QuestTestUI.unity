@@ -10022,6 +10022,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 125836721115434362, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: m_Name
+      value: IndustrialZone
+      objectReference: {fileID: 0}
     - target: {fileID: 314908820199227704, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: buyButton
       value: 
@@ -10029,6 +10033,10 @@ PrefabInstance:
     - target: {fileID: 972326741785980961, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: typeOfReceource
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 972326741785980961, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 972326741785980962, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -10074,6 +10082,22 @@ PrefabInstance:
       propertyPath: zone
       value: 
       objectReference: {fileID: 1778123539}
+    - target: {fileID: 4661619456880533208, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 132.23343
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661619456880533208, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 132.23343
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661619456880533208, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 132.23343
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159666149407366375, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: m_Name
+      value: FarmZone
+      objectReference: {fileID: 0}
     - target: {fileID: 5430137011413819839, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -10094,10 +10118,22 @@ PrefabInstance:
       propertyPath: canvasManager
       value: 
       objectReference: {fileID: 1157204787}
+    - target: {fileID: 7278849915780998459, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7620867645454096480, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: m_Name
+      value: MineralZone
+      objectReference: {fileID: 0}
     - target: {fileID: 7792083379357930530, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: buyButton
       value: 
       objectReference: {fileID: 1284005019}
+    - target: {fileID: 8270486596576631890, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: m_Name
+      value: WaterZone
+      objectReference: {fileID: 0}
     - target: {fileID: 9081440942916320515, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: mainUI
       value: 
@@ -10281,6 +10317,22 @@ PrefabInstance:
     - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: seedConsumptionTime
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: resouces.Array.data[0].amount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: resouces.Array.data[1].amount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: resouces.Array.data[2].amount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081440944751468809, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9081440944751468810, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
