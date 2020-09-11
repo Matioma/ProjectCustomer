@@ -35,12 +35,7 @@ public class UIPlanetManager : MonoBehaviour
 
     public void UpdateAllScrreens()
     {
-        UpdateGeneral();
-        UpdateFarmZone();
-        UpdateWaterZone();
-        UpdateMineralZone();
-        UpdateInvestmentZone();
-        UpdateTransportZone();
+
     }
 
     public void UpdateGeneral()
@@ -70,6 +65,26 @@ public class UIPlanetManager : MonoBehaviour
 
     }
 
+    public void UpdateQuestes()
+    {
+
+    }
+    public void UpdatePopulationNumber()
+    {
+
+    }
+    public void UpdateHungryPeople()
+    {
+
+    }
+    public void UpdateDeathRate()
+    {
+
+    }
+    public void UpdateBirthRate()
+    {
+
+    }
     public void UpdateResourceButtons(Receources rec, int amount)
     {
        // if (ResouceButtons.activeSelf)
@@ -78,4 +93,30 @@ public class UIPlanetManager : MonoBehaviour
         TransportZone.GetComponentInChildren<ChangeMaxValue>().ChangeValue(rec,amount);
        // }
     }
+    public void UpdateSeedConsumption()
+    {
+
+    }
+    public void UpdateWaterConsumption()
+    {
+
+    }
+    public void UpdateSeedProductivity()
+    {
+
+    }
+    public void UpdateWaterProductivity()
+    {
+
+    }
+    public void UpdateMoneyProductivity()
+    {
+
+    }
+    public void UpdateUpgrades()
+    {
+
+    }
+
+
 }
