@@ -385,6 +385,10 @@ PrefabInstance:
       propertyPath: mainUI
       value: 
       objectReference: {fileID: 1258297484}
+    - target: {fileID: 6602431171416400969, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: resouces.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6602431171779622181, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -443,22 +447,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6602431170377263403, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
   m_PrefabInstance: {fileID: 119743507}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &119743514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119743508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  seedsNeededToBuy: 10
-  WaterNeededToBuy: 10
-  MoneyNeededToBuy: 10
-  buyButton: {fileID: 1258297480}
 --- !u!114 &119743515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,22 +475,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredCanvasType: 5
   canvasManager: {fileID: 1258297479}
---- !u!114 &119743517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119743509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  seedsNeededToBuy: 10
-  WaterNeededToBuy: 10
-  MoneyNeededToBuy: 10
-  buyButton: {fileID: 1258297481}
 --- !u!114 &119743518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,22 +502,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrades: []
   button: {fileID: 1339122226}
---- !u!114 &119743520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119743510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  seedsNeededToBuy: 10
-  WaterNeededToBuy: 10
-  MoneyNeededToBuy: 10
-  buyButton: {fileID: 1258297482}
 --- !u!114 &119743521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,22 +516,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrades: []
   button: {fileID: 547031581}
---- !u!114 &119743522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119743511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  seedsNeededToBuy: 10
-  WaterNeededToBuy: 10
-  MoneyNeededToBuy: 10
-  buyButton: {fileID: 1258297483}
 --- !u!114 &119743523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5994,7 +5934,7 @@ PrefabInstance:
     - target: {fileID: 482365367576749917, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 119743522}
+      objectReference: {fileID: 0}
     - target: {fileID: 482365367576749917, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: BuyZone, Assembly-CSharp
@@ -6206,7 +6146,7 @@ PrefabInstance:
     - target: {fileID: 482365368109396929, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 119743520}
+      objectReference: {fileID: 0}
     - target: {fileID: 482365368109396929, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: BuyZone, Assembly-CSharp
@@ -6622,7 +6562,7 @@ PrefabInstance:
     - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 119743514}
+      objectReference: {fileID: 0}
     - target: {fileID: 482365369674125928, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: BuyZone, Assembly-CSharp
@@ -7178,26 +7118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada7b63b4d40c7140ab52d57c1f4740c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1258297480 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 482365369674125930, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
-  m_PrefabInstance: {fileID: 1258297473}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1258297481 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 482365368904480388, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
-  m_PrefabInstance: {fileID: 1258297473}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1258297482 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 482365368109396931, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
-  m_PrefabInstance: {fileID: 1258297473}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1258297483 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 482365367576749919, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
-  m_PrefabInstance: {fileID: 1258297473}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1258297484 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3977515067236964067, guid: 20436ae13f8732940be3cfd36c43b5cc, type: 3}
@@ -7643,7 +7563,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287463492118, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
+      propertyPath: resouces.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7139615287827753850, guid: bc86c3df40847ba4886bd21839c5e01f, type: 3}
       propertyPath: moneynumber
@@ -10114,7 +10038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: resouces.Array.size
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: seedConsumptionTime
@@ -10142,6 +10066,109 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8270486596576631890, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
   m_PrefabInstance: {fileID: 1778123535}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1778123540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778123536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5560767393f5554ea98074d022b349c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiredCanvasType: 5
+  canvasManager: {fileID: 1157204787}
+--- !u!114 &1778123541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778123536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfafbd5160ea7c4184e6f7357560fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetToSend: {fileID: 0}
+--- !u!114 &1778123542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778123536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seedsNeededToBuy: 10
+  WaterNeededToBuy: 10
+  MoneyNeededToBuy: 10
+  buyButton: {fileID: 1284005019}
+--- !u!114 &1778123543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778123537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d9d059f51457784ba521c4a8ff0a4f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrades: []
+  button: {fileID: 108484892}
+--- !u!114 &1778123544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778123537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seedsNeededToBuy: 10
+  WaterNeededToBuy: 10
+  MoneyNeededToBuy: 10
+  buyButton: {fileID: 1284005019}
+--- !u!114 &1778123545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778123538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d9d059f51457784ba521c4a8ff0a4f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrades: []
+  button: {fileID: 39713559}
+--- !u!114 &1778123546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778123538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a257763bf37313a41bd5d25d2cbb28af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seedsNeededToBuy: 10
+  WaterNeededToBuy: 10
+  MoneyNeededToBuy: 10
+  buyButton: {fileID: 169222270}
 --- !u!1 &1803794712
 GameObject:
   m_ObjectHideFlags: 0
@@ -10429,7 +10456,7 @@ PrefabInstance:
       objectReference: {fileID: 169222270}
     - target: {fileID: 5909672666509376240, guid: abdfd05c213f37945a96f4c679447de9, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5909672666509376242, guid: abdfd05c213f37945a96f4c679447de9, type: 3}
       propertyPath: canvasManager
@@ -10455,7 +10482,11 @@ PrefabInstance:
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnScreenChange
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2907735953183726273, guid: abdfd05c213f37945a96f4c679447de9, type: 3}
+    - {fileID: 3701452512847372019, guid: abdfd05c213f37945a96f4c679447de9, type: 3}
+    - {fileID: 6567372064283986921, guid: abdfd05c213f37945a96f4c679447de9, type: 3}
+    - {fileID: 2091395131226266228, guid: abdfd05c213f37945a96f4c679447de9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: abdfd05c213f37945a96f4c679447de9, type: 3}
 --- !u!1 &1886787957 stripped
 GameObject:
