@@ -9,8 +9,11 @@ public class ContinentDirection : MonoBehaviour
 
     [SerializeField]
     Vector3 vectorDirection;
-    public Vector3 getDirection() {
+    public Vector3 getWorldDirection() {
         return transform.rotation*vectorDirection.normalized;
+    }
+    public Vector3 getDirection() {
+        return vectorDirection.normalized;
     }
 
 

@@ -295,7 +295,7 @@ public class CameraController : MonoBehaviour
 
         Vector3 directionVector = hitResult.normal;
         if (continentDirection != null) {
-            directionVector = continentDirection.getDirection().normalized;
+            directionVector = continentDirection.getWorldDirection().normalized;
         }
 
         Vector3 position = SelectedPlanet.transform.position + directionVector * SelectedPlanet.GetDistance();
