@@ -54,7 +54,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         resourcesNumber = new Dictionary<Receources, int>();
 
@@ -74,6 +74,8 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         moneyProductionAmount = Mine.GetComponent<ReceourceZone>().GetProductivity();
 
         planetGoals = GetComponent<Quest>().getGoalList();
+
+        Debug.Log("prod  "+seedProductionAmount);
 
     }
 

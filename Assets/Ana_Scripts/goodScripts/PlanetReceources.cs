@@ -140,14 +140,20 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
             receourcesNumber[resouces[i].type] = resouces[i].amount;
         }
 
-        calculateConsumptionSeedAmount();
-        calculateConsumptionWaterAmount();
+        //calculateConsumptionSeedAmount();
+        //calculateConsumptionWaterAmount();
 
         seedTimer = seedConsumptionTime;
         waterTimer = waterConsumtionTime;
         birthRateTimer = birthRateTime;
         hungerTimer = hungerWarningTimer;
         deathTimer = peopleDeathTimer;
+    }
+
+    void Start()
+    {
+        calculateConsumptionSeedAmount();
+        calculateConsumptionWaterAmount();
     }
     void calculateConsumptionSeedAmount()
     {
@@ -157,6 +163,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     public void calculateConsumptionWaterAmount()
     {
         var productivity = GetComponentInParent<UIInformation>().getSeedProductionAmount();
+        Debug.Log("rec   "+productivity);
         waterConsumtionAmount = productivity  * waterConsumtionAmountPerSeed;
     }
 

@@ -57,6 +57,7 @@ public class ReceourceZone : MonoBehaviour
     public void ChangeProductivityNumber(int amount)
     {
         productionNumber += amount;
+        Debug.Log("prod Increase  " + productionNumber);
         GetComponentInParent<PlanetReceources>().GetComponentInParent<UIInformation>().ChangeProductivity(typeOfReceource, amount);
     }
 
