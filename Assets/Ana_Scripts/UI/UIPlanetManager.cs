@@ -52,7 +52,7 @@ public class UIPlanetManager : MonoBehaviour
     {
         UIMineralZone.GetComponent<BasicZoneUpdater>().Initialize(isZoneUnlocked, productivityNumber, productivityTime, Zone);
     }
-    public void InitializeInvestmentZone(bool isZoneUnlocked, GameObject Farm, GameObject Water, GameObject Mine)
+    public void InitializeInvestmentZone(bool isZoneUnlocked, GameObject Farm, GameObject Water, GameObject Mine, GameObject Invest)
     {
 
     }

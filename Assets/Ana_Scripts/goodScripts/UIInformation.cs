@@ -165,7 +165,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         }
         if (Invest != null) 
         {
-            mainUI.GetComponent<UIPlanetManager>().InitializeInvestmentZone(isInvestmentUnlocked, Farm, Water, Mine);
+            mainUI.GetComponent<UIPlanetManager>().InitializeInvestmentZone(isInvestmentUnlocked, Farm, Water, Mine, Invest);
             mainUI.GetComponent<UIPlanetManager>().InitializeTransportZone(Invest);
         }
     }

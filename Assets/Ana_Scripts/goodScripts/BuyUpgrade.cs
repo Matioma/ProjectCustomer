@@ -47,8 +47,8 @@ public class BuyUpgrade : MonoBehaviour
         }
     }
 
-    public int GetUpgrade()
+    public string GetUpgradeText()
     {
-        return upgrades[upgradeIndex].productivityIncrease;
+        return upgrades[upgradeIndex].description;
     }
 }
