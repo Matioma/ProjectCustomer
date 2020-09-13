@@ -34,23 +34,23 @@ public class UIPlanetManager : MonoBehaviour
     }
 
 
-    public void InitializeGeneral(int populationNumber, int hungryPeopleNumber,int deathRateNumber,int deathRateTime, int birthRateNumber, int birthRateTime)
+    public void InitializeGeneral(int populationNumber, int hungryPeopleNumber, int deathRateNumber, int deathRateTime, int birthRateNumber, int birthRateTime)
     {
-        UIGeneral.GetComponent<GeneralZoneUpdater>().Initialize( populationNumber,  hungryPeopleNumber,  deathRateNumber,  deathRateTime,  birthRateNumber,  birthRateTime);
+        UIGeneral.GetComponent<GeneralZoneUpdater>().Initialize(populationNumber, hungryPeopleNumber, deathRateNumber, deathRateTime, birthRateNumber, birthRateTime);
     }
-    public void InitializeFarmZone(bool isZoneUnlocked, int productivityNumber,int productivityTime, int consumptionWaterNumber, int consumptionWaterTime)
+    public void InitializeFarmZone(bool isZoneUnlocked, int productivityNumber, int productivityTime, int consumptionWaterNumber, int consumptionWaterTime, GameObject Farm)
     {
-
-    }
-
-    public void InitializeWaterZone(bool isZoneUnlocked, int productivityNumber, int productivityTime)
-    {
-
+        UIFarmZone.GetComponent<FarmZoneUpdater>().Initialize(isZoneUnlocked, productivityNumber, productivityTime, consumptionWaterNumber, consumptionWaterTime, Farm);
     }
 
-    public void InitializeMineralZone(bool isZoneUnlocked, int productivityNumber, int productivityTime)
+    public void InitializeWaterZone(bool isZoneUnlocked, int productivityNumber, int productivityTime, GameObject Zone)
     {
+        UIWaterZone.GetComponent<BasicZoneUpdater>().Initialize(isZoneUnlocked, productivityNumber, productivityTime, Zone);
+    }
 
+    public void InitializeMineralZone(bool isZoneUnlocked, int productivityNumber, int productivityTime, GameObject Zone)
+    {
+        UIMineralZone.GetComponent<BasicZoneUpdater>().Initialize(isZoneUnlocked, productivityNumber, productivityTime, Zone);
     }
     public void InitializeInvestmentZone(bool isZoneUnlocked, GameObject Farm, GameObject Water, GameObject Mine)
     {
@@ -83,11 +83,11 @@ public class UIPlanetManager : MonoBehaviour
     }
     public void UpdateResourceButtons(Receources rec, int amount)
     {
-       // if (ResouceButtons.activeSelf)
-       // {
-            UIResouceButtons.GetComponent<ResourcesButtonsUpdater>().ChangeAmount(rec, amount);
-        UITransportZone.GetComponentInChildren<ChangeMaxValue>().ChangeValue(rec,amount);
-       // }
+        // if (ResouceButtons.activeSelf)
+        // {
+        UIResouceButtons.GetComponent<ResourcesButtonsUpdater>().ChangeAmount(rec, amount);
+        UITransportZone.GetComponentInChildren<ChangeMaxValue>().ChangeValue(rec, amount);
+        // }
     }
     public void UpdateSeedConsumption(int newConsumption)
     {
