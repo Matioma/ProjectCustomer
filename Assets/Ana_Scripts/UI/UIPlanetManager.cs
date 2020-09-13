@@ -7,19 +7,19 @@ public class UIPlanetManager : MonoBehaviour
     [SerializeField]
     List<GameObject> planets;
     [SerializeField]
-    GameObject General;
+    GameObject UIGeneral;
     [SerializeField]
-    GameObject FarmZone;
+    GameObject UIFarmZone;
     [SerializeField]
-    GameObject WaterZone;
+    GameObject UIWaterZone;
     [SerializeField]
-    GameObject MineralZone;
+    GameObject UIMineralZone;
     [SerializeField]
-    GameObject InvestmentZone;
+    GameObject UIInvestmentZone;
     [SerializeField]
-    GameObject TransportZone;
+    GameObject UITransportZone;
     [SerializeField]
-    GameObject ResouceButtons;
+    GameObject UIResouceButtons;
 
     GameObject currentPlanet;
 
@@ -38,29 +38,29 @@ public class UIPlanetManager : MonoBehaviour
 
     }
 
-    public void UpdateGeneral()
+    public void InitializeGeneral(int populationNumber, int hungryPeopleNumber,int deathRateNumber,int deathRateTime, int birthRateNumber, int birthRateTime)
     {
-
+        UIGeneral.GetComponent<GeneralZoneUpdater>().Initialize( populationNumber,  hungryPeopleNumber,  deathRateNumber,  deathRateTime,  birthRateNumber,  birthRateTime);
     }
-    public void UpdateFarmZone()
-    {
-
-    }
-
-    public void UpdateWaterZone()
+    public void InitializeFarmZone(bool isZoneUnlocked, int productivityNumber,int productivityTime, int consumptionWaterNumber, int consumptionWaterTime)
     {
 
     }
 
-    public void UpdateMineralZone()
+    public void InitializeWaterZone(bool isZoneUnlocked, int productivityNumber, int productivityTime)
     {
 
     }
-    public void UpdateInvestmentZone()
+
+    public void InitializeMineralZone(bool isZoneUnlocked, int productivityNumber, int productivityTime)
     {
 
     }
-    public void UpdateTransportZone()
+    public void InitializeInvestmentZone(bool isZoneUnlocked, GameObject Farm, GameObject Water, GameObject Mine)
+    {
+
+    }
+    public void InitializeTransportZone(GameObject IndustrialZone)
     {
 
     }
@@ -69,19 +69,19 @@ public class UIPlanetManager : MonoBehaviour
     {
 
     }
-    public void UpdatePopulationNumber()
+    public void UpdatePopulationNumber(int newNumber)
     {
 
     }
-    public void UpdateHungryPeople()
+    public void UpdateHungryPeople(int newNumber)
     {
 
     }
-    public void UpdateDeathRate()
+    public void UpdateDeathRate(int newRateNumber, int newRateTime)
     {
 
     }
-    public void UpdateBirthRate()
+    public void UpdateBirthRate(int newRateNumber, int newRateTime)
     {
 
     }
@@ -89,27 +89,27 @@ public class UIPlanetManager : MonoBehaviour
     {
        // if (ResouceButtons.activeSelf)
        // {
-            ResouceButtons.GetComponent<ResourcesButtonsUpdater>().ChangeAmount(rec, amount);
-        TransportZone.GetComponentInChildren<ChangeMaxValue>().ChangeValue(rec,amount);
+            UIResouceButtons.GetComponent<ResourcesButtonsUpdater>().ChangeAmount(rec, amount);
+        UITransportZone.GetComponentInChildren<ChangeMaxValue>().ChangeValue(rec,amount);
        // }
     }
-    public void UpdateSeedConsumption()
+    public void UpdateSeedConsumption(int newConsumption)
     {
 
     }
-    public void UpdateWaterConsumption()
+    public void UpdateWaterConsumption(int newConsumption)
     {
 
     }
-    public void UpdateSeedProductivity()
+    public void UpdateSeedProductivity(int newProductivity)
     {
 
     }
-    public void UpdateWaterProductivity()
+    public void UpdateWaterProductivity(int newProductivity)
     {
 
     }
-    public void UpdateMoneyProductivity()
+    public void UpdateMoneyProductivity(int newProductivity)
     {
 
     }
