@@ -276,7 +276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2448139194147951892, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: MoneyNeededToBuy
-      value: 0
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 2600900888091662678, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: m_Name
@@ -316,7 +316,7 @@ PrefabInstance:
       objectReference: {fileID: 1463141643}
     - target: {fileID: 4250800613337403686, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: MoneyNeededToBuy
-      value: 0
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4250800613337403686, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: WaterNeededToBuy
@@ -338,6 +338,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4658099882840076567, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: productivityTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658099882840076567, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: productionNumber
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5297434702538358798, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: buyButton
       value: 
@@ -352,7 +360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297434702538358798, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: MoneyNeededToBuy
-      value: 0
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 5504961116460387404, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: m_Name
@@ -590,9 +598,29 @@ PrefabInstance:
       propertyPath: hungerWarningTimer
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 6602431171416400969, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: population
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6602431171416400969, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: seedConsumptionAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6602431171416400969, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: resouces.Array.data[2].amount
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 6602431171779622181, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6602431171779622181, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: productivityTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6602431171779622181, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
+      propertyPath: productionNumber
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6602431171779622182, guid: 53f42304f7cc17d4281e46eaf319b2c5, type: 3}
       propertyPath: selectedMaterial
@@ -665,7 +693,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d9d059f51457784ba521c4a8ff0a4f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrades: []
+  upgrades:
+  - description: 
+    productivityIncrease: 20
+    price: 1000
+  - description: 
+    productivityIncrease: 40
+    price: 1500
+  - description: 
+    productivityIncrease: 80
+    price: 2000
   button: {fileID: 191619632}
 --- !u!114 &119743516
 MonoBehaviour:
@@ -730,7 +767,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d9d059f51457784ba521c4a8ff0a4f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrades: []
+  upgrades:
+  - description: 
+    productivityIncrease: 3
+    price: 1000
+  - description: 
+    productivityIncrease: 6
+    price: 2000
+  - description: 
+    productivityIncrease: 12
+    price: 3000
   button: {fileID: 547031581}
 --- !u!114 &119743523
 MonoBehaviour:
@@ -8206,7 +8252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seedsNeededToBuy: 0
   WaterNeededToBuy: 0
-  MoneyNeededToBuy: 10
+  MoneyNeededToBuy: 50
   buyButton: {fileID: 1035658466}
 --- !u!114 &1348041589
 MonoBehaviour:
@@ -8222,7 +8268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seedsNeededToBuy: 0
   WaterNeededToBuy: 0
-  MoneyNeededToBuy: 10
+  MoneyNeededToBuy: 50
   buyButton: {fileID: 1035658476}
 --- !u!114 &1348041590
 MonoBehaviour:
@@ -8254,7 +8300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seedsNeededToBuy: 0
   WaterNeededToBuy: 0
-  MoneyNeededToBuy: 80
+  MoneyNeededToBuy: 50
   buyButton: {fileID: 1035658477}
 --- !u!1 &1348041592 stripped
 GameObject:
@@ -8276,13 +8322,13 @@ MonoBehaviour:
   upgrades:
   - description: 
     productivityIncrease: 20
-    price: 1
+    price: 100
   - description: 
     productivityIncrease: 40
-    price: 1
+    price: 300
   - description: 
     productivityIncrease: 80
-    price: 1
+    price: 500
   button: {fileID: 1493862218}
 --- !u!114 &1348041594
 MonoBehaviour:
@@ -8299,13 +8345,13 @@ MonoBehaviour:
   upgrades:
   - description: 
     productivityIncrease: 3
-    price: 1
+    price: 100
   - description: 
     productivityIncrease: 5
-    price: 1
+    price: 300
   - description: 
     productivityIncrease: 10
-    price: 1
+    price: 500
   button: {fileID: 1589859362}
 --- !u!114 &1348041595
 MonoBehaviour:
@@ -8321,14 +8367,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrades:
   - description: 
-    productivityIncrease: 5
-    price: 1
+    productivityIncrease: 3
+    price: 100
   - description: 
     productivityIncrease: 5
-    price: 1
+    price: 200
   - description: 
-    productivityIncrease: 5
-    price: 1
+    productivityIncrease: 8
+    price: 300
   button: {fileID: 1668340655}
 --- !u!114 &1348041596
 MonoBehaviour:
@@ -10338,6 +10384,10 @@ PrefabInstance:
       propertyPath: seedsNeededToBuy
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 314908820199227704, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: MoneyNeededToBuy
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 972326741785980961, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: typeOfReceource
       value: 2
@@ -10363,9 +10413,37 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1157204787}
     - target: {fileID: 1034510276215685689, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: upgrades.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034510276215685689, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: button
       value: 
       objectReference: {fileID: 39713559}
+    - target: {fileID: 1034510276215685689, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: upgrades.Array.data[0].productivityIncrease
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034510276215685689, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: upgrades.Array.data[1].productivityIncrease
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034510276215685689, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: upgrades.Array.data[2].productivityIncrease
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034510276215685689, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: upgrades.Array.data[0].price
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034510276215685689, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: upgrades.Array.data[1].price
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034510276215685689, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: upgrades.Array.data[2].price
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 1122840356776993044, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -10389,6 +10467,10 @@ PrefabInstance:
     - target: {fileID: 2259310464998016266, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: seedsNeededToBuy
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2259310464998016266, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: MoneyNeededToBuy
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3028341302868264383, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: buyButton
@@ -10473,6 +10555,10 @@ PrefabInstance:
     - target: {fileID: 7792083379357930530, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: seedsNeededToBuy
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792083379357930530, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: MoneyNeededToBuy
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 8270486596576631890, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: m_Name
@@ -10668,15 +10754,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: resouces.Array.data[0].amount
-      value: 100000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: resouces.Array.data[1].amount
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: resouces.Array.data[2].amount
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: resouces.Array.data[1].type
@@ -10702,12 +10788,28 @@ PrefabInstance:
       propertyPath: seedConsumptionAmount
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: birthRateNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081440944024662117, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: birthRateTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9081440944751468809, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9081440944751468809, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
       propertyPath: typeOfReceource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081440944751468809, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: productivityTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081440944751468809, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
+      propertyPath: productionNumber
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9081440944751468810, guid: 3d02bc8ffc8f078448649b64243e4393, type: 3}
@@ -10812,8 +10914,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrades:
   - description: 
-    productivityIncrease: 3
-    price: 5
+    productivityIncrease: 20
+    price: 500
+  - description: 
+    productivityIncrease: 40
+    price: 700
+  - description: 
+    productivityIncrease: 80
+    price: 1000
   button: {fileID: 564738235}
 --- !u!114 &1778123544
 MonoBehaviour:
@@ -10829,7 +10937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seedsNeededToBuy: 0
   WaterNeededToBuy: 0
-  MoneyNeededToBuy: 0
+  MoneyNeededToBuy: 500
   buyButton: {fileID: 1157204790}
 --- !u!114 &1778123545
 MonoBehaviour:
@@ -10843,7 +10951,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d9d059f51457784ba521c4a8ff0a4f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrades: []
+  upgrades:
+  - description: 
+    productivityIncrease: 5
+    price: 300
+  - description: 
+    productivityIncrease: 10
+    price: 700
+  - description: 
+    productivityIncrease: 15
+    price: 1000
   button: {fileID: 108484892}
 --- !u!114 &1778123546 stripped
 MonoBehaviour:
@@ -10965,7 +11082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeOfReceource: 0
   receourcesToWork: 
-  productivityTime: 5
+  productivityTime: 1
   productionNumber: 15
 --- !u!114 &1778123561 stripped
 MonoBehaviour:
@@ -10992,8 +11109,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeOfReceource: 2
   receourcesToWork: 
-  productivityTime: 5
-  productionNumber: 15
+  productivityTime: 1
+  productionNumber: 5
 --- !u!1 &1803794712
 GameObject:
   m_ObjectHideFlags: 0
