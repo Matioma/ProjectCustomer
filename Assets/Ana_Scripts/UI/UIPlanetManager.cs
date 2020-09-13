@@ -33,10 +33,6 @@ public class UIPlanetManager : MonoBehaviour
         return currentPlanet;
     }
 
-    public void UpdateAllScrreens()
-    {
-
-    }
 
     public void InitializeGeneral(int populationNumber, int hungryPeopleNumber,int deathRateNumber,int deathRateTime, int birthRateNumber, int birthRateTime)
     {
