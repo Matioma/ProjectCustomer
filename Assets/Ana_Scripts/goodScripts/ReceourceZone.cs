@@ -54,10 +54,10 @@ public class ReceourceZone : MonoBehaviour
     {
         productivityTime += amount;
     }
-    public void ChangeProductivityNumber(int amount)
+    public void ChangeProductivityNumber(int amount,string upgradeDescription)
     {
         productionNumber += amount;
-        GetComponentInParent<PlanetReceources>().GetComponentInParent<UIInformation>().ChangeProductivity(typeOfReceource, amount);
+        GetComponentInParent<PlanetReceources>().GetComponentInParent<UIInformation>().ChangeProductivity(typeOfReceource, amount,upgradeDescription);
     }
 
     public int GetProductivity()
