@@ -57,7 +57,7 @@ MonoBehaviour:
   OnDeselected:
     m_PersistentCalls:
       m_Calls: []
-  MinCameraDistFromPlanet: 50
+  MinCameraDistFromPlanet: 1000
 --- !u!135 &5319158110676492876
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -83,11 +83,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c2e769f79717043a8a1ff940925b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetName: 
-  planetDescription: 
-  planet: {fileID: 0}
+  descriptionGeneral: 
+  descriptionFarmingZone: 
+  descriptionWaterZone: 
+  descriptionMineralZone: 
+  descriptionIndZoneInvest: 
+  descriptionIndZoneTransport: 
   mainUI: {fileID: 0}
-  GeoMash: {fileID: 0}
   Farm: {fileID: 0}
   Water: {fileID: 0}
   Mine: {fileID: 0}
