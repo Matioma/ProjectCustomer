@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FeedBackPrefab: {fileID: 3036071632593117490, guid: b22c284fa40908b4ea1b48669b7de38d, type: 3}
-  rangeFromCenter: 500
+  rangeFromCenter: 10
   ResourceImagePairs:
   - resourceType: 0
     image: {fileID: 21300000, guid: d71cd340506bf714aa1bf38e85b36ff1, type: 3}
