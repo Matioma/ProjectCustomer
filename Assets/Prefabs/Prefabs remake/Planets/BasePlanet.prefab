@@ -146,7 +146,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  MinCameraDistFromPlanet: 50
+  MinCameraDistFromPlanet: 500
 --- !u!135 &5319158110676492876
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -417,6 +417,10 @@ PrefabInstance:
     - target: {fileID: 2925226143283568993, guid: bc30a12ed45a2fc4db753bbf3644a4b7, type: 3}
       propertyPath: m_Name
       value: PlanetUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564817644510383081, guid: bc30a12ed45a2fc4db753bbf3644a4b7, type: 3}
+      propertyPath: rangeFromCenter
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3634950832784624722, guid: bc30a12ed45a2fc4db753bbf3644a4b7, type: 3}
       propertyPath: m_LocalPosition.x
