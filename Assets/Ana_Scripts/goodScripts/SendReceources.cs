@@ -6,7 +6,6 @@ public class SendReceources : MonoBehaviour
 {
     Receources typeOfReceurce=Receources.SEEDS;
     float amount = 0;
-    string destination="planetB";
 
     [SerializeField]
     GameObject planetToSend;

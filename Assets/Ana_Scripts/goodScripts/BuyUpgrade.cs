@@ -19,6 +19,8 @@ public class BuyUpgrade : MonoBehaviour
     Upgrades[] upgrades;
     [SerializeField]
     Button button;
+    [SerializeField]
+    Receources id;
     int upgradeIndex = 0;
 
 
@@ -31,7 +33,14 @@ public class BuyUpgrade : MonoBehaviour
             if (GetComponentInParent<PlanetReceources>().GetReceouceNumber(Receources.MONEY) >= upgrades[upgradeIndex].price)
             {
                 Debug.Log(" listeners");
-                GetComponent<ReceourceZone>().ChangeProductivityNumber(upgrades[upgradeIndex].productivityIncrease);
+                if(upgradeIndex < upgrades.Length-1)
+                {
+                    GetComponent<ReceourceZone>().ChangeProductivityNumber(upgrades[upgradeIndex].productivityIncrease, upgrades[upgradeIndex + 1].description);
+                }
+                else
+                {
+                    GetComponent<ReceourceZone>().ChangeProductivityNumber(upgrades[upgradeIndex].productivityIncrease, "Maximum level reached");
+                }
                 upgradeIndex++;
                 OnZoneUpgrade?.Invoke();
             }
@@ -47,8 +56,8 @@ public class BuyUpgrade : MonoBehaviour
         }
     }
 
-    public int GetUpgrade()
+    public string GetUpgradeText()
     {
-        return upgrades[upgradeIndex].productivityIncrease;
+        return upgrades[upgradeIndex].description;
     }
 }

@@ -7,19 +7,19 @@ public class UIPlanetManager : MonoBehaviour
     [SerializeField]
     List<GameObject> planets;
     [SerializeField]
-    GameObject General;
+    GameObject UIGeneral;
     [SerializeField]
-    GameObject FarmZone;
+    GameObject UIFarmZone;
     [SerializeField]
-    GameObject WaterZone;
+    GameObject UIWaterZone;
     [SerializeField]
-    GameObject MineralZone;
+    GameObject UIMineralZone;
     [SerializeField]
-    GameObject InvestmentZone;
+    GameObject UIInvestmentZone;
     [SerializeField]
-    GameObject TransportZone;
+    GameObject UITransportZone;
     [SerializeField]
-    GameObject ResouceButtons;
+    GameObject UIResouceButtons;
 
     GameObject currentPlanet;
 
@@ -33,49 +33,85 @@ public class UIPlanetManager : MonoBehaviour
         return currentPlanet;
     }
 
-    public void UpdateAllScrreens()
+
+    public void InitializeGeneral(int populationNumber, int hungryPeopleNumber, int deathRateNumber, int deathRateTime, int birthRateNumber, int birthRateTime)
     {
-        UpdateGeneral();
-        UpdateFarmZone();
-        UpdateWaterZone();
-        UpdateMineralZone();
-        UpdateInvestmentZone();
-        UpdateTransportZone();
+        UIGeneral.GetComponent<GeneralZoneUpdater>().Initialize(populationNumber, hungryPeopleNumber, deathRateNumber, deathRateTime, birthRateNumber, birthRateTime);
+    }
+    public void InitializeFarmZone(bool isZoneUnlocked, int productivityNumber, int productivityTime, int consumptionWaterNumber, int consumptionWaterTime, GameObject Farm)
+    {
+        UIFarmZone.GetComponent<FarmZoneUpdater>().Initialize(isZoneUnlocked, productivityNumber, productivityTime, consumptionWaterNumber, consumptionWaterTime, Farm);
     }
 
-    public void UpdateGeneral()
+    public void InitializeWaterZone(bool isZoneUnlocked, int productivityNumber, int productivityTime, GameObject Zone)
     {
-
-    }
-    public void UpdateFarmZone()
-    {
-
+        UIWaterZone.GetComponent<BasicZoneUpdater>().Initialize(isZoneUnlocked, productivityNumber, productivityTime, Zone);
     }
 
-    public void UpdateWaterZone()
+    public void InitializeMineralZone(bool isZoneUnlocked, int productivityNumber, int productivityTime, GameObject Zone)
     {
-
+        UIMineralZone.GetComponent<BasicZoneUpdater>().Initialize(isZoneUnlocked, productivityNumber, productivityTime, Zone);
+    }
+    public void InitializeInvestmentZone(bool isZoneUnlocked, GameObject Farm, GameObject Water, GameObject Mine, GameObject Invest)
+    {
+        UIInvestmentZone.GetComponent<InvestmentZoneUpdater>().Initialize(isZoneUnlocked, Farm, Water, Mine, Invest);
+    }
+    public void InitializeTransportZone(GameObject IndustrialZone, GameObject currentPlanet)
+    {
+        UITransportZone.GetComponent<TransportZoneUpdater>().Initialize(IndustrialZone, currentPlanet);
     }
 
-    public void UpdateMineralZone()
-    {
-
-    }
-    public void UpdateInvestmentZone()
-    {
-
-    }
-    public void UpdateTransportZone()
+    public void UpdateQuestes()
     {
 
     }
-
+    public void UpdatePopulationNumber(int newNumber)
+    {
+        UIGeneral.GetComponent<GeneralZoneUpdater>().UpdatePopulationNumber(newNumber);
+    }
+    public void UpdateHungryPeople(int newNumber)
+    {
+        UIGeneral.GetComponent<GeneralZoneUpdater>().UpdateHungryPeople(newNumber);
+    }
+    public void UpdateDeathRate(int newRateNumber, int newRateTime)
+    {
+        UIGeneral.GetComponent<GeneralZoneUpdater>().UpdateDeathRate(newRateNumber,newRateTime);
+    }
+    public void UpdateBirthRate(int newRateNumber, int newRateTime)
+    {
+        UIGeneral.GetComponent<GeneralZoneUpdater>().UpdateBirthRate(newRateNumber, newRateTime);
+    }
     public void UpdateResourceButtons(Receources rec, int amount)
     {
-        // if (ResouceButtons.activeSelf)
-         Debug.Log(ResouceButtons);
-        ResouceButtons.GetComponent<ResourcesButtonsUpdater>().ChangeAmount(rec, amount);
-            TransportZone.GetComponentInChildren<ChangeMaxValue>().ChangeValue(rec,amount);
-       // }
+        UIResouceButtons.GetComponent<ResourcesButtonsUpdater>().ChangeAmount(rec, amount);
+        UITransportZone.GetComponentInChildren<ChangeMaxValue>().ChangeValue(rec, amount);
     }
+    public void UpdateSeedConsumption(int newConsumption) ///////////////// To Add
+    {
+
+    }
+    public void UpdateWaterConsumption(int newConsumptionNumber, int newConsumprionTime)
+    {
+        UIFarmZone.GetComponent<FarmZoneUpdater>().UpdateConsumptionRate(newConsumptionNumber,newConsumprionTime);
+    }
+    public void UpdateSeedProductivity(int newProductivityNumber, int newProductivitytTime)
+    {
+        UIFarmZone.GetComponent<FarmZoneUpdater>().UpdateProductionRate(newProductivityNumber, newProductivitytTime);
+    }
+    public void UpdateWaterProductivity(int newProductivityNumber, int newProductivitytTime)
+    {
+        UIWaterZone.GetComponent<BasicZoneUpdater>().UpdateProductionRate(newProductivityNumber, newProductivitytTime);
+
+    }
+    public void UpdateMoneyProductivity(int newProductivityNumber, int newProductivitytTime)
+    {
+        UIMineralZone.GetComponent<BasicZoneUpdater>().UpdateProductionRate(newProductivityNumber, newProductivitytTime);
+
+    }
+    public void UpdateUpgrades(Receources resource, string description)
+    {
+        UIInvestmentZone.GetComponent<InvestmentZoneUpdater>().UpdateUpgradeText(resource, description);
+    }
+
+
 }
