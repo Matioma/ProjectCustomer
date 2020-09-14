@@ -62,12 +62,11 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
     // Start is called before the first frame update
     void Start()
     {
-        resourcesNumber = new Dictionary<Receources, int>();
+        
 
         PlanetReceources planetReceources = GetComponentInChildren<PlanetReceources>();
+        resourcesNumber = new Dictionary<Receources, int>(planetReceources.GetResouses());
 
-
-        resourcesNumber = planetReceources.GetResouses();
 
         seedConsumptionAmount = planetReceources.getSeedComsumptionAmount();
         seedConsumptionTime = planetReceources.getSeedComsumptionTime();

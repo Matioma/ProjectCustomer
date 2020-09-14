@@ -45,15 +45,15 @@ public class GeneralZoneUpdater : MonoBehaviour
     }
     public void UpdateHungryPeople(int newNumber)
     {
-        hungryPeople.text = newNumber.ToString();
+        hungryPeople.text = "Hungry people: " + newNumber.ToString();
     }
     public void UpdateDeathRate(int newRateNumber, int newRateTime)
     {
-        deathRate.text = newRateNumber.ToString() + "/" + newRateTime.ToString();
+        deathRate.text = "Death Rate:" + newRateNumber.ToString() + "/" + newRateTime.ToString();
     }
     public void UpdateBirthRate(int newRateNumber, int newRateTime)
     {
-        birthRate.text = newRateNumber.ToString() + "/" + newRateTime.ToString();
+        birthRate.text = "Birth Rate: " + newRateNumber.ToString() + "/" + newRateTime.ToString();
     }
 
 
