@@ -10,35 +10,43 @@ public class ProductionFeedbackManager : MonoBehaviour
     //List<ReceourceZone> planetReceourceZones;
 
     [SerializeField]
-    float rangeFromCenter=500;
+    float rangeFromCenter=250;
+
+    Planet owningPlanet;
         
     void Start()
     {
-        var planetReceurcesZones = GetComponentInParent<Planet>().GetComponentsInChildren<ReceourceZone>();
+        owningPlanet = GetComponentInParent<Planet>();
+
+        var planetReceurcesZones = owningPlanet.GetComponentsInChildren<ReceourceZone>();
         foreach (ReceourceZone receourceZone in planetReceurcesZones) {
             receourceZone.onEndProductionCycle += ()=> {
-                //SpawnNumber(receourceZone);
+                SpawnNumber(receourceZone);
             };
         }
     }
     void SpawnNumber(ReceourceZone receourceZone) {
-        var obj = Instantiate(FeedBackPrefab,transform);
+
         Vector3 continentDirection = receourceZone.GetComponentInChildren<ContinentDirection>().getDirection();
+        Debug.DrawRay(transform.position, owningPlanet.transform.rotation* continentDirection * 10000.0f, Color.green, 10.0f);
+        
 
-        obj.transform.localPosition = transform.position + continentDirection * rangeFromCenter ;
+        var indicatorObject = Instantiate(FeedBackPrefab, transform);
+        var idicatorRotation = owningPlanet.transform.rotation * continentDirection; // world Rotation of the Indicator
+        
+        //indicatorObject.transform.rotation = Quaternion.LookRotation(continentDirection, Vector3.up);
+        
+        indicatorObject.transform.position = transform.position + idicatorRotation.normalized * rangeFromCenter ; // set position
+        //indicatorObject.transform.rotation = Quaternion.LookRotation(continentDirection * 10000.0f,Vector3.up);
+
+        //MyTransform targetTransform = new MyTransform();
+        Vector3 targetPosition = indicatorObject.transform.position - transform.position;
 
 
-        var movingNumber = obj.GetComponent<MovingNumber>();
-        if (movingNumber != null) { 
-            movingNumber.Direction = continentDirection;
-        }
+        indicatorObject.transform.rotation = Quaternion.LookRotation(targetPosition, Vector3.up);
 
 
-        //var movingNumber = obj.GetComponent<MovingNumber>();
-        //movingNumber.Direction = receourceZone.GetComponentInChildren<ContinentDirection>().getWorldDirection();
-
-        //obj.transform.localPosition += receourceZone.GetComponentInChildren<ContinentDirection>().getWorldDirection()*1000f;
-        //Debug.Log("One Cycle done " + receourceZone.GetProductionAmount() + " " + receourceZone.GetResourceType());
+        Debug.Log("One Cycle done " + receourceZone.GetProductionAmount() + " " + receourceZone.GetResourceType());
     }
 
     void Update()

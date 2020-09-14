@@ -10,7 +10,7 @@ public class MovingNumber : MonoBehaviour
 
 
     [SerializeField]
-    float velocity = 120.0f;
+    float velocity = 100.0f;
     [SerializeField]
     float lifeTime =5;
     public float Velocity { get { return velocity; } }
@@ -24,10 +24,9 @@ public class MovingNumber : MonoBehaviour
 
     private void Update()
     {
-        Quaternion lookDirection = Quaternion.LookRotation(-Direction,Vector3.up);
-
-        transform.rotation = lookDirection;
-        transform.localPosition += Direction * velocity * Time.deltaTime;
+        //transform.rotation = LookDirection;
+        //transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, 0, transform.rotation.eulerAngles.z);
+        transform.localPosition += transform.localPosition.normalized * velocity * Time.deltaTime;
     }
 
     void DestroyIndicator() {
