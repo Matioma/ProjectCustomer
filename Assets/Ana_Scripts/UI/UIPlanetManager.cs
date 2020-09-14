@@ -58,7 +58,7 @@ public class UIPlanetManager : MonoBehaviour
     }
     public void InitializeTransportZone(GameObject IndustrialZone, GameObject currentPlanet)
     {
-
+        UITransportZone.GetComponent<TransportZoneUpdater>().Initialize(IndustrialZone, currentPlanet);
     }
 
     public void UpdateQuestes()
