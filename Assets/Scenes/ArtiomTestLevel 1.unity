@@ -190,6 +190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JunglePlanet
       objectReference: {fileID: 0}
+    - target: {fileID: 4397491209848086769, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: resouces.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
 --- !u!1 &621566780
