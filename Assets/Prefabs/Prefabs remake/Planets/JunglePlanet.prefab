@@ -33536,6 +33536,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 12.993191
       objectReference: {fileID: 0}
+    - target: {fileID: 2695903912343917379, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4864056309639282896, guid: 06a3f5508d9acdb4da89d233ae3f91ae, type: 3}
     - target: {fileID: 2793889350845064710, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_LocalScale.x
       value: 12.993191
@@ -33564,6 +33568,18 @@ PrefabInstance:
       propertyPath: LevelsPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7485628012907205599}
+    - target: {fileID: 3243306906482833596, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243306906482833596, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 8748892135801146194, guid: 06a3f5508d9acdb4da89d233ae3f91ae, type: 3}
+    - target: {fileID: 3243306906482833596, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: -1114199533890271507, guid: 06a3f5508d9acdb4da89d233ae3f91ae, type: 3}
     - target: {fileID: 3758949232981825237, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: VectorLength
       value: 400
@@ -33668,6 +33684,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: -1114199533890271507, guid: 21cde4f8c95eab949b6a5e72f161352d, type: 3}
+    - target: {fileID: 6183266612903480216, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4864056309639282896, guid: 06a3f5508d9acdb4da89d233ae3f91ae, type: 3}
     - target: {fileID: 6627168064758100862, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: LevelsPrefabs.Array.size
       value: 3
