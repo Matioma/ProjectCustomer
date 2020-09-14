@@ -8164,9 +8164,57 @@ PrefabInstance:
       propertyPath: m_Name
       value: MineralRegion
       objectReference: {fileID: 0}
+    - target: {fileID: 1180530734961828079, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180530734961828079, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1597331284954689027, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: typeOfReceource
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345725482877630188, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345725482877630188, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[0].description
+      value: hi
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345725482877630188, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[1].description
+      value: hi hi
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345725482877630188, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[2].description
+      value: hi hi hi
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345725482877630188, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[0].productivityIncrease
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345725482877630188, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[1].productivityIncrease
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345725482877630188, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[2].productivityIncrease
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345725482877630188, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[0].price
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345725482877630188, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[1].price
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345725482877630188, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[2].price
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3228927195318960544, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8253,8 +8301,48 @@ PrefabInstance:
       value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: id
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[0].description
+      value: bla
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[1].description
+      value: bla bla
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[2].description
+      value: bla bla bla
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[0].productivityIncrease
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[1].productivityIncrease
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[2].productivityIncrease
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[0].price
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[1].price
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[2].price
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3553266654540208291, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: desiredCanvasType
@@ -8264,9 +8352,65 @@ PrefabInstance:
       propertyPath: type
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3792327708924555282, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792327708924555282, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5930479947621174582, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: m_Name
       value: WaterRegion
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374196012783637053, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374196012783637053, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[0].description
+      value: ha
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374196012783637053, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[1].description
+      value: ha ha
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374196012783637053, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[2].description
+      value: ' ha ha ha'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374196012783637053, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[0].productivityIncrease
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374196012783637053, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[1].productivityIncrease
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374196012783637053, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[2].productivityIncrease
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374196012783637053, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[0].price
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374196012783637053, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[1].price
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374196012783637053, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[2].price
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200125385768039208, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200125385768039208, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8542861822712913355, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: m_Name
