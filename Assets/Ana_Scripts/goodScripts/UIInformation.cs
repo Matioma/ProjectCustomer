@@ -101,18 +101,18 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         //Debug.Log(selected);
         if (selected)
         {
-            if (mainUI.GetComponent<UIPlanetManager>() == null)
-            {
-                Debug.Log("is null");
-            }
-            else
-            {
-                if (mainUI != null)
-                {
+            //if (mainUI.GetComponent<UIPlanetManager>() == null)
+            //{
+            //    Debug.Log("is null");
+            //}
+            //else
+            //{
+            //    if (mainUI != null)
+            //    {
                     mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(rec, resourcesNumber[rec]);
-                    Debug.Log("is not null");
-                }
-            }
+                    //Debug.Log("is not null");
+                //}
+            //}
             
 
         }
@@ -190,6 +190,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
                 mainUI.GetComponent<UIPlanetManager>().InitializeInvestmentZone(isInvestmentUnlocked, Farm, Water, Mine, Invest);
                 mainUI.GetComponent<UIPlanetManager>().InitializeTransportZone(Invest, planet);
             }
+            mainUI.GetComponent<UIPlanetManager>().InitializeRecourceButtons(resourcesNumber[Receources.SEEDS], resourcesNumber[Receources.WATER], resourcesNumber[Receources.MONEY]);
         }
         else
         {
@@ -297,26 +298,6 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         }
     }
 
-    //public void ChangeConsumption(Receources Id, int amount)
-    //{
-    //    switch (Id)
-    //    {
-    //        case Receources.SEEDS:
-    //            seedConsumptionAmount += amount;
-    //            if (selected)
-    //            {
-    //               // mainUI.GetComponent<UIPlanetManager>().UpdateSeedConsumption(amount, seedProductionTime);
-    //            }
-    //            break;
-    //        case Receources.WATER:
-    //            waterConsumtionAmount += amount;
-    //            if (selected)
-    //            {
-    //                mainUI.GetComponent<UIPlanetManager>().UpdateWaterConsumption(amount, waterProductionTime);
-    //            }
-    //            break;
-    //    }
-    //}
     public void ChangeProductivity(Receources Id, int amount, string description)
     {
         switch (Id)
@@ -347,53 +328,5 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
                 break;
         }
     }
-    //public void ChangeProductionNumberSeeds(int amount, Receources id, string description)
-    //{
-    //    seedProductionAmount = amount;
-    //    if (selected)
-    //    {
-    //        mainUI.GetComponent<UIPlanetManager>().UpdateSeedProductivity(amount,seedProductionTime);
-    //    }
-    //}
-    //public void ChangeProductionTimeSeeds(int amount)
-    //{
-    //    seedProductionTime = amount;
-    //    if (selected)
-    //    {
-    //        //mainUI.GetComponent<UIPlanetManager>().UpdateSeedProductivity(amount);
-    //    }
-    //}
-    //public void ChangeProductionNumberWater(int amount,Receources id, string description)
-    //{
-    //    waterConsumtionAmount = amount;
-    //    if (selected)
-    //    {
-    //        mainUI.GetComponent<UIPlanetManager>().UpdateWaterProductivity(amount,waterConsumtionTime);
-    //    }
-    //}
-    //public void ChangeProductionTimeWater(int amount)
-    //{
-    //    waterConsumtionTime = amount;
-    //    if (selected)
-    //    {
-    //        // mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(); // Replace
-    //    }
-    //}
-    //public void ChangeProductionNumberMoney(int amount, Receources id, string description)
-    //{
-    //    waterConsumtionTime = amount;
-    //    //if (selected)
-    //    //{
-    //    //    mainUI.GetComponent<UIPlanetManager>().UpdateMoneyProductivity(amount);
-    //    //}
-    //}
-    //public void ChangeProductionTimeMoney(int amount)
-    //{
-    //    waterConsumtionTime = amount;
-    //    if (selected)
-    //    {
-    //        // mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(); // Replace
-    //    }
-    //}
 
 }
