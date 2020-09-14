@@ -488,6 +488,10 @@ PrefabInstance:
       propertyPath: desiredCanvasType
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2770057253657614864, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4411870845720569306, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -590,6 +594,10 @@ PrefabInstance:
     - target: {fileID: 2566920544029782689, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: desiredCanvasType
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2770057253657614864, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: type
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4411870845720569306, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -768,6 +776,10 @@ PrefabInstance:
     - target: {fileID: 2566920544029782689, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: desiredCanvasType
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2770057253657614864, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: type
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4411870845720569306, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: m_LocalPosition.x

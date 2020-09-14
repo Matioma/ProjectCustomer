@@ -210,6 +210,9 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
             case Receources.MONEY:
                 isMineUnlocked = true;
                 break;
+            case Receources.INDUSTRIAL:
+                isInvestmentUnlocked = true;
+                break;
         }
     }
     public void ChangePopulationNumber(int amount)

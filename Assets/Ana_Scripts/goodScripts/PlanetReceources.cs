@@ -148,10 +148,6 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         {
             receourcesNumber[resouces[i].type] = resouces[i].amount;
         }
-
-        //calculateConsumptionSeedAmount();
-        //calculateConsumptionWaterAmount();
-
         seedTimer = seedConsumptionTime;
         waterTimer = waterConsumtionTime;
         birthRateTimer = birthRateTime;
@@ -180,10 +176,13 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
 
     public void calculateConsumptionWaterAmount()
     {
-        var productivity = GetComponentInParent<UIInformation>().getSeedProductionAmount();
-        if (initialFoodProd != 0)
-            waterConsumtionAmount = productivity / initialFoodProd * waterConsumtionAmountPerSeed;
-        GetComponentInParent<UIInformation>().ChangeConsumptionAmountWater(waterConsumtionAmount);
+        if (GetComponentInParent<UIInformation>() != null)
+        {
+            var productivity = GetComponentInParent<UIInformation>().getSeedProductionAmount();
+            if (initialFoodProd != 0)
+                waterConsumtionAmount = productivity / initialFoodProd * waterConsumtionAmountPerSeed;
+            GetComponentInParent<UIInformation>().ChangeConsumptionAmountWater(waterConsumtionAmount);
+        }
     }
 
     bool isEnoughReceourse(Receources type)

@@ -58,6 +58,11 @@ public class BuyUpgrade : MonoBehaviour
 
     public string GetUpgradeText()
     {
-        return upgrades[upgradeIndex].description;
+        //Debug.Log(upgradeIndex);
+        if (upgradeIndex <= upgrades.Length-1)
+        {
+            return upgrades[upgradeIndex].description;
+        }
+        return null;
     }
 }

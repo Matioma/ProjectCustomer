@@ -36,7 +36,7 @@ public class InvestmentZoneUpdater : MonoBehaviour
         {
             unlockZoneButton.gameObject.SetActive(false);
             UIZoneUnlocked.SetActive(true);
-            UpdateUI();
+            
         }
         else
         {
@@ -44,6 +44,7 @@ public class InvestmentZoneUpdater : MonoBehaviour
             UIZoneUnlocked.SetActive(false);
             UpdateButton();
         }
+        UpdateUI();
     }
     public void UpdateButton()
     {
@@ -72,6 +73,7 @@ public class InvestmentZoneUpdater : MonoBehaviour
         }
         else
         {
+            Debug.Log("updateFarm buttons");
             farmUpgradeDescription.gameObject.SetActive(true);
             farmUpgradeDescription.text = Farm.GetComponent<BuyUpgrade>().GetUpgradeText();
             farmUpgradeButton.gameObject.SetActive(true);
@@ -85,6 +87,8 @@ public class InvestmentZoneUpdater : MonoBehaviour
         }
         else
         {
+            Debug.Log("updateWater buttons");
+
             waterUpgradeDescription.gameObject.SetActive(true);
             waterUpgradeDescription.text = Water.GetComponent<BuyUpgrade>().GetUpgradeText();
             waterUpgradeButton.gameObject.SetActive(true);
@@ -98,6 +102,8 @@ public class InvestmentZoneUpdater : MonoBehaviour
         }
         else
         {
+            Debug.Log("updateMine buttons");
+
             mineUpgradeDescription.gameObject.SetActive(true);
             mineUpgradeDescription.text = Mine.GetComponent<BuyUpgrade>().GetUpgradeText();
             mineUpgradeButton.gameObject.SetActive(true);

@@ -33,7 +33,7 @@ public class ReceourceZone : MonoBehaviour
     private void Start()
     {
         timer = productivityTime;
-        GetComponentInParent<PlanetReceources>().GetComponentInParent<UIInformation>().ZoneIsUnlocked(typeOfReceource);
+        
     }
 
     void FixedUpdate()

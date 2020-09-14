@@ -67,14 +67,19 @@ public class TransportZoneUpdater : MonoBehaviour
     private void OnResourceChangeToSeeds()
     {
         Invest.GetComponent<SendReceources>().ChangeTypeOfReceource(Receources.SEEDS);
+        slider.GetComponent<ChangeMaxValue>().ChangeRec(Receources.SEEDS);
     }
     private void OnResourceChangeToWater()
     {
         Invest.GetComponent<SendReceources>().ChangeTypeOfReceource(Receources.WATER);
+        slider.GetComponent<ChangeMaxValue>().ChangeRec(Receources.WATER);
+
     }
     private void OnResourceChangeToMoney()
     {
         Invest.GetComponent<SendReceources>().ChangeTypeOfReceource(Receources.MONEY);
+        slider.GetComponent<ChangeMaxValue>().ChangeRec(Receources.MONEY);
+
     }
 
     private void ChangeValueInSlider()

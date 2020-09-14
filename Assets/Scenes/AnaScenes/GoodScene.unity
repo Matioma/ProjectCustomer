@@ -2015,6 +2015,7 @@ GameObject:
   m_Component:
   - component: {fileID: 331273661}
   - component: {fileID: 331273662}
+  - component: {fileID: 331273663}
   m_Layer: 0
   m_Name: AmountSlider
   m_TagString: Untagged
@@ -2106,6 +2107,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &331273663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331273660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe121884569f0144087122d20d25811f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &348501196
 GameObject:
   m_ObjectHideFlags: 0
@@ -4403,7 +4416,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 608835621}
-  - component: {fileID: 608835622}
   m_Layer: 0
   m_Name: SelectAmount
   m_TagString: Untagged
@@ -4428,18 +4440,6 @@ Transform:
   m_Father: {fileID: 398256599}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &608835622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608835620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe121884569f0144087122d20d25811f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &621566780
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ public class BuyZone : MonoBehaviour
     int WaterNeededToBuy = 10;
     [SerializeField]
     int MoneyNeededToBuy = 10;
+    [SerializeField]
+    Receources type;
     //[SerializeField]
     //GameObject buyButton;
 
@@ -30,6 +32,7 @@ public class BuyZone : MonoBehaviour
                 GetComponent<ReceourceZone>().enabled = true;
             }
             IReceourceAddition<Receources> AddResource = GetComponentInParent<IReceourceAddition<Receources>>();
+            GetComponentInParent<PlanetReceources>().GetComponentInParent<UIInformation>().ZoneIsUnlocked(type);
 
             AddResource.AddReceource(Receources.SEEDS, - seedsNeededToBuy);
             AddResource.AddReceource(Receources.WATER, - WaterNeededToBuy);

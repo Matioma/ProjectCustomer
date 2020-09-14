@@ -9,6 +9,7 @@ public class ChangeAmountTextTransport : MonoBehaviour
     TextMeshProUGUI text;
     public void ChangeText(float value)
     {
-        text.text = value.ToString();
+        int amount = (int)value;
+        text.text = amount.ToString();
     }
 }

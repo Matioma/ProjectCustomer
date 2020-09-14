@@ -19,24 +19,28 @@ public class ChangeMaxValue : MonoBehaviour
 
     public void ResetValue()
     {
-        var slider = GetComponent<Slider>();
+        var slider = GetComponentInChildren<Slider>();
         slider.maxValue = 1;
-        rec = Receources.ALL;
+        slider.value = 0;
     }
 
 
-    public void ChangeRec(int i)
+    public void ChangeRec(Receources resouce)
     {
-        switch (i)
+        var slider = GetComponentInChildren<Slider>();
+        switch (resouce)
         {
-            case 1:
+            case Receources.SEEDS:
                 rec = Receources.SEEDS;
+                slider.value = 0;
                 break;
-            case 2:
+            case Receources.WATER:
                 rec = Receources.WATER;
+                slider.value = 0;
                 break;
-            case 3:
+            case Receources.MONEY:
                 rec = Receources.MONEY;
+                slider.value = 0;
                 break;
         }
     }
