@@ -9,7 +9,6 @@ public class ProductionNumberSpawner : MonoBehaviour
 {
     [SerializeField]
     GameObject FeedBackPrefab;
-    //List<ReceourceZone> planetReceourceZones;
 
     [SerializeField]
     float rangeFromCenter=250;
@@ -17,24 +16,42 @@ public class ProductionNumberSpawner : MonoBehaviour
     Planet owningPlanet;
 
     [SerializeField]
+    Color32 PositiveIncomeColor;
+    [SerializeField]
+    Color32 PositiveIncomeImageTint;
+
+    [SerializeField]
+    Color NegativeIncomeColor;
+    [SerializeField]
+    Color NegativeIncomeImageTint;
+
+    [SerializeField]
     List<IndicatorPairs> ResourceImagePairs;
-        
     void Start()
     {
         owningPlanet = GetComponentInParent<Planet>();
 
         var planetReceurcesZones = owningPlanet.GetComponentsInChildren<ReceourceZone>();
         foreach (ReceourceZone receourceZone in planetReceurcesZones) {
+            
             receourceZone.onEndProductionCycle += ()=> {
                 SpawnNumber(receourceZone);
+                Debug.Log("Food produced");
             };
         }
-    }
-    void SpawnNumber(ReceourceZone receourceZone) {
 
+
+        var planet = GetComponentInParent<Planet>().GetComponentInChildren<PlanetReceources>();
+        planet.OnConsumeWaterFromProduction += () =>
+        {
+            Debug.Log("Food Water");
+        };
+    }
+
+
+
+    void SpawnNumber(ReceourceZone receourceZone) {
         Vector3 continentDirection = receourceZone.GetComponentInChildren<ContinentDirection>().getDirection();
-        //Debug.DrawRay(transform.position, owningPlanet.transform.rotation* continentDirection * 10000.0f, Color.green, 10.0f);
-        
 
         var indicatorObject = Instantiate(FeedBackPrefab, transform);
         var idicatorRotation = owningPlanet.transform.rotation * continentDirection; // world Rotation of the Indicator
@@ -48,8 +65,15 @@ public class ProductionNumberSpawner : MonoBehaviour
 
         var TextMessege = indicatorObject.GetComponent<MovingNumber>();
         if (TextMessege != null) {
-            TextMessege.GetComponentInChildren<TextMeshProUGUI>().text = receourceZone.GetProductionAmount() + " " + receourceZone.GetResourceType();
-            indicatorObject.GetComponentInChildren<Image>().sprite = GetImageOfType(receourceZone.GetResourceType());
+            TextMeshProUGUI textMessage = TextMessege.GetComponentInChildren<TextMeshProUGUI>();
+
+            textMessage.text = receourceZone.GetProductionAmount() + " " + receourceZone.GetResourceType();
+            textMessage.color = PositiveIncomeColor;
+
+            Image spriteIcon = indicatorObject.GetComponentInChildren<Image>();
+            spriteIcon.sprite = GetImageOfType(receourceZone.GetResourceType());
+            spriteIcon.color = PositiveIncomeImageTint;
+
         }
     }
 
