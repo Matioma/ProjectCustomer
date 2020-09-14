@@ -61,6 +61,11 @@ public class UIPlanetManager : MonoBehaviour
         UITransportZone.GetComponent<TransportZoneUpdater>().Initialize(IndustrialZone, currentPlanet);
     }
 
+    public void InitializeRecourceButtons(int newSeedNumber, int newWaterNumber, int newMoneyNimber)
+    {
+        UIResouceButtons.GetComponent<ResourcesButtonsUpdater>().ResetButtons(newSeedNumber, newWaterNumber, newMoneyNimber);
+    }
+
     public void UpdateQuestes()
     {
 
@@ -75,7 +80,7 @@ public class UIPlanetManager : MonoBehaviour
     }
     public void UpdateDeathRate(int newRateNumber, int newRateTime)
     {
-        UIGeneral.GetComponent<GeneralZoneUpdater>().UpdateDeathRate(newRateNumber,newRateTime);
+        UIGeneral.GetComponent<GeneralZoneUpdater>().UpdateDeathRate(newRateNumber, newRateTime);
     }
     public void UpdateBirthRate(int newRateNumber, int newRateTime)
     {
@@ -92,7 +97,7 @@ public class UIPlanetManager : MonoBehaviour
     }
     public void UpdateWaterConsumption(int newConsumptionNumber, int newConsumprionTime)
     {
-        UIFarmZone.GetComponent<FarmZoneUpdater>().UpdateConsumptionRate(newConsumptionNumber,newConsumprionTime);
+        UIFarmZone.GetComponent<FarmZoneUpdater>().UpdateConsumptionRate(newConsumptionNumber, newConsumprionTime);
     }
     public void UpdateSeedProductivity(int newProductivityNumber, int newProductivitytTime)
     {
