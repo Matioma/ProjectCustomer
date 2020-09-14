@@ -6,12 +6,9 @@ using UnityEngine.UI;
 public class CanvasSwitcher : MonoBehaviour
 {
     public CanvasType desiredCanvasType;
+    [SerializeField]
     CanvasManager canvasManager;
 
-    void Start()
-    {
-        canvasManager = GameObject.FindObjectOfType<CanvasManager>();
-    }
 
     public void OnScreenChange()
     {
@@ -20,13 +17,13 @@ public class CanvasSwitcher : MonoBehaviour
         }
         canvasManager.SwitchCanvas(desiredCanvasType);
         //Debug.Log("canvasSwitcher");
-        if (desiredCanvasType == CanvasType.TransportZone)
-        {
-            canvasManager.DisableableResourceButtons();
-        }
-        else
-        {
-            canvasManager.EnableResourceButtons();
-        }
+        //if(desiredCanvasType== CanvasType.InvestmentZone|| desiredCanvasType == CanvasType.TransportZone)
+        //{
+        //    canvasManager.DisableableResourceButtons();
+        //}
+        //else
+        //{
+        //    canvasManager.EnableResourceButtons();
+        //}
     }
 }
