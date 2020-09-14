@@ -12183,15 +12183,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1138074116525986800, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: resouces.Array.data[0].amount
-      value: 1000
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1138074116525986800, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: resouces.Array.data[1].amount
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1138074116525986800, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: resouces.Array.data[2].amount
-      value: 1000
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074116525986800, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: waterConsumtionAmountPerSeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074116525986800, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: waterConsumtionTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12264,6 +12272,74 @@ PrefabInstance:
     - target: {fileID: 1138074117638528667, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: MinCameraDistFromPlanet
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291956523335836111, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: productivityTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291956523335836111, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: productionNumber
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1703831500982415139, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1703831500982415139, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1703831500982415139, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: MoneyNeededToBuy
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703685396340178910, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703685396340178910, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703685396340178910, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: MoneyNeededToBuy
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832255536995987762, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: productivityTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832255536995987762, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: productionNumber
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679186890862439449, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679186890862439449, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679186890862439449, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: MoneyNeededToBuy
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050877492636995728, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050877492636995728, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050877492636995728, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: MoneyNeededToBuy
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089824758019338760, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: productivityTime
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
@@ -12757,6 +12833,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 120019027607456991, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120019027607456991, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 568208430483341875, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: productivityTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 568208430483341875, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: productionNumber
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531503516570260174, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: productivityTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531503516570260174, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: productionNumber
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695825682257255458, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695825682257255458, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695825682257255458, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: MoneyNeededToBuy
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4397491208869768592, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: m_LocalPosition.x
       value: 115.2
@@ -12824,6 +12936,42 @@ PrefabInstance:
     - target: {fileID: 4397491208869768602, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397491208869768602, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: MinCameraDistFromPlanet
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397491209848086769, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: resouces.Array.data[0].amount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397491209848086769, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: resouces.Array.data[1].amount
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397491209848086769, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: resouces.Array.data[2].amount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5811992729114099977, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: productivityTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004592277527208849, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004592277527208849, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224568228219313944, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224568228219313944, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
