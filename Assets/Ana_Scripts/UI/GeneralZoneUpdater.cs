@@ -41,6 +41,7 @@ public class GeneralZoneUpdater : MonoBehaviour
     public void UpdatePopulationNumber(int newNumber)
     {
         population.text = newNumber.ToString();
+        Debug.Log(population.text);
     }
     public void UpdateHungryPeople(int newNumber)
     {

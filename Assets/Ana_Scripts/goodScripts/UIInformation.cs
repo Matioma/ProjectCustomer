@@ -74,7 +74,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         waterConsumtionAmount = planetReceources.getWaterComsumptionAmount();
         waterConsumtionTime = planetReceources.getWaterComsumptionTime();
 
-        
+        planetPopulation = planetReceources.getPopulation();
 
 
         planetGoals = GetComponent<Quest>().getGoalList();
