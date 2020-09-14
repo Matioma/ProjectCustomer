@@ -24,8 +24,6 @@ public class MovingNumber : MonoBehaviour
 
     private void Update()
     {
-        //transform.rotation = LookDirection;
-        //transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, 0, transform.rotation.eulerAngles.z);
         transform.localPosition += transform.localPosition.normalized * velocity * Time.deltaTime;
     }
 

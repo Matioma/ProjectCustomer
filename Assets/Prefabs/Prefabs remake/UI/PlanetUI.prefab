@@ -145,6 +145,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FeedBackPrefab: {fileID: 3036071632593117490, guid: b22c284fa40908b4ea1b48669b7de38d, type: 3}
   rangeFromCenter: 500
+  ResourceImagePairs:
+  - resourceType: 0
+    image: {fileID: 21300000, guid: d71cd340506bf714aa1bf38e85b36ff1, type: 3}
+  - resourceType: 1
+    image: {fileID: 21300000, guid: f72fd54d509d84549b98cbce95344f27, type: 3}
+  - resourceType: 2
+    image: {fileID: 21300000, guid: cf535819e0018cf4a82147041ae39d49, type: 3}
 --- !u!1001 &6286883238889701553
 PrefabInstance:
   m_ObjectHideFlags: 0
