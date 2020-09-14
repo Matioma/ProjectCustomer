@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &5013551838991471877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409716445995859490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d9d059f51457784ba521c4a8ff0a4f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrades: []
+  button: {fileID: 0}
+  id: 0
+--- !u!114 &6128415772394275357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3986611616989769439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d9d059f51457784ba521c4a8ff0a4f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrades: []
+  button: {fileID: 0}
+  id: 1
 --- !u!1 &5319158110676492874
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,7 +45,6 @@ GameObject:
   - component: {fileID: 5319158110676492879}
   - component: {fileID: 5319158110676492872}
   - component: {fileID: 4054243692379111001}
-  - component: {fileID: 5206411210510705993}
   m_Layer: 8
   m_Name: BasePlanet
   m_TagString: Untagged
@@ -53,11 +82,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnSelected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5319158110676492878}
+        m_TargetAssemblyTypeName: UIInformation, Assembly-CSharp
+        m_MethodName: PlanetIsSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDeselected:
     m_PersistentCalls:
-      m_Calls: []
-  MinCameraDistFromPlanet: 1000
+      m_Calls:
+      - m_Target: {fileID: 5319158110676492878}
+        m_TargetAssemblyTypeName: UIInformation, Assembly-CSharp
+        m_MethodName: PlanetIsDeselected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UIInformation, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  MinCameraDistFromPlanet: 50
 --- !u!135 &5319158110676492876
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -83,17 +148,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c2e769f79717043a8a1ff940925b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionGeneral: 
-  descriptionFarmingZone: 
-  descriptionWaterZone: 
-  descriptionMineralZone: 
-  descriptionIndZoneInvest: 
-  descriptionIndZoneTransport: 
+  planetName: 
+  planetDescription: 
+  planet: {fileID: 5319158110676492874}
   mainUI: {fileID: 0}
-  Farm: {fileID: 0}
-  Water: {fileID: 0}
-  Mine: {fileID: 0}
-  Invest: {fileID: 0}
+  GeoMash: {fileID: 0}
+  Farm: {fileID: 1409716445995859490}
+  Water: {fileID: 3986611616989769439}
+  Mine: {fileID: 6924772826448047589}
+  Invest: {fileID: 8290980234635465068}
   selected: 0
 --- !u!114 &5319158110676492879
 MonoBehaviour:
@@ -136,30 +199,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationVelocity: {x: 10, y: 0, z: 0}
---- !u!114 &5206411210510705993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5319158110676492874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d110b2aaa5ecd3d47b3405b7cda3e870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  seedConsumptionAmountPerPerson: 1
-  seedConsumptionTime: 10
-  waterConsumtionAmountPerSeed: 1
-  waterConsumtionAmount: 1
-  waterConsumtionTime: 10
-  population: 10
-  hungerWarningTimer: 10
-  peopleDeathTimer: 10
-  deathRateForTimer: 10
-  birthRateNumber: 10
-  birthRateTime: 10
-  resouces: []
 --- !u!1 &5319158111791132458
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +242,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5319158111791132458}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d110b2aaa5ecd3d47b3405b7cda3e870, type: 3}
   m_Name: 
@@ -220,6 +259,40 @@ MonoBehaviour:
   birthRateNumber: 10
   birthRateTime: 10
   resouces: []
+  birthRateTimer: 0
+  hungerTimer: 0
+  deathTimer: 0
+  peopleToDie: 0
+  deathRate: 0
+  seedConsumptionAmount: 10
+--- !u!114 &4425833041591103956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6924772826448047589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d9d059f51457784ba521c4a8ff0a4f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrades: []
+  button: {fileID: 0}
+  id: 2
+--- !u!114 &6740240584727634928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8290980234635465068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfafbd5160ea7c4184e6f7357560fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetToSend: {fileID: 0}
 --- !u!1001 &1752778468704424144
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -380,36 +453,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 358856161468318721, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: typeOfReceource
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
-      propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
-      propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: CanvasSwitcher, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
-      propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnScreenChange
-      objectReference: {fileID: 0}
-    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
-      propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
-      propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
-      propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
-      propertyPath: selectedMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 098f5685f8c60ad4bb3ea02dfa096e6a, type: 2}
     - target: {fileID: 2566920544029782689, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: desiredCanvasType
       value: 4
@@ -464,6 +509,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+--- !u!1 &6924772826448047589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4656011211976582964, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+  m_PrefabInstance: {fileID: 2343215087565605585}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2143388644528664331 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4411870845720569306, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
@@ -478,11 +528,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 358856161468318721, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: typeOfReceource
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -504,6 +554,10 @@ PrefabInstance:
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1156734326066300153}
     - target: {fileID: 2566920544029782689, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: desiredCanvasType
       value: 5
@@ -556,13 +610,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: InvestementRegion
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 358856161468318721, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+--- !u!1 &8290980234635465068 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4656011211976582964, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+  m_PrefabInstance: {fileID: 3716036077788788312}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1056127336055919490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4411870845720569306, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
   m_PrefabInstance: {fileID: 3716036077788788312}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1156734326066300153 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2566920544029782689, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+  m_PrefabInstance: {fileID: 3716036077788788312}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8290980234635465068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5560767393f5554ea98074d022b349c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5984483615558490390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -644,6 +715,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+--- !u!1 &1409716445995859490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4656011211976582964, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+  m_PrefabInstance: {fileID: 5984483615558490390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7941874796224183500 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4411870845720569306, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
@@ -658,16 +734,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 358856161468318721, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: typeOfReceource
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
-      propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
-      propertyPath: selectedMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 2034cc700a7e297489d066065f5b13c2, type: 2}
     - target: {fileID: 2566920544029782689, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: desiredCanvasType
       value: 3
@@ -722,6 +790,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+--- !u!1 &3986611616989769439 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4656011211976582964, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+  m_PrefabInstance: {fileID: 8632894313304902123}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5400993028365413425 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4411870845720569306, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
