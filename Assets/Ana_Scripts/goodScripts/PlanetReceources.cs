@@ -204,8 +204,12 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         var addition = GetComponentInParent<UIInformation>();
         if (addition == null)
         {
-            addition.AddReceource(rec, amount);
+            
             Debug.LogWarning(transform.name + " planet resources resources has no UIINFORMATION component");
+        }
+        else
+        {
+            addition.AddReceource(rec, amount);
         }
 
         
