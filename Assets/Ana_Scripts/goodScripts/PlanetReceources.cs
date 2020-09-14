@@ -38,7 +38,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     [SerializeField]
     List<Rec> resouces;
 
-    
+
 
     float waterTimer;
     float seedTimer;
@@ -63,7 +63,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
 
     public float GetHungerFractionLeft()
     {
-        return hungerTimer/ hungerWarningTimer;
+        return hungerTimer / hungerWarningTimer;
     }
 
 
@@ -75,17 +75,21 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
 
     private bool peopleLackFood = false;
     private bool peopleAreDying = false;
-    private bool PeopleLackFood {
+    private bool PeopleLackFood
+    {
         get { return peopleLackFood; }
-        set {
-            if (value != peopleLackFood) {
+        set
+        {
+            if (value != peopleLackFood)
+            {
                 //No food
                 if (value)
                 {
                     OnPeopleStartLackFood?.Invoke();
                 }
                 //Enough Food
-                else {
+                else
+                {
                     //Stop invoke method that people no longer Die
                     if (peopleAreDying) OnPeopleStopDying?.Invoke();
                     OnPeopleStopLackFood?.Invoke();
@@ -95,19 +99,24 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         }
     }
 
-    private bool PeopleAreDying {
-        get {
+    private bool PeopleAreDying
+    {
+        get
+        {
             return peopleAreDying;
         }
-        set {
-            if (value != peopleAreDying) {
+        set
+        {
+            if (value != peopleAreDying)
+            {
                 //If people dying
                 if (!value)
                 {
                     OnPeopleStopDying?.Invoke();
                 }
                 // If people no longer die
-                else {
+                else
+                {
                     OnPeopleStartDying?.Invoke();
                 }
                 peopleAreDying = value;
@@ -154,18 +163,27 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     {
         calculateConsumptionSeedAmount();
         calculateConsumptionWaterAmount();
-        initialFoodProd= GetComponentInParent<UIInformation>().getSeedProductionAmount(); 
+        initialFoodProd = GetComponentInParent<UIInformation>().getSeedProductionAmount();
     }
     void calculateConsumptionSeedAmount()
     {
         seedConsumptionAmount = population * seedConsumptionAmountPerPerson;
+        if (GetComponentInParent<UIInformation>() != null)
+        {
+            GetComponentInParent<UIInformation>().ChangeConsumptionAmountSeeds(seedConsumptionAmount);
+        }
+        else
+        {
+            Debug.Log("UIInformation is null");
+        }
     }
 
     public void calculateConsumptionWaterAmount()
     {
         var productivity = GetComponentInParent<UIInformation>().getSeedProductionAmount();
-        if(initialFoodProd!=0)
-        waterConsumtionAmount = productivity/initialFoodProd  * waterConsumtionAmountPerSeed;
+        if (initialFoodProd != 0)
+            waterConsumtionAmount = productivity / initialFoodProd * waterConsumtionAmountPerSeed;
+        GetComponentInParent<UIInformation>().ChangeConsumptionAmountWater(waterConsumtionAmount);
     }
 
     bool isEnoughReceourse(Receources type)
@@ -235,12 +253,14 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
                 PeopleAreDying = true;
                 if (deathTimer > 0)
                 {
-                     peopleToDie = (seedConsumptionAmount - receourcesNumber[Receources.SEEDS]) / 2;
-                     deathRate = (peopleToDie * deathRateForTimer) / peopleDeathTimer;
-
+                    peopleToDie = (seedConsumptionAmount - receourcesNumber[Receources.SEEDS]) / 2;
+                    deathRate = (peopleToDie * deathRateForTimer) / peopleDeathTimer;
+                    GetComponentInParent<UIInformation>().ChangeHungryPeople(peopleToDie);
+                    GetComponentInParent<UIInformation>().ChangeDeathRateNumber(deathRate);
                     if (deathTimer % deathRateForTimer == 0)
                     {
                         population -= deathRate;
+                        GetComponentInParent<UIInformation>().ChangePopulationNumber(population);
                         calculateConsumptionSeedAmount();
                     }
                     deathTimer -= Time.fixedDeltaTime;
@@ -248,6 +268,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
                 else
                 {
                     population = 0;
+                    GetComponentInParent<UIInformation>().ChangePopulationNumber(population);
                     calculateConsumptionSeedAmount();
                 }
             }
