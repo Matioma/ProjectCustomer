@@ -19817,10 +19817,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: -1114199533890271507, guid: 45455ec644556ca47badbd3b5dbdde69, type: 3}
-    - target: {fileID: 3291950688025497147, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
-      propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3758949232981825237, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: vectorDirection.x
       value: -1.08
@@ -19873,10 +19869,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: -1114199533890271507, guid: d6476b775e193e94fa4cf03119364110, type: 3}
-    - target: {fileID: 4519816458759385778, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
-      propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5041477867368152077, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Mesh
       value: 

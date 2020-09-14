@@ -42,10 +42,7 @@ public class ProductionNumberSpawner : MonoBehaviour
 
 
         var planet = GetComponentInParent<Planet>().GetComponentInChildren<PlanetReceources>();
-        planet.OnConsumeWaterFromProduction += () =>
-        {
-            Debug.Log("Food Water");
-        };
+
     }
 
 
