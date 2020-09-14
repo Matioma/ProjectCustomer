@@ -220,7 +220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8366277821223875804
 Transform:
   m_ObjectHideFlags: 0
@@ -271,7 +271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &888630810157293387
 Transform:
   m_ObjectHideFlags: 0
@@ -625,7 +625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1626282906157874417
 Transform:
   m_ObjectHideFlags: 0
@@ -19767,15 +19767,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1218615051609359912, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: vectorDirection.x
-      value: -11
+      value: 110.1
       objectReference: {fileID: 0}
     - target: {fileID: 1218615051609359912, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: vectorDirection.z
-      value: -3.3
+      value: 122.74
       objectReference: {fileID: 0}
     - target: {fileID: 1218615051609359912, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: VectorLength
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218615051609359912, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: vectorDirection.y
+      value: 45.3
       objectReference: {fileID: 0}
     - target: {fileID: 1266444452793201707, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Mesh
@@ -19819,15 +19823,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3758949232981825237, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: vectorDirection.x
-      value: 4.94
+      value: -1.08
       objectReference: {fileID: 0}
     - target: {fileID: 3758949232981825237, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: vectorDirection.z
-      value: 3.7
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 3758949232981825237, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: VectorLength
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 3758949232981825237, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: vectorDirection.y
+      value: 97.17
       objectReference: {fileID: 0}
     - target: {fileID: 3841652957011879126, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Mesh
@@ -19971,15 +19979,15 @@ PrefabInstance:
       objectReference: {fileID: 2540817853737639666, guid: bd23efb7315694c4689a2a97873fb3da, type: 3}
     - target: {fileID: 7160880087895873007, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: vectorDirection.x
-      value: 0.83
+      value: -190.54
       objectReference: {fileID: 0}
     - target: {fileID: 7160880087895873007, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: vectorDirection.y
-      value: 51.3
+      value: 54.49
       objectReference: {fileID: 0}
     - target: {fileID: 7160880087895873007, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: vectorDirection.z
-      value: 1.33
+      value: -78.04
       objectReference: {fileID: 0}
     - target: {fileID: 7160880087895873007, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: VectorLength

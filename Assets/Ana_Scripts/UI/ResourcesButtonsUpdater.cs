@@ -42,6 +42,9 @@ public class ResourcesButtonsUpdater : MonoBehaviour
         seedsNumber = newSeedNumber;
         waterNumber = newWaterNumber;
         moneyNumber = newMoneyNimber;
+        seeds.text = seedsNumber.ToString();
+        water.text = waterNumber.ToString();
+        money.text = moneyNumber.ToString();
     }
 
 
