@@ -54,9 +54,9 @@ public class UIPlanetManager : MonoBehaviour
     }
     public void InitializeInvestmentZone(bool isZoneUnlocked, GameObject Farm, GameObject Water, GameObject Mine, GameObject Invest)
     {
-
+        UIInvestmentZone.GetComponent<InvestmentZoneUpdater>().Initialize(isZoneUnlocked, Farm, Water, Mine, Invest);
     }
-    public void InitializeTransportZone(GameObject IndustrialZone)
+    public void InitializeTransportZone(GameObject IndustrialZone, GameObject currentPlanet)
     {
 
     }

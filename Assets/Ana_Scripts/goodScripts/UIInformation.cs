@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
 {
@@ -9,6 +10,8 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
     string planetName;
     [SerializeField]
     string planetDescription;
+    [SerializeField]
+    GameObject planet;
     [SerializeField]
     GameObject mainUI;
     [SerializeField]
@@ -21,6 +24,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
     GameObject Mine;
     [SerializeField]
     GameObject Invest;
+
 
     List<Goal> planetGoals;
 
@@ -166,7 +170,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         if (Invest != null) 
         {
             mainUI.GetComponent<UIPlanetManager>().InitializeInvestmentZone(isInvestmentUnlocked, Farm, Water, Mine, Invest);
-            mainUI.GetComponent<UIPlanetManager>().InitializeTransportZone(Invest);
+            mainUI.GetComponent<UIPlanetManager>().InitializeTransportZone(Invest,planet);
         }
     }
     public void ChangePopulationNumber(int amount)
