@@ -7193,7 +7193,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2359190377824000052}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7235,7 +7235,7 @@ Transform:
   - {fileID: 2567614079560000778}
   - {fileID: 5337549712608302738}
   - {fileID: 6067629218571931887}
-  m_Father: {fileID: 7693358089624433630}
+  m_Father: {fileID: 8778231185340682071}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2362936127605643859
@@ -9148,7 +9148,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2852202191536141621}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9193,7 +9193,7 @@ Transform:
   - {fileID: 7026046476429739302}
   - {fileID: 6824099176125360173}
   - {fileID: 5653189081419707690}
-  m_Father: {fileID: 7693358089624433630}
+  m_Father: {fileID: 8778231185340682071}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2859949846188648990
@@ -24836,7 +24836,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7485628012907205599}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -24884,7 +24884,7 @@ Transform:
   - {fileID: 8035242858814516858}
   - {fileID: 3383604098104208298}
   - {fileID: 6595000013827171029}
-  m_Father: {fileID: 7693358089624433630}
+  m_Father: {fileID: 8778231185340682071}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7492296866194302778
@@ -33684,6 +33684,10 @@ PrefabInstance:
       propertyPath: LevelsPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 662892656887045561}
+    - target: {fileID: 6924772826448047589, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7004776303530208496, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -33730,7 +33734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8290980234635465068, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9168050906745086851, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: LevelsPrefabs.Array.size
@@ -33760,8 +33764,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5285201311859359549, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
   m_PrefabInstance: {fileID: 8419045101863915481}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &7693358089624433630 stripped
+--- !u!4 &8778231185340682071 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2166856501067938823, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 938154083085942926, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
   m_PrefabInstance: {fileID: 8419045101863915481}
   m_PrefabAsset: {fileID: 0}
