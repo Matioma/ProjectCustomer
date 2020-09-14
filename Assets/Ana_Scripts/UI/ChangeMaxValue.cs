@@ -11,7 +11,7 @@ public class ChangeMaxValue : MonoBehaviour
     {
         if (rec == _rec)
         {
-            var slider = GetComponent<Slider>();
+            var slider = GetComponentInChildren<Slider>();
             slider.maxValue = value;
         }
 

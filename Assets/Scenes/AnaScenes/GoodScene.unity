@@ -4390,6 +4390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 608835621}
+  - component: {fileID: 608835622}
   m_Layer: 0
   m_Name: SelectAmount
   m_TagString: Untagged
@@ -4414,6 +4415,18 @@ Transform:
   m_Father: {fileID: 398256599}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &608835622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608835620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe121884569f0144087122d20d25811f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &621566780
 GameObject:
   m_ObjectHideFlags: 0
@@ -5181,7 +5194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &699128349
 Transform:
   m_ObjectHideFlags: 0
@@ -5575,7 +5588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &732455481
 Transform:
   m_ObjectHideFlags: 0
@@ -6480,7 +6493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &961439705
 Transform:
   m_ObjectHideFlags: 0
@@ -6832,7 +6845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1015051369
 Transform:
   m_ObjectHideFlags: 0
@@ -8212,6 +8225,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: EarthPlanet
       objectReference: {fileID: 0}
+    - target: {fileID: 3228927195318960551, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: mainUI
+      value: 
+      objectReference: {fileID: 1237278036}
+    - target: {fileID: 3228927195318960554, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1237278042}
+    - target: {fileID: 3228927195318960554, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CanvasSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228927195318960554, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnScreenChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228927195318960554, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: resouces.Array.data[2].amount
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: resouces.Array.data[1].amount
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: resouces.Array.data[0].amount
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
 --- !u!1 &1211769330 stripped
@@ -8219,6 +8264,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3228927195318960547, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
   m_PrefabInstance: {fileID: 1211769329}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1211769336 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3228927195318960554, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+  m_PrefabInstance: {fileID: 1211769329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211769330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6319a943366a9e04f846a86bad90aefd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1220803791
 GameObject:
   m_ObjectHideFlags: 0
@@ -8236,7 +8292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1220803792
 Transform:
   m_ObjectHideFlags: 0
@@ -8295,6 +8351,8 @@ GameObject:
   - component: {fileID: 1237278038}
   - component: {fileID: 1237278037}
   - component: {fileID: 1237278041}
+  - component: {fileID: 1237278042}
+  - component: {fileID: 1237278043}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -8402,6 +8460,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceButtons: {fileID: 2003897702}
+--- !u!114 &1237278042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237278036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5560767393f5554ea98074d022b349c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiredCanvasType: 0
+--- !u!114 &1237278043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237278036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02ef1a8c2de9bc43882803695e354e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planets: []
+  UIGeneral: {fileID: 699128348}
+  UIFarmZone: {fileID: 1015051368}
+  UIWaterZone: {fileID: 732455480}
+  UIMineralZone: {fileID: 1220803791}
+  UIInvestmentZone: {fileID: 961439704}
+  UITransportZone: {fileID: 398256598}
+  UIResouceButtons: {fileID: 2003897702}
 --- !u!1 &1275729397
 GameObject:
   m_ObjectHideFlags: 0
@@ -9171,7 +9262,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432442779}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -242.23373, y: 1400.7478, z: -1157.6101}
+  m_LocalPosition: {x: -86, y: 435, z: -219}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 534168979}
@@ -11540,7 +11631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldViewTransform: {fileID: 1432442782}
   transitionTime: 1
-  SelectedPlanet: {fileID: 0}
+  SelectedPlanet: {fileID: 1211769336}
   RotationSensitivity: 6.56
   planetInertia: 0.936
   maxMovementMagnitute: 2
@@ -12077,6 +12168,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1138074116525986800, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: resouces.Array.data[0].amount
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074116525986800, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: resouces.Array.data[1].amount
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074116525986800, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: resouces.Array.data[2].amount
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: 269
@@ -12124,6 +12227,26 @@ PrefabInstance:
     - target: {fileID: 1138074117638528658, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: m_Name
       value: DesertPlanet
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528662, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: mainUI
+      value: 
+      objectReference: {fileID: 1237278036}
+    - target: {fileID: 1138074117638528667, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1237278042}
+    - target: {fileID: 1138074117638528667, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CanvasSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528667, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnScreenChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528667, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
@@ -12651,6 +12774,26 @@ PrefabInstance:
     - target: {fileID: 4397491208869768595, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: m_Name
       value: JunglePlanet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397491208869768599, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: mainUI
+      value: 
+      objectReference: {fileID: 1237278036}
+    - target: {fileID: 4397491208869768602, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1237278042}
+    - target: {fileID: 4397491208869768602, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CanvasSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397491208869768602, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnScreenChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397491208869768602, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}

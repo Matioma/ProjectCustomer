@@ -164,7 +164,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     public void calculateConsumptionWaterAmount()
     {
         var productivity = GetComponentInParent<UIInformation>().getSeedProductionAmount();
-        Debug.Log("rec   "+productivity);
+        if(initialFoodProd!=0)
         waterConsumtionAmount = productivity/initialFoodProd  * waterConsumtionAmountPerSeed;
     }
 

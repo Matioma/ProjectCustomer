@@ -75,13 +75,11 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         waterConsumtionTime = planetReceources.getWaterComsumptionTime();
 
         
-        waterProductionAmount = Water.GetComponent<ReceourceZone>().GetProductivity();
-        if (Mine != null)
-            moneyProductionAmount = Mine.GetComponent<ReceourceZone>().GetProductivity();
+
 
         planetGoals = GetComponent<Quest>().getGoalList();
 
-        Debug.Log("prod  "+seedProductionAmount);
+
         
 
     }
@@ -89,6 +87,9 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
     void Awake()
     {
         seedProductionAmount = Farm.GetComponent<ReceourceZone>().GetProductivity();
+        waterProductionAmount = Water.GetComponent<ReceourceZone>().GetProductivity();
+        if (Mine != null)
+            moneyProductionAmount = Mine.GetComponent<ReceourceZone>().GetProductivity();
     }
 
 
@@ -160,23 +161,55 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
 
     public void InitializeUI()
     {
-        mainUI.GetComponent<UIPlanetManager>().InitializeGeneral(planetPopulation, hungryPeople, deathRateNumber, deathRateTime, birthRateNumber, birthRateTime);
-        if (Farm != null)
+        Debug.Log("init ui");
+        if (mainUI.GetComponent<UIPlanetManager>())
         {
-            mainUI.GetComponent<UIPlanetManager>().InitializeFarmZone(isFarmUnlocked, seedProductionAmount, seedProductionTime, waterConsumtionAmount, waterConsumtionTime, Farm);
+            mainUI.GetComponent<UIPlanetManager>().InitializeGeneral(planetPopulation, hungryPeople, deathRateNumber, deathRateTime, birthRateNumber, birthRateTime);
+            if (Farm != null)
+            {
+                Debug.Log("init ui farm");
+
+                mainUI.GetComponent<UIPlanetManager>().InitializeFarmZone(isFarmUnlocked, seedProductionAmount, seedProductionTime, waterConsumtionAmount, waterConsumtionTime, Farm);
+            }
+            if (Water != null)
+            {
+                Debug.Log("init water");
+
+                mainUI.GetComponent<UIPlanetManager>().InitializeWaterZone(isWaterUnlocked, waterProductionAmount, waterProductionTime, Water);
+            }
+            if (Mine != null)
+            {
+                Debug.Log("init ui mine");
+
+                mainUI.GetComponent<UIPlanetManager>().InitializeMineralZone(isMineUnlocked, moneyProductionAmount, moneyProductionTime, Mine);
+            }
+            if (Invest != null)
+            {
+                Debug.Log("init invest");
+
+                mainUI.GetComponent<UIPlanetManager>().InitializeInvestmentZone(isInvestmentUnlocked, Farm, Water, Mine, Invest);
+                mainUI.GetComponent<UIPlanetManager>().InitializeTransportZone(Invest, planet);
+            }
         }
-        if (Water != null)
+        else
         {
-            mainUI.GetComponent<UIPlanetManager>().InitializeWaterZone(isWaterUnlocked, waterProductionAmount, waterProductionTime, Water);
+            Debug.Log("planetManger is Null");
         }
-        if (Mine != null)
+    }
+
+    public void ZoneIsUnlocked(Receources Id)
+    {
+        switch (Id)
         {
-            mainUI.GetComponent<UIPlanetManager>().InitializeMineralZone(isMineUnlocked, moneyProductionAmount, moneyProductionTime, Mine);
-        }
-        if (Invest != null) 
-        {
-            mainUI.GetComponent<UIPlanetManager>().InitializeInvestmentZone(isInvestmentUnlocked, Farm, Water, Mine, Invest);
-            mainUI.GetComponent<UIPlanetManager>().InitializeTransportZone(Invest,planet);
+            case Receources.SEEDS:
+                isFarmUnlocked = true;
+                break;
+            case Receources.WATER:
+                isWaterUnlocked = true;
+                break;
+            case Receources.MONEY:
+                isMineUnlocked = true;
+                break;
         }
     }
     public void ChangePopulationNumber(int amount)

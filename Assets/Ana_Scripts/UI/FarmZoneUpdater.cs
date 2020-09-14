@@ -45,6 +45,11 @@ public class FarmZoneUpdater : MonoBehaviour
         {
             Farm.GetComponent<BuyZone>().Buy();
         }
+        if (UIZoneUnlocked != null)
+        {
+            UIZoneUnlocked.GetComponent<ZoneEnabler>().Enable();
+        }
+        unlockZoneButton.gameObject.SetActive(false);
     }
     public void UpdateProductionRate(int productivityNumber, int productivityTime)
     {

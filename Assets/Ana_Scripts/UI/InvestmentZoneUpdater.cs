@@ -57,6 +57,11 @@ public class InvestmentZoneUpdater : MonoBehaviour
         {
             Invest.GetComponent<BuyZone>().Buy();
         }
+        if (UIZoneUnlocked != null)
+        {
+            UIZoneUnlocked.GetComponent<ZoneEnabler>().Enable();
+        }
+        unlockZoneButton.gameObject.SetActive(false);
     }
     void UpdateUI()
     {

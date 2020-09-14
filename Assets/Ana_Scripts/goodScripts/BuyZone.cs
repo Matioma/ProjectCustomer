@@ -11,8 +11,8 @@ public class BuyZone : MonoBehaviour
     int WaterNeededToBuy = 10;
     [SerializeField]
     int MoneyNeededToBuy = 10;
-    [SerializeField]
-    GameObject buyButton;
+    //[SerializeField]
+    //GameObject buyButton;
 
     public void Buy()
     {
@@ -35,10 +35,7 @@ public class BuyZone : MonoBehaviour
             AddResource.AddReceource(Receources.WATER, - WaterNeededToBuy);
             AddResource.AddReceource(Receources.MONEY, - MoneyNeededToBuy);
 
-            //GetComponentInParent<IReceourceAddition>().AddReceource(Receources.SEEDS, -seedsNeededToBuy);
-            //GetComponentInParent<IReceourceAddition>().AddReceource(Receources.WATER, -WaterNeededToBuy);
-            //GetComponentInParent<IReceourceAddition>().AddReceource(Receources.MONEY, -MoneyNeededToBuy);
-            buyButton.gameObject.SetActive(false);
+
         }
 
     }

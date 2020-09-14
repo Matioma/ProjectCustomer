@@ -34,14 +34,23 @@ public class TransportZoneUpdater : MonoBehaviour
     List<PlanetIcon> modifiedPlanets;
     GameObject Invest;
 
+    private void Awake()
+    {
+        modifiedPlanets = new List<PlanetIcon>();
+    }
     public void Initialize(GameObject IndustrialZone, GameObject currentPlanet)
     {
         Invest = IndustrialZone;
+        //Debug.Log(modifiedPlanets.Count);
+
         ChangePlanetList(currentPlanet);
+        //Debug.Log(modifiedPlanets.Count);
+
         ChangeButtonsResourceChange();
         ChangeValueInSlider();
         ChangePlanetDestination();
         UpdateSendButton();
+        
     }
 
     void ChangeButtonsResourceChange()
@@ -80,28 +89,38 @@ public class TransportZoneUpdater : MonoBehaviour
     }
     private void ChangePlanetList(GameObject currentPlanet)
     {
-        modifiedPlanets.Clear();
-        for (int i = 0; i < planets.Count; i++)
-        {
-            if (planets[i].planet != currentPlanet)
+        //if (modifiedPlanets.Count != 0)
+        //{
+            modifiedPlanets.Clear();
+        //}
+        //if (planets.Count != 0)
+        //{
+            for (int i = 0; i < planets.Count; i++)
             {
-                modifiedPlanets[i] = planets[i];
+                if (planets[i].planet != currentPlanet)
+                {
+                    modifiedPlanets.Add(planets[i]);
+                }
             }
-        }
+        //}
     }
 
     void ChangePlanetDestination()
     {
         ChangeToPlanetA.onClick.RemoveAllListeners();
         ChangeToPlanetB.onClick.RemoveAllListeners();
-
-        var imageToChangeA = ChangeToPlanetA.GetComponentInChildren<Image>();
-        imageToChangeA = modifiedPlanets[0].planetIcon;
-        var imageToChangeB = ChangeToPlanetB.GetComponentInChildren<Image>();
-        imageToChangeB = modifiedPlanets[1].planetIcon;
-
-        ChangeToPlanetA.onClick.AddListener(OnPlanetChangeToA);
-        ChangeToPlanetB.onClick.AddListener(OnPlanetChangeToB);
+        if (modifiedPlanets.Count - 1 >= 0)
+        {
+            var imageToChangeA = ChangeToPlanetA.GetComponentInChildren<Image>();
+            imageToChangeA = modifiedPlanets[0].planetIcon;
+            ChangeToPlanetA.onClick.AddListener(OnPlanetChangeToA);
+        }
+        if (modifiedPlanets.Count - 1 >= 1)
+        {
+            var imageToChangeB = ChangeToPlanetB.GetComponentInChildren<Image>();
+            imageToChangeB = modifiedPlanets[1].planetIcon;
+            ChangeToPlanetB.onClick.AddListener(OnPlanetChangeToB);
+        }
     }
 
     private void OnPlanetChangeToA()
@@ -111,7 +130,6 @@ public class TransportZoneUpdater : MonoBehaviour
     private void OnPlanetChangeToB()
     {
         Invest.GetComponent<SendReceources>().ChangeDestination(modifiedPlanets[1].planet);
-
     }
 
     void UpdateSendButton()

@@ -95,6 +95,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5319158110676492878}
+        m_TargetAssemblyTypeName: UIInformation, Assembly-CSharp
+        m_MethodName: InitializeUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5319158110676492872}
+        m_TargetAssemblyTypeName: CanvasSwitcher, Assembly-CSharp
+        m_MethodName: OnScreenChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDeselected:
     m_PersistentCalls:
       m_Calls:
@@ -185,7 +209,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 1
-  canvasManager: {fileID: 0}
 --- !u!114 &4054243692379111001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,7 +281,13 @@ MonoBehaviour:
   deathRateForTimer: 10
   birthRateNumber: 10
   birthRateTime: 10
-  resouces: []
+  resouces:
+  - type: 0
+    amount: 0
+  - type: 1
+    amount: 0
+  - type: 2
+    amount: 0
   birthRateTimer: 0
   hungerTimer: 0
   deathTimer: 0
