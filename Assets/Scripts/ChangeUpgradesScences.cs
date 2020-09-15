@@ -36,7 +36,6 @@ public class ChangeUpgradesScences : MonoBehaviour
         }
         if (CurrentLevel < LevelsPrefabs.Count-1)
         {
-            Debug.Log("Upgrade ZonePrefabs");
             CurrentLevel++;
             RemoveOldPrefabs();
             ChangePrefab();
