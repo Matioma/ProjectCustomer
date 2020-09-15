@@ -61,6 +61,10 @@ public class GlobalTimer : MonoBehaviour
     }
 
 
+    [SerializeField]
+    int[] acelerationValues;
+    int accelerationValueIndex = 0;
+
 
 
     float multiplierBeforePause;
@@ -74,13 +78,16 @@ public class GlobalTimer : MonoBehaviour
 
     public void ResumeGame() {
         GameIsPaused = false;
-        //TimeMultiplier = multiplierBeforePause;
     }
 
     public void AccelerateGame()
     {
-        TimeMultiplier *= 2;
+        accelerationValueIndex  = (accelerationValueIndex +1)% acelerationValues.Length;
+        TimeMultiplier = acelerationValues[accelerationValueIndex];
+        //TimeMultiplier *= 2;
     }
+    
+
 
     public void StartTimer() {
         TimerIsStarted= true;
