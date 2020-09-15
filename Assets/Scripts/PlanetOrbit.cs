@@ -10,6 +10,6 @@ public class PlanetOrbit : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(rotationVelocity * Time.deltaTime);
+        transform.Rotate(rotationVelocity * GlobalTimer.Instance.DeltaTime);
     }
 }

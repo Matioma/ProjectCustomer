@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEditorInternal;
 using UnityEngine;
 
@@ -19,7 +20,9 @@ public class GlobalTimer : MonoBehaviour
             if (_instance != null && _instance != value) {
                 Destroy(value.gameObject);
                 Debug.LogWarning("Tried to override golbat Timer value, the object is being Destroyed");
+                return;
             }
+            _instance = value;
         }
     }
 
@@ -29,6 +32,10 @@ public class GlobalTimer : MonoBehaviour
         set{
         }
     }
+    public float NonAcceleratedTime {
+        get { return Time.deltaTime; }
+    }
+
 
     public bool TimerIsStarted=false;
 
@@ -47,6 +54,11 @@ public class GlobalTimer : MonoBehaviour
         TimerIsStarted= true;
     }
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+
 
     void Start()
     {
@@ -61,6 +73,8 @@ public class GlobalTimer : MonoBehaviour
         }
 
         GameTimeLeftTimer -= DeltaTime;
+
+        Debug.Log(DeltaTime);
         if (GameTimeLeftTimer < 0) {
             OnDefeat?.Invoke();
         }

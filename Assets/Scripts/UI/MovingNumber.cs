@@ -24,7 +24,7 @@ public class MovingNumber : MonoBehaviour
 
     private void Update()
     {
-        transform.localPosition += transform.localPosition.normalized * velocity * Time.deltaTime;
+        transform.localPosition += transform.localPosition.normalized * velocity * GlobalTimer.Instance.DeltaTime;
     }
 
     void DestroyIndicator() {

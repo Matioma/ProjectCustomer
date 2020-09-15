@@ -162,3 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b8383448718907499b2bf0b133a4210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimerIsStarted: 1
+  GameLengthInSeconds: 300
+  TimeMultiplier: 1

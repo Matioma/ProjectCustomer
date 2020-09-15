@@ -251,7 +251,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         }
         else
         {
-            birthRateTimer -= Time.fixedDeltaTime;
+            birthRateTimer -= GlobalTimer.Instance.DeltaTime;
         }
     }
     void CheckHunger()
@@ -280,7 +280,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
                         GetComponentInParent<UIInformation>().ChangePopulationNumber(population);
                         calculateConsumptionSeedAmount();
                     }
-                    deathTimer -= Time.fixedDeltaTime;
+                    deathTimer -= GlobalTimer.Instance.DeltaTime;
                 }
                 else
                 {
@@ -291,7 +291,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
             }
             else
             {
-                hungerTimer -= Time.fixedDeltaTime;
+                hungerTimer -= GlobalTimer.Instance.DeltaTime;
             }
         }
         else
@@ -343,7 +343,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         }
         else
         {
-            waterTimer -= Time.fixedDeltaTime;
+            waterTimer -= GlobalTimer.Instance.DeltaTime;
         }
     }
 
@@ -367,7 +367,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         }
         else
         {
-            seedTimer -= Time.fixedDeltaTime;
+            seedTimer -= GlobalTimer.Instance.DeltaTime;
         }
         Debug.Log("seed during check " + receourcesNumber[Receources.SEEDS]);
     }
