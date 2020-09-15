@@ -16032,7 +16032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4397491209848086769, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: waterConsumtionTime
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5363762921019440491, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: selectedMaterial
