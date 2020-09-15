@@ -14956,7 +14956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1138074116525986800, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: resouces.Array.data[0].amount
-      value: 13000
+      value: 1300
       objectReference: {fileID: 0}
     - target: {fileID: 1138074116525986800, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: resouces.Array.data[1].amount
@@ -15988,7 +15988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4397491209848086769, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: resouces.Array.data[1].amount
-      value: 30
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 4397491209848086769, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: resouces.Array.data[2].amount
