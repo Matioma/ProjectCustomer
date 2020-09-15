@@ -171,6 +171,10 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         }
     }
 
+    void Update()
+    {
+        //Debug.Log("investment Zone status " + isInvestmentUnlocked);
+    }
     public void PlanetIsSelected()
     {
         selected = true;

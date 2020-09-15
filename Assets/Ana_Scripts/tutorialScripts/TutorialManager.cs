@@ -40,6 +40,7 @@ public class TutorialManager : MonoBehaviour
 
     bool CheckConditions(int index)
     {
+        Debug.Log("index " + index);
         switch (index)
         {
             case 0:
@@ -64,14 +65,17 @@ public class TutorialManager : MonoBehaviour
                 }
                 break;
             case 3:
+                Debug.Log("index " + index);
+                Debug.Log("zone unlocked " + planetInformation.GetIsZoneUnlocked(Receources.INDUSTRIAL));
                 if (planetInformation.GetIsZoneUnlocked(Receources.INDUSTRIAL) == true)
                 {
+                    
                     //Invoke("getNextScreen", delay);
                     return true;
                 }
                 break;
             case 4:
-                if (planetInformation.GetIsZoneUnlocked(Receources.INDUSTRIAL) == true)
+                if (planetInformation.GetIsOneUpgradeBought() == true)
                 {
                     //Invoke("getNextScreen", delay);
                     return true;

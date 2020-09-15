@@ -44,13 +44,18 @@ public class FarmZoneUpdater : MonoBehaviour
         if (Farm != null)
         {
             Farm.GetComponent<BuyZone>().Buy();
-            Farm.GetComponentInParent<PlanetReceources>().FarmZoneIsBought();
+            if (Farm.GetComponent<BuyZone>().ConditionsToBuy())
+            {
+                Farm.GetComponentInParent<PlanetReceources>().FarmZoneIsBought();
+                if (UIZoneUnlocked != null)
+                {
+                    UIZoneUnlocked.GetComponent<ZoneEnabler>().Enable();
+                }
+                unlockZoneButton.gameObject.SetActive(false);
+            }
+            
         }
-        if (UIZoneUnlocked != null)
-        {
-            UIZoneUnlocked.GetComponent<ZoneEnabler>().Enable();
-        }
-        unlockZoneButton.gameObject.SetActive(false);
+
     }
     public void UpdateProductionRate(int productivityNumber, int productivityTime)
     {

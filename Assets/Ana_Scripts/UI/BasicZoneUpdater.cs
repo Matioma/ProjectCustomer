@@ -41,12 +41,16 @@ public class BasicZoneUpdater : MonoBehaviour
         if (Zone != null)
         {
             Zone.GetComponent<BuyZone>().Buy();
+            if (Zone.GetComponent<BuyZone>().ConditionsToBuy())
+            {
+                if (UIZoneUnlocked != null)
+                {
+                    UIZoneUnlocked.GetComponent<ZoneEnabler>().Enable();
+                }
+                unlockZoneButton.gameObject.SetActive(false);
+            }
         }
-        if (UIZoneUnlocked != null)
-        {
-            UIZoneUnlocked.GetComponent<ZoneEnabler>().Enable();
-        }
-        unlockZoneButton.gameObject.SetActive(false);
+
     }
     public void UpdateProductionRate(int productivityNumber, int productivityTime)
     {
