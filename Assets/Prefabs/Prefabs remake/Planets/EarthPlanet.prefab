@@ -19797,6 +19797,10 @@ PrefabInstance:
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2588188620611988956, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 90dba4683703c3c4cbaa6e2ca4d2115e, type: 3}
     - target: {fileID: 2695903912343917379, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Mesh
       value: 
