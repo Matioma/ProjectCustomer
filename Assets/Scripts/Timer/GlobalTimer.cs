@@ -74,7 +74,7 @@ public class GlobalTimer : MonoBehaviour
 
         GameTimeLeftTimer -= DeltaTime;
 
-        Debug.Log(DeltaTime);
+        //Debug.Log(DeltaTime);
         if (GameTimeLeftTimer < 0) {
             OnDefeat?.Invoke();
         }

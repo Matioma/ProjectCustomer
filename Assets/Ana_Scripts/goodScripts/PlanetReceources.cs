@@ -258,6 +258,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         {
             population += birthRateNumber;
             birthRateTimer = birthRateTime;
+            GetComponentInParent<UIInformation>().ChangePopulationNumber(population);
             calculateConsumptionSeedAmount();
         }
         else

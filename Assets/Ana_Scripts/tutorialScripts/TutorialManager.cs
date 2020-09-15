@@ -8,9 +8,12 @@ public class TutorialManager : MonoBehaviour
     GameObject StarterPlanet;
     [SerializeField]
     Canvas MainUI;
-    int tutorialScreenIndex;
+    [SerializeField]
+    GameObject[] tutorialScreens;
+    int tutorialScreenIndex=0;
     UIInformation planetInformation;
     CanvasManager mainUIManager;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -29,12 +32,28 @@ public class TutorialManager : MonoBehaviour
         switch (index)
         {
             case 0:
+                if (planetInformation.GetIsZoneUnlocked(Receources.MONEY)==true)
+                {
+
+                }
                 break;
             case 1:
+                if (planetInformation.GetIsZoneUnlocked(Receources.WATER) == true)
+                {
+
+                }
                 break;
             case 2:
+                if (planetInformation.GetIsZoneUnlocked(Receources.SEEDS) == true)
+                {
+
+                }
                 break;
             case 3:
+                if (planetInformation.GetIsZoneUnlocked(Receources.INDUSTRIAL) == true)
+                {
+
+                }
                 break;
             case 4:
                 break;
@@ -44,5 +63,10 @@ public class TutorialManager : MonoBehaviour
                 break;
         }
         return false;
+    }
+
+    void changeScreen()
+    {
+
     }
 }
