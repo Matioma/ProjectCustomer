@@ -33848,6 +33848,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 12.993191
       objectReference: {fileID: 0}
+    - target: {fileID: 2588188620611988956, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 090251e7e3bfe76488b2e4f206dc8071, type: 3}
     - target: {fileID: 2695903912343917379, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Mesh
       value: 

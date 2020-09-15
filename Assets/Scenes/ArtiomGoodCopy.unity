@@ -8343,7 +8343,7 @@ PrefabInstance:
     - target: {fileID: 3228927195318960554, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1211769331}
+      objectReference: {fileID: 0}
     - target: {fileID: 3228927195318960554, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: set_mute
@@ -8485,11 +8485,6 @@ PrefabInstance:
 --- !u!1 &1211769330 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3228927195318960547, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
-  m_PrefabInstance: {fileID: 1211769329}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1211769331 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1373609696134077212, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
   m_PrefabInstance: {fileID: 1211769329}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1211769336 stripped
@@ -14612,6 +14607,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 809283179966466753, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
+      propertyPath: LevelUpgradeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d016af6ab2e1c7d45a8f9304c34bc01d, type: 3}
     - target: {fileID: 809283179966466759, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -14620,6 +14619,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2444489871651145811, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -80679412273971760, guid: 3d8b4f4dabb75db4da8fe6bc0f05a5ad, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
 --- !u!4 &809283180959722365 stripped
