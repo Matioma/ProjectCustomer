@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 809283179966466752}
   - component: {fileID: 809283179966466753}
   - component: {fileID: 2444489871651145811}
+  - component: {fileID: 130470384938208327}
   m_Layer: 0
   m_Name: MangerObject
   m_TagString: Untagged
@@ -51,7 +52,8 @@ MonoBehaviour:
   DefeatSound: {fileID: 0}
   SelectingMaterial: {fileID: 0}
   SelectZoneSound: {fileID: 8300000, guid: dbcca89a7ba8cec4fa354fc9340cb540, type: 3}
-  LevelUpgradeSound: {fileID: 0}
+  LevelUpgradeSound: {fileID: 8300000, guid: d016af6ab2e1c7d45a8f9304c34bc01d, type: 3}
+  UnableToBuyUpgrade: {fileID: 0}
 --- !u!82 &2444489871651145811
 AudioSource:
   m_ObjectHideFlags: 0
@@ -148,3 +150,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &130470384938208327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809283179966466759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8383448718907499b2bf0b133a4210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
