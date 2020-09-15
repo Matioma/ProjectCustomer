@@ -47,7 +47,7 @@ public class ReceourceZone : MonoBehaviour
         }
         else
         {
-            timer -= Time.fixedDeltaTime;
+            timer -= GlobalTimer.Instance.DeltaTime;
         }
     }
 

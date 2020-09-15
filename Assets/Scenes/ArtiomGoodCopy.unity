@@ -14563,6 +14563,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534168979}
     m_Modifications:
+    - target: {fileID: 130470384938208327, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
+      propertyPath: GameLengthInSeconds
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 130470384938208327, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
+      propertyPath: TimerIsStarted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 130470384938208327, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
+      propertyPath: TimeMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 809283179966466752, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1340.2338

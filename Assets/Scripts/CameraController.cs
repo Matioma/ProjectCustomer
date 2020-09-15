@@ -320,7 +320,7 @@ public class CameraController : MonoBehaviour
         isCameraTransitioning = true;
     }
     void LerpTransform(MyTransform initialTransform, MyTransform targetTransform, float speed) {
-        progress += 1/speed* Time.deltaTime;
+        progress += 1/speed* GlobalTimer.Instance.NonAcceleratedTime;
 
         transform.position = Vector3.Lerp(initialTransform.position, targetTransform.position, progress);
         transform.rotation = Quaternion.Lerp(initialTransform.rotation, targetTransform.rotation, progress);
