@@ -9593,6 +9593,10 @@ PrefabInstance:
       propertyPath: hungerWarningTimer
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: waterConsumtionTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: upgrades.Array.size
       value: 3
@@ -14972,7 +14976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1138074116525986800, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: waterConsumtionTime
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1138074116525986800, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: population
@@ -16032,7 +16036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4397491209848086769, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: waterConsumtionTime
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5363762921019440491, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: selectedMaterial
