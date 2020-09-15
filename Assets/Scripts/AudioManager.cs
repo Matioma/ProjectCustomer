@@ -55,8 +55,12 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     AudioClip SelectZoneSound;
 
+
+    [Header("Upgrade sounds!")]
     [SerializeField]
     AudioClip LevelUpgradeSound;
+    [SerializeField]
+    AudioClip UnableToBuyUpgrade;
 
     float currentVolume = 0.8f;
 
@@ -85,8 +89,10 @@ public class AudioManager : MonoBehaviour
             GetComponent<AudioSource>().PlayOneShot(SelectZoneSound);
         };
 
-        //Subscribe to ZoneUpgrading Sound
-        foreach (var obj in Resources.FindObjectsOfTypeAll<BuyUpgrade>()) {
+
+        //Subscribe to ZoneUpgrading Sounds
+        foreach (var obj in Resources.FindObjectsOfTypeAll<BuyUpgrade>())
+        {
             obj.OnZoneUpgrade += () =>
             {
                 if (LevelUpgradeSound != null)
@@ -94,7 +100,27 @@ public class AudioManager : MonoBehaviour
                     GetComponent<AudioSource>().PlayOneShot(LevelUpgradeSound);
                 }
             };
+            obj.OnTryUpgradeWithoutMoney += () =>
+            {
+                Debug.LogWarning("Cant upgrade");
+                if (UnableToBuyUpgrade != null)
+                {
+                    GetComponent<AudioSource>().PlayOneShot(UnableToBuyUpgrade);
+                }
+            };
         }
+
+
+        //foreach (var obj in Resources.FindObjectsOfTypeAll<BuyUpgrade>())
+        //{
+        //    obj.OnZoneUpgrade += () =>
+        //    {
+        //        if (LevelUpgradeSound != null)
+        //        {
+        //            GetComponent<AudioSource>().PlayOneShot(LevelUpgradeSound);
+        //        }
+        //    };
+        //}
 
         //Debug.LogWarning("");
         ////Debug.LogError("Test");

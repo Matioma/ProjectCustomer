@@ -13299,7 +13299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4397491208869768602, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: MinCameraDistFromPlanet
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4397491209848086769, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: resouces.Array.data[0].amount
@@ -14607,13 +14607,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 809283179966466753, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
-      propertyPath: LevelUpgradeSound
-      value: 
-      objectReference: {fileID: 8300000, guid: d016af6ab2e1c7d45a8f9304c34bc01d, type: 3}
     - target: {fileID: 809283179966466759, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: m_Name
-      value: AudioManager
+      value: PersistentObject
       objectReference: {fileID: 0}
     - target: {fileID: 809283179966466759, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: m_IsActive
