@@ -66,14 +66,14 @@ public class AudioManager : MonoBehaviour
         Instance = this;
 
 
-        //foreach (Button obj in FindObjectsOfType<Button>())
-        //{
-        //    Debug.LogError(obj.transform.name);
-        //    obj.onClick.AddListener(() => {
-        //        Debug.LogError("ButtonClicked");
-        //    });
-        //    obj.onClick.AddListener(OnButtonClick);
-        //}
+        foreach (Button obj in FindObjectsOfType<Button>())
+        {
+            
+            obj.onClick.AddListener(() =>
+            {
+            });
+            obj.onClick.AddListener(OnButtonClick);
+        }
     }
 
     private void Start()
@@ -96,17 +96,17 @@ public class AudioManager : MonoBehaviour
             };
         }
 
-        Debug.LogError("Test");
-        Debug.LogError(Resources.FindObjectsOfTypeAll<Button>());
+        //Debug.LogWarning("");
+        ////Debug.LogError("Test");
+        //Debug.LogWarning(Resources.FindObjectsOfTypeAll<Button>());
         //ButtonClicking
-        foreach (Button obj in Resources.FindObjectsOfTypeAll<Button>())
-        {
-            
-            obj.onClick.AddListener(() => {
-                Debug.LogError("ButtonClicked");
-            });
-            obj.onClick.AddListener(OnButtonClick);
-        }
+        //foreach (Button obj in Resources.FindObjectsOfTypeAll<Button>())
+        //{
+        //    obj.onClick.AddListener(() => {
+        //        Debug.LogError("ButtonClicked");
+        //    });
+        //    obj.onClick.AddListener(OnButtonClick);
+        //}
 
     }
 
