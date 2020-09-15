@@ -89,7 +89,7 @@ public class AudioManager : MonoBehaviour
         foreach (var obj in Resources.FindObjectsOfTypeAll<BuyUpgrade>()) {
             obj.OnZoneUpgrade += () =>
             {
-                if (SelectZoneSound != null)
+                if (LevelUpgradeSound != null)
                 {
                     GetComponent<AudioSource>().PlayOneShot(LevelUpgradeSound);
                 }

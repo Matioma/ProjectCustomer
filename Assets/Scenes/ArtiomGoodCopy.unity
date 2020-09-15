@@ -14607,6 +14607,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 809283179966466753, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
+      propertyPath: LevelUpgradeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d016af6ab2e1c7d45a8f9304c34bc01d, type: 3}
     - target: {fileID: 809283179966466759, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: m_Name
       value: AudioManager
