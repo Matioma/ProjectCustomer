@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3464556606074032885}
   - component: {fileID: 3464556606074032842}
   - component: {fileID: 3464556606074032843}
+  - component: {fileID: 6533899342349306897}
   m_Layer: 0
   m_Name: 'PauseButton '
   m_TagString: Untagged
@@ -120,6 +121,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6533899342349306897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3464556606074032841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4596abb29923adb41b21e07af990003b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3464556606158097231
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,6 +325,7 @@ GameObject:
   - component: {fileID: 3464556606369817927}
   - component: {fileID: 3464556606369817924}
   - component: {fileID: 3464556606369817925}
+  - component: {fileID: 9028472844848569395}
   m_Layer: 0
   m_Name: 'ForwardButton '
   m_TagString: Untagged
@@ -421,6 +435,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9028472844848569395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3464556606369817947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bf5412db9516d64ba94ffa41b099d9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3464556606777560680
 GameObject:
   m_ObjectHideFlags: 0

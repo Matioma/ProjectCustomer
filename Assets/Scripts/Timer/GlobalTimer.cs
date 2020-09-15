@@ -28,16 +28,27 @@ public class GlobalTimer : MonoBehaviour
 
     float deltaTime = 0f;
     public float DeltaTime{
-        get{ return Time.deltaTime*TimeMultiplier; }
+        get{
+            if (GameIsPaused) {
+                return 0.0f;
+            }
+            return Time.deltaTime*TimeMultiplier; }
         set{
         }
     }
     public float NonAcceleratedTime {
-        get { return Time.deltaTime; }
+        get {
+            if (GameIsPaused) {
+                return 0.0f;
+            }
+            return Time.deltaTime; 
+        }
     }
 
 
-    public bool TimerIsStarted=false;
+    public bool TimerIsStarted { get; private set; } = true;
+    public bool GameIsPaused { get; private set; } = false;
+
 
     public event Action OnDefeat;
 
@@ -50,8 +61,26 @@ public class GlobalTimer : MonoBehaviour
     }
 
 
-    public float TimeMultiplier = 1;
 
+
+    float multiplierBeforePause;
+    [SerializeField]
+    float TimeMultiplier = 1;
+
+    public void StopGame() {
+        GameIsPaused = true;
+        Debug.LogWarning("Game Paused"); ;
+    }
+
+    public void ResumeGame() {
+        GameIsPaused = false;
+        //TimeMultiplier = multiplierBeforePause;
+    }
+
+    public void AccelerateGame()
+    {
+        TimeMultiplier *= 2;
+    }
 
     public void StartTimer() {
         TimerIsStarted= true;
@@ -60,6 +89,7 @@ public class GlobalTimer : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        multiplierBeforePause = TimeMultiplier;
     }
 
 
