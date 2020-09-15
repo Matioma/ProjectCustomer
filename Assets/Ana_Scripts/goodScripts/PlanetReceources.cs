@@ -264,16 +264,19 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
                 PeopleAreDying = true;
                 if (deathTimer > 0)
                 {
-                    peopleToDie = (seedConsumptionAmount - receourcesNumber[Receources.SEEDS]) / 2;
+                    peopleToDie = (seedConsumptionAmount - receourcesNumber[Receources.SEEDS]) / seedConsumptionAmountPerPerson;
                     deathRate = (peopleToDie * deathRateForTimer) / peopleDeathTimer;
                    // Debug.Log("seed consumprion "+seedConsumptionAmount);
                    // Debug.Log("current seeds "+receourcesNumber[Receources.SEEDS]);
-                   // Debug.Log("hungry people "+peopleToDie);
+                    Debug.Log("hungry people "+peopleToDie);
+                    Debug.Log("death rate " + deathRate);
                     GetComponentInParent<UIInformation>().ChangeHungryPeople(peopleToDie);
                     GetComponentInParent<UIInformation>().ChangeDeathRateNumber(deathRate);
                     if (deathTimer % deathRateForTimer == 0)
                     {
+                        Debug.Log("old population " + population);
                         population -= deathRate;
+                        Debug.Log("new population " + population);
                         GetComponentInParent<UIInformation>().ChangePopulationNumber(population);
                         calculateConsumptionSeedAmount();
                     }

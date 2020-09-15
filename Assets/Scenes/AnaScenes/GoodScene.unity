@@ -9360,6 +9360,14 @@ PrefabInstance:
       propertyPath: typeOfReceource
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1597331284954689027, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: productivityTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597331284954689027, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: productionNumber
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2345725482877630188, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: upgrades.Array.size
       value: 3
@@ -9482,7 +9490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: resouces.Array.data[0].amount
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: population
@@ -9495,6 +9503,22 @@ PrefabInstance:
     - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: seedConsumptionAmountPerPerson
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: birthRateNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: birthRateTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: hungerWarningTimer
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: seedConsumptionTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: upgrades.Array.size
@@ -9543,6 +9567,14 @@ PrefabInstance:
     - target: {fileID: 3553266654540208291, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: desiredCanvasType
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668683069815176958, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: productivityTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668683069815176958, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: productionNumber
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3792327708924555282, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: type
