@@ -44,6 +44,7 @@ public class FarmZoneUpdater : MonoBehaviour
         if (Farm != null)
         {
             Farm.GetComponent<BuyZone>().Buy();
+            Farm.GetComponentInParent<PlanetReceources>().FarmZoneIsBought();
         }
         if (UIZoneUnlocked != null)
         {

@@ -36,7 +36,7 @@ public class ProductionNumberSpawner : MonoBehaviour
             
             receourceZone.onEndProductionCycle += ()=> {
                 SpawnNumber(receourceZone);
-                Debug.Log("Food produced");
+               // Debug.Log("Food produced");
             };
         }
         var planet = GetComponentInParent<Planet>().GetComponentInChildren<PlanetReceources>();

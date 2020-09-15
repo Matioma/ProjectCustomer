@@ -144,6 +144,28 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         return resourcesNumber[type];
     }
 
+    public bool GetIsZoneUnlocked(Receources Id)
+    {
+        switch (Id)
+        {
+            case Receources.SEEDS:
+                return isFarmUnlocked;
+               // break;
+            case Receources.WATER:
+                return isWaterUnlocked;
+               // break;
+            case Receources.MONEY:
+                return isMineUnlocked;
+               // break;
+            case Receources.INDUSTRIAL:
+                return isInvestmentUnlocked;
+                //break;
+            default:
+                return false;
+                
+        }
+    }
+
     public void PlanetIsSelected()
     {
         selected = true;
