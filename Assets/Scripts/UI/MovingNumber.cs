@@ -14,17 +14,30 @@ public class MovingNumber : MonoBehaviour
     [SerializeField]
     float lifeTime =5;
     public float Velocity { get { return velocity; } }
-    
+
+
+    float Timer;
+
+
 
     void Start()
     {
-        Invoke("DestroyIndicator", lifeTime);
+        //Invoke("DestroyIndicator", lifeTime);
+        Timer = lifeTime;
     }
+
+
+
 
 
     private void Update()
     {
         transform.localPosition += transform.localPosition.normalized * velocity * GlobalTimer.Instance.DeltaTime;
+
+        lifeTime -= GlobalTimer.Instance.DeltaTime;
+        if (lifeTime <= 0) {
+            DestroyIndicator();
+        }
     }
 
     void DestroyIndicator() {

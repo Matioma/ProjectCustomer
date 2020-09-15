@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
-using UnityEditorInternal;
+
 using UnityEngine;
 
 public class GlobalTimer : MonoBehaviour
@@ -45,6 +45,9 @@ public class GlobalTimer : MonoBehaviour
     float GameLengthInSeconds;
     float GameTimeLeftTimer;
 
+    public float GetTimeLeft() {
+        return GameTimeLeftTimer;
+    }
 
 
     public float TimeMultiplier = 1;
