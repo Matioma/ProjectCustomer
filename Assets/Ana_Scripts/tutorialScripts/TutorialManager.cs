@@ -29,7 +29,7 @@ public class TutorialManager : MonoBehaviour
     void Start()
     {
         planetInformation = StarterPlanet.GetComponent<UIInformation>();
-        mainUIManager = mainUIManager.GetComponent<CanvasManager>();
+        mainUIManager = MainUI.GetComponent<CanvasManager>();
     }
 
     // Update is called once per frame
