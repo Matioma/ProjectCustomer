@@ -207,8 +207,16 @@ public class CameraController : MonoBehaviour
                     SelectedZone.GetComponent<ZoneSelection>().Deselect();
                 }
 
-                
+
+                //If clicking on the selected zone
+                if (SelectedZone == newSelectedZone) {
+                    deselectLastZone();
+                    return;
+                }
+
+
                 SelectedZone = newSelectedZone;
+
                 newSelectedZone.GetComponent<ZoneSelection>().Select();
 
                 //hitResult.normal
