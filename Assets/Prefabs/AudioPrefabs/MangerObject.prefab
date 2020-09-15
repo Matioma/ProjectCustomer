@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 809283179966466753}
   - component: {fileID: 2444489871651145811}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: MangerObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,10 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 3d8b4f4dabb75db4da8fe6bc0f05a5ad, type: 2}
   BackgroundMusic: {fileID: 0}
   ClickingButton: {fileID: 8300000, guid: 25a983de3321ca648a5554e46df6c77f, type: 3}
-  SelectZoneSound: {fileID: 8300000, guid: 1a47827c3f57e6c4a9b19b848718bf65, type: 3}
+  SpaceShipSound: {fileID: 0}
+  DefeatSound: {fileID: 0}
+  SelectingMaterial: {fileID: 0}
+  SelectZoneSound: {fileID: 8300000, guid: dbcca89a7ba8cec4fa354fc9340cb540, type: 3}
   LevelUpgradeSound: {fileID: 0}
 --- !u!82 &2444489871651145811
 AudioSource:

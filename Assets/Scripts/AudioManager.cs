@@ -39,10 +39,22 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField]
     AudioClip BackgroundMusic;
+
     [SerializeField] 
     AudioClip ClickingButton;
+
+    [SerializeField]
+    AudioClip SpaceShipSound;
+
+    [SerializeField]
+    AudioClip DefeatSound;
+
+    [SerializeField]
+    AudioClip SelectingMaterial;
+
     [SerializeField]
     AudioClip SelectZoneSound;
+
     [SerializeField]
     AudioClip LevelUpgradeSound;
 
@@ -53,6 +65,15 @@ public class AudioManager : MonoBehaviour
     {
         Instance = this;
 
+
+        //foreach (Button obj in FindObjectsOfType<Button>())
+        //{
+        //    Debug.LogError(obj.transform.name);
+        //    obj.onClick.AddListener(() => {
+        //        Debug.LogError("ButtonClicked");
+        //    });
+        //    obj.onClick.AddListener(OnButtonClick);
+        //}
     }
 
     private void Start()
@@ -75,19 +96,27 @@ public class AudioManager : MonoBehaviour
             };
         }
 
-        foreach (var obj in Resources.FindObjectsOfTypeAll<Button>())
+        Debug.LogError("Test");
+        Debug.LogError(Resources.FindObjectsOfTypeAll<Button>());
+        //ButtonClicking
+        foreach (Button obj in Resources.FindObjectsOfTypeAll<Button>())
         {
-            obj.onClick.AddListener(() =>
-                {
-                    //Debug.Log("buttonClicked");
-                    if (ClickingButton != null)
-                    {
-
-                        GetComponent<AudioSource>().PlayOneShot(ClickingButton);
-                    }
-                }
-            );
+            
+            obj.onClick.AddListener(() => {
+                Debug.LogError("ButtonClicked");
+            });
+            obj.onClick.AddListener(OnButtonClick);
         }
+
+    }
+
+
+    public void OnButtonClick() {
+        Debug.LogWarning("CLicking on button");
+        if (ClickingButton != null) {
+            GetComponent<AudioSource>().PlayOneShot(ClickingButton);
+        }
+        
     }
 
 

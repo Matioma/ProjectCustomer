@@ -39,10 +39,7 @@ public class ProductionNumberSpawner : MonoBehaviour
                 Debug.Log("Food produced");
             };
         }
-
-
         var planet = GetComponentInParent<Planet>().GetComponentInChildren<PlanetReceources>();
-
     }
 
 
