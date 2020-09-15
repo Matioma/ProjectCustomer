@@ -57,7 +57,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
     [SerializeField]
     bool selected = false;
 
-
+    bool isOneUpgradeBought=false;
 
     // Start is called before the first frame update
     void Start()
@@ -142,6 +142,11 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
     public int GetReceouceNumber(Receources type)
     {
         return resourcesNumber[type];
+    }
+
+    public bool GetIsOneUpgradeBought()
+    {
+        return isOneUpgradeBought;
     }
 
     public bool GetIsZoneUnlocked(Receources Id)
@@ -321,6 +326,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
 
     public void ChangeProductivity(Receources Id, int amount, string description)
     {
+        isOneUpgradeBought = true;
         switch (Id)
         {
             case Receources.SEEDS:
