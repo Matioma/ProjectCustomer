@@ -41,6 +41,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     GetComponent<ReceourceZone>().ChangeProductivityNumber(upgrades[upgradeIndex].productivityIncrease, "Maximum level reached");
                 }
+                GetComponentInParent<PlanetReceources>().AddReceource(Receources.MONEY, -upgrades[upgradeIndex].price);
                 upgradeIndex++;
                 OnZoneUpgrade?.Invoke();
             }
