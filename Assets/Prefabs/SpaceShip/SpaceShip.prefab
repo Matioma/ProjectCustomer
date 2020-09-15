@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPlanet: {fileID: 0}
-  speed: 76.15
+  speed: 35
 --- !u!114 &9102493979056009261
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -222,9 +222,19 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         {
             addition.AddReceource(rec, amount);
         }
+        if (Receources.SEEDS == rec)
+        {
+            Debug.Log("newSeeds " + receourcesNumber[rec]);
+        }
+
+ 
+
+        //Debug.Log("newSeeds " + receourcesNumber[rec]);
 
         
-        //Debug.Log("newSeeds " + receourcesNumber[rec]);
+
+
+ 
     }
 
 
