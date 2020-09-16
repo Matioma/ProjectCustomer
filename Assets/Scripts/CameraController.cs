@@ -100,6 +100,14 @@ public class CameraController : MonoBehaviour
     }
     void readInput()
     {
+        if (GlobalTimer.Instance != null)
+        {
+            if (GlobalTimer.Instance.GameIsPaused) {
+                return;
+            }
+        }
+
+
         ScrollAxis = Input.GetAxis("Mouse ScrollWheel");
         MouseXAxis = Input.GetAxis("Mouse X");
         MouseYAxis = Input.GetAxis("Mouse Y");
