@@ -27,7 +27,7 @@ public class GlobalTimerBinding : MonoBehaviour
         
         int timerLeft =(int) GlobalTimer.Instance.GetTimeLeft();
 
-        Debug.Log(timerLeft);
+        //Debug.Log(timerLeft);
 
         textBox.text =""+ timerLeft/60 + ":" + timerLeft%60;
     }

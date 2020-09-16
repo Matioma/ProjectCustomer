@@ -27,7 +27,7 @@ public class TransportZoneUpdater : MonoBehaviour
     public class PlanetIcon
     {
         public GameObject planet;
-        public Image planetIcon;
+        public Sprite planetIcon;
     }
     [SerializeField]
     List<PlanetIcon> planets;
@@ -116,15 +116,21 @@ public class TransportZoneUpdater : MonoBehaviour
         ChangeToPlanetB.onClick.RemoveAllListeners();
         if (modifiedPlanets.Count - 1 >= 0)
         {
+            
             var imageToChangeA = ChangeToPlanetA.GetComponentInChildren<Image>();
-            imageToChangeA = modifiedPlanets[0].planetIcon;
+            imageToChangeA.sprite = modifiedPlanets[0].planetIcon;
             ChangeToPlanetA.onClick.AddListener(OnPlanetChangeToA);
+            Debug.Log("Change Icon planetA "+ modifiedPlanets[0].planetIcon.name);
+            Debug.Log("Change Icon planetA "+ modifiedPlanets[0].planet.gameObject.name);
         }
         if (modifiedPlanets.Count - 1 >= 1)
         {
+            
             var imageToChangeB = ChangeToPlanetB.GetComponentInChildren<Image>();
-            imageToChangeB = modifiedPlanets[1].planetIcon;
+            imageToChangeB.sprite = modifiedPlanets[1].planetIcon;
             ChangeToPlanetB.onClick.AddListener(OnPlanetChangeToB);
+            Debug.Log("Change Icon planetA " + modifiedPlanets[1].planetIcon.name);
+            Debug.Log("Change Icon planetB "+ modifiedPlanets[1].planet.gameObject.name);
         }
     }
 
