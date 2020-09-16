@@ -52,6 +52,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     AudioClip SelectingMaterial;
 
+    [SerializeField]
+    AudioClip PeopleStartDying;
+
     [Header("Select Zone")]
     [SerializeField]
     AudioClip SelectZoneSound;
@@ -84,6 +87,17 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        warningSounds();
+
+        GlobalTimer.Instance.OnDefeat += () =>
+        {
+            if (DefeatSound != null)
+                GetComponent<AudioSource>().PlayOneShot(DefeatSound);
+        };
+
+       
+
+
         //Subscribe to Zone Selection Sound
         CameraController.Instance.OnSelectZone += () =>
         {
@@ -104,16 +118,12 @@ public class AudioManager : MonoBehaviour
             };
             obj.OnTryUpgradeWithoutMoney += () =>
             {
-                Debug.LogWarning("Cant upgrade");
                 if (UnableToBuyUpgrade != null)
                 {
                     GetComponent<AudioSource>().PlayOneShot(UnableToBuyUpgrade);
                 }
             };
         }
-
-
-
     }
 
 
@@ -125,6 +135,35 @@ public class AudioManager : MonoBehaviour
         
     }
 
+    public void warningSounds() {
+        foreach (var obj in Resources.FindObjectsOfTypeAll<PlanetReceources>())
+        {
+            obj.OnPeopleStartLackFood += () =>
+            {
+                if (PeopleStartDying != null)
+                {
+                    GetComponent<AudioSource>().PlayOneShot(PeopleStartDying);
+                }
+
+            };
+            //obj.OnZoneUpgrade += () =>
+            //{
+            //    if (LevelUpgradeSound != null)
+            //    {
+            //        GetComponent<AudioSource>().PlayOneShot(LevelUpgradeSound);
+            //    }
+            //};
+            //obj.OnTryUpgradeWithoutMoney += () =>
+            //{
+            //    Debug.LogWarning("Cant upgrade");
+            //    if (UnableToBuyUpgrade != null)
+            //    {
+            //        GetComponent<AudioSource>().PlayOneShot(UnableToBuyUpgrade);
+            //    }
+            //};
+        }
+
+    }
 
     private void Update()
     {

@@ -2028,18 +2028,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 595.632
       objectReference: {fileID: 0}
-    - target: {fileID: 1876061023336874151, guid: b55cee369236a394da69126a8793a3e5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.00006638777
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876061023336874151, guid: b55cee369236a394da69126a8793a3e5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.00006638777
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876061023336874151, guid: b55cee369236a394da69126a8793a3e5, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.00006638776
-      objectReference: {fileID: 0}
     - target: {fileID: 6133808140211963601, guid: b55cee369236a394da69126a8793a3e5, type: 3}
       propertyPath: VelocityModule.y.scalar
       value: 21.1
@@ -11846,6 +11834,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 501586004884230337, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 501586004884230337, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 501586004884230337, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: MoneyNeededToBuy
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 938154083085942926, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_LocalScale.x
       value: 1299.1328
@@ -11862,6 +11862,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2540817853737639666, guid: 32b64645184bc7c488f7f09d602c5842, type: 3}
+    - target: {fileID: 1577169691944905800, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1577169691944905800, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1577169691944905800, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: MoneyNeededToBuy
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 2166856501067938823, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_LocalScale.x
       value: 1299.1328
@@ -11878,6 +11890,14 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: b9dedd1a20f0cb34a821a337da32b5ef, type: 3}
+    - target: {fileID: 2629588100626026192, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: productivityTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629588100626026192, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: productionNumber
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2695903912343917379, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -11930,6 +11950,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2540817853737639666, guid: 7bb4c8a45e5cece44b48d9d6a51d8f87, type: 3}
+    - target: {fileID: 4054243692379111001, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: rotationVelocity.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054243692379111001, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: rotationVelocity.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4280465862610689072, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: LevelsPrefabs.Array.size
       value: 3
@@ -11946,6 +11974,46 @@ PrefabInstance:
       propertyPath: LevelsPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 4031958297260466760}
+    - target: {fileID: 4425833041591103956, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425833041591103956, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[0].description
+      value: Pikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425833041591103956, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[0].productivityIncrease
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425833041591103956, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[0].price
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425833041591103956, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[1].description
+      value: Mining cart
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425833041591103956, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[1].productivityIncrease
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425833041591103956, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[1].price
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425833041591103956, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[2].description
+      value: Rails
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425833041591103956, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[2].productivityIncrease
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425833041591103956, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[2].price
+      value: 800
+      objectReference: {fileID: 0}
     - target: {fileID: 4473284821589099573, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Materials.Array.size
       value: 2
@@ -11958,6 +12026,46 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: -1114199533890271507, guid: 7bb4c8a45e5cece44b48d9d6a51d8f87, type: 3}
+    - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[0].description
+      value: Tractors
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[0].productivityIncrease
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[0].price
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[1].description
+      value: Fertilizers
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[1].productivityIncrease
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[1].price
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[2].description
+      value: Hothouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[2].productivityIncrease
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[2].price
+      value: 800
+      objectReference: {fileID: 0}
     - target: {fileID: 5041477867368152077, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -11977,6 +12085,10 @@ PrefabInstance:
     - target: {fileID: 5285201311859359549, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_LocalScale.z
       value: 1299.1328
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319158110676492867, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: MinCameraDistFromPlanet
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5319158110676492873, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12026,6 +12138,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: DesertPlanet
       objectReference: {fileID: 0}
+    - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: seedConsumptionAmountPerPerson
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: seedConsumptionTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: waterConsumtionTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: population
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: hungerWarningTimer
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: birthRateNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: birthRateTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: resouces.Array.data[0].type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: resouces.Array.data[0].amount
+      value: 1300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: resouces.Array.data[1].amount
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: resouces.Array.data[2].type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: resouces.Array.data[2].amount
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: seedConsumptionAmount
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5592803648961402866, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Materials.Array.size
       value: 2
@@ -12038,10 +12202,70 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: -1114199533890271507, guid: 2e73e62308bdc25408c56b8b0cb9bcca, type: 3}
+    - target: {fileID: 5890439785939915771, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890439785939915771, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890439785939915771, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: MoneyNeededToBuy
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128415772394275357, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128415772394275357, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[0].description
+      value: Drain pipes
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128415772394275357, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[0].productivityIncrease
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128415772394275357, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[0].price
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128415772394275357, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[1].description
+      value: irrigation system
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128415772394275357, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[1].productivityIncrease
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128415772394275357, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[1].price
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128415772394275357, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[2].description
+      value: remote control
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128415772394275357, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[2].productivityIncrease
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128415772394275357, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[2].price
+      value: 800
+      objectReference: {fileID: 0}
     - target: {fileID: 6183266612903480216, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2540817853737639666, guid: 3bcb83ce3e2e3c84fa22aa8f153c3923, type: 3}
+    - target: {fileID: 6338748181924666647, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: productivityTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338748181924666647, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: productionNumber
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6627168064758100862, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: LevelsPrefabs.Array.size
       value: 3
@@ -12085,6 +12309,26 @@ PrefabInstance:
     - target: {fileID: 7898140640285503424, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_LocalScale.z
       value: 1299.1328
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301500138828910058, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: productivityTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301500138828910058, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: productionNumber
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8465659272892760838, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: seedsNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8465659272892760838, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: WaterNeededToBuy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8465659272892760838, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: MoneyNeededToBuy
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 9168050906745086851, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: LevelsPrefabs.Array.size
@@ -20474,18 +20718,6 @@ PrefabInstance:
     - target: {fileID: 1876061023336874151, guid: b55cee369236a394da69126a8793a3e5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 595.632
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876061023336874151, guid: b55cee369236a394da69126a8793a3e5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.00008268368
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876061023336874151, guid: b55cee369236a394da69126a8793a3e5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.00008268366
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876061023336874151, guid: b55cee369236a394da69126a8793a3e5, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.00008268367
       objectReference: {fileID: 0}
     - target: {fileID: 6133808140211963601, guid: b55cee369236a394da69126a8793a3e5, type: 3}
       propertyPath: VelocityModule.x.scalar

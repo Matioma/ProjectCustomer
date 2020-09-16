@@ -40,7 +40,7 @@ public class TutorialManager : MonoBehaviour
 
     bool CheckConditions(int index)
     {
-        Debug.Log("index " + index);
+        //Debug.Log("index " + index);
         switch (index)
         {
             case 0:
@@ -103,6 +103,8 @@ public class TutorialManager : MonoBehaviour
     void getNextScreen()
     {
         tutorialScreens[tutorialScreenIndex].SetActive(true);
+        nextButton.gameObject.SetActive(true);
+        skipButton.gameObject.SetActive(true);
     }
 
     void changeScreen()
@@ -110,6 +112,8 @@ public class TutorialManager : MonoBehaviour
         if (CheckConditions(tutorialScreenIndex) == true)
         {
             tutorialScreens[tutorialScreenIndex].SetActive(false);
+            nextButton.gameObject.SetActive(false);
+            skipButton.gameObject.SetActive(false);
             if (tutorialScreenIndex == tutorialScreens.Length - 1)
             {
                 CompleteTutorial();

@@ -85,10 +85,16 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
 
     void Awake()
     {
-        seedProductionAmount = Farm.GetComponent<ReceourceZone>().GetProductivity();
-        waterProductionAmount = Water.GetComponent<ReceourceZone>().GetProductivity();
+        seedProductionAmount = Farm.GetComponent<ReceourceZone>().GetProductionAmount();
+        seedProductionTime = Farm.GetComponent<ReceourceZone>().GetProductivityTime();
+
+        waterProductionAmount = Water.GetComponent<ReceourceZone>().GetProductionAmount();
+        waterProductionTime = Water.GetComponent<ReceourceZone>().GetProductivityTime();
         if (Mine != null)
-            moneyProductionAmount = Mine.GetComponent<ReceourceZone>().GetProductivity();
+        {
+            moneyProductionAmount = Mine.GetComponent<ReceourceZone>().GetProductionAmount();
+            moneyProductionTime = Mine.GetComponent<ReceourceZone>().GetProductivityTime();
+        }
     }
 
 
@@ -194,30 +200,30 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         Debug.Log("init ui");
         if (mainUI.GetComponent<UIPlanetManager>())
         {
-            mainUI.GetComponent<UIPlanetManager>().InitializeGeneral(planetPopulation, hungryPeople, deathRateNumber, deathRateTime, birthRateNumber, birthRateTime);
+            mainUI.GetComponent<UIPlanetManager>().InitializeGeneral(planetPopulation, hungryPeople, deathRateNumber, deathRateTime, birthRateNumber, birthRateTime,seedConsumptionAmount,seedConsumptionTime);
             if (Farm != null)
             {
                 Debug.Log("init ui farm");
 
-                mainUI.GetComponent<UIPlanetManager>().InitializeFarmZone(isFarmUnlocked, seedProductionAmount, seedProductionTime, waterConsumtionAmount, waterConsumtionTime, Farm);
+                mainUI.GetComponent<UIPlanetManager>().InitializeFarmZone(isFarmUnlocked, seedProductionAmount, seedProductionTime, waterConsumtionAmount, waterConsumtionTime, Farm, Farm.GetComponent<BuyZone>().GetPrice());
             }
             if (Water != null)
             {
                 Debug.Log("init water");
 
-                mainUI.GetComponent<UIPlanetManager>().InitializeWaterZone(isWaterUnlocked, waterProductionAmount, waterProductionTime, Water);
+                mainUI.GetComponent<UIPlanetManager>().InitializeWaterZone(isWaterUnlocked, waterProductionAmount, waterProductionTime, Water, Water.GetComponent<BuyZone>().GetPrice());
             }
             if (Mine != null)
             {
                 Debug.Log("init ui mine");
 
-                mainUI.GetComponent<UIPlanetManager>().InitializeMineralZone(isMineUnlocked, moneyProductionAmount, moneyProductionTime, Mine);
+                mainUI.GetComponent<UIPlanetManager>().InitializeMineralZone(isMineUnlocked, moneyProductionAmount, moneyProductionTime, Mine, Mine.GetComponent<BuyZone>().GetPrice());
             }
             if (Invest != null)
             {
                 Debug.Log("init invest");
 
-                mainUI.GetComponent<UIPlanetManager>().InitializeInvestmentZone(isInvestmentUnlocked, Farm, Water, Mine, Invest);
+                mainUI.GetComponent<UIPlanetManager>().InitializeInvestmentZone(isInvestmentUnlocked, Farm, Water, Mine, Invest, Invest.GetComponent<BuyZone>().GetPrice());
                 mainUI.GetComponent<UIPlanetManager>().InitializeTransportZone(Invest, planet);
             }
             mainUI.GetComponent<UIPlanetManager>().InitializeRecourceButtons(resourcesNumber[Receources.SEEDS], resourcesNumber[Receources.WATER], resourcesNumber[Receources.MONEY]);
@@ -301,7 +307,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         seedConsumptionAmount = amount;
         if (selected)
         {
-            mainUI.GetComponent<UIPlanetManager>().UpdateSeedConsumption(amount);
+            mainUI.GetComponent<UIPlanetManager>().UpdateSeedConsumption(seedConsumptionAmount, seedConsumptionTime);
         }
     }
     public void ChangeConsumptionTimeSeeds(int amount)
@@ -317,7 +323,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         waterConsumtionAmount = amount;
         if (selected)
         {
-            mainUI.GetComponent<UIPlanetManager>().UpdateWaterConsumption(amount,waterConsumtionTime);
+            mainUI.GetComponent<UIPlanetManager>().UpdateWaterConsumption(waterConsumtionAmount, waterConsumtionTime);
         }
     }
     public void ChangeConsumptionTimeWater(int amount)
@@ -338,7 +344,8 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
                 seedProductionAmount += amount;
                 if (selected)
                 {
-                    mainUI.GetComponent<UIPlanetManager>().UpdateSeedProductivity(amount, seedProductionTime);
+                    Debug.Log("prod time " + seedProductionAmount);
+                    mainUI.GetComponent<UIPlanetManager>().UpdateSeedProductivity(seedProductionAmount, seedProductionTime);
                     mainUI.GetComponent<UIPlanetManager>().UpdateUpgrades(Id, description, price);
                 }
                 break;
@@ -346,7 +353,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
                 waterProductionAmount += amount;
                 if (selected)
                 {
-                    mainUI.GetComponent<UIPlanetManager>().UpdateWaterProductivity(amount, waterProductionTime);
+                    mainUI.GetComponent<UIPlanetManager>().UpdateWaterProductivity(waterProductionAmount, waterProductionTime);
                     mainUI.GetComponent<UIPlanetManager>().UpdateUpgrades(Id, description, price);
                 }
                 break;
@@ -354,7 +361,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
                 moneyProductionAmount += amount;
                 if (selected)
                 {
-                    mainUI.GetComponent<UIPlanetManager>().UpdateMoneyProductivity(amount,moneyProductionTime);
+                    mainUI.GetComponent<UIPlanetManager>().UpdateMoneyProductivity(moneyProductionAmount, moneyProductionTime);
                     mainUI.GetComponent<UIPlanetManager>().UpdateUpgrades(Id, description, price);
                 }
                 break;

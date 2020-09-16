@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public class UIPlanetManager : MonoBehaviour
 {
@@ -36,27 +37,27 @@ public class UIPlanetManager : MonoBehaviour
     }
 
 
-    public void InitializeGeneral(int populationNumber, int hungryPeopleNumber, int deathRateNumber, int deathRateTime, int birthRateNumber, int birthRateTime)
+    public void InitializeGeneral(int populationNumber, int hungryPeopleNumber, int deathRateNumber, int deathRateTime, int birthRateNumber, int birthRateTime, int consumptionSeedNumber, int consumptionSeedTime)
     {
-        UIGeneral.GetComponent<GeneralZoneUpdater>().Initialize(populationNumber, hungryPeopleNumber, deathRateNumber, deathRateTime, birthRateNumber, birthRateTime);
+        UIGeneral.GetComponent<GeneralZoneUpdater>().Initialize(populationNumber, hungryPeopleNumber, deathRateNumber, deathRateTime, birthRateNumber, birthRateTime, consumptionSeedNumber, consumptionSeedTime);
     }
-    public void InitializeFarmZone(bool isZoneUnlocked, int productivityNumber, int productivityTime, int consumptionWaterNumber, int consumptionWaterTime, GameObject Farm)
+    public void InitializeFarmZone(bool isZoneUnlocked, int productivityNumber, int productivityTime, int consumptionWaterNumber, int consumptionWaterTime, GameObject Farm, int price)
     {
-        UIFarmZone.GetComponent<FarmZoneUpdater>().Initialize(isZoneUnlocked, productivityNumber, productivityTime, consumptionWaterNumber, consumptionWaterTime, Farm);
-    }
-
-    public void InitializeWaterZone(bool isZoneUnlocked, int productivityNumber, int productivityTime, GameObject Zone)
-    {
-        UIWaterZone.GetComponent<BasicZoneUpdater>().Initialize(isZoneUnlocked, productivityNumber, productivityTime, Zone);
+        UIFarmZone.GetComponent<FarmZoneUpdater>().Initialize(isZoneUnlocked, productivityNumber, productivityTime, consumptionWaterNumber, consumptionWaterTime, Farm, price);
     }
 
-    public void InitializeMineralZone(bool isZoneUnlocked, int productivityNumber, int productivityTime, GameObject Zone)
+    public void InitializeWaterZone(bool isZoneUnlocked, int productivityNumber, int productivityTime, GameObject Zone, int price)
     {
-        UIMineralZone.GetComponent<BasicZoneUpdater>().Initialize(isZoneUnlocked, productivityNumber, productivityTime, Zone);
+        UIWaterZone.GetComponent<BasicZoneUpdater>().Initialize(isZoneUnlocked, productivityNumber, productivityTime, Zone, price);
     }
-    public void InitializeInvestmentZone(bool isZoneUnlocked, GameObject Farm, GameObject Water, GameObject Mine, GameObject Invest)
+
+    public void InitializeMineralZone(bool isZoneUnlocked, int productivityNumber, int productivityTime, GameObject Zone, int price)
     {
-        UIInvestmentZone.GetComponent<InvestmentZoneUpdater>().Initialize(isZoneUnlocked, Farm, Water, Mine, Invest);
+        UIMineralZone.GetComponent<BasicZoneUpdater>().Initialize(isZoneUnlocked, productivityNumber, productivityTime, Zone, price);
+    }
+    public void InitializeInvestmentZone(bool isZoneUnlocked, GameObject Farm, GameObject Water, GameObject Mine, GameObject Invest, int price)
+    {
+        UIInvestmentZone.GetComponent<InvestmentZoneUpdater>().Initialize(isZoneUnlocked, Farm, Water, Mine, Invest, price);
     }
     public void InitializeTransportZone(GameObject IndustrialZone, GameObject currentPlanet)
     {
@@ -98,9 +99,9 @@ public class UIPlanetManager : MonoBehaviour
         UIResouceButtons.GetComponent<ResourcesButtonsUpdater>().ChangeAmount(rec, amount);
         UITransportZone.GetComponentInChildren<ChangeMaxValue>().ChangeValue(rec, amount);
     }
-    public void UpdateSeedConsumption(int newConsumption) ///////////////// To Add
+    public void UpdateSeedConsumption(int newConsumptionNumber, int newConsumprionTime) 
     {
-
+        UIGeneral.GetComponent<GeneralZoneUpdater>().UpdateSeedConsumptionRate(newConsumptionNumber, newConsumprionTime);
     }
     public void UpdateWaterConsumption(int newConsumptionNumber, int newConsumprionTime)
     {

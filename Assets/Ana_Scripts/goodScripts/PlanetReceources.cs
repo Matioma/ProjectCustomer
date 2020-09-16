@@ -109,7 +109,8 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         }
         set
         {
-            if (value != peopleAreDying)
+            //if value changes
+            if (value != PeopleAreDying)
             {
                 //If people dying
                 if (!value)
@@ -175,23 +176,18 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         }
         else
         {
-            Debug.Log("UIInformation is null");
+           // Debug.Log("UIInformation is null");
         }
     }
 
     public void calculateConsumptionWaterAmount()
     {
-        Debug.Log("water consumption change");
         if (info != null)
         {
             var productivity = info.getSeedProductionAmount();
             if (initialFoodProd != 0)
                 waterConsumtionAmount = (productivity / initialFoodProd) * waterConsumtionAmountPerSeed;
             info.ChangeConsumptionAmountWater(waterConsumtionAmount);
-            Debug.Log("current Productivity " + productivity);
-            Debug.Log("initial Productivity " + initialFoodProd);
-            Debug.Log("water consumprion per seed " + waterConsumtionAmountPerSeed);
-            Debug.Log("new water consumption " + waterConsumtionAmount);
         }
         else Debug.Log("no change");
     }
@@ -318,9 +314,9 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         }
         else
         {
-            resetHungerDeathTimers();
             PeopleLackFood = false;
-            peopleAreDying = false;
+            PeopleAreDying = false;
+            resetHungerDeathTimers();
         }
     }
     public void resetHungerDeathTimers()
