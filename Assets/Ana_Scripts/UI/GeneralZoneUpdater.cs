@@ -51,7 +51,7 @@ public class GeneralZoneUpdater : MonoBehaviour
     }
     public void UpdateDeathRate(int newRateNumber, int newRateTime)
     {
-        deathRate.text = "Death Rate:" + newRateNumber.ToString() + " / " + newRateTime.ToString() + " s";
+        deathRate.text = "Death Rate: " + newRateNumber.ToString() + " / " + newRateTime.ToString() + " s";
     }
     public void UpdateBirthRate(int newRateNumber, int newRateTime)
     {
