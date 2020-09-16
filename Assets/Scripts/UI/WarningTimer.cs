@@ -14,7 +14,12 @@ public class WarningTimer : MonoBehaviour
         set{
             if (value != progress)
             {
-                progress = value;
+                if (value >= 0) {
+                    progress = value;
+                }
+                else {
+                    progress = 0;                
+                }
                 SetValue(progress);
             }
         }
@@ -30,7 +35,9 @@ public class WarningTimer : MonoBehaviour
     }
     void Update()
     {
-        SetValue(planetReceources.GetHungerFractionLeft());
+        Value = planetReceources.GetHungerFractionLeft();
+        Debug.LogWarning(Value);
+        //SetValue(planetReceources.GetHungerFractionLeft());
     }
     void SetValue(float fraction) {
         GetComponent<Image>().fillAmount = fraction;
