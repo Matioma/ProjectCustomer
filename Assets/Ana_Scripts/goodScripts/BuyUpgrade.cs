@@ -34,7 +34,6 @@ public class BuyUpgrade : MonoBehaviour
         {
             if (GetComponentInParent<PlanetReceources>().GetReceouceNumber(Receources.MONEY) >= upgrades[upgradeIndex].price)
             {
-                Debug.Log(" listeners");
                 if (upgradeIndex < upgrades.Length - 1)
                 {
                     GetComponent<ReceourceZone>().ChangeProductivityNumber(upgrades[upgradeIndex].productivityIncrease, upgrades[upgradeIndex + 1].description, upgrades[upgradeIndex+1].price);

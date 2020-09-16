@@ -8,9 +8,15 @@ public class TransportZoneUpdater : MonoBehaviour
     [SerializeField]
     Button ChangeToSeeds;
     [SerializeField]
+    GameObject SeedBackgroundIcon;
+    [SerializeField]
     Button ChangeToWater;
     [SerializeField]
+    GameObject WaterBackgroundIcon;
+    [SerializeField]
     Button ChangeToMoney;
+    [SerializeField]
+    GameObject MoneyBackgroundIcon;
 
     [SerializeField]
     Slider slider;
@@ -18,7 +24,11 @@ public class TransportZoneUpdater : MonoBehaviour
     [SerializeField]
     Button ChangeToPlanetA;
     [SerializeField]
+    GameObject PlanetABackgroundIcon;
+    [SerializeField]
     Button ChangeToPlanetB;
+    [SerializeField]
+    GameObject PlanetBBackgroundIcon;
 
     [SerializeField]
     Button Send;
@@ -68,18 +78,25 @@ public class TransportZoneUpdater : MonoBehaviour
     {
         Invest.GetComponent<SendReceources>().ChangeTypeOfReceource(Receources.SEEDS);
         slider.GetComponent<ChangeMaxValue>().ChangeRec(Receources.SEEDS);
+        SeedBackgroundIcon.SetActive(true);
+        WaterBackgroundIcon.SetActive(false);
+        MoneyBackgroundIcon.SetActive(false);
     }
     private void OnResourceChangeToWater()
     {
         Invest.GetComponent<SendReceources>().ChangeTypeOfReceource(Receources.WATER);
         slider.GetComponent<ChangeMaxValue>().ChangeRec(Receources.WATER);
-
+        SeedBackgroundIcon.SetActive(false);
+        WaterBackgroundIcon.SetActive(true);
+        MoneyBackgroundIcon.SetActive(false);
     }
     private void OnResourceChangeToMoney()
     {
         Invest.GetComponent<SendReceources>().ChangeTypeOfReceource(Receources.MONEY);
         slider.GetComponent<ChangeMaxValue>().ChangeRec(Receources.MONEY);
-
+        SeedBackgroundIcon.SetActive(false);
+        WaterBackgroundIcon.SetActive(false);
+        MoneyBackgroundIcon.SetActive(true);
     }
 
     private void ChangeValueInSlider()
@@ -137,10 +154,14 @@ public class TransportZoneUpdater : MonoBehaviour
     private void OnPlanetChangeToA()
     {
         Invest.GetComponent<SendReceources>().ChangeDestination(modifiedPlanets[0].planet);
+        PlanetABackgroundIcon.SetActive(true);
+        PlanetBBackgroundIcon.SetActive(false);
     }
     private void OnPlanetChangeToB()
     {
         Invest.GetComponent<SendReceources>().ChangeDestination(modifiedPlanets[1].planet);
+        PlanetABackgroundIcon.SetActive(false);
+        PlanetBBackgroundIcon.SetActive(true);
     }
 
     void UpdateSendButton()
@@ -151,6 +172,18 @@ public class TransportZoneUpdater : MonoBehaviour
     private void OnSendButtonPress()
     {
         Invest.GetComponent<SendReceources>().Send();
+        ResetButtons();
+    }
+
+    private void ResetButtons()
+    {
+        slider.GetComponent<ChangeMaxValue>().ResetValue();
+        Invest.GetComponent<SendReceources>().ChangeTypeOfReceource(Receources.ALL);
+        SeedBackgroundIcon.SetActive(false);
+        WaterBackgroundIcon.SetActive(false);
+        MoneyBackgroundIcon.SetActive(false);
+        PlanetABackgroundIcon.SetActive(false);
+        PlanetBBackgroundIcon.SetActive(false);
     }
 
 
