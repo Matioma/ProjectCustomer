@@ -135,6 +135,7 @@ public class TutorialManager : MonoBehaviour
 
     public void CompleteTutorial()
     {
+        GlobalTimer.Instance.StartTimer();
 
         tutorial.SetActive(false);
     }

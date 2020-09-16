@@ -36,8 +36,6 @@ public class WarningTimer : MonoBehaviour
     void Update()
     {
         Value = planetReceources.GetHungerFractionLeft();
-        Debug.LogWarning(Value);
-        //SetValue(planetReceources.GetHungerFractionLeft());
     }
     void SetValue(float fraction) {
         GetComponent<Image>().fillAmount = fraction;

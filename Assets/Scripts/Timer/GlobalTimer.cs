@@ -5,26 +5,30 @@ using System.Runtime.InteropServices.WindowsRuntime;
 
 using UnityEngine;
 
-public class GlobalTimer : MonoBehaviour
+public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
 {
-    static GlobalTimer _instance; 
-    public static GlobalTimer Instance
-    {
-        get {
-            if (_instance == null) {
-                Debug.LogWarning("Make sure that your scene has GlobatTimer attached to any object");
-            }
-            return _instance;  
-        }
-        set {
-            if (_instance != null && _instance != value) {
-                Destroy(value.gameObject);
-                Debug.LogWarning("Tried to override golbat Timer value, the object is being Destroyed");
-                return;
-            }
-            _instance = value;
-        }
-    }
+    //static GlobalTimer _instance;
+    //public static GlobalTimer Instance
+    //{
+    //    get
+    //    {
+    //        if (_instance == null)
+    //        {
+    //            Debug.LogWarning("Make sure that your scene has GlobatTimer attached to any object");
+    //        }
+    //        return _instance;
+    //    }
+    //    set
+    //    {
+    //        if (_instance != null && _instance != value)
+    //        {
+    //            Destroy(value.gameObject);
+    //            Debug.LogWarning("Tried to override golbat Timer value, the object is being Destroyed");
+    //            return;
+    //        }
+    //        _instance = value;
+    //    }
+    //}
 
     float deltaTime = 0f;
     public float DeltaTime{
@@ -50,7 +54,7 @@ public class GlobalTimer : MonoBehaviour
     public bool GameIsPaused { get; private set; } = false;
 
 
-    public event Action OnDefeat;
+    public event Action OnTimerEnd;
 
     [SerializeField]
     float GameLengthInSeconds;
@@ -90,8 +94,6 @@ public class GlobalTimer : MonoBehaviour
         TimeMultiplier = acelerationValues[accelerationValueIndex];
         //TimeMultiplier *= 2;
     }
-    
-
 
     public void StartTimer() {
         TimerIsStarted= true;
@@ -101,6 +103,16 @@ public class GlobalTimer : MonoBehaviour
     {
         Instance = this;
         multiplierBeforePause = TimeMultiplier;
+        OpenWinScreen();
+
+    }
+
+    void OpenWinScreen() {
+        OnTimerEnd += () =>
+        {
+            GetComponent<CanvasSwitcher>()?.OnScreenChange();
+            StopGame();
+        };
     }
 
 
@@ -120,7 +132,7 @@ public class GlobalTimer : MonoBehaviour
 
         //Debug.Log(DeltaTime);
         if (GameTimeLeftTimer < 0) {
-            OnDefeat?.Invoke();
+            OnTimerEnd?.Invoke();
         }
             
     }

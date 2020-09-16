@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 809283179966466753}
   - component: {fileID: 2444489871651145811}
   - component: {fileID: 130470384938208327}
+  - component: {fileID: 4063026738451837990}
   m_Layer: 0
   m_Name: MangerObject
   m_TagString: Untagged
@@ -165,3 +166,16 @@ MonoBehaviour:
   GameLengthInSeconds: 300
   acelerationValues: 010000000200000004000000
   TimeMultiplier: 1
+--- !u!114 &4063026738451837990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809283179966466759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5560767393f5554ea98074d022b349c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiredCanvasType: 8
