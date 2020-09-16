@@ -40,7 +40,7 @@ public class TutorialManager : MonoBehaviour
 
     bool CheckConditions(int index)
     {
-        Debug.Log("index " + index);
+        //Debug.Log("index " + index);
         switch (index)
         {
             case 0:

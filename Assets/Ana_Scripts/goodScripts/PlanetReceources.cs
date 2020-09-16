@@ -175,7 +175,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         }
         else
         {
-            Debug.Log("UIInformation is null");
+           // Debug.Log("UIInformation is null");
         }
     }
 
