@@ -133,6 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4596abb29923adb41b21e07af990003b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PauseGame: {fileID: 21300000, guid: 2cbd3443ab430c74a8ebe4f94a8fe1ac, type: 3}
+  ContinueGame: {fileID: 21300000, guid: 3519b982f9dafd8418fbc71dc7f6bdf0, type: 3}
 --- !u!1 &3464556606158097231
 GameObject:
   m_ObjectHideFlags: 0
