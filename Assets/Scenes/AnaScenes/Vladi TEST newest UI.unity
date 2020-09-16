@@ -7008,6 +7008,7 @@ MonoBehaviour:
   hungryPeople: {fileID: 1179434678}
   deathRate: {fileID: 1487655117}
   birthRate: {fileID: 1853165781}
+  consumptionRateSeed: {fileID: 1179324438}
 --- !u!114 &699128351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7400,6 +7401,7 @@ MonoBehaviour:
   productionRate: {fileID: 1613550872}
   unlockZoneButton: {fileID: 1578923069}
   UIZoneUnlocked: {fileID: 1496898949}
+  priceToBuyZone: {fileID: 1784587951}
 --- !u!114 &732455483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8663,6 +8665,7 @@ MonoBehaviour:
   mineUpgradeButton: {fileID: 348501198}
   unlockZoneButton: {fileID: 1886534626}
   UIZoneUnlocked: {fileID: 597673236}
+  priceToBuyZone: {fileID: 1175340471}
 --- !u!114 &961439707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9011,6 +9014,7 @@ MonoBehaviour:
   consumptionRateWater: {fileID: 518183344}
   unlockZoneButton: {fileID: 1693914070}
   UIZoneUnlocked: {fileID: 1912418661}
+  priceToBuyZone: {fileID: 159109212}
 --- !u!114 &1015051371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10775,6 +10779,7 @@ MonoBehaviour:
   productionRate: {fileID: 1119771241}
   unlockZoneButton: {fileID: 369512115}
   UIZoneUnlocked: {fileID: 1487241755}
+  priceToBuyZone: {fileID: 1655882850}
 --- !u!114 &1220803794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16806,6 +16811,18 @@ PrefabInstance:
     - target: {fileID: 1138074117638528667, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228157980482234893, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: vectorDirection.x
+      value: -8.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228157980482234893, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: vectorDirection.y
+      value: -0.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228157980482234893, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: vectorDirection.z
+      value: 57.74
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}

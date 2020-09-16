@@ -34216,6 +34216,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 12.993191
       objectReference: {fileID: 0}
+    - target: {fileID: 8103744659798255974, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: vectorDirection.x
+      value: -0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103744659798255974, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: vectorDirection.y
+      value: -1.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103744659798255974, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: vectorDirection.z
+      value: -1.21
+      objectReference: {fileID: 0}
     - target: {fileID: 8290980234635465068, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_IsActive
       value: 1
