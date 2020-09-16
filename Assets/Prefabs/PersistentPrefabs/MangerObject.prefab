@@ -46,14 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 3d8b4f4dabb75db4da8fe6bc0f05a5ad, type: 2}
-  BackgroundMusic: {fileID: 0}
-  ClickingButton: {fileID: 8300000, guid: 25a983de3321ca648a5554e46df6c77f, type: 3}
-  SpaceShipSound: {fileID: 0}
-  DefeatSound: {fileID: 0}
-  SelectingMaterial: {fileID: 0}
+  BackgroundMusic: {fileID: 8300000, guid: f89ac95ff75b7d048a3753451d022fa0, type: 3}
+  ClickingButton: {fileID: 8300000, guid: 6107b5b465b1cfd44bc7c0989e3fe715, type: 3}
+  DefeatSound: {fileID: 8300000, guid: 20f30b45eaa668a4d8647a9379980e13, type: 3}
+  SelectingMaterial: {fileID: 8300000, guid: 08405852cb3c48e488508ce623b73fbe, type: 3}
   SelectZoneSound: {fileID: 8300000, guid: dbcca89a7ba8cec4fa354fc9340cb540, type: 3}
   LevelUpgradeSound: {fileID: 8300000, guid: d016af6ab2e1c7d45a8f9304c34bc01d, type: 3}
-  UnableToBuyUpgrade: {fileID: 0}
+  UnableToBuyUpgrade: {fileID: 8300000, guid: 0a36462f2f4c5604b8c95145124a1ebf, type: 3}
 --- !u!82 &2444489871651145811
 AudioSource:
   m_ObjectHideFlags: 0

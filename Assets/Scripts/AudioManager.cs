@@ -43,15 +43,16 @@ public class AudioManager : MonoBehaviour
     [SerializeField] 
     AudioClip ClickingButton;
 
-    [SerializeField]
-    AudioClip SpaceShipSound;
 
     [SerializeField]
     AudioClip DefeatSound;
 
+
+
     [SerializeField]
     AudioClip SelectingMaterial;
 
+    [Header("Select Zone")]
     [SerializeField]
     AudioClip SelectZoneSound;
 
@@ -61,6 +62,7 @@ public class AudioManager : MonoBehaviour
     AudioClip LevelUpgradeSound;
     [SerializeField]
     AudioClip UnableToBuyUpgrade;
+
 
     float currentVolume = 0.8f;
 
@@ -111,28 +113,6 @@ public class AudioManager : MonoBehaviour
         }
 
 
-        //foreach (var obj in Resources.FindObjectsOfTypeAll<BuyUpgrade>())
-        //{
-        //    obj.OnZoneUpgrade += () =>
-        //    {
-        //        if (LevelUpgradeSound != null)
-        //        {
-        //            GetComponent<AudioSource>().PlayOneShot(LevelUpgradeSound);
-        //        }
-        //    };
-        //}
-
-        //Debug.LogWarning("");
-        ////Debug.LogError("Test");
-        //Debug.LogWarning(Resources.FindObjectsOfTypeAll<Button>());
-        //ButtonClicking
-        //foreach (Button obj in Resources.FindObjectsOfTypeAll<Button>())
-        //{
-        //    obj.onClick.AddListener(() => {
-        //        Debug.LogError("ButtonClicked");
-        //    });
-        //    obj.onClick.AddListener(OnButtonClick);
-        //}
 
     }
 
