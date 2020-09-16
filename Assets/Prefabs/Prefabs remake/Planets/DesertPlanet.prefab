@@ -11942,6 +11942,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: -1114199533890271507, guid: 3bcb83ce3e2e3c84fa22aa8f153c3923, type: 3}
+    - target: {fileID: 3758949232981825237, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: vectorDirection.x
+      value: 5.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3758949232981825237, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: vectorDirection.y
+      value: 5.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 3758949232981825237, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: vectorDirection.z
+      value: 17.63
+      objectReference: {fileID: 0}
     - target: {fileID: 3841652957011879126, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -12286,6 +12298,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2540817853737639666, guid: 32b64645184bc7c488f7f09d602c5842, type: 3}
+    - target: {fileID: 7160880087895873007, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: vectorDirection.x
+      value: 25.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160880087895873007, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: vectorDirection.y
+      value: -17.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160880087895873007, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: vectorDirection.z
+      value: -10.6
+      objectReference: {fileID: 0}
     - target: {fileID: 7592711419466827535, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Materials.Array.size
       value: 2
@@ -12309,6 +12333,18 @@ PrefabInstance:
     - target: {fileID: 7898140640285503424, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_LocalScale.z
       value: 1299.1328
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103744659798255974, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: vectorDirection.x
+      value: -564.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103744659798255974, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: vectorDirection.y
+      value: -374.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103744659798255974, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: vectorDirection.z
+      value: 57.4
       objectReference: {fileID: 0}
     - target: {fileID: 8301500138828910058, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: productivityTime

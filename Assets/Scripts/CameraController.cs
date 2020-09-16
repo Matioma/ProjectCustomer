@@ -9,23 +9,8 @@ enum CameraState {
     WatchingWorld
 }
 
-public class CameraController : MonoBehaviour
+public class CameraController : SingletonMenobehaviour<CameraController>
 {
-    static CameraController _instance;
-
-    public static CameraController Instance {
-        get { return _instance; }
-        set {
-            if (_instance != null) {
-                Debug.LogError(" Only one Camera Controller allowed, it is being deleted");
-                Destroy(value.gameObject);
-            }
-            else
-            {
-                _instance = value;
-            }
-        }
-    }
 
     [SerializeField, Tooltip("Position of the camera when zoomed out to view the world")]
     Transform worldViewTransform;
@@ -96,7 +81,7 @@ public class CameraController : MonoBehaviour
     }
     private void Start()
     {
-        selectPlanet(SelectedPlanet);
+        //selectPlanet(SelectedPlanet);
     }
     void readInput()
     {
@@ -161,7 +146,12 @@ public class CameraController : MonoBehaviour
             }
         }
     }
-    private void selectPlanet(Planet newSelectedPlanet)
+
+    public void SelectInitialPlanet() {
+        selectPlanet(SelectedPlanet);
+    }
+
+    void selectPlanet(Planet newSelectedPlanet)
     {
         deselectLastPlanet();
         SelectedPlanet = newSelectedPlanet;
@@ -236,7 +226,6 @@ public class CameraController : MonoBehaviour
                 deselectLastZone();
             }
         }
-       
     }
     void ResetMouseMovements() {
         movement = new Vector2(0, 0);

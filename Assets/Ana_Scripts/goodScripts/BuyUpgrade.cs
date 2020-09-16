@@ -17,8 +17,8 @@ public class BuyUpgrade : MonoBehaviour
 
     [SerializeField]
     Upgrades[] upgrades;
-    [SerializeField]
-    Button button;
+    //[SerializeField]
+    //Button button;
     [SerializeField]
     Receources id;
     int upgradeIndex = 0;
@@ -30,6 +30,7 @@ public class BuyUpgrade : MonoBehaviour
     public event Action OnZoneUpgrade;
     public void Buy()
     {
+        Debug.Log("upgradeIndex: "+upgradeIndex+"   Upgrades.length; "+ upgrades.Length);
         if (upgradeIndex < upgrades.Length)
         {
             if (GetComponentInParent<PlanetReceources>().GetReceouceNumber(Receources.MONEY) >= upgrades[upgradeIndex].price)
@@ -45,20 +46,21 @@ public class BuyUpgrade : MonoBehaviour
                 GetComponentInParent<PlanetReceources>().AddReceource(Receources.MONEY, -upgrades[upgradeIndex].price);
                 upgradeIndex++;
                 OnZoneUpgrade?.Invoke();
+                
             }
             else {
                 OnTryUpgradeWithoutMoney?.Invoke();
             }
         }
 
-        if (upgradeIndex >= upgrades.Length)
-        {
-            Debug.Log("remove listeners");
-           // button.onClick.RemoveAllListeners();
-            button.interactable = false;
-            //var text = button.GetComponent<TextMeshProUGUI>();
-           // text.text="Sold Out";
-        }
+        //if (upgradeIndex >= upgrades.Length)
+        //{
+        //    Debug.Log("remove listeners");
+        //   // button.onClick.RemoveAllListeners();
+        //    button.interactable = false;
+        //    //var text = button.GetComponent<TextMeshProUGUI>();
+        //   // text.text="Sold Out";
+        //}
     }
 
     public string GetUpgradeText()

@@ -5,35 +5,33 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : SingletonMenobehaviour<AudioManager>
 {
-    static AudioManager _instance;
-
     [SerializeField]
     AudioMixer audioMixer;
-    public static AudioManager Instance
-    {
-        get{
-            if (_instance != null)
-            {
-                return _instance;
-            }
-            else {
-                Debug.LogWarning("Audio manager Does not exist in this scene, creating a new one");
-                GameObject AudioManager = new GameObject();
-                AudioManager.AddComponent<AudioManager>();
-                return _instance;
-            }
-        }
-        set{
-            if (_instance != null) {
-                Debug.LogWarning("Tried to create Second Audio manager, the last one is being deleted");
-                Destroy(value.gameObject);
-                return;
-            }
-            _instance = value;
-        }
-    }
+    //public static AudioManager Instance
+    //{
+    //    get{
+    //        if (_instance != null)
+    //        {
+    //            return _instance;
+    //        }
+    //        else {
+    //            Debug.LogWarning("Audio manager Does not exist in this scene, creating a new one");
+    //            GameObject AudioManager = new GameObject();
+    //            AudioManager.AddComponent<AudioManager>();
+    //            return _instance;
+    //        }
+    //    }
+    //    set{
+    //        if (_instance != null) {
+    //            Debug.LogWarning("Tried to create Second Audio manager, the last one is being deleted");
+    //            Destroy(value.gameObject);
+    //            return;
+    //        }
+    //        _instance = value;
+    //    }
+    //}
 
    
 
@@ -74,10 +72,15 @@ public class AudioManager : MonoBehaviour
     {
         Instance = this;
 
+        if (WarningAudio.Instance != null)
+        {
+            WarningAudio.Instance.SetWarningSound(PeopleStartDying);
+        }
+
+
 
         foreach (Button obj in FindObjectsOfType<Button>())
         {
-            
             obj.onClick.AddListener(() =>
             {
             });
@@ -142,25 +145,10 @@ public class AudioManager : MonoBehaviour
             {
                 if (PeopleStartDying != null)
                 {
-                    GetComponent<AudioSource>().PlayOneShot(PeopleStartDying);
+                    WarningAudio.Instance.PlayAudioSound();
                 }
 
             };
-            //obj.OnZoneUpgrade += () =>
-            //{
-            //    if (LevelUpgradeSound != null)
-            //    {
-            //        GetComponent<AudioSource>().PlayOneShot(LevelUpgradeSound);
-            //    }
-            //};
-            //obj.OnTryUpgradeWithoutMoney += () =>
-            //{
-            //    Debug.LogWarning("Cant upgrade");
-            //    if (UnableToBuyUpgrade != null)
-            //    {
-            //        GetComponent<AudioSource>().PlayOneShot(UnableToBuyUpgrade);
-            //    }
-            //};
         }
 
     }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 809283179966466753}
   - component: {fileID: 2444489871651145811}
   - component: {fileID: 130470384938208327}
+  - component: {fileID: 4063026738451837990}
   m_Layer: 0
   m_Name: MangerObject
   m_TagString: Untagged
@@ -50,7 +51,7 @@ MonoBehaviour:
   ClickingButton: {fileID: 8300000, guid: 6107b5b465b1cfd44bc7c0989e3fe715, type: 3}
   DefeatSound: {fileID: 8300000, guid: 20f30b45eaa668a4d8647a9379980e13, type: 3}
   SelectingMaterial: {fileID: 8300000, guid: 08405852cb3c48e488508ce623b73fbe, type: 3}
-  PeopleStartDying: {fileID: 8300000, guid: 1b907dc06d6173445b78242501b0e450, type: 3}
+  PeopleStartDying: {fileID: 8300000, guid: 020b83052d4c5fd42987562cdc3a071a, type: 3}
   SelectZoneSound: {fileID: 8300000, guid: dbcca89a7ba8cec4fa354fc9340cb540, type: 3}
   LevelUpgradeSound: {fileID: 8300000, guid: d016af6ab2e1c7d45a8f9304c34bc01d, type: 3}
   UnableToBuyUpgrade: {fileID: 8300000, guid: 0a36462f2f4c5604b8c95145124a1ebf, type: 3}
@@ -165,3 +166,16 @@ MonoBehaviour:
   GameLengthInSeconds: 300
   acelerationValues: 010000000200000004000000
   TimeMultiplier: 1
+--- !u!114 &4063026738451837990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809283179966466759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5560767393f5554ea98074d022b349c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiredCanvasType: 8

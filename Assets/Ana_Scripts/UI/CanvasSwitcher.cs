@@ -18,7 +18,6 @@ public class CanvasSwitcher : MonoBehaviour
             return;
         }
         canvasManager.SwitchCanvas(desiredCanvasType);
-        //Debug.Log("canvasSwitcher");
 
         if (desiredCanvasType == CanvasType.NoZone)
         {
@@ -36,7 +35,10 @@ public class CanvasSwitcher : MonoBehaviour
         {
             canvasManager.EnableResourceButtons();
         }
+    }
 
-        
+    public void OpenScreen(CanvasType canvasType) {
+        desiredCanvasType = canvasType;
+        OnScreenChange();
     }
 }
