@@ -84,6 +84,13 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        GlobalTimer.Instance.OnDefeat += () =>
+        {
+            if (DefeatSound != null)
+                GetComponent<AudioSource>().PlayOneShot(DefeatSound);
+        };
+
+
         //Subscribe to Zone Selection Sound
         CameraController.Instance.OnSelectZone += () =>
         {
@@ -111,9 +118,6 @@ public class AudioManager : MonoBehaviour
                 }
             };
         }
-
-
-
     }
 
 
