@@ -142,11 +142,11 @@ public class CameraController : SingletonMenobehaviour<CameraController>
             // If Clicked on a planet and it is different from already Selected Planet
             if (newSelectedPlanet != null && newSelectedPlanet!=SelectedPlanet)
             {
-                Select(newSelectedPlanet);
+                SelectPlanet(newSelectedPlanet);
             }
         }
     }
-    public void Select(Planet newSelectedPlanet)
+    public void SelectPlanet(Planet newSelectedPlanet)
     {
         deselectLastPlanet();
         SelectedPlanet = newSelectedPlanet;
