@@ -70,6 +70,10 @@ public class GlobalTimer : MonoBehaviour
     float multiplierBeforePause;
     [SerializeField]
     float TimeMultiplier = 1;
+    public float GetTimeMultiplier() {
+        return TimeMultiplier;
+    }
+
 
     public void StopGame() {
         GameIsPaused = true;
