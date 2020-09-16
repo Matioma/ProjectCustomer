@@ -46,7 +46,9 @@ public class SpaceShipManager : MonoBehaviour
     public void SendShip(Planet from, Planet to, Receources resource, int amount) {
         GameObject spaceShipRef =Instantiate(SpaceShipPrefab, from.transform.position, Quaternion.identity);
         spaceShipRef.GetComponent<SpaceShipController>()?.SetTargetPlanet(to);
-        spaceShipRef.GetComponent<PlanetReceources>()?.AddReceource(resource, amount);
+        //spaceShipRef.GetComponent<PlanetReceources>()?.AddReceource(resource, amount);
+
+        spaceShipRef.GetComponent<UnitResources>().AddResource(resource, amount);
     }
     void Start()
     {

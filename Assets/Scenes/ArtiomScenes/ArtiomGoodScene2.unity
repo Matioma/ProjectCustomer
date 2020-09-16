@@ -18887,7 +18887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 130470384938208327, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: GameLengthInSeconds
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 809283179966466752, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: m_LocalPosition.x

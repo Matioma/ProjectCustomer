@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
 {
+    public int foodRequiredCondition;
+
     float deltaTime = 0f;
     public float DeltaTime{
         get{
@@ -25,7 +27,6 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
             return Time.deltaTime; 
         }
     }
-
 
     public bool TimerIsStarted { get; private set; } = true;
     public bool GameIsPaused { get; private set; } = false;
@@ -118,8 +119,13 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
 
     bool HasWon()
     {
-
-        return false;
+        foreach(var planetResource in Resources.FindObjectsOfTypeAll<PlanetReceources>())
+        {
+            if (planetResource.getPopulation() < foodRequiredCondition) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }
