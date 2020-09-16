@@ -96,6 +96,7 @@ public class UIPlanetManager : MonoBehaviour
     }
     public void UpdateDeathRate(int newRateNumber, int newRateTime)
     {
+        //Debug.Log("UIPlanetManager  Death Rate: " + newRateNumber.ToString() + " / " + newRateTime.ToString() + " s");
         UIGeneral.GetComponent<GeneralZoneUpdater>().UpdateDeathRate(newRateNumber, newRateTime);
     }
     public void UpdateBirthRate(int newRateNumber, int newRateTime)

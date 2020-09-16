@@ -10458,6 +10458,14 @@ PrefabInstance:
       propertyPath: resouces.Array.data[0].amount
       value: 20000
       objectReference: {fileID: 0}
+    - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: hungerWarningTimer
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: resouces.Array.data[2].amount
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 5930479947621174582, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: m_Name
       value: WaterRegion

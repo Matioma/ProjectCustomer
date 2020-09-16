@@ -65,8 +65,10 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         
 
         PlanetReceources planetReceources = GetComponentInChildren<PlanetReceources>();
-        
 
+        birthRateNumber = planetReceources.getBirthRateNumber();
+        birthRateTime = 1;
+        deathRateTime = 1;
 
         seedConsumptionAmount = planetReceources.getSeedComsumptionAmount();
         seedConsumptionTime = planetReceources.getSeedComsumptionTime();
@@ -292,6 +294,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         deathRateNumber = amount;
         if (selected)
         {
+           // Debug.Log("deathrateChange");
             mainUI.GetComponent<UIPlanetManager>().UpdateDeathRate(deathRateNumber,deathRateTime);
         }
     }
