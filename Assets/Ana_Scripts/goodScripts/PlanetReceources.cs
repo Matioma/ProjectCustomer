@@ -161,9 +161,10 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     int initialFoodProd;
     void Start()
     {
-        
+        if (info == null) {
+            return;
+        }
         calculateConsumptionSeedAmount();
-        
         initialFoodProd = info.getSeedProductionAmount();
         calculateConsumptionWaterAmount();
     }

@@ -48,7 +48,7 @@ public class PlanetIndicator : MonoBehaviour
     }
 
     void ShowTimer() {
-        Debug.LogWarning("Show timer");
+        //Debug.LogWarning("Show timer");
         timerObject.SetActive(true);
         IsIndicatorVisible isIndicatorVisible = timerObject.GetComponent<IsIndicatorVisible>();
         isIndicatorVisible.Visible = true;
