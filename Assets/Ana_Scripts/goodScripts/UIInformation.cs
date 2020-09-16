@@ -65,7 +65,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         
 
         PlanetReceources planetReceources = GetComponentInChildren<PlanetReceources>();
-        resourcesNumber = new Dictionary<Receources, int>(planetReceources.GetResouses());
+        
 
 
         seedConsumptionAmount = planetReceources.getSeedComsumptionAmount();
@@ -85,6 +85,8 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
 
     void Awake()
     {
+        PlanetReceources planetReceources = GetComponentInChildren<PlanetReceources>();
+        resourcesNumber = new Dictionary<Receources, int>(planetReceources.GetResouses());
         seedProductionAmount = Farm.GetComponent<ReceourceZone>().GetProductionAmount();
         seedProductionTime = Farm.GetComponent<ReceourceZone>().GetProductivityTime();
 
@@ -198,41 +200,57 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
     public void InitializeUI()
     {
         Debug.Log("init ui");
-        if (mainUI.GetComponent<UIPlanetManager>())
+        if (mainUI.GetComponent<UIPlanetManager>()!=null)
         {
             mainUI.GetComponent<UIPlanetManager>().InitializeGeneral(planetPopulation, hungryPeople, deathRateNumber, deathRateTime, birthRateNumber, birthRateTime,seedConsumptionAmount,seedConsumptionTime);
             if (Farm != null)
             {
-                Debug.Log("init ui farm");
+                
 
                 mainUI.GetComponent<UIPlanetManager>().InitializeFarmZone(isFarmUnlocked, seedProductionAmount, seedProductionTime, waterConsumtionAmount, waterConsumtionTime, Farm, Farm.GetComponent<BuyZone>().GetPrice());
+                Debug.Log("init ui farm");
             }
             if (Water != null)
             {
-                Debug.Log("init water");
+                
 
                 mainUI.GetComponent<UIPlanetManager>().InitializeWaterZone(isWaterUnlocked, waterProductionAmount, waterProductionTime, Water, Water.GetComponent<BuyZone>().GetPrice());
+                Debug.Log("init water");
             }
             if (Mine != null)
             {
-                Debug.Log("init ui mine");
+               
 
                 mainUI.GetComponent<UIPlanetManager>().InitializeMineralZone(isMineUnlocked, moneyProductionAmount, moneyProductionTime, Mine, Mine.GetComponent<BuyZone>().GetPrice());
+                Debug.Log("init ui mine");
             }
             if (Invest != null)
             {
-                Debug.Log("init invest");
+               
 
                 mainUI.GetComponent<UIPlanetManager>().InitializeInvestmentZone(isInvestmentUnlocked, Farm, Water, Mine, Invest, Invest.GetComponent<BuyZone>().GetPrice());
                 mainUI.GetComponent<UIPlanetManager>().InitializeTransportZone(Invest, planet);
+                Debug.Log("init invest");
             }
-            mainUI.GetComponent<UIPlanetManager>().InitializeRecourceButtons(resourcesNumber[Receources.SEEDS], resourcesNumber[Receources.WATER], resourcesNumber[Receources.MONEY]);
+
+            Debug.Log("init InitalizeTitleAndDescription");
+            mainUI.GetComponent<UIPlanetManager>()?.InitializeRecourceButtons(resourcesNumber[Receources.SEEDS], resourcesNumber[Receources.WATER], resourcesNumber[Receources.MONEY]);
+
             mainUI.GetComponent<UIPlanetManager>().InitalizeTitleAndDescription(planetName, planetDescription);
         }
         else
         {
             Debug.Log("planetManger is Null");
         }
+    }
+
+    public void initTest()
+    {
+        Debug.Log("init buttons");
+        mainUI.GetComponent<UIPlanetManager>().CheckForResourceButtons();
+        //Debug.Log(resourcesNumber[Receources.SEEDS] + "    " + resourcesNumber[Receources.WATER] + "    " + resourcesNumber[Receources.MONEY]);
+        Debug.Log(resourcesNumber);
+
     }
 
     public void ZoneIsUnlocked(Receources Id)
