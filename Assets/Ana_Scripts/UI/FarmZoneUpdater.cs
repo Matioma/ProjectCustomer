@@ -14,8 +14,10 @@ public class FarmZoneUpdater : MonoBehaviour
     Button unlockZoneButton;
     [SerializeField]
     GameObject UIZoneUnlocked;
+    [SerializeField]
+    TextMeshProUGUI priceToBuyZone;
     GameObject Farm;
-    public void Initialize(bool isZoneUnlocked, int productivityNumber, int productivityTime, int consumptionWaterNumber, int consumptionWaterTime, GameObject farm)
+    public void Initialize(bool isZoneUnlocked, int productivityNumber, int productivityTime, int consumptionWaterNumber, int consumptionWaterTime, GameObject farm, int price)
     {
         Farm = farm;
         if (isZoneUnlocked == true)
@@ -27,16 +29,17 @@ public class FarmZoneUpdater : MonoBehaviour
         {
             unlockZoneButton.gameObject.SetActive(true);
             UIZoneUnlocked.SetActive(false);
-            UpdateButton();
+            UpdateButton(price);
         }
         UpdateProductionRate(productivityNumber, productivityTime);
         UpdateConsumptionRate(consumptionWaterNumber, consumptionWaterTime);
     }
 
-    public void UpdateButton()
+    public void UpdateButton(int price)
     {
         unlockZoneButton.onClick.RemoveAllListeners();
         unlockZoneButton.onClick.AddListener(OnBuyZone);
+        priceToBuyZone.text = "Price:     "+price.ToString();
     }
 
     void OnBuyZone()

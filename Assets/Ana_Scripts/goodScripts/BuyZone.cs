@@ -40,6 +40,11 @@ public class BuyZone : MonoBehaviour
         }
         return false;
     }
+
+    public int GetPrice()
+    {
+        return MoneyNeededToBuy;
+    }
     
 
 }

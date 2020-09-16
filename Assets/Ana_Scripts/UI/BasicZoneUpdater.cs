@@ -12,8 +12,10 @@ public class BasicZoneUpdater : MonoBehaviour
     Button unlockZoneButton;
     [SerializeField]
     GameObject UIZoneUnlocked;
+    [SerializeField]
+    TextMeshProUGUI priceToBuyZone;
     GameObject Zone;
-    public void Initialize(bool isZoneUnlocked, int productivityNumber, int productivityTime, GameObject zone)
+    public void Initialize(bool isZoneUnlocked, int productivityNumber, int productivityTime, GameObject zone, int price)
     {
         Zone = zone;
         if (isZoneUnlocked == true)
@@ -26,15 +28,16 @@ public class BasicZoneUpdater : MonoBehaviour
         {
             unlockZoneButton.gameObject.SetActive(true);
             UIZoneUnlocked.SetActive(false);
-            UpdateButton();
+            UpdateButton(price);
         }
         UpdateProductionRate(productivityNumber, productivityTime);
     }
 
-    public void UpdateButton()
+    public void UpdateButton(int price)
     {
         unlockZoneButton.onClick.RemoveAllListeners();
         unlockZoneButton.onClick.AddListener(OnBuyZone);
+        priceToBuyZone.text = "Price:     " + price.ToString();
     }
 
     void OnBuyZone()

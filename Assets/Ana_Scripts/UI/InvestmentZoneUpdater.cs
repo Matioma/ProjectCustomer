@@ -22,11 +22,13 @@ public class InvestmentZoneUpdater : MonoBehaviour
     Button unlockZoneButton;
     [SerializeField]
     GameObject UIZoneUnlocked;
+    [SerializeField]
+    TextMeshProUGUI priceToBuyZone;
     GameObject Farm;
     GameObject Water;
     GameObject Mine;
     GameObject Invest;
-    public void Initialize(bool isZoneUnlocked, GameObject farm, GameObject water, GameObject mine, GameObject invest)
+    public void Initialize(bool isZoneUnlocked, GameObject farm, GameObject water, GameObject mine, GameObject invest, int price)
     {
         Farm = farm;
         Water = water;
@@ -42,14 +44,15 @@ public class InvestmentZoneUpdater : MonoBehaviour
         {
             unlockZoneButton.gameObject.SetActive(true);
             UIZoneUnlocked.SetActive(false);
-            UpdateButton();
+            UpdateButton(price);
         }
         UpdateUI();
     }
-    public void UpdateButton()
+    public void UpdateButton(int price)
     {
         unlockZoneButton.onClick.RemoveAllListeners();
         unlockZoneButton.onClick.AddListener(OnBuyZone);
+        priceToBuyZone.text = "Price:     " + price.ToString();
     }
 
     void OnBuyZone()
