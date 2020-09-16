@@ -36,7 +36,7 @@ public class CanvasManager : MonoBehaviour
         {
             item.gameObject.SetActive(false);
         }
-        SwitchCanvas(CanvasType.NoZone);
+        SwitchCanvas(CanvasType.MainMenu);
     }
 
     public void SwitchCanvas(CanvasType _type)

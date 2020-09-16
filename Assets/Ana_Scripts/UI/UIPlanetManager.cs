@@ -64,8 +64,16 @@ public class UIPlanetManager : MonoBehaviour
         UITransportZone.GetComponent<TransportZoneUpdater>().Initialize(IndustrialZone, currentPlanet);
     }
 
+    public void CheckForResourceButtons()
+    {
+        Debug.Log(UIResouceButtons);
+        Debug.Log(UIResouceButtons.GetComponent<ResourcesButtonsUpdater>());
+        UIResouceButtons.GetComponent<ResourcesButtonsUpdater>().CheckForObjects();
+    }
+
     public void InitializeRecourceButtons(int newSeedNumber, int newWaterNumber, int newMoneyNimber)
     {
+        Debug.Log(UIResouceButtons.GetComponent<ResourcesButtonsUpdater>());
         UIResouceButtons.GetComponent<ResourcesButtonsUpdater>().ResetButtons(newSeedNumber, newWaterNumber, newMoneyNimber);
     }
 

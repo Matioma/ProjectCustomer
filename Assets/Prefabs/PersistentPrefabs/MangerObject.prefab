@@ -163,7 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b8383448718907499b2bf0b133a4210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameLengthInSeconds: 300
+  foodRequiredCondition: 100
+  GameLengthInSeconds: 900
   acelerationValues: 010000000200000004000000
   TimeMultiplier: 1
 --- !u!114 &4063026738451837990

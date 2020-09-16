@@ -19,7 +19,7 @@ public class CanvasSwitcher : MonoBehaviour
         }
         canvasManager.SwitchCanvas(desiredCanvasType);
 
-        if (desiredCanvasType == CanvasType.NoZone)
+        if (desiredCanvasType == CanvasType.NoZone|| desiredCanvasType == CanvasType.MainMenu || desiredCanvasType == CanvasType.WinScreen || desiredCanvasType == CanvasType.LoseScreen)
         {
             canvasManager.DisableableTitleAndDescription();
         }
@@ -27,7 +27,7 @@ public class CanvasSwitcher : MonoBehaviour
         {
             canvasManager.EnableTitleAndDescription();
         }
-        if (desiredCanvasType == CanvasType.TransportZone||desiredCanvasType==CanvasType.NoZone)
+        if (desiredCanvasType == CanvasType.TransportZone||desiredCanvasType==CanvasType.NoZone || desiredCanvasType == CanvasType.MainMenu || desiredCanvasType == CanvasType.WinScreen || desiredCanvasType == CanvasType.LoseScreen)
         {
             canvasManager.DisableableResourceButtons();
         }
