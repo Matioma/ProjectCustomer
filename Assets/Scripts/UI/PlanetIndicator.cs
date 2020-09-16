@@ -21,18 +21,16 @@ public class PlanetIndicator : MonoBehaviour
     void Start()
     {
         HideUI();
+        HideTimer();
         HideExclamationMark();
 
         player = CameraController.Instance;
         if (player != null) {
             player.OnZoomToWorldView += ShowUI;
-            //player.OnZoomToWorldView += ShowExclamationMark;
             player.OnZoomToPlanet+= HideUI;
-            //player.OnZoomToPlanet += HideExclamationMark;
         }
 
-        PlanetReceources planet= transform.parent.GetComponentInChildren<PlanetReceources>();
-
+        PlanetReceources planet= transform.GetComponentInParent<Planet>().GetComponentInChildren<PlanetReceources>();
         if (planet != null) {
             planet.OnPeopleStartLackFood += ShowTimer;
             planet.OnPeopleStartDying += ShowExplamationMark;
@@ -50,6 +48,7 @@ public class PlanetIndicator : MonoBehaviour
     }
 
     void ShowTimer() {
+        Debug.LogWarning("Show timer");
         timerObject.SetActive(true);
         IsIndicatorVisible isIndicatorVisible = timerObject.GetComponent<IsIndicatorVisible>();
         isIndicatorVisible.Visible = true;
@@ -75,15 +74,11 @@ public class PlanetIndicator : MonoBehaviour
 
 
     void ShowUI() {
-        
-
         gameObject.SetActive(true);
-        //exclamationMark.SetActive(true);
     }
 
     void HideUI() {
         gameObject.SetActive(false);
-        //exclamationMark.SetActive(false);
     }
 
     private void OnDestroy()
