@@ -120,9 +120,9 @@ public class UIPlanetManager : MonoBehaviour
         UIMineralZone.GetComponent<BasicZoneUpdater>().UpdateProductionRate(newProductivityNumber, newProductivitytTime);
 
     }
-    public void UpdateUpgrades(Receources resource, string description)
+    public void UpdateUpgrades(Receources resource, string description,int price)
     {
-        UIInvestmentZone.GetComponent<InvestmentZoneUpdater>().UpdateUpgradeText(resource, description);
+        UIInvestmentZone.GetComponent<InvestmentZoneUpdater>().UpdateUpgradeText(resource, description, price);
     }
 
 

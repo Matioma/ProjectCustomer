@@ -82,6 +82,8 @@ public class InvestmentZoneUpdater : MonoBehaviour
             farmUpgradeButton.gameObject.SetActive(true);
             farmUpgradeButton.onClick.RemoveAllListeners();
             farmUpgradeButton.onClick.AddListener(OnBuyUpgradeFarm);
+            var buttonPriceText = farmUpgradeButton.GetComponentInChildren<TextMeshProUGUI>();
+            buttonPriceText.text = Farm.GetComponent<BuyUpgrade>().GetUpgradePrice().ToString();
         }
         if (Water == null)
         {
@@ -97,6 +99,8 @@ public class InvestmentZoneUpdater : MonoBehaviour
             waterUpgradeButton.gameObject.SetActive(true);
             waterUpgradeButton.onClick.RemoveAllListeners();
             waterUpgradeButton.onClick.AddListener(OnBuyUpgradeWater);
+            var buttonPriceText = waterUpgradeButton.GetComponentInChildren<TextMeshProUGUI>();
+            buttonPriceText.text = Water.GetComponent<BuyUpgrade>().GetUpgradePrice().ToString();
         }
         if (Mine == null)
         {
@@ -112,6 +116,8 @@ public class InvestmentZoneUpdater : MonoBehaviour
             mineUpgradeButton.gameObject.SetActive(true);
             mineUpgradeButton.onClick.RemoveAllListeners();
             mineUpgradeButton.onClick.AddListener(OnBuyUpgradeMine);
+            var buttonPriceText = mineUpgradeButton.GetComponentInChildren<TextMeshProUGUI>();
+            buttonPriceText.text = Mine.GetComponent<BuyUpgrade>().GetUpgradePrice().ToString();
         }
     }
     void OnBuyUpgradeFarm()
@@ -136,18 +142,24 @@ public class InvestmentZoneUpdater : MonoBehaviour
         }
     }
 
-    public void UpdateUpgradeText(Receources resource, string description)
+    public void UpdateUpgradeText(Receources resource, string description, int price)
     {
         switch (resource)
         {
             case Receources.SEEDS:
                 farmUpgradeDescription.text = description;
+                var buttonPriceTextFarm = farmUpgradeButton.GetComponentInChildren<TextMeshProUGUI>();
+                buttonPriceTextFarm.text = price.ToString();
                 break;
             case Receources.WATER:
                 waterUpgradeDescription.text = description;
+                var buttonPriceTextWater = waterUpgradeButton.GetComponentInChildren<TextMeshProUGUI>();
+                buttonPriceTextWater.text = price.ToString();
                 break;
             case Receources.MONEY:
                 mineUpgradeDescription.text = description;
+                var buttonPriceTextMine = mineUpgradeButton.GetComponentInChildren<TextMeshProUGUI>();
+                buttonPriceTextMine.text = price.ToString();
                 break;
         }
     }
