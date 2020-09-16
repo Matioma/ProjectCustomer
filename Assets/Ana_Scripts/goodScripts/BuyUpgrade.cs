@@ -23,6 +23,8 @@ public class BuyUpgrade : MonoBehaviour
     Receources id;
     int upgradeIndex = 0;
 
+    public event Action OnTryUpgradeWithoutMoney;
+
 
 
     public event Action OnZoneUpgrade;
@@ -33,17 +35,20 @@ public class BuyUpgrade : MonoBehaviour
             if (GetComponentInParent<PlanetReceources>().GetReceouceNumber(Receources.MONEY) >= upgrades[upgradeIndex].price)
             {
                 Debug.Log(" listeners");
-                if(upgradeIndex < upgrades.Length-1)
+                if (upgradeIndex < upgrades.Length - 1)
                 {
-                    GetComponent<ReceourceZone>().ChangeProductivityNumber(upgrades[upgradeIndex].productivityIncrease, upgrades[upgradeIndex + 1].description);
+                    GetComponent<ReceourceZone>().ChangeProductivityNumber(upgrades[upgradeIndex].productivityIncrease, upgrades[upgradeIndex + 1].description, upgrades[upgradeIndex+1].price);
                 }
                 else
                 {
-                    GetComponent<ReceourceZone>().ChangeProductivityNumber(upgrades[upgradeIndex].productivityIncrease, "Maximum level reached");
+                    GetComponent<ReceourceZone>().ChangeProductivityNumber(upgrades[upgradeIndex].productivityIncrease, "Maximum level reached",0);
                 }
                 GetComponentInParent<PlanetReceources>().AddReceource(Receources.MONEY, -upgrades[upgradeIndex].price);
                 upgradeIndex++;
                 OnZoneUpgrade?.Invoke();
+            }
+            else {
+                OnTryUpgradeWithoutMoney?.Invoke();
             }
         }
 
@@ -65,5 +70,15 @@ public class BuyUpgrade : MonoBehaviour
             return upgrades[upgradeIndex].description;
         }
         return null;
+    }
+
+    public int GetUpgradePrice()
+    {
+        //Debug.Log(upgradeIndex);
+        if (upgradeIndex <= upgrades.Length - 1)
+        {
+            return upgrades[upgradeIndex].price;
+        }
+        return -1;
     }
 }

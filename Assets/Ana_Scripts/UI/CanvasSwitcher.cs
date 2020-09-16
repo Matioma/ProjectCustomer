@@ -19,6 +19,15 @@ public class CanvasSwitcher : MonoBehaviour
         }
         canvasManager.SwitchCanvas(desiredCanvasType);
         //Debug.Log("canvasSwitcher");
+
+        if (desiredCanvasType == CanvasType.NoZone)
+        {
+            canvasManager.DisableableTitleAndDescription();
+        }
+        else
+        {
+            canvasManager.EnableTitleAndDescription();
+        }
         if (desiredCanvasType == CanvasType.TransportZone||desiredCanvasType==CanvasType.NoZone)
         {
             canvasManager.DisableableResourceButtons();
@@ -27,5 +36,7 @@ public class CanvasSwitcher : MonoBehaviour
         {
             canvasManager.EnableResourceButtons();
         }
+
+        
     }
 }

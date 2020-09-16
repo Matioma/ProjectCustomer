@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Experimental.GraphView;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -36,13 +36,10 @@ public class ProductionNumberSpawner : MonoBehaviour
             
             receourceZone.onEndProductionCycle += ()=> {
                 SpawnNumber(receourceZone);
-                Debug.Log("Food produced");
+               // Debug.Log("Food produced");
             };
         }
-
-
         var planet = GetComponentInParent<Planet>().GetComponentInChildren<PlanetReceources>();
-
     }
 
 

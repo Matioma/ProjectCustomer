@@ -57,7 +57,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
     [SerializeField]
     bool selected = false;
 
-
+    bool isOneUpgradeBought=false;
 
     // Start is called before the first frame update
     void Start()
@@ -144,6 +144,37 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         return resourcesNumber[type];
     }
 
+    public bool GetIsOneUpgradeBought()
+    {
+        return isOneUpgradeBought;
+    }
+
+    public bool GetIsZoneUnlocked(Receources Id)
+    {
+        switch (Id)
+        {
+            case Receources.SEEDS:
+                return isFarmUnlocked;
+               // break;
+            case Receources.WATER:
+                return isWaterUnlocked;
+               // break;
+            case Receources.MONEY:
+                return isMineUnlocked;
+               // break;
+            case Receources.INDUSTRIAL:
+                return isInvestmentUnlocked;
+                //break;
+            default:
+                return false;
+                
+        }
+    }
+
+    void Update()
+    {
+        //Debug.Log("investment Zone status " + isInvestmentUnlocked);
+    }
     public void PlanetIsSelected()
     {
         selected = true;
@@ -190,6 +221,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
                 mainUI.GetComponent<UIPlanetManager>().InitializeTransportZone(Invest, planet);
             }
             mainUI.GetComponent<UIPlanetManager>().InitializeRecourceButtons(resourcesNumber[Receources.SEEDS], resourcesNumber[Receources.WATER], resourcesNumber[Receources.MONEY]);
+            mainUI.GetComponent<UIPlanetManager>().InitalizeTitleAndDescription(planetName, planetDescription);
         }
         else
         {
@@ -297,8 +329,9 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         }
     }
 
-    public void ChangeProductivity(Receources Id, int amount, string description)
+    public void ChangeProductivity(Receources Id, int amount, string description, int price)
     {
+        isOneUpgradeBought = true;
         switch (Id)
         {
             case Receources.SEEDS:
@@ -306,7 +339,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
                 if (selected)
                 {
                     mainUI.GetComponent<UIPlanetManager>().UpdateSeedProductivity(amount, seedProductionTime);
-                    mainUI.GetComponent<UIPlanetManager>().UpdateUpgrades(Id, description);
+                    mainUI.GetComponent<UIPlanetManager>().UpdateUpgrades(Id, description, price);
                 }
                 break;
             case Receources.WATER:
@@ -314,7 +347,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
                 if (selected)
                 {
                     mainUI.GetComponent<UIPlanetManager>().UpdateWaterProductivity(amount, waterProductionTime);
-                    mainUI.GetComponent<UIPlanetManager>().UpdateUpgrades(Id, description);
+                    mainUI.GetComponent<UIPlanetManager>().UpdateUpgrades(Id, description, price);
                 }
                 break;
             case Receources.MONEY:
@@ -322,7 +355,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
                 if (selected)
                 {
                     mainUI.GetComponent<UIPlanetManager>().UpdateMoneyProductivity(amount,moneyProductionTime);
-                    mainUI.GetComponent<UIPlanetManager>().UpdateUpgrades(Id, description);
+                    mainUI.GetComponent<UIPlanetManager>().UpdateUpgrades(Id, description, price);
                 }
                 break;
         }

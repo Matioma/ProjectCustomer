@@ -21,7 +21,8 @@ public class SpaceShipController : MonoBehaviour
         }
 
         transform.LookAt(targetPlanet.transform);
-        transform.position += transform.forward * speed * Time.deltaTime;
+        transform.position += transform.forward * speed * GlobalTimer.Instance.DeltaTime;
+       
     }
     private void OnTriggerEnter(Collider other)
     {

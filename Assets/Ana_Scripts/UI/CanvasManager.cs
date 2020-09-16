@@ -22,8 +22,10 @@ public class CanvasManager : MonoBehaviour
 {
     [SerializeField]
     GameObject resourceButtons;
+    [SerializeField]
+    GameObject TitleAndDescription;
     List<CanvasController> canvasControllerList;
-    CanvasController lastActiveCanvs;
+    CanvasController lastActiveCanvas;
     private void Awake()
     {
         canvasControllerList = GetComponentsInChildren<CanvasController>().ToList();
@@ -37,15 +39,15 @@ public class CanvasManager : MonoBehaviour
     public void SwitchCanvas(CanvasType _type)
     {
         
-        if (lastActiveCanvs != null)
+        if (lastActiveCanvas != null)
         {
-            lastActiveCanvs.gameObject.SetActive(false);
+            lastActiveCanvas.gameObject.SetActive(false);
         }
         CanvasController desiredScreen = canvasControllerList.Find(x => x.type == _type);
         if (desiredScreen != null)
         {
             desiredScreen.gameObject.SetActive(true);
-            lastActiveCanvs = desiredScreen;
+            lastActiveCanvas = desiredScreen;
         }
         Debug.Log("switch zone" + desiredScreen);
     }
@@ -64,5 +66,25 @@ public class CanvasManager : MonoBehaviour
         //{
             resourceButtons.SetActive(false);
        // }
+    }
+    public void EnableTitleAndDescription()
+    {
+        //if (resourceButtons.activeSelf == false)
+        //{
+        TitleAndDescription.SetActive(true);
+
+        //}
+    }
+    public void DisableableTitleAndDescription()
+    {
+        //if (resourceButtons.activeSelf == true)
+        //{
+        TitleAndDescription.SetActive(false);
+        // }
+    }
+
+    public CanvasController GetCurrentCanvas()
+    {
+        return lastActiveCanvas;
     }
 }

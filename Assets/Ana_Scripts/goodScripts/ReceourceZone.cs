@@ -47,7 +47,7 @@ public class ReceourceZone : MonoBehaviour
         }
         else
         {
-            timer -= Time.fixedDeltaTime;
+            timer -= GlobalTimer.Instance.DeltaTime;
         }
     }
 
@@ -55,10 +55,15 @@ public class ReceourceZone : MonoBehaviour
     {
         productivityTime += amount;
     }
-    public void ChangeProductivityNumber(int amount,string upgradeDescription)
+    public void ChangeProductivityNumber(int amount,string upgradeDescription, int price)
     {
         productionNumber += amount;
-        GetComponentInParent<PlanetReceources>().GetComponentInParent<UIInformation>().ChangeProductivity(typeOfReceource, amount,upgradeDescription);
+        GetComponentInParent<PlanetReceources>().GetComponentInParent<UIInformation>().ChangeProductivity(typeOfReceource, amount,upgradeDescription, price);
+        if (typeOfReceource == Receources.SEEDS)
+        {
+            Debug.Log("Upgrade Change Water Change");
+            GetComponentInParent<PlanetReceources>().calculateConsumptionWaterAmount();
+        }
     }
 
     public int GetProductivity()

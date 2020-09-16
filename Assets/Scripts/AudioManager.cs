@@ -39,12 +39,28 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField]
     AudioClip BackgroundMusic;
+
     [SerializeField] 
     AudioClip ClickingButton;
+
+    [SerializeField]
+    AudioClip SpaceShipSound;
+
+    [SerializeField]
+    AudioClip DefeatSound;
+
+    [SerializeField]
+    AudioClip SelectingMaterial;
+
     [SerializeField]
     AudioClip SelectZoneSound;
+
+
+    [Header("Upgrade sounds!")]
     [SerializeField]
     AudioClip LevelUpgradeSound;
+    [SerializeField]
+    AudioClip UnableToBuyUpgrade;
 
     float currentVolume = 0.8f;
 
@@ -53,6 +69,15 @@ public class AudioManager : MonoBehaviour
     {
         Instance = this;
 
+
+        foreach (Button obj in FindObjectsOfType<Button>())
+        {
+            
+            obj.onClick.AddListener(() =>
+            {
+            });
+            obj.onClick.AddListener(OnButtonClick);
+        }
     }
 
     private void Start()
@@ -64,30 +89,60 @@ public class AudioManager : MonoBehaviour
             GetComponent<AudioSource>().PlayOneShot(SelectZoneSound);
         };
 
-        //Subscribe to ZoneUpgrading Sound
-        foreach (var obj in Resources.FindObjectsOfTypeAll<BuyUpgrade>()) {
+
+        //Subscribe to ZoneUpgrading Sounds
+        foreach (var obj in Resources.FindObjectsOfTypeAll<BuyUpgrade>())
+        {
             obj.OnZoneUpgrade += () =>
             {
-                if (SelectZoneSound != null)
+                if (LevelUpgradeSound != null)
                 {
                     GetComponent<AudioSource>().PlayOneShot(LevelUpgradeSound);
                 }
             };
-        }
-
-        foreach (var obj in Resources.FindObjectsOfTypeAll<Button>())
-        {
-            obj.onClick.AddListener(() =>
+            obj.OnTryUpgradeWithoutMoney += () =>
+            {
+                Debug.LogWarning("Cant upgrade");
+                if (UnableToBuyUpgrade != null)
                 {
-                    //Debug.Log("buttonClicked");
-                    if (ClickingButton != null)
-                    {
-
-                        GetComponent<AudioSource>().PlayOneShot(ClickingButton);
-                    }
+                    GetComponent<AudioSource>().PlayOneShot(UnableToBuyUpgrade);
                 }
-            );
+            };
         }
+
+
+        //foreach (var obj in Resources.FindObjectsOfTypeAll<BuyUpgrade>())
+        //{
+        //    obj.OnZoneUpgrade += () =>
+        //    {
+        //        if (LevelUpgradeSound != null)
+        //        {
+        //            GetComponent<AudioSource>().PlayOneShot(LevelUpgradeSound);
+        //        }
+        //    };
+        //}
+
+        //Debug.LogWarning("");
+        ////Debug.LogError("Test");
+        //Debug.LogWarning(Resources.FindObjectsOfTypeAll<Button>());
+        //ButtonClicking
+        //foreach (Button obj in Resources.FindObjectsOfTypeAll<Button>())
+        //{
+        //    obj.onClick.AddListener(() => {
+        //        Debug.LogError("ButtonClicked");
+        //    });
+        //    obj.onClick.AddListener(OnButtonClick);
+        //}
+
+    }
+
+
+    public void OnButtonClick() {
+        Debug.LogWarning("CLicking on button");
+        if (ClickingButton != null) {
+            GetComponent<AudioSource>().PlayOneShot(ClickingButton);
+        }
+        
     }
 
 
