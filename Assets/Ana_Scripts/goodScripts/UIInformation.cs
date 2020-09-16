@@ -221,6 +221,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
                 mainUI.GetComponent<UIPlanetManager>().InitializeTransportZone(Invest, planet);
             }
             mainUI.GetComponent<UIPlanetManager>().InitializeRecourceButtons(resourcesNumber[Receources.SEEDS], resourcesNumber[Receources.WATER], resourcesNumber[Receources.MONEY]);
+            mainUI.GetComponent<UIPlanetManager>().InitalizeTitleAndDescription(planetName, planetDescription);
         }
         else
         {

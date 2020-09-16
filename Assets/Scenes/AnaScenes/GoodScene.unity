@@ -365,7 +365,7 @@ RectTransform:
   - {fileID: 244978024}
   - {fileID: 293775798}
   m_Father: {fileID: 699128349}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -950,7 +950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3464556606158097230, guid: b926ac106c7c42b42a5278a8a4922057, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3464556606158097230, guid: b926ac106c7c42b42a5278a8a4922057, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4079,7 +4079,7 @@ Transform:
   - {fileID: 1965209554}
   - {fileID: 6455976}
   m_Father: {fileID: 1237278040}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &398256600
 MonoBehaviour:
@@ -6165,15 +6165,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662645684}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 208.38995}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 699128349}
+  m_Father: {fileID: 1850443868}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 372, y: 376}
+  m_AnchoredPosition: {x: 376.03375, y: 427.7522}
   m_SizeDelta: {x: 3001.34, y: 44.98}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &662645686
@@ -6987,12 +6987,10 @@ Transform:
   m_LocalPosition: {x: 4.03374, y: 51.752193, z: -208.38995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1806825494}
-  - {fileID: 662645685}
   - {fileID: 21410173}
   - {fileID: 1905393090}
   m_Father: {fileID: 1237278040}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &699128350
 MonoBehaviour:
@@ -7385,7 +7383,7 @@ Transform:
   - {fileID: 1578923068}
   - {fileID: 1496898950}
   m_Father: {fileID: 1237278040}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &732455482
 MonoBehaviour:
@@ -7446,7 +7444,7 @@ RectTransform:
   - {fileID: 16615564}
   - {fileID: 1857202669}
   m_Father: {fileID: 1237278040}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7821,7 +7819,7 @@ RectTransform:
   - {fileID: 1073843619}
   - {fileID: 1026994205}
   m_Father: {fileID: 1237278040}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8643,7 +8641,7 @@ Transform:
   - {fileID: 1886534625}
   - {fileID: 597673237}
   m_Father: {fileID: 1237278040}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &961439706
 MonoBehaviour:
@@ -8995,7 +8993,7 @@ Transform:
   - {fileID: 1693914069}
   - {fileID: 1912418662}
   m_Father: {fileID: 1237278040}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1015051370
 MonoBehaviour:
@@ -10737,6 +10735,14 @@ PrefabInstance:
       propertyPath: mainUI
       value: 
       objectReference: {fileID: 1237278036}
+    - target: {fileID: 3228927195318960551, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: planetName
+      value: Planet Earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228927195318960551, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: planetDescription
+      value: This Is planet Earth
+      objectReference: {fileID: 0}
     - target: {fileID: 3228927195318960554, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -10980,7 +10986,7 @@ Transform:
   - {fileID: 369512114}
   - {fileID: 1487241756}
   m_Father: {fileID: 1237278040}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1220803793
 MonoBehaviour:
@@ -11243,6 +11249,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1275850676}
+  - {fileID: 1850443868}
   - {fileID: 699128349}
   - {fileID: 2003897703}
   - {fileID: 398256599}
@@ -11277,6 +11284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceButtons: {fileID: 2003897702}
+  TitleAndDescription: {fileID: 1850443867}
 --- !u!114 &1237278042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11310,6 +11318,7 @@ MonoBehaviour:
   UIInvestmentZone: {fileID: 961439704}
   UITransportZone: {fileID: 398256598}
   UIResouceButtons: {fileID: 2003897702}
+  UITitleAndDescription: {fileID: 1850443867}
 --- !u!1 &1275729397
 GameObject:
   m_ObjectHideFlags: 0
@@ -11654,7 +11663,7 @@ RectTransform:
   - {fileID: 665091484}
   - {fileID: 74874651}
   m_Father: {fileID: 1237278040}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16465,16 +16474,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806825493}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -208.38994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 699128349}
+  m_Father: {fileID: 1850443868}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -479, y: 279}
+  m_AnchoredPosition: {x: -474.96625, y: 330.7522}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1806825495
@@ -16862,7 +16871,7 @@ Transform:
   - {fileID: 1783150813}
   - {fileID: 1508495183}
   m_Father: {fileID: 1237278040}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1835427865
 GameObject:
@@ -17062,6 +17071,14 @@ PrefabInstance:
       propertyPath: mainUI
       value: 
       objectReference: {fileID: 1237278036}
+    - target: {fileID: 1138074117638528662, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: planetName
+      value: Desert Planet
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074117638528662, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: planetDescription
+      value: This is planet Desert
+      objectReference: {fileID: 0}
     - target: {fileID: 1138074117638528667, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -17375,6 +17392,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842374621}
   m_CullTransparentMesh: 0
+--- !u!1 &1850443867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1850443868}
+  - component: {fileID: 1850443869}
+  m_Layer: 5
+  m_Name: TitleAndDescription
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1850443868
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850443867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1806825494}
+  - {fileID: 662645685}
+  m_Father: {fileID: 1237278040}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1850443869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850443867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7dbe206ab170448b20e22dbef57ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: {fileID: 1806825495}
+  description: {fileID: 662645686}
 --- !u!1 &1853165779
 GameObject:
   m_ObjectHideFlags: 0
@@ -17919,7 +17988,7 @@ RectTransform:
   - {fileID: 1487655116}
   - {fileID: 1853165780}
   m_Father: {fileID: 699128349}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18072,6 +18141,14 @@ PrefabInstance:
       propertyPath: mainUI
       value: 
       objectReference: {fileID: 1237278036}
+    - target: {fileID: 4397491208869768599, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: planetName
+      value: Jungle Planet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397491208869768599, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: planetDescription
+      value: This is planet Jungle
+      objectReference: {fileID: 0}
     - target: {fileID: 4397491208869768602, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -18491,7 +18568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1967821522
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18507,7 +18584,7 @@ RectTransform:
   - {fileID: 1331900782}
   - {fileID: 872859610}
   m_Father: {fileID: 1237278040}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18691,7 +18768,7 @@ Transform:
   - {fileID: 1382540393}
   - {fileID: 2121901823}
   m_Father: {fileID: 1237278040}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2003897704
 MonoBehaviour:

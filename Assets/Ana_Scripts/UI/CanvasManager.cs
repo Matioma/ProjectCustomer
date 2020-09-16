@@ -22,6 +22,8 @@ public class CanvasManager : MonoBehaviour
 {
     [SerializeField]
     GameObject resourceButtons;
+    [SerializeField]
+    GameObject TitleAndDescription;
     List<CanvasController> canvasControllerList;
     CanvasController lastActiveCanvas;
     private void Awake()
@@ -64,6 +66,21 @@ public class CanvasManager : MonoBehaviour
         //{
             resourceButtons.SetActive(false);
        // }
+    }
+    public void EnableTitleAndDescription()
+    {
+        //if (resourceButtons.activeSelf == false)
+        //{
+        TitleAndDescription.SetActive(true);
+
+        //}
+    }
+    public void DisableableTitleAndDescription()
+    {
+        //if (resourceButtons.activeSelf == true)
+        //{
+        TitleAndDescription.SetActive(false);
+        // }
     }
 
     public CanvasController GetCurrentCanvas()

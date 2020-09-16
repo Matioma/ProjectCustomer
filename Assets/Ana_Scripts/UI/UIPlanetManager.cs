@@ -20,6 +20,8 @@ public class UIPlanetManager : MonoBehaviour
     GameObject UITransportZone;
     [SerializeField]
     GameObject UIResouceButtons;
+    [SerializeField]
+    GameObject UITitleAndDescription;
 
     GameObject currentPlanet;
 
@@ -64,6 +66,11 @@ public class UIPlanetManager : MonoBehaviour
     public void InitializeRecourceButtons(int newSeedNumber, int newWaterNumber, int newMoneyNimber)
     {
         UIResouceButtons.GetComponent<ResourcesButtonsUpdater>().ResetButtons(newSeedNumber, newWaterNumber, newMoneyNimber);
+    }
+
+    public void InitalizeTitleAndDescription(string title, string description)
+    {
+        UITitleAndDescription.GetComponent<TitleAndDescriptionUpdater>().Initialize(title, description);
     }
 
     public void UpdateQuestes()
