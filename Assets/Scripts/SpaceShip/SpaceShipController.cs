@@ -30,15 +30,14 @@ public class SpaceShipController : MonoBehaviour
             UnloadTheShip(other.gameObject.GetComponentInChildren<PlanetReceources>());
         }
     }
-    void UnloadTheShip(IReceourceAddition<Receources> planetReceources)
+    void UnloadTheShip(PlanetReceources targetPlanet)
     {
-        PlanetReceources thisShipResources = GetComponent<PlanetReceources>();
-
-        if (planetReceources != null)
+        UnitResources thisShipResources = GetComponent<UnitResources>();
+        if (targetPlanet != null)
         {
-            foreach (var resource in thisShipResources.GetResouses())
+            foreach (var resource in thisShipResources.GetResources())
             {
-                planetReceources.AddReceource(resource.Key, resource.Value);
+                targetPlanet.AddReceource(resource.Key, resource.Value);
             }
         }
         else {

@@ -118,7 +118,6 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
 
     bool HasWon()
     {
-
         return false;
     }
 
