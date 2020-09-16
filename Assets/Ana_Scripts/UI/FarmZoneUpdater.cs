@@ -22,8 +22,6 @@ public class FarmZoneUpdater : MonoBehaviour
         {
             unlockZoneButton.gameObject.SetActive(false);
             UIZoneUnlocked.SetActive(true);
-            UpdateProductionRate( productivityNumber,  productivityTime);
-            UpdateConsumptionRate( consumptionWaterNumber,  consumptionWaterTime);
         }
         else
         {
@@ -31,6 +29,8 @@ public class FarmZoneUpdater : MonoBehaviour
             UIZoneUnlocked.SetActive(false);
             UpdateButton();
         }
+        UpdateProductionRate(productivityNumber, productivityTime);
+        UpdateConsumptionRate(consumptionWaterNumber, consumptionWaterTime);
     }
 
     public void UpdateButton()
@@ -58,10 +58,11 @@ public class FarmZoneUpdater : MonoBehaviour
     }
     public void UpdateProductionRate(int productivityNumber, int productivityTime)
     {
-        productionRate.text = productivityNumber.ToString() + "/" + productivityTime.ToString();
+        Debug.Log("productivity change "+ productivityNumber.ToString() + " / " + productivityTime.ToString());
+        productionRate.text = productivityNumber.ToString() + " / " + productivityTime.ToString();
     }
     public void UpdateConsumptionRate(int consumptionWaterNumber, int consumptionWaterTime)
     {
-        consumptionRateWater.text = consumptionWaterNumber.ToString() + "/" + consumptionWaterTime.ToString();
+        consumptionRateWater.text = consumptionWaterNumber.ToString() + " / " + consumptionWaterTime.ToString();
     }
 }

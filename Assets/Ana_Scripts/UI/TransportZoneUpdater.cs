@@ -120,8 +120,8 @@ public class TransportZoneUpdater : MonoBehaviour
             var imageToChangeA = ChangeToPlanetA.GetComponentInChildren<Image>();
             imageToChangeA.sprite = modifiedPlanets[0].planetIcon;
             ChangeToPlanetA.onClick.AddListener(OnPlanetChangeToA);
-            Debug.Log("Change Icon planetA "+ modifiedPlanets[0].planetIcon.name);
-            Debug.Log("Change Icon planetA "+ modifiedPlanets[0].planet.gameObject.name);
+           // Debug.Log("Change Icon planetA "+ modifiedPlanets[0].planetIcon.name);
+           // Debug.Log("Change Icon planetA "+ modifiedPlanets[0].planet.gameObject.name);
         }
         if (modifiedPlanets.Count - 1 >= 1)
         {
@@ -129,8 +129,8 @@ public class TransportZoneUpdater : MonoBehaviour
             var imageToChangeB = ChangeToPlanetB.GetComponentInChildren<Image>();
             imageToChangeB.sprite = modifiedPlanets[1].planetIcon;
             ChangeToPlanetB.onClick.AddListener(OnPlanetChangeToB);
-            Debug.Log("Change Icon planetA " + modifiedPlanets[1].planetIcon.name);
-            Debug.Log("Change Icon planetB "+ modifiedPlanets[1].planet.gameObject.name);
+           // Debug.Log("Change Icon planetA " + modifiedPlanets[1].planetIcon.name);
+           // Debug.Log("Change Icon planetB "+ modifiedPlanets[1].planet.gameObject.name);
         }
     }
 

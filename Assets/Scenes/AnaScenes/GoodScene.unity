@@ -9007,7 +9007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25663af0f6ac29d4f9a3c79e0df4ccd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productionRate: {fileID: 1726055958}
+  productionRate: {fileID: 1082621405}
   consumptionRateWater: {fileID: 518183344}
   unlockZoneButton: {fileID: 1693914070}
   UIZoneUnlocked: {fileID: 1912418661}

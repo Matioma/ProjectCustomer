@@ -15,6 +15,9 @@ public enum CanvasType
     MineralZone,
     InvestmentZone,
     TransportZone,
+    MainMenu,
+    WinScreen,
+    LoseScreen
 }
 
 
@@ -49,7 +52,6 @@ public class CanvasManager : MonoBehaviour
             desiredScreen.gameObject.SetActive(true);
             lastActiveCanvas = desiredScreen;
         }
-        Debug.Log("switch zone" + desiredScreen);
     }
 
     public void EnableResourceButtons()

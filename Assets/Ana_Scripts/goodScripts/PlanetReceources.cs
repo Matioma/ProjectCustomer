@@ -181,17 +181,12 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
 
     public void calculateConsumptionWaterAmount()
     {
-        Debug.Log("water consumption change");
         if (info != null)
         {
             var productivity = info.getSeedProductionAmount();
             if (initialFoodProd != 0)
                 waterConsumtionAmount = (productivity / initialFoodProd) * waterConsumtionAmountPerSeed;
             info.ChangeConsumptionAmountWater(waterConsumtionAmount);
-            Debug.Log("current Productivity " + productivity);
-            Debug.Log("initial Productivity " + initialFoodProd);
-            Debug.Log("water consumprion per seed " + waterConsumtionAmountPerSeed);
-            Debug.Log("new water consumption " + waterConsumtionAmount);
         }
         else Debug.Log("no change");
     }

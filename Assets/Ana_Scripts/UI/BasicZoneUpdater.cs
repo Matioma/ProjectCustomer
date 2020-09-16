@@ -20,7 +20,7 @@ public class BasicZoneUpdater : MonoBehaviour
         {
             unlockZoneButton.gameObject.SetActive(false);
             UIZoneUnlocked.SetActive(true);
-            UpdateProductionRate(productivityNumber, productivityTime);
+           
         }
         else
         {
@@ -28,6 +28,7 @@ public class BasicZoneUpdater : MonoBehaviour
             UIZoneUnlocked.SetActive(false);
             UpdateButton();
         }
+        UpdateProductionRate(productivityNumber, productivityTime);
     }
 
     public void UpdateButton()

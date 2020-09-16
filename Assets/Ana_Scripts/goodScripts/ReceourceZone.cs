@@ -11,7 +11,7 @@ public class ReceourceZone : MonoBehaviour
     [SerializeField]
     Receources[] receourcesToWork;
     [SerializeField]
-    float productivityTime=5;
+    int productivityTime=5;
     [SerializeField]
     int productionNumber = 15;
     float timer;
@@ -66,9 +66,13 @@ public class ReceourceZone : MonoBehaviour
         }
     }
 
-    public int GetProductivity()
+    //public int GetProductivityAmount()
+    //{
+    //    return productionNumber;
+    //}
+    public int GetProductivityTime()
     {
-        return productionNumber;
+        return productivityTime;
     }
     public void Enable(Receources rec)
     {
