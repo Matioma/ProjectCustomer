@@ -92,7 +92,7 @@ public class AudioManager : SingletonMenobehaviour<AudioManager>
     {
         warningSounds();
 
-        GlobalTimer.Instance.OnTimerEnd += () =>
+        GlobalTimer.Instance.OnDefeat += () =>
         {
             if (DefeatSound != null)
                 GetComponent<AudioSource>().PlayOneShot(DefeatSound);

@@ -39,16 +39,12 @@ public class PlanetIndicator : MonoBehaviour
             planet.OnPeopleStopLackFood += HideTimer;
             planet.OnPeopleStopLackFood += HideExclamationMark;
         }
-
-
-
     }
     void Update()
     {
     }
 
     void ShowTimer() {
-        //Debug.LogWarning("Show timer");
         timerObject.SetActive(true);
         IsIndicatorVisible isIndicatorVisible = timerObject.GetComponent<IsIndicatorVisible>();
         isIndicatorVisible.Visible = true;

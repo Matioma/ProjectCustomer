@@ -473,7 +473,6 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     {
         return waterConsumtionTime;
     }
-
     public int getPopulation()
     {
         return population;

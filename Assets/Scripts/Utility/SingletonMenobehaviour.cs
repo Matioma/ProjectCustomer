@@ -31,7 +31,7 @@ public class SingletonMenobehaviour<T> : MonoBehaviour where T:MonoBehaviour
         }
     }
 
-    private void Awake()
+    public void Awake()
     {
         Instance = this as T;
     }

@@ -7,29 +7,6 @@ using UnityEngine;
 
 public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
 {
-    //static GlobalTimer _instance;
-    //public static GlobalTimer Instance
-    //{
-    //    get
-    //    {
-    //        if (_instance == null)
-    //        {
-    //            Debug.LogWarning("Make sure that your scene has GlobatTimer attached to any object");
-    //        }
-    //        return _instance;
-    //    }
-    //    set
-    //    {
-    //        if (_instance != null && _instance != value)
-    //        {
-    //            Destroy(value.gameObject);
-    //            Debug.LogWarning("Tried to override golbat Timer value, the object is being Destroyed");
-    //            return;
-    //        }
-    //        _instance = value;
-    //    }
-    //}
-
     float deltaTime = 0f;
     public float DeltaTime{
         get{
@@ -56,6 +33,9 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
 
     public event Action OnTimerEnd;
 
+    public event Action OnVictory;
+    public event Action OnDefeat;
+
     [SerializeField]
     float GameLengthInSeconds;
     float GameTimeLeftTimer;
@@ -63,7 +43,6 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
     public float GetTimeLeft() {
         return GameTimeLeftTimer;
     }
-
 
     [SerializeField]
     int[] acelerationValues;
@@ -78,7 +57,6 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
         return TimeMultiplier;
     }
 
-
     public void StopGame() {
         GameIsPaused = true;
         Debug.LogWarning("Game Paused"); ;
@@ -87,54 +65,61 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
     public void ResumeGame() {
         GameIsPaused = false;
     }
-
     public void AccelerateGame()
     {
         accelerationValueIndex  = (accelerationValueIndex +1)% acelerationValues.Length;
         TimeMultiplier = acelerationValues[accelerationValueIndex];
-        //TimeMultiplier *= 2;
     }
-
     public void StartTimer() {
         TimerIsStarted= true;
     }
 
     private void Awake()
     {
-        Instance = this;
+        base.Awake();
+        //Instance = this;
         multiplierBeforePause = TimeMultiplier;
-        OpenWinScreen();
-
+        GameTimeEnded();
     }
-
-    void OpenWinScreen() {
-        OnTimerEnd += () =>
-        {
-            GetComponent<CanvasSwitcher>()?.OnScreenChange();
-            StopGame();
-        };
-    }
-
 
     void Start()
     {
         GameTimeLeftTimer = GameLengthInSeconds;        
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!TimerIsStarted) {
             return;
         }
-
         GameTimeLeftTimer -= DeltaTime;
-
-        //Debug.Log(DeltaTime);
         if (GameTimeLeftTimer < 0) {
             OnTimerEnd?.Invoke();
         }
-            
+    }
+
+    void GameTimeEnded()
+    {
+        OnTimerEnd += () =>
+        {
+            if (HasWon())
+            {
+                OnVictory?.Invoke();
+                GetComponent<CanvasSwitcher>()?.OpenScreen(CanvasType.WinScreen);
+            }
+            else
+            {
+                OnDefeat?.Invoke();
+                GetComponent<CanvasSwitcher>()?.OpenScreen(CanvasType.LoseScreen);
+            }
+            StopGame();
+        };
+    }
+
+    bool HasWon()
+    {
+
+        return false;
     }
 
 }
