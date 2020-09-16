@@ -26,7 +26,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrades: []
-  button: {fileID: 0}
   id: 0
 --- !u!114 &6128415772394275357
 MonoBehaviour:
@@ -41,7 +40,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrades: []
-  button: {fileID: 0}
   id: 1
 --- !u!1 &5319158110676492874
 GameObject:
@@ -245,7 +243,7 @@ AudioSource:
   m_GameObject: {fileID: 5319158110676492874}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -6767818803761869722, guid: 3d8b4f4dabb75db4da8fe6bc0f05a5ad, type: 2}
   m_audioClip: {fileID: 8300000, guid: 90dba4683703c3c4cbaa6e2ca4d2115e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -417,7 +415,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrades: []
-  button: {fileID: 0}
   id: 2
 --- !u!114 &6740240584727634928
 MonoBehaviour:
@@ -594,6 +591,34 @@ PrefabInstance:
       propertyPath: typeOfReceource
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5319158110676492872}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CanvasSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnScreenChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2566920544029782689, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: desiredCanvasType
       value: 4
@@ -678,6 +703,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: CanvasSwitcher, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -705,6 +734,30 @@ PrefabInstance:
       propertyPath: selectedMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 4670a99df6d211447aaed697f7d946ee, type: 2}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5319158110676492872}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CanvasSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnScreenChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2566920544029782689, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: desiredCanvasType
       value: 5
@@ -793,6 +846,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 5319158111791132457}
     m_Modifications:
     - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: CanvasSwitcher, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -816,6 +873,30 @@ PrefabInstance:
       propertyPath: selectedMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 78a3da90f9aab0840a5354d8568600d7, type: 2}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5319158110676492872}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CanvasSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnScreenChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4411870845720569306, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -888,9 +969,37 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: selectedMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 2034cc700a7e297489d066065f5b13c2, type: 2}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5319158110676492872}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CanvasSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnScreenChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 949025872003974378, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
+      propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2566920544029782689, guid: a7e017794b3441c46a74b9d1d75db1dc, type: 3}
       propertyPath: desiredCanvasType
       value: 3
