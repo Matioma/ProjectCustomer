@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6133808140211963601}
   - component: {fileID: 4362932838548954353}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: another particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 6945352266707791244}
   m_LocalRotation: {x: -0.45208013, y: -0.39233074, z: -0.62351966, w: 0.50291497}
   m_LocalPosition: {x: -5703, y: -4185, z: -1176}
-  m_LocalScale: {x: 0.27885327, y: 0.27885327, z: 0.27885327}
+  m_LocalScale: {x: 0.032197498, y: 0.032197494, z: 0.032197498}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

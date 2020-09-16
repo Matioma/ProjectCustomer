@@ -109,7 +109,8 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         }
         set
         {
-            if (value != peopleAreDying)
+            //if value changes
+            if (value != PeopleAreDying)
             {
                 //If people dying
                 if (!value)
@@ -313,9 +314,9 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         }
         else
         {
-            resetHungerDeathTimers();
             PeopleLackFood = false;
-            peopleAreDying = false;
+            PeopleAreDying = false;
+            resetHungerDeathTimers();
         }
     }
     public void resetHungerDeathTimers()
