@@ -271,13 +271,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c2e769f79717043a8a1ff940925b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionGeneral: 
-  descriptionFarmingZone: 
-  descriptionWaterZone: 
-  descriptionMineralZone: 
-  descriptionIndZoneInvest: 
-  descriptionIndZoneTransport: 
+  planetName: 
+  planetDescription: 
+  planet: {fileID: 0}
   mainUI: {fileID: 0}
+  GeoMash: {fileID: 0}
   Farm: {fileID: 0}
   Water: {fileID: 0}
   Mine: {fileID: 0}
@@ -310,7 +308,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredCanvasType: 1
-  canvasManager: {fileID: 0}
 --- !u!114 &4054243692379111001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,6 +381,12 @@ MonoBehaviour:
   birthRateNumber: 10
   birthRateTime: 10
   resouces: []
+  birthRateTimer: 0
+  hungerTimer: 0
+  deathTimer: 0
+  peopleToDie: 0
+  deathRate: 0
+  seedConsumptionAmount: 10
 --- !u!1 &6090734509462822091
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +537,10 @@ PrefabInstance:
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnScreenChange
       objectReference: {fileID: 0}
+    - target: {fileID: 5420733362619861961, guid: 32415d59dda1ce54fa1792d65631ddf7, type: 3}
+      propertyPath: selectedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 2034cc700a7e297489d066065f5b13c2, type: 2}
     - target: {fileID: 5526173172122889259, guid: 32415d59dda1ce54fa1792d65631ddf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36.120842
@@ -629,6 +636,10 @@ PrefabInstance:
       propertyPath: desiredCanvasType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5420733362619861961, guid: 32415d59dda1ce54fa1792d65631ddf7, type: 3}
+      propertyPath: selectedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 78a3da90f9aab0840a5354d8568600d7, type: 2}
     - target: {fileID: 5420733362619861962, guid: 32415d59dda1ce54fa1792d65631ddf7, type: 3}
       propertyPath: typeOfReceource
       value: 1
@@ -993,6 +1004,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Region3
       objectReference: {fileID: 0}
+    - target: {fileID: 5420733362619861961, guid: 32415d59dda1ce54fa1792d65631ddf7, type: 3}
+      propertyPath: selectedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 098f5685f8c60ad4bb3ea02dfa096e6a, type: 2}
     - target: {fileID: 5526173172122889259, guid: 32415d59dda1ce54fa1792d65631ddf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36.120842
