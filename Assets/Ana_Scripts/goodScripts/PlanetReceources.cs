@@ -277,18 +277,20 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         if (receourcesNumber[Receources.SEEDS] < seedConsumptionAmount)
         {
             PeopleLackFood = true;
+            peopleToDie = (seedConsumptionAmount - receourcesNumber[Receources.SEEDS]) / seedConsumptionAmountPerPerson;
+            GetComponentInParent<UIInformation>().ChangeHungryPeople(peopleToDie);
             if (hungerTimer < 0)
             {
                 PeopleAreDying = true;
                 if (deathTimer > 0)
                 {
-                    peopleToDie = (seedConsumptionAmount - receourcesNumber[Receources.SEEDS]) / seedConsumptionAmountPerPerson;
+                    
                     deathRate = (peopleToDie * deathRateForTimer) / peopleDeathTimer;
                    // Debug.Log("seed consumprion "+seedConsumptionAmount);
                    // Debug.Log("current seeds "+receourcesNumber[Receources.SEEDS]);
                    // Debug.Log("hungry people "+peopleToDie);
                    // Debug.Log("death rate " + deathRate);
-                    GetComponentInParent<UIInformation>().ChangeHungryPeople(peopleToDie);
+                    
                     GetComponentInParent<UIInformation>().ChangeDeathRateNumber(deathRate);
                     if (deathTimer % deathRateForTimer == 0)
                     {
@@ -323,6 +325,10 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     {
         deathTimer = peopleDeathTimer;
         hungerTimer = hungerWarningTimer;
+        peopleToDie = 0;
+        deathRate = 0;
+        GetComponentInParent<UIInformation>().ChangeHungryPeople(peopleToDie);
+        GetComponentInParent<UIInformation>().ChangeDeathRateNumber(deathRate);
     }
     public void FarmZoneIsBought()
     {
