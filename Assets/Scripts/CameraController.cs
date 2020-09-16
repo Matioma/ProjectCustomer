@@ -142,11 +142,16 @@ public class CameraController : SingletonMenobehaviour<CameraController>
             // If Clicked on a planet and it is different from already Selected Planet
             if (newSelectedPlanet != null && newSelectedPlanet!=SelectedPlanet)
             {
-                SelectPlanet(newSelectedPlanet);
+                selectPlanet(newSelectedPlanet);
             }
         }
     }
-    public void SelectPlanet(Planet newSelectedPlanet)
+
+    public void SelectInitialPlanet() {
+        selectPlanet(SelectedPlanet);
+    }
+
+    void selectPlanet(Planet newSelectedPlanet)
     {
         deselectLastPlanet();
         SelectedPlanet = newSelectedPlanet;
@@ -221,7 +226,6 @@ public class CameraController : SingletonMenobehaviour<CameraController>
                 deselectLastZone();
             }
         }
-       
     }
     void ResetMouseMovements() {
         movement = new Vector2(0, 0);
