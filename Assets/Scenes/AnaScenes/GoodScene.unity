@@ -6933,6 +6933,7 @@ MonoBehaviour:
   hungryPeople: {fileID: 1179434678}
   deathRate: {fileID: 1487655117}
   birthRate: {fileID: 1853165781}
+  consumptionRateSeed: {fileID: 1179324438}
 --- !u!114 &699128351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7325,6 +7326,7 @@ MonoBehaviour:
   productionRate: {fileID: 1613550872}
   unlockZoneButton: {fileID: 1578923069}
   UIZoneUnlocked: {fileID: 1496898949}
+  priceToBuyZone: {fileID: 1784587951}
 --- !u!114 &732455483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8602,6 +8604,7 @@ MonoBehaviour:
   mineUpgradeButton: {fileID: 348501198}
   unlockZoneButton: {fileID: 1886534626}
   UIZoneUnlocked: {fileID: 597673236}
+  priceToBuyZone: {fileID: 1175340471}
 --- !u!114 &961439707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8950,6 +8953,7 @@ MonoBehaviour:
   consumptionRateWater: {fileID: 518183344}
   unlockZoneButton: {fileID: 1693914070}
   UIZoneUnlocked: {fileID: 1912418661}
+  priceToBuyZone: {fileID: 159109212}
 --- !u!114 &1015051371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10714,6 +10718,7 @@ MonoBehaviour:
   productionRate: {fileID: 1119771241}
   unlockZoneButton: {fileID: 369512115}
   UIZoneUnlocked: {fileID: 1487241755}
+  priceToBuyZone: {fileID: 1655882850}
 --- !u!114 &1220803794
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,6 +15,8 @@ public class GeneralZoneUpdater : MonoBehaviour
     TextMeshProUGUI deathRate;
     [SerializeField]
     TextMeshProUGUI birthRate;
+    [SerializeField]
+    TextMeshProUGUI consumptionRateSeed;
 
 
     //public void UpdateGeneralZoneText(Text newText)
@@ -27,12 +29,13 @@ public class GeneralZoneUpdater : MonoBehaviour
     //    currentQuest = newQuest;
     //}
 
-    public void Initialize(int populationNumber, int hungryPeopleNumber, int deathRateNumber, int deathRateTime, int birthRateNumber, int birthRateTime)
+    public void Initialize(int populationNumber, int hungryPeopleNumber, int deathRateNumber, int deathRateTime, int birthRateNumber, int birthRateTime, int consumptionSeedNumber, int consumptionSeedTime)
     {
         UpdatePopulationNumber(populationNumber);
         UpdateHungryPeople(hungryPeopleNumber);
         UpdateDeathRate(deathRateNumber, deathRateTime);
         UpdateBirthRate(birthRateNumber, birthRateTime);
+        UpdateSeedConsumptionRate(consumptionSeedNumber, consumptionSeedTime);
     }
     public void UpdateQuestes()
     {
@@ -41,7 +44,6 @@ public class GeneralZoneUpdater : MonoBehaviour
     public void UpdatePopulationNumber(int newNumber)
     {
         population.text = newNumber.ToString();
-       // Debug.Log(population.text);
     }
     public void UpdateHungryPeople(int newNumber)
     {
@@ -49,11 +51,16 @@ public class GeneralZoneUpdater : MonoBehaviour
     }
     public void UpdateDeathRate(int newRateNumber, int newRateTime)
     {
-        deathRate.text = "Death Rate:" + newRateNumber.ToString() + "/" + newRateTime.ToString();
+        deathRate.text = "Death Rate:" + newRateNumber.ToString() + " / " + newRateTime.ToString() + " s";
     }
     public void UpdateBirthRate(int newRateNumber, int newRateTime)
     {
-        birthRate.text = "Birth Rate: " + newRateNumber.ToString() + "/" + newRateTime.ToString();
+        birthRate.text = "Birth Rate: " + newRateNumber.ToString() + " / " + newRateTime.ToString() + " s";
+    }
+
+    public void UpdateSeedConsumptionRate(int consumptionSeedNumber, int consumptionSeedTime)
+    {
+        consumptionRateSeed.text = "Population is consuming:         " + consumptionSeedNumber.ToString() + " / " + consumptionSeedTime.ToString() + " s";
     }
 
 

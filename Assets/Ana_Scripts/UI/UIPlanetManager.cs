@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public class UIPlanetManager : MonoBehaviour
 {
@@ -36,9 +37,9 @@ public class UIPlanetManager : MonoBehaviour
     }
 
 
-    public void InitializeGeneral(int populationNumber, int hungryPeopleNumber, int deathRateNumber, int deathRateTime, int birthRateNumber, int birthRateTime)
+    public void InitializeGeneral(int populationNumber, int hungryPeopleNumber, int deathRateNumber, int deathRateTime, int birthRateNumber, int birthRateTime, int consumptionSeedNumber, int consumptionSeedTime)
     {
-        UIGeneral.GetComponent<GeneralZoneUpdater>().Initialize(populationNumber, hungryPeopleNumber, deathRateNumber, deathRateTime, birthRateNumber, birthRateTime);
+        UIGeneral.GetComponent<GeneralZoneUpdater>().Initialize(populationNumber, hungryPeopleNumber, deathRateNumber, deathRateTime, birthRateNumber, birthRateTime, consumptionSeedNumber, consumptionSeedTime);
     }
     public void InitializeFarmZone(bool isZoneUnlocked, int productivityNumber, int productivityTime, int consumptionWaterNumber, int consumptionWaterTime, GameObject Farm, int price)
     {
@@ -98,9 +99,9 @@ public class UIPlanetManager : MonoBehaviour
         UIResouceButtons.GetComponent<ResourcesButtonsUpdater>().ChangeAmount(rec, amount);
         UITransportZone.GetComponentInChildren<ChangeMaxValue>().ChangeValue(rec, amount);
     }
-    public void UpdateSeedConsumption(int newConsumption) ///////////////// To Add
+    public void UpdateSeedConsumption(int newConsumptionNumber, int newConsumprionTime) 
     {
-
+        UIGeneral.GetComponent<GeneralZoneUpdater>().UpdateSeedConsumptionRate(newConsumptionNumber, newConsumprionTime);
     }
     public void UpdateWaterConsumption(int newConsumptionNumber, int newConsumprionTime)
     {

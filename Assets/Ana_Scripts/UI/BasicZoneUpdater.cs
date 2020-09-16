@@ -59,6 +59,6 @@ public class BasicZoneUpdater : MonoBehaviour
     }
     public void UpdateProductionRate(int productivityNumber, int productivityTime)
     {
-        productionRate.text = productivityNumber.ToString() + "/" + productivityTime.ToString();
+        productionRate.text = productivityNumber.ToString() + " / " + productivityTime.ToString() + " s";
     }
 }

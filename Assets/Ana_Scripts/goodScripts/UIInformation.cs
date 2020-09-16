@@ -200,7 +200,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         Debug.Log("init ui");
         if (mainUI.GetComponent<UIPlanetManager>())
         {
-            mainUI.GetComponent<UIPlanetManager>().InitializeGeneral(planetPopulation, hungryPeople, deathRateNumber, deathRateTime, birthRateNumber, birthRateTime);
+            mainUI.GetComponent<UIPlanetManager>().InitializeGeneral(planetPopulation, hungryPeople, deathRateNumber, deathRateTime, birthRateNumber, birthRateTime,seedConsumptionAmount,seedConsumptionTime);
             if (Farm != null)
             {
                 Debug.Log("init ui farm");
@@ -307,7 +307,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         seedConsumptionAmount = amount;
         if (selected)
         {
-            mainUI.GetComponent<UIPlanetManager>().UpdateSeedConsumption(amount);
+            mainUI.GetComponent<UIPlanetManager>().UpdateSeedConsumption(seedConsumptionAmount, seedConsumptionTime);
         }
     }
     public void ChangeConsumptionTimeSeeds(int amount)
@@ -323,7 +323,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         waterConsumtionAmount = amount;
         if (selected)
         {
-            mainUI.GetComponent<UIPlanetManager>().UpdateWaterConsumption(amount,waterConsumtionTime);
+            mainUI.GetComponent<UIPlanetManager>().UpdateWaterConsumption(waterConsumtionAmount, waterConsumtionTime);
         }
     }
     public void ChangeConsumptionTimeWater(int amount)
