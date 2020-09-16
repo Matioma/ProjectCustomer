@@ -43,7 +43,6 @@ public class FarmZoneUpdater : MonoBehaviour
     {
         if (Farm != null)
         {
-            Farm.GetComponent<BuyZone>().Buy();
             if (Farm.GetComponent<BuyZone>().ConditionsToBuy())
             {
                 Farm.GetComponentInParent<PlanetReceources>().FarmZoneIsBought();
@@ -53,7 +52,7 @@ public class FarmZoneUpdater : MonoBehaviour
                 }
                 unlockZoneButton.gameObject.SetActive(false);
             }
-            
+            Farm.GetComponent<BuyZone>().Buy();
         }
 
     }

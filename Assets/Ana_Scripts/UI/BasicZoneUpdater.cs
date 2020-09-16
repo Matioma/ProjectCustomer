@@ -40,7 +40,6 @@ public class BasicZoneUpdater : MonoBehaviour
     {
         if (Zone != null)
         {
-            Zone.GetComponent<BuyZone>().Buy();
             if (Zone.GetComponent<BuyZone>().ConditionsToBuy())
             {
                 if (UIZoneUnlocked != null)
@@ -49,6 +48,8 @@ public class BasicZoneUpdater : MonoBehaviour
                 }
                 unlockZoneButton.gameObject.SetActive(false);
             }
+            Zone.GetComponent<BuyZone>().Buy();
+
         }
 
     }
