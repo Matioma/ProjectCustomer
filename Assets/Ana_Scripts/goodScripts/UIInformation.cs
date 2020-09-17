@@ -242,7 +242,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
 
 
                 mainUI.GetComponent<UIPlanetManager>().InitializeInvestmentZone(isInvestmentUnlocked, Farm, Water, Mine, Invest, Invest.GetComponent<BuyZone>().GetPrice());
-                mainUI.GetComponent<UIPlanetManager>().InitializeTransportZone(Invest, planet);
+                mainUI.GetComponent<UIPlanetManager>().InitializeTransportZone(Invest, planet, resourcesNumber[Receources.SEEDS], resourcesNumber[Receources.WATER], resourcesNumber[Receources.MONEY]);
                 Debug.Log("init invest");
             }
 

@@ -61,9 +61,9 @@ public class UIPlanetManager : MonoBehaviour
     {
         UIInvestmentZone.GetComponent<InvestmentZoneUpdater>().Initialize(isZoneUnlocked, Farm, Water, Mine, Invest, price);
     }
-    public void InitializeTransportZone(GameObject IndustrialZone, GameObject currentPlanet)
+    public void InitializeTransportZone(GameObject IndustrialZone, GameObject currentPlanet, int newSeedNumber, int newWaterNumber, int newMoneyNimber)
     {
-        UITransportZone.GetComponent<TransportZoneUpdater>().Initialize(IndustrialZone, currentPlanet);
+        UITransportZone.GetComponent<TransportZoneUpdater>().Initialize(IndustrialZone, currentPlanet, newSeedNumber, newWaterNumber, newMoneyNimber);
     }
 
     public void CheckForResourceButtons()
@@ -75,7 +75,6 @@ public class UIPlanetManager : MonoBehaviour
 
     public void InitializeRecourceButtons(int newSeedNumber, int newWaterNumber, int newMoneyNimber)
     {
-        Debug.Log(UIResouceButtons.GetComponent<ResourcesButtonsUpdater>());
         UIResouceButtons.GetComponent<ResourcesButtonsUpdater>().ResetButtons(newSeedNumber, newWaterNumber, newMoneyNimber);
     }
 
@@ -108,7 +107,7 @@ public class UIPlanetManager : MonoBehaviour
     public void UpdateResourceButtons(Receources rec, int amount)
     {
         UIResouceButtons.GetComponent<ResourcesButtonsUpdater>().ChangeAmount(rec, amount);
-        UITransportZone.GetComponentInChildren<ChangeMaxValue>().ChangeValue(rec, amount);
+        UITransportZone.GetComponentInChildren<ChangeMaxValue>().ChangeValueWhileProducing(rec, amount);
     }
     public void UpdateSeedConsumption(int newConsumptionNumber, int newConsumprionTime) 
     {

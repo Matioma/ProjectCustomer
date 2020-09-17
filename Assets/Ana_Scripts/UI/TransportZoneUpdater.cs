@@ -48,7 +48,7 @@ public class TransportZoneUpdater : MonoBehaviour
     {
         modifiedPlanets = new List<PlanetIcon>();
     }
-    public void Initialize(GameObject IndustrialZone, GameObject currentPlanet)
+    public void Initialize(GameObject IndustrialZone, GameObject currentPlanet,int newSeedNumber, int newWaterNumber, int newMoneyNimber)
     {
         Invest = IndustrialZone;
         //Debug.Log(modifiedPlanets.Count);
@@ -61,7 +61,8 @@ public class TransportZoneUpdater : MonoBehaviour
         ChangePlanetDestination();
         UpdateSendButton();
         ResetButtons();
-        
+        slider.GetComponent<ChangeMaxValue>().ResetButtons(newSeedNumber,newWaterNumber,newMoneyNimber);
+
     }
 
     void ChangeButtonsResourceChange()
@@ -178,7 +179,7 @@ public class TransportZoneUpdater : MonoBehaviour
 
     private void ResetButtons()
     {
-        slider.GetComponent<ChangeMaxValue>().ResetValue();
+        
         Invest.GetComponent<SendReceources>().ChangeTypeOfReceource(Receources.ALL);
         SeedBackgroundIcon.SetActive(false);
         WaterBackgroundIcon.SetActive(false);

@@ -10116,6 +10116,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: MineralRegion
       objectReference: {fileID: 0}
+    - target: {fileID: 2345725482877630188, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[0].description
+      value: tractors
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345725482877630188, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[1].description
+      value: fertilizers
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345725482877630188, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[2].description
+      value: hothouse
+      objectReference: {fileID: 0}
     - target: {fileID: 3228927195318960544, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 238.6
@@ -10236,9 +10248,33 @@ PrefabInstance:
       propertyPath: resouces.Array.data[2].amount
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[0].description
+      value: drain pipes
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[1].description
+      value: irrigation system
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[2].description
+      value: remote control
+      objectReference: {fileID: 0}
     - target: {fileID: 5930479947621174582, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: m_Name
       value: WaterRegion
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374196012783637053, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[0].description
+      value: pikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374196012783637053, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[1].description
+      value: rails
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374196012783637053, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[2].description
+      value: mining cart
       objectReference: {fileID: 0}
     - target: {fileID: 8542861822712913355, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: m_Name
@@ -10989,7 +11025,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 487, y: -409}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1299776922
@@ -16200,6 +16236,14 @@ PrefabInstance:
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8895037850418072844, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: upgrades.Array.data[1].description
+      value: rails
+      objectReference: {fileID: 0}
+    - target: {fileID: 8895037850418072844, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: upgrades.Array.data[2].description
+      value: mining cart
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
 --- !u!1 &1841841395 stripped
@@ -17208,27 +17252,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2439531832826465732, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: upgrades.Array.data[0].description
-      value: 111
+      value: drain pipes
       objectReference: {fileID: 0}
     - target: {fileID: 2439531832826465732, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: upgrades.Array.data[1].description
-      value: 222
+      value: irrigation system
       objectReference: {fileID: 0}
     - target: {fileID: 2439531832826465732, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: upgrades.Array.data[2].description
-      value: 333
+      value: remote control
       objectReference: {fileID: 0}
     - target: {fileID: 3550457460017896156, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: upgrades.Array.data[0].description
-      value: 111
+      value: tractors
       objectReference: {fileID: 0}
     - target: {fileID: 3550457460017896156, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: upgrades.Array.data[1].description
-      value: 222
+      value: fertilizers
       objectReference: {fileID: 0}
     - target: {fileID: 3550457460017896156, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: upgrades.Array.data[2].description
-      value: 333
+      value: hothouse
       objectReference: {fileID: 0}
     - target: {fileID: 4397491208869768592, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17586,7 +17630,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 488, y: -409}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1967821523
