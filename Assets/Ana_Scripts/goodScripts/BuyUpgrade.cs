@@ -70,7 +70,7 @@ public class BuyUpgrade : MonoBehaviour
         {
             return upgrades[upgradeIndex].description;
         }
-        return null;
+        return "Maximum level reached";
     }
 
     public int GetUpgradePrice()
@@ -80,6 +80,6 @@ public class BuyUpgrade : MonoBehaviour
         {
             return upgrades[upgradeIndex].price;
         }
-        return -1;
+        return 0;
     }
 }
