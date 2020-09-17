@@ -10248,6 +10248,14 @@ PrefabInstance:
       propertyPath: resouces.Array.data[2].amount
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: peopleDeathTimer
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: deathRateInterval
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: upgrades.Array.data[0].description
       value: drain pipes
@@ -16128,6 +16136,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1138074116525986800, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: peopleDeathTimer
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138074116525986800, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
+      propertyPath: deathRateInterval
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: 269
@@ -17353,6 +17369,14 @@ PrefabInstance:
     - target: {fileID: 4397491208869768602, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397491209848086769, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: deathRateInterval
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397491209848086769, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: peopleDeathTimer
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5811992729114099977, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: productivityTime
