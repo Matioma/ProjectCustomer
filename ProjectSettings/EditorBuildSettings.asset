@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/VladiScenes/Vladi TEST newest UI.unity
-    guid: 762f89db1cacb6b45b1cce09fdc9fc66
+    path: Assets/Scenes/AnaScenes/GoodScene.unity
+    guid: 8211846292cee7644bea8992c8060723
   m_configObjects: {}

@@ -10190,7 +10190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3228927195318960551, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: planetDescription
-      value: 4 zones, which function pretty well; no political crisis
+      value: 4 zones, which function well; no political crisis
       objectReference: {fileID: 0}
     - target: {fileID: 3228927195318960554, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.size
@@ -16215,11 +16215,11 @@ PrefabInstance:
       objectReference: {fileID: 1237278036}
     - target: {fileID: 1138074117638528662, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: planetName
-      value: Desert Planet
+      value: Dolha Planet
       objectReference: {fileID: 0}
     - target: {fileID: 1138074117638528662, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: planetDescription
-      value: This is planet Desert
+      value: 4 zones; political conflicts are main cause for the hunger
       objectReference: {fileID: 0}
     - target: {fileID: 1138074117638528667, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: OnSelected.m_PersistentCalls.m_Calls.Array.size
@@ -17361,11 +17361,11 @@ PrefabInstance:
       objectReference: {fileID: 1237278036}
     - target: {fileID: 4397491208869768599, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: planetName
-      value: Jungle Planet
+      value: Gaabul Planet
       objectReference: {fileID: 0}
     - target: {fileID: 4397491208869768599, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: planetDescription
-      value: This is planet Jungle
+      value: 3 zones; no production of money
       objectReference: {fileID: 0}
     - target: {fileID: 4397491208869768602, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: OnDeselected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
