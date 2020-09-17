@@ -9,6 +9,7 @@ using UnityEngine.Events;
 public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
 {
     public int foodRequiredCondition;
+    public int MaxHungryPeople;
 
     float deltaTime = 0f;
     public float DeltaTime{
@@ -162,21 +163,13 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
 
     bool HasWon()
     {
-        Debug.Log(FindObjectsOfType<Planet>().Length);
-
-        //foreach(var planetResource in Resources.FindObjectsOfTypeAll<PlanetReceources>())
-
         foreach (var planetResource in FindObjectsOfType<Planet>())
         {
-
-            //Debug.LogError("Test" + (planetResource.getPopulation() < foodRequiredCondition));
-
-            if (planetResource.GetComponentInChildren<PlanetReceources>().getPopulation() < foodRequiredCondition) {
-                //Debug.Log("YOu have won");
+            if ((planetResource.GetComponentInChildren<PlanetReceources>().getPopulation() < foodRequiredCondition) 
+                || (planetResource.GetComponentInChildren<PlanetReceources>().GetHungryPeople()>MaxHungryPeople)) {
                 return false;
             }
         }
-        Debug.LogError("Test");
         return true;
     }
 
