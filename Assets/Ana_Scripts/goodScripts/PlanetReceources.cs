@@ -20,6 +20,8 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     [SerializeField]
     int population = 10;
     [SerializeField]
+    int maxPopulation = 10;
+    [SerializeField]
     int hungerWarningTimer = 10;
     [SerializeField]
     int peopleDeathTimer = 10;
@@ -206,16 +208,23 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
 
     public void AddReceource(Receources rec, int amount)
     {
-        if (amount == 0)
-        {
-            return;
-        }
+       //if (amount == 0)
+        //{
+         //   return;
+       // }
         receourcesNumber[rec] += amount;
 
         var addition = GetComponentInParent<UIInformation>();
         if (addition != null)
         {
             addition.AddReceource(rec, amount);
+        }
+
+        if (rec == Receources.SEEDS)
+        {
+            Debug.Log("seeds addition "+receourcesNumber[Receources.SEEDS]);
+            Debug.Log(" addition " + amount);
+            Debug.Log(" seed consumption " + seedConsumptionAmount);
         }
     }
 
@@ -227,7 +236,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     }
     void FixedUpdate()
     {
-        Debug.Log(this.gameObject.name+"       " + receourcesNumber[Receources.SEEDS]);
+       // Debug.Log(receourcesNumber[Receources.SEEDS]);
         seedConsumption();
         if (isWaterConsuming == true)
         {
@@ -238,7 +247,11 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
             checkFarmZoneWorking();
         }
         CheckHunger();
-        BirthRate();
+        if (population <= maxPopulation)
+        {
+            BirthRate();
+
+        }
     }
 
     void BirthRate()
@@ -314,6 +327,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
                     {
                         
                         population -= hungryPeople;
+                        calculateConsumptionSeedAmount();
                         hungryPeople = 0;
                     }
                     else

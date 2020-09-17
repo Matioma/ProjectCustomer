@@ -38,12 +38,17 @@ public class ReceourceZone : MonoBehaviour
 
     void FixedUpdate()
     {
+
         if (timer < 0)
         {
             var addition = GetComponentInParent<IReceourceAddition<Receources>>();
             addition.AddReceource(typeOfReceource, productionNumber);
             onEndProductionCycle?.Invoke();
             timer = productivityTime;
+            if (typeOfReceource == Receources.SEEDS)
+            {
+                Debug.Log("prodNumber " + productionNumber);
+            }
         }
         else
         {
