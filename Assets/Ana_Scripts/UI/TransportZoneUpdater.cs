@@ -60,6 +60,7 @@ public class TransportZoneUpdater : MonoBehaviour
         ChangeValueInSlider();
         ChangePlanetDestination();
         UpdateSendButton();
+        ResetButtons();
         
     }
 
@@ -134,7 +135,7 @@ public class TransportZoneUpdater : MonoBehaviour
         if (modifiedPlanets.Count - 1 >= 0)
         {
             
-            var imageToChangeA = ChangeToPlanetA.GetComponentInChildren<Image>();
+            var imageToChangeA = ChangeToPlanetA.GetComponent<Image>();
             imageToChangeA.sprite = modifiedPlanets[0].planetIcon;
             ChangeToPlanetA.onClick.AddListener(OnPlanetChangeToA);
            // Debug.Log("Change Icon planetA "+ modifiedPlanets[0].planetIcon.name);
@@ -143,7 +144,7 @@ public class TransportZoneUpdater : MonoBehaviour
         if (modifiedPlanets.Count - 1 >= 1)
         {
             
-            var imageToChangeB = ChangeToPlanetB.GetComponentInChildren<Image>();
+            var imageToChangeB = ChangeToPlanetB.GetComponent<Image>();
             imageToChangeB.sprite = modifiedPlanets[1].planetIcon;
             ChangeToPlanetB.onClick.AddListener(OnPlanetChangeToB);
            // Debug.Log("Change Icon planetA " + modifiedPlanets[1].planetIcon.name);
