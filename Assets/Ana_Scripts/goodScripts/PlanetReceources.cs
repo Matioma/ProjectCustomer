@@ -51,7 +51,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     [SerializeField]
     int hungryPeople;
     [SerializeField]
-    int deathRate;
+    float deathRate;
     [SerializeField]
     int seedConsumptionAmount;
 
@@ -311,19 +311,20 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
                 if (deathTimer > 0)
                 {
 
-                    deathRate = (hungryPeople * deathRateInterval) / peopleDeathTimer;
+                    deathRate = ((float)hungryPeople*(float)deathRateInterval)/deathTimer;
                     // Debug.Log("current seeds "+receourcesNumber[Receources.SEEDS]);
                     // Debug.Log("hungry people "+peopleToDie);
-                    Debug.Log(deathTimer % deathRateInterval == 0f);
+                    deathRate = Mathf.Ceil(deathRate);
+                    Debug.Log(deathRate);
                     if (info != null)
                     {
-                        GetComponentInParent<UIInformation>().ChangeDeathRateNumber(deathRate);
+                        GetComponentInParent<UIInformation>().ChangeDeathRateNumber((int)deathRate);
                     }
 
                     if (death < 0)
                     {
                         Debug.Log("old population " + population);
-                        population -= deathRate;
+                        population -= (int)deathRate;
                         Debug.Log("new population " + population);
                         if (info != null)
                         {
@@ -377,7 +378,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         if (info != null)
         {
             GetComponentInParent<UIInformation>().ChangeHungryPeople(hungryPeople);
-            GetComponentInParent<UIInformation>().ChangeDeathRateNumber(deathRate);
+            GetComponentInParent<UIInformation>().ChangeDeathRateNumber((int)deathRate);
         }
     }
     public void FarmZoneIsBought()
