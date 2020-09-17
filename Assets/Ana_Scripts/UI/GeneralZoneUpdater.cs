@@ -57,7 +57,7 @@ public class GeneralZoneUpdater : MonoBehaviour
     }
     public void UpdateBirthRate(int newRateNumber, int newRateTime)
     {
-        Debug.Log("Birth Rate: " + newRateNumber.ToString() + " / " + newRateTime.ToString() + " s");
+        //Debug.Log("Birth Rate: " + newRateNumber.ToString() + " / " + newRateTime.ToString() + " s");
         birthRate.text = "Birth Rate: " + newRateNumber.ToString() + " / " + newRateTime.ToString() + " s";
     }
 

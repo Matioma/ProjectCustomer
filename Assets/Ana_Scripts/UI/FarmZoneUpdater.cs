@@ -61,7 +61,7 @@ public class FarmZoneUpdater : MonoBehaviour
     }
     public void UpdateProductionRate(int productivityNumber, int productivityTime)
     {
-        Debug.Log("productivity change "+ productivityNumber.ToString() + " / " + productivityTime.ToString());
+       // Debug.Log("productivity change "+ productivityNumber.ToString() + " / " + productivityTime.ToString());
         productionRate.text = productivityNumber.ToString() + " / " + productivityTime.ToString() + " s";
     }
     public void UpdateConsumptionRate(int consumptionWaterNumber, int consumptionWaterTime)

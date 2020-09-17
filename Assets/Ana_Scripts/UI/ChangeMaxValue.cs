@@ -43,21 +43,21 @@ public class ChangeMaxValue : MonoBehaviour
     void changeValueTo(Receources _rec)
     {
         var slider = GetComponentInChildren<Slider>();
-        Debug.Log("changeValueTo");
+        //Debug.Log("changeValueTo");
         switch (_rec)
         {
             case Receources.SEEDS:
-                Debug.Log("changeValueTo Seeds");
+              //  Debug.Log("changeValueTo Seeds");
                 slider.maxValue = seedsNumber;
                 rec = _rec;
                 break;
             case Receources.WATER:
-                Debug.Log("changeValueTo Water");
+              //  Debug.Log("changeValueTo Water");
                 slider.maxValue = waterNumber;
                 rec = _rec;
                 break;
             case Receources.MONEY:
-                Debug.Log("changeValueTo Money");
+              //  Debug.Log("changeValueTo Money");
                 slider.maxValue = moneyNumber;
                 rec = _rec;
                 break;
