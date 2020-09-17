@@ -34096,6 +34096,10 @@ PrefabInstance:
       propertyPath: resouces.Array.data[2].amount
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: waterConsumtionAmountPerSeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5592803648961402866, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Materials.Array.size
       value: 2
