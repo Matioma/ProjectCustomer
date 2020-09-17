@@ -21,8 +21,6 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
     [SerializeField]
     GameObject mainUI;
     [SerializeField]
-    GameObject GeoMash;
-    [SerializeField]
     GameObject Farm;
     [SerializeField]
     GameObject Water;
