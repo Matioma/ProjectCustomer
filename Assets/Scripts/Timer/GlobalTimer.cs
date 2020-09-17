@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
 {
@@ -29,7 +30,33 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
     }
 
     public bool TimerIsStarted { get; private set; } = false;
-    public bool GameIsPaused { get; private set; } = false;
+    public bool GameIsPaused { 
+        get; private set; } = false;
+
+    public void SetGameIsPaused(bool value)
+    {
+        if (value == GameIsPaused) {
+            return;
+        }
+
+        if (value)
+        {
+            OnPauseGame?.Invoke();
+        }
+        else {
+            OnContinueGame?.Invoke();
+        }
+        GameIsPaused = value;
+    }
+
+
+    [SerializeField]
+    UnityEvent OnPauseGame;
+    [SerializeField]
+    UnityEvent OnContinueGame;
+
+
+
 
 
     public bool GameEnded = false;
@@ -64,12 +91,14 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
     }
 
     public void StopGame() {
-        GameIsPaused = true;
-        Debug.LogWarning("Game Paused"); ;
+        SetGameIsPaused(true);
+        //GameIsPaused = true;
+        //Debug.LogWarning("Game Paused"); ;
     }
 
     public void ResumeGame() {
-        GameIsPaused = false;
+        SetGameIsPaused(false);
+        //GameIsPaused = false;
     }
     public void AccelerateGame()
     {
