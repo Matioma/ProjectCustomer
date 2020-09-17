@@ -28,7 +28,7 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
         }
     }
 
-    public bool TimerIsStarted { get; private set; } = true;
+    public bool TimerIsStarted { get; private set; } = false;
     public bool GameIsPaused { get; private set; } = false;
 
 
