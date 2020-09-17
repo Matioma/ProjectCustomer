@@ -9,30 +9,7 @@ public class AudioManager : SingletonMenobehaviour<AudioManager>
 {
     [SerializeField]
     AudioMixer audioMixer;
-    //public static AudioManager Instance
-    //{
-    //    get{
-    //        if (_instance != null)
-    //        {
-    //            return _instance;
-    //        }
-    //        else {
-    //            Debug.LogWarning("Audio manager Does not exist in this scene, creating a new one");
-    //            GameObject AudioManager = new GameObject();
-    //            AudioManager.AddComponent<AudioManager>();
-    //            return _instance;
-    //        }
-    //    }
-    //    set{
-    //        if (_instance != null) {
-    //            Debug.LogWarning("Tried to create Second Audio manager, the last one is being deleted");
-    //            Destroy(value.gameObject);
-    //            return;
-    //        }
-    //        _instance = value;
-    //    }
-    //}
-
+    
    
 
     [SerializeField]
@@ -66,6 +43,9 @@ public class AudioManager : SingletonMenobehaviour<AudioManager>
 
 
     float currentVolume = 0.8f;
+    public float GetVolume() {
+        return currentVolume;
+    }
 
 
     private void Awake()
