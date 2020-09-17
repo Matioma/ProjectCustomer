@@ -72,11 +72,7 @@ public class AudioManager : SingletonMenobehaviour<AudioManager>
     {
         Instance = this;
 
-        if (WarningAudio.Instance != null)
-        {
-            WarningAudio.Instance.SetWarningSound(PeopleStartDying);
-        }
-
+      
 
 
         foreach (Button obj in FindObjectsOfType<Button>())
@@ -90,6 +86,11 @@ public class AudioManager : SingletonMenobehaviour<AudioManager>
 
     private void Start()
     {
+        if (WarningAudio.Instance != null)
+        {
+            WarningAudio.Instance.SetWarningSound(PeopleStartDying);
+        }
+
         warningSounds();
 
         GlobalTimer.Instance.OnDefeat += () =>
