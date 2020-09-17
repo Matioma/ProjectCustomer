@@ -11,7 +11,7 @@ public class Manager : MonoBehaviour
     GameObject tutorial;
     
 
-    private void Start()
+    private void Awake()
     {
         for (int i = 0; i < planets.Length; i++)
         {
