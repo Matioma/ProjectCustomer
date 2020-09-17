@@ -317,7 +317,15 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
                 }
                 else
                 {
-                    population = 0;
+                    if (population >= hungryPeople)
+                    {
+                        population -= hungryPeople;
+                    }
+                    else
+                    {
+                        population = 0;
+                    }
+                    
                     if (info != null)
                     {
                         GetComponentInParent<UIInformation>().ChangePopulationNumber(population);
