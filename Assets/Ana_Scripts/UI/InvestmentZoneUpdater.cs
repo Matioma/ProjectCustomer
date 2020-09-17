@@ -38,7 +38,6 @@ public class InvestmentZoneUpdater : MonoBehaviour
         {
             unlockZoneButton.gameObject.SetActive(false);
             UIZoneUnlocked.SetActive(true);
-            
         }
         else
         {

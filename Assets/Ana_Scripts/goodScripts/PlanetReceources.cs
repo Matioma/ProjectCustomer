@@ -143,10 +143,6 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     }
    
 
-    public Dictionary<Receources, int> GetResouses()
-    {
-        return receourcesNumber;
-    }
 
     public void OnValidate()
     {
@@ -191,10 +187,6 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         {
             info.ChangeConsumptionAmountSeeds(seedConsumptionAmount);
         }
-        else
-        {
-            // Debug.Log("UIInformation is null");
-        }
     }
 
     public void calculateConsumptionWaterAmount()
@@ -206,15 +198,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
                 waterConsumtionAmount = (productivity / initialFoodProd) * waterConsumtionAmountPerSeed;
             info.ChangeConsumptionAmountWater(waterConsumtionAmount);
         }
-        else Debug.Log("no change");
     }
-
-    bool isEnoughReceourse(Receources type)
-    {
-        if (receourcesNumber[type] > 0) return true;
-        return false;
-    }
-
 
     public void AddReceource(Receources rec, int amount)
     {
@@ -222,32 +206,13 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         {
             return;
         }
-        // Debug.Log("method amount " + amount);
         receourcesNumber[rec] += amount;
 
         var addition = GetComponentInParent<UIInformation>();
-        if (addition == null)
-        {
-
-            Debug.LogWarning(transform.name + " planet resources resources has no UIINFORMATION component");
-        }
-        else
+        if (addition != null)
         {
             addition.AddReceource(rec, amount);
         }
-        //if (Receources.SEEDS == rec)
-        // {
-        //  Debug.Log("newSeeds " + receourcesNumber[rec]);
-        //}
-
-
-
-        //Debug.Log("newSeeds " + receourcesNumber[rec]);
-
-
-
-
-
     }
 
 
@@ -258,11 +223,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     }
     void FixedUpdate()
     {
-        //Debug.Log("seeds before check: " + receourcesNumber[Receources.SEEDS]);
-        // Debug.Log("consumption " + seedConsumptionAmount);
         seedConsumption();
-        //Debug.Log("seeds after check: " + receourcesNumber[Receources.SEEDS]);
-        //Debug.Log("consumption " + seedConsumptionAmount);
         if (isWaterConsuming == true)
         {
             waterConsumption();
@@ -295,7 +256,6 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     float death;
     void CheckHunger()
     {
-        //Debug.Log("Deathrate planetReceources 1 " + deathRate);
         if (receourcesNumber[Receources.SEEDS] < seedConsumptionAmount)
         {
             PeopleLackFood = true;
@@ -306,16 +266,11 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
             }
             if (hungerTimer < 0)
             {
-
                 PeopleAreDying = true;
                 if (deathTimer > 0)
                 {
-
                     deathRate = ((float)hungryPeople*(float)deathRateInterval)/deathTimer;
-                    // Debug.Log("current seeds "+receourcesNumber[Receources.SEEDS]);
-                    // Debug.Log("hungry people "+peopleToDie);
                     deathRate = Mathf.Ceil(deathRate);
-                    Debug.Log(deathRate);
                     if (info != null)
                     {
                         GetComponentInParent<UIInformation>().ChangeDeathRateNumber((int)deathRate);
@@ -323,9 +278,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
 
                     if (death < 0)
                     {
-                        Debug.Log("old population " + population);
                         population -= (int)deathRate;
-                        Debug.Log("new population " + population);
                         if (info != null)
                         {
                             GetComponentInParent<UIInformation>().ChangePopulationNumber(population);
@@ -341,7 +294,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
                 }
                 else
                 {
-                    if (population >= hungryPeople)
+                    if (population > hungryPeople)
                     {
                         population -= hungryPeople;
                     }
@@ -383,7 +336,6 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     }
     public void FarmZoneIsBought()
     {
-        // Debug.Log("water consumption starts");
         isWaterConsuming = true;
         isFarmZoneBought = true;
     }
@@ -404,7 +356,6 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
 
     private void waterConsumption()
     {
-        // Debug.Log("water consiming "+ waterConsumtionAmount);
         if (waterTimer < 0 && receourcesNumber[Receources.WATER] > 0)
         {
             if (receourcesNumber[Receources.WATER] > waterConsumtionAmount)
@@ -429,9 +380,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         {
             if (receourcesNumber[Receources.SEEDS] > seedConsumptionAmount)
             {
-                // Debug.Log("seed before decrease " + receourcesNumber[Receources.SEEDS]);
                 AddReceource(Receources.SEEDS, -seedConsumptionAmount);
-                //Debug.Log("seed after decrease " + receourcesNumber[Receources.SEEDS]);
             }
             else
             {
@@ -445,7 +394,6 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         {
             seedTimer -= GlobalTimer.Instance.DeltaTime;
         }
-        // Debug.Log("seed during check " + receourcesNumber[Receources.SEEDS]);
     }
 
 

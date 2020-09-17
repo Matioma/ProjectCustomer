@@ -44,26 +44,19 @@ public class SendReceources : MonoBehaviour
 
     public void ChangeAmount(float newAmount)
     {
-       // Debug.Log("old amount "+amount);
         amount = newAmount;
-       // Debug.Log("new amount " + amount);
     }
 
     public void ChangeDestination(GameObject newPlanet)
     {
         planetToSend = newPlanet;
-        
     }
     public void Send()
     {
         var currentPlanet = GetComponentInParent<PlanetReceources>();
 
-        Debug.Log("check amount " + amount);
-
         if (currentPlanet.GetReceouceNumber(typeOfReceurce) > amount)
-        {
-            
-            //planetToSend.GetComponent<IReceourceAddition<Receources, int>>().AddReceource(typeOfReceurce, (int)(amount));
+        { 
             //Notify SpaceShipManager to send a ship
             SpaceShipManager.Instance.SendShip(currentPlanet.GetComponentInParent<Planet>(), planetToSend.GetComponentInParent<Planet>(), typeOfReceurce, (int)amount);
             currentPlanet.GetComponent<IReceourceAddition<Receources>>().AddReceource(typeOfReceurce, (int)(-amount));

@@ -12,14 +12,12 @@ public class EnableZone : MonoBehaviour
     {
         zone.GetComponent<ReceourceZone>().enabled = true;
         isActive = true;
-       // zone.SetActive(true);
     }
 
     public void DisableZone()
     {
         zone.GetComponent<ReceourceZone>().enabled = false;
         isActive = false;
-       // zone.SetActive(false);
     }
 
     public bool getIsActive()

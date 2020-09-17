@@ -46,16 +46,4 @@ public class ResourcesButtonsUpdater : MonoBehaviour
         water.text = waterNumber.ToString();
         money.text = moneyNumber.ToString();
     }
-
-    public void CheckForObjects()
-    {
-        Debug.Log(seeds);
-        Debug.Log(water);
-        Debug.Log(money);
-        Debug.Log(seedsNumber);
-        Debug.Log(waterNumber);
-        Debug.Log(moneyNumber);
-    }
-
-
 }

@@ -41,7 +41,7 @@ public class CanvasManager : MonoBehaviour
 
     public void SwitchCanvas(CanvasType _type)
     {
-        
+
         if (lastActiveCanvas != null)
         {
             lastActiveCanvas.gameObject.SetActive(false);
@@ -56,33 +56,19 @@ public class CanvasManager : MonoBehaviour
 
     public void EnableResourceButtons()
     {
-        //if (resourceButtons.activeSelf == false)
-        //{
-            resourceButtons.SetActive(true);
-
-        //}
+        resourceButtons.SetActive(true);
     }
     public void DisableableResourceButtons()
     {
-        //if (resourceButtons.activeSelf == true)
-        //{
-            resourceButtons.SetActive(false);
-       // }
+        resourceButtons.SetActive(false);
     }
     public void EnableTitleAndDescription()
     {
-        //if (resourceButtons.activeSelf == false)
-        //{
         TitleAndDescription.SetActive(true);
-
-        //}
     }
     public void DisableableTitleAndDescription()
     {
-        //if (resourceButtons.activeSelf == true)
-        //{
         TitleAndDescription.SetActive(false);
-        // }
     }
 
     public CanvasController GetCurrentCanvas()

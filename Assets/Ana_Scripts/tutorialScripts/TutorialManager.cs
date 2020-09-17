@@ -25,14 +25,12 @@ public class TutorialManager : MonoBehaviour
     UIInformation planetInformation;
     CanvasManager mainUIManager;
 
-    // Start is called before the first frame update
     void Start()
     {
         planetInformation = StarterPlanet.GetComponent<UIInformation>();
         mainUIManager = MainUI.GetComponent<CanvasManager>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         changeScreen();
@@ -40,58 +38,47 @@ public class TutorialManager : MonoBehaviour
 
     bool CheckConditions(int index)
     {
-        //Debug.Log("index " + index);
         switch (index)
         {
             case 0:
                 if (planetInformation.GetIsZoneUnlocked(Receources.MONEY) == true)
                 {
-                   // Invoke("getNextScreen", delay);
                     return true;
                 }
                 break;
             case 1:
                 if (planetInformation.GetIsZoneUnlocked(Receources.WATER) == true)
                 {
-                   // Invoke("getNextScreen", delay);
                     return true;
                 }
                 break;
             case 2:
                 if (planetInformation.GetIsZoneUnlocked(Receources.SEEDS) == true)
                 {
-                    //Invoke("getNextScreen", delay);
                     return true;
                 }
                 break;
             case 3:
-                Debug.Log("index " + index);
-                Debug.Log("zone unlocked " + planetInformation.GetIsZoneUnlocked(Receources.INDUSTRIAL));
                 if (planetInformation.GetIsZoneUnlocked(Receources.INDUSTRIAL) == true)
                 {
-                    
-                    //Invoke("getNextScreen", delay);
                     return true;
                 }
                 break;
             case 4:
                 if (planetInformation.GetIsOneUpgradeBought() == true)
                 {
-                    //Invoke("getNextScreen", delay);
                     return true;
                 }
                 break;
             case 5:
                 if (mainUIManager.GetCurrentCanvas().type == CanvasType.TransportZone)
                 {
-                   // Invoke("getNextScreen", delay);
                     return true;
                 }
                 break;
             case 6:
                 if (mainUIManager.GetCurrentCanvas().type == CanvasType.NoZone)
                 {
-                    //Invoke("getNextScreen", delay);
                     return true;
                 }
                 break;

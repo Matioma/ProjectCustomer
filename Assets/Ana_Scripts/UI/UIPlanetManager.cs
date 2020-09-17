@@ -40,8 +40,6 @@ public class UIPlanetManager : MonoBehaviour
     public void InitializeGeneral(int populationNumber, int hungryPeopleNumber, int deathRateNumber, int deathRateTime, int birthRateNumber, int birthRateTime, int consumptionSeedNumber, int consumptionSeedTime)
     {
         UIGeneral.GetComponent<GeneralZoneUpdater>().Initialize(populationNumber, hungryPeopleNumber, deathRateNumber, deathRateTime, birthRateNumber, birthRateTime, consumptionSeedNumber, consumptionSeedTime);
-        //Debug.Log("Birth Rate UIPlanetManager: " + birthRateNumber.ToString() + " / " + birthRateTime.ToString() + " s");
-
     }
     public void InitializeFarmZone(bool isZoneUnlocked, int productivityNumber, int productivityTime, int consumptionWaterNumber, int consumptionWaterTime, GameObject Farm, int price)
     {
@@ -66,13 +64,6 @@ public class UIPlanetManager : MonoBehaviour
         UITransportZone.GetComponent<TransportZoneUpdater>().Initialize(IndustrialZone, currentPlanet, newSeedNumber, newWaterNumber, newMoneyNimber);
     }
 
-    public void CheckForResourceButtons()
-    {
-        Debug.Log(UIResouceButtons);
-        Debug.Log(UIResouceButtons.GetComponent<ResourcesButtonsUpdater>());
-        UIResouceButtons.GetComponent<ResourcesButtonsUpdater>().CheckForObjects();
-    }
-
     public void InitializeRecourceButtons(int newSeedNumber, int newWaterNumber, int newMoneyNimber)
     {
         UIResouceButtons.GetComponent<ResourcesButtonsUpdater>().ResetButtons(newSeedNumber, newWaterNumber, newMoneyNimber);
@@ -83,10 +74,6 @@ public class UIPlanetManager : MonoBehaviour
         UITitleAndDescription.GetComponent<TitleAndDescriptionUpdater>().Initialize(title, description);
     }
 
-    public void UpdateQuestes()
-    {
-
-    }
     public void UpdatePopulationNumber(int newNumber)
     {
         UIGeneral.GetComponent<GeneralZoneUpdater>().UpdatePopulationNumber(newNumber);
@@ -97,7 +84,6 @@ public class UIPlanetManager : MonoBehaviour
     }
     public void UpdateDeathRate(int newRateNumber, int newRateTime)
     {
-        //Debug.Log("UIPlanetManager  Death Rate: " + newRateNumber.ToString() + " / " + newRateTime.ToString() + " s");
         UIGeneral.GetComponent<GeneralZoneUpdater>().UpdateDeathRate(newRateNumber, newRateTime);
     }
     public void UpdateBirthRate(int newRateNumber, int newRateTime)

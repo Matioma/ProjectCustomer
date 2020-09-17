@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
@@ -29,8 +28,4 @@ public class Manager : MonoBehaviour
         CameraController.Instance.SelectInitialPlanet();
     }
 
-    public void ReploadGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
 }

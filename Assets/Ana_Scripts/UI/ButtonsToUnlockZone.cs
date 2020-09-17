@@ -22,8 +22,6 @@ public class ButtonsToUnlockZone : MonoBehaviour
 
     void OnClickToBuy()
     {
-        UIToUnlock.SetActive(true);
-       // buyButton.gameObject.SetActive(false);
-       
+        UIToUnlock.SetActive(true);       
     }
 }

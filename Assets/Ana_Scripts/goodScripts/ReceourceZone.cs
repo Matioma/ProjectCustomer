@@ -61,15 +61,10 @@ public class ReceourceZone : MonoBehaviour
         GetComponentInParent<PlanetReceources>().GetComponentInParent<UIInformation>().ChangeProductivity(typeOfReceource, amount,upgradeDescription, price);
         if (typeOfReceource == Receources.SEEDS)
         {
-            Debug.Log("Upgrade Change Water Change");
             GetComponentInParent<PlanetReceources>().calculateConsumptionWaterAmount();
         }
     }
 
-    //public int GetProductivityAmount()
-    //{
-    //    return productionNumber;
-    //}
     public int GetProductivityTime()
     {
         return productivityTime;

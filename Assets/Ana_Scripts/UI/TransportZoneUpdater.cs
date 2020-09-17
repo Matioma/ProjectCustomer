@@ -48,20 +48,16 @@ public class TransportZoneUpdater : MonoBehaviour
     {
         modifiedPlanets = new List<PlanetIcon>();
     }
-    public void Initialize(GameObject IndustrialZone, GameObject currentPlanet,int newSeedNumber, int newWaterNumber, int newMoneyNimber)
+    public void Initialize(GameObject IndustrialZone, GameObject currentPlanet, int newSeedNumber, int newWaterNumber, int newMoneyNimber)
     {
         Invest = IndustrialZone;
-        //Debug.Log(modifiedPlanets.Count);
-
         ChangePlanetList(currentPlanet);
-        //Debug.Log(modifiedPlanets.Count);
-
         ChangeButtonsResourceChange();
         ChangeValueInSlider();
         ChangePlanetDestination();
         UpdateSendButton();
         ResetButtons();
-        slider.GetComponent<ChangeMaxValue>().ResetButtons(newSeedNumber,newWaterNumber,newMoneyNimber);
+        slider.GetComponent<ChangeMaxValue>().ResetButtons(newSeedNumber, newWaterNumber, newMoneyNimber);
 
     }
 
@@ -113,20 +109,15 @@ public class TransportZoneUpdater : MonoBehaviour
     }
     private void ChangePlanetList(GameObject currentPlanet)
     {
-        //if (modifiedPlanets.Count != 0)
-        //{
-            modifiedPlanets.Clear();
-        //}
-        //if (planets.Count != 0)
-        //{
-            for (int i = 0; i < planets.Count; i++)
+        modifiedPlanets.Clear();
+
+        for (int i = 0; i < planets.Count; i++)
+        {
+            if (planets[i].planet != currentPlanet)
             {
-                if (planets[i].planet != currentPlanet)
-                {
-                    modifiedPlanets.Add(planets[i]);
-                }
+                modifiedPlanets.Add(planets[i]);
             }
-        //}
+        }
     }
 
     void ChangePlanetDestination()
@@ -135,21 +126,15 @@ public class TransportZoneUpdater : MonoBehaviour
         ChangeToPlanetB.onClick.RemoveAllListeners();
         if (modifiedPlanets.Count - 1 >= 0)
         {
-            
             var imageToChangeA = ChangeToPlanetA.GetComponent<Image>();
             imageToChangeA.sprite = modifiedPlanets[0].planetIcon;
             ChangeToPlanetA.onClick.AddListener(OnPlanetChangeToA);
-           // Debug.Log("Change Icon planetA "+ modifiedPlanets[0].planetIcon.name);
-           // Debug.Log("Change Icon planetA "+ modifiedPlanets[0].planet.gameObject.name);
         }
         if (modifiedPlanets.Count - 1 >= 1)
         {
-            
             var imageToChangeB = ChangeToPlanetB.GetComponent<Image>();
             imageToChangeB.sprite = modifiedPlanets[1].planetIcon;
             ChangeToPlanetB.onClick.AddListener(OnPlanetChangeToB);
-           // Debug.Log("Change Icon planetA " + modifiedPlanets[1].planetIcon.name);
-           // Debug.Log("Change Icon planetB "+ modifiedPlanets[1].planet.gameObject.name);
         }
     }
 
@@ -179,7 +164,6 @@ public class TransportZoneUpdater : MonoBehaviour
 
     private void ResetButtons()
     {
-        
         Invest.GetComponent<SendReceources>().ChangeTypeOfReceource(Receources.ALL);
         SeedBackgroundIcon.SetActive(false);
         WaterBackgroundIcon.SetActive(false);

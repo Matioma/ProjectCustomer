@@ -42,7 +42,6 @@ public class CanvasPlanetManager : MonoBehaviour
         {
             desiredScreen.gameObject.SetActive(true);
             lastActiveCanvs = desiredScreen;
-            Debug.Log("switch planet" + desiredScreen);
         }
     }
 }
