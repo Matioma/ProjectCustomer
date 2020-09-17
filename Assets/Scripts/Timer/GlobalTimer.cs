@@ -110,15 +110,14 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
             return;
         }
         GameTimeLeftTimer -= DeltaTime;
-        if (GameTimeLeftTimer < 0) {
-            GameTimeLeftTimer = 0;
-        }
+        
 
-        if (GameTimeLeftTimer < 0) {
+        if (GameTimeLeftTimer <= 0) {
             if (!GameEnded) { 
                 OnTimerEnd?.Invoke();
                 GameEnded = true;
             }
+            GameTimeLeftTimer = 0;
         }
     }
 
@@ -148,6 +147,7 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
             if (HasWon())
             {
                 OnVictory?.Invoke();
+                //Debug.Log("YOu have won");
                 GetComponent<CanvasSwitcher>()?.OpenScreen(CanvasType.WinScreen);
             }
             else
@@ -162,12 +162,21 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
 
     bool HasWon()
     {
-        foreach(var planetResource in Resources.FindObjectsOfTypeAll<PlanetReceources>())
+        Debug.Log(FindObjectsOfType<Planet>().Length);
+
+        //foreach(var planetResource in Resources.FindObjectsOfTypeAll<PlanetReceources>())
+
+        foreach (var planetResource in FindObjectsOfType<Planet>())
         {
-            if (planetResource.getPopulation() < foodRequiredCondition) {
+
+            //Debug.LogError("Test" + (planetResource.getPopulation() < foodRequiredCondition));
+
+            if (planetResource.GetComponentInChildren<PlanetReceources>().getPopulation() < foodRequiredCondition) {
+                //Debug.Log("YOu have won");
                 return false;
             }
         }
+        Debug.LogError("Test");
         return true;
     }
 
