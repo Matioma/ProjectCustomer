@@ -13,11 +13,11 @@ public class VolumeSlider : MonoBehaviour
         slider.value = AudioManager.Instance.GetVolume();
        
         slider.onValueChanged.AddListener(onChangedVolume);
-      
     }
 
     void onChangedVolume(float value)
     {
+        //Debug.LogWarning(value +"Test");
         AudioManager.Instance.SetVolume(value);
 
     }
