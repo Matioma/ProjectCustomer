@@ -50,6 +50,10 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     float deathTimer;
     [SerializeField]
     int hungryPeople;
+    public int GetHungryPeople() {
+        return hungryPeople;
+    }
+
     [SerializeField]
     float deathRate;
     [SerializeField]
