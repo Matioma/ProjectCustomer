@@ -11834,6 +11834,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 487400131177258548, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 5604539269314155553, guid: dfb8dd3a9527669438033c0d4f5c6a91, type: 3}
     - target: {fileID: 501586004884230337, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: seedsNeededToBuy
       value: 0
@@ -11862,6 +11866,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1299.1328
       objectReference: {fileID: 0}
+    - target: {fileID: 1056335970748478923, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2540817853737639666, guid: dfb8dd3a9527669438033c0d4f5c6a91, type: 3}
     - target: {fileID: 1266444452793201707, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Mesh
       value: 

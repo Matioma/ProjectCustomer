@@ -10505,7 +10505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: resouces.Array.data[0].amount
-      value: 20000
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: hungerWarningTimer
@@ -11875,7 +11875,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432442779}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -86, y: 435, z: -219}
+  m_LocalPosition: {x: -86, y: 176.6, z: -191.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 534168979}
@@ -17689,6 +17689,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2439531832826465732, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: upgrades.Array.data[0].description
+      value: 111
+      objectReference: {fileID: 0}
+    - target: {fileID: 2439531832826465732, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: upgrades.Array.data[1].description
+      value: 222
+      objectReference: {fileID: 0}
+    - target: {fileID: 2439531832826465732, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: upgrades.Array.data[2].description
+      value: 333
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550457460017896156, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: upgrades.Array.data[0].description
+      value: 111
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550457460017896156, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: upgrades.Array.data[1].description
+      value: 222
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550457460017896156, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
+      propertyPath: upgrades.Array.data[2].description
+      value: 333
+      objectReference: {fileID: 0}
     - target: {fileID: 4397491208869768592, guid: 8e54e8d45ef0c1444944ff0d4dd3fa79, type: 3}
       propertyPath: m_LocalPosition.x
       value: 115.2
@@ -19470,15 +19494,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3326530735659460459, guid: 97b451e9ed8340c45aaf9f58a31cd66c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5293495716061621213, guid: 97b451e9ed8340c45aaf9f58a31cd66c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6424163865008975473, guid: 97b451e9ed8340c45aaf9f58a31cd66c, type: 3}
       propertyPath: m_Name
       value: PasuedMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424163865008975473, guid: 97b451e9ed8340c45aaf9f58a31cd66c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97b451e9ed8340c45aaf9f58a31cd66c, type: 3}
