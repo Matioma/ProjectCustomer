@@ -267,7 +267,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
             if (hungerTimer < 0)
             {
                 PeopleAreDying = true;
-                if (deathTimer > 0)
+                if (deathTimer > 0.5f)
                 {
                     deathRate = ((float)hungryPeople*(float)deathRateInterval)/deathTimer;
                     deathRate = Mathf.Ceil(deathRate);
@@ -278,7 +278,15 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
 
                     if (death < 0)
                     {
-                        population -= (int)deathRate;
+                        if (population > deathRate)
+                        {
+                            population -= (int)deathRate;
+                        }
+                        else
+                        {
+                            population = 0;
+                        }
+                        
                         if (info != null)
                         {
                             GetComponentInParent<UIInformation>().ChangePopulationNumber(population);
@@ -294,9 +302,12 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
                 }
                 else
                 {
+                    Debug.Log(hungryPeople);
                     if (population > hungryPeople)
                     {
+                        
                         population -= hungryPeople;
+                        hungryPeople = 0;
                     }
                     else
                     {
