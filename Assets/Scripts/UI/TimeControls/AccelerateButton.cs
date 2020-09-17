@@ -11,11 +11,12 @@ public class AccelerateButton : MonoBehaviour
     {
         GetComponent<Button>().onClick.AddListener(() =>
         {
+            GlobalTimer.Instance.AccelerateGame();
             if (GetComponentInChildren<TextMeshProUGUI>() != null) {
                 GetComponentInChildren<TextMeshProUGUI>().text ="x" + GlobalTimer.Instance.GetTimeMultiplier();
             }
             
-            GlobalTimer.Instance.AccelerateGame();
+            
         });
     }
 
