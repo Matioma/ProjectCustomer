@@ -10323,7 +10323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: hungerWarningTimer
-      value: 10
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: resouces.Array.data[2].amount
@@ -15509,8 +15509,8 @@ MonoBehaviour:
   worldViewTransform: {fileID: 1432442782}
   transitionTime: 1
   SelectedPlanet: {fileID: 1211769336}
-  RotationSensitivity: 6.56
-  planetInertia: 0.936
+  RotationSensitivity: 3
+  planetInertia: 0.7
   maxMovementMagnitute: 2
 --- !u!1 &1774067392
 GameObject:
@@ -16232,7 +16232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1138074116525986800, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: deathRateInterval
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1138074117638528657, guid: a5be6ae5795e5714ab114934a1a8c5ae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19019,7 +19019,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 130470384938208327, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: acelerationValues.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 130470384938208327, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: OnPauseGame.m_PersistentCalls.m_Calls.Array.size
@@ -19039,7 +19039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 130470384938208327, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: GameLengthInSeconds
-      value: 900
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 130470384938208327, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: OnPauseGame.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -19120,6 +19120,14 @@ PrefabInstance:
     - target: {fileID: 130470384938208327, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: OnContinueGame.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 130470384938208327, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
+      propertyPath: acelerationValues.Array.data[2]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 130470384938208327, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
+      propertyPath: acelerationValues.Array.data[3]
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 809283179966466752, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: m_LocalPosition.x
