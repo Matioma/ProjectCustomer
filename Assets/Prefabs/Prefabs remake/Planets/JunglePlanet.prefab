@@ -33954,7 +33954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: upgrades.Array.data[0].productivityIncrease
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: upgrades.Array.data[0].price
@@ -33962,7 +33962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: upgrades.Array.data[1].productivityIncrease
-      value: 40
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: upgrades.Array.data[1].price
@@ -33970,11 +33970,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: upgrades.Array.data[2].productivityIncrease
-      value: 80
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: upgrades.Array.data[2].price
       value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[0].description
+      value: tractors
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[1].description
+      value: fertilizers
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013551838991471877, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: upgrades.Array.data[2].description
+      value: hothouse
       objectReference: {fileID: 0}
     - target: {fileID: 5041477867368152077, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Mesh
@@ -34102,7 +34114,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: deathRateInterval
-      value: 5
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: maxPopulation
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: peopleDeathTimer
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5592803648961402866, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Materials.Array.size
@@ -34170,7 +34190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6338748181924666647, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: productionNumber
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6627168064758100862, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: LevelsPrefabs.Array.size
