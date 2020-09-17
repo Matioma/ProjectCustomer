@@ -12116,7 +12116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5319158110676492867, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: MinCameraDistFromPlanet
-      value: 40
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 5319158110676492873, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12204,7 +12204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: resouces.Array.data[1].amount
-      value: 1000
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: resouces.Array.data[2].type
@@ -12212,7 +12212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: resouces.Array.data[2].amount
-      value: 2000
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: seedConsumptionAmount
@@ -12221,6 +12221,10 @@ PrefabInstance:
     - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: waterConsumtionAmountPerSeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319158111791132456, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
+      propertyPath: deathRateInterval
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5592803648961402866, guid: dbeb1e0507d5b5147a23a844ad8e296a, type: 3}
       propertyPath: m_Materials.Array.size

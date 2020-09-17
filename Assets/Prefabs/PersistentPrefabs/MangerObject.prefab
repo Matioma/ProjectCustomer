@@ -163,7 +163,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b8383448718907499b2bf0b133a4210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodRequiredCondition: 100
+  foodRequiredCondition: 75
+  OnPauseGame:
+    m_PersistentCalls:
+      m_Calls: []
+  OnContinueGame:
+    m_PersistentCalls:
+      m_Calls: []
+  GameEnded: 0
   GameLengthInSeconds: 900
   acelerationValues: 010000000200000004000000
   TimeMultiplier: 1
