@@ -40,6 +40,8 @@ public class UIPlanetManager : MonoBehaviour
     public void InitializeGeneral(int populationNumber, int hungryPeopleNumber, int deathRateNumber, int deathRateTime, int birthRateNumber, int birthRateTime, int consumptionSeedNumber, int consumptionSeedTime)
     {
         UIGeneral.GetComponent<GeneralZoneUpdater>().Initialize(populationNumber, hungryPeopleNumber, deathRateNumber, deathRateTime, birthRateNumber, birthRateTime, consumptionSeedNumber, consumptionSeedTime);
+        //Debug.Log("Birth Rate UIPlanetManager: " + birthRateNumber.ToString() + " / " + birthRateTime.ToString() + " s");
+
     }
     public void InitializeFarmZone(bool isZoneUnlocked, int productivityNumber, int productivityTime, int consumptionWaterNumber, int consumptionWaterTime, GameObject Farm, int price)
     {

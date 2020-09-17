@@ -57,48 +57,47 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
     [SerializeField]
     bool selected = false;
 
-    bool isOneUpgradeBought=false;
+    bool isOneUpgradeBought = false;
 
     // Start is called before the first frame update
     void Start()
     {
         
-
-        PlanetReceources planetReceources = GetComponentInChildren<PlanetReceources>();
-
-        birthRateNumber = planetReceources.getBirthRateNumber();
-        birthRateTime = 1;
-        deathRateTime = 1;
-
-        seedConsumptionAmount = planetReceources.getSeedComsumptionAmount();
-        seedConsumptionTime = planetReceources.getSeedComsumptionTime();
-        waterConsumtionAmount = planetReceources.getWaterComsumptionAmount();
-        waterConsumtionTime = planetReceources.getWaterComsumptionTime();
-
-        planetPopulation = planetReceources.getPopulation();
-
-
-        planetGoals = GetComponent<Quest>().getGoalList();
-
-
-        
-
     }
 
     void Awake()
     {
-        PlanetReceources planetReceources = GetComponentInChildren<PlanetReceources>();
-        resourcesNumber = new Dictionary<Receources, int>(planetReceources.GetResouses());
-        seedProductionAmount = Farm.GetComponent<ReceourceZone>().GetProductionAmount();
-        seedProductionTime = Farm.GetComponent<ReceourceZone>().GetProductivityTime();
+        PlanetReceources planetResources = GetComponentInChildren<PlanetReceources>();
+        resourcesNumber = new Dictionary<Receources, int>(planetResources.GetResouses());
+        birthRateNumber = planetResources.getBirthRateNumber();
+        birthRateTime = planetResources.getBirthRateTime();
+        deathRateTime = 1;
 
-        waterProductionAmount = Water.GetComponent<ReceourceZone>().GetProductionAmount();
-        waterProductionTime = Water.GetComponent<ReceourceZone>().GetProductivityTime();
+        seedConsumptionAmount = planetResources.getSeedComsumptionAmount();
+        seedConsumptionTime = planetResources.getSeedComsumptionTime();
+
+        waterConsumtionAmount = planetResources.getWaterComsumptionAmount();
+        waterConsumtionTime = planetResources.getWaterComsumptionTime();
+
+        planetPopulation = planetResources.getPopulation();
+
+        if (Farm != null)
+        {
+            seedProductionAmount = Farm.GetComponent<ReceourceZone>().GetProductionAmount();
+            seedProductionTime = Farm.GetComponent<ReceourceZone>().GetProductivityTime();
+        }
+        if (Water != null)
+        {
+            waterProductionAmount = Water.GetComponent<ReceourceZone>().GetProductionAmount();
+            waterProductionTime = Water.GetComponent<ReceourceZone>().GetProductivityTime();
+        }
         if (Mine != null)
         {
             moneyProductionAmount = Mine.GetComponent<ReceourceZone>().GetProductionAmount();
             moneyProductionTime = Mine.GetComponent<ReceourceZone>().GetProductivityTime();
         }
+
+
     }
 
 
@@ -118,11 +117,11 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
             //{
             //    if (mainUI != null)
             //    {
-                    mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(rec, resourcesNumber[rec]);
-                    //Debug.Log("is not null");
-                //}
+            mainUI.GetComponent<UIPlanetManager>().UpdateResourceButtons(rec, resourcesNumber[rec]);
+            //Debug.Log("is not null");
             //}
-            
+            //}
+
 
         }
     }
@@ -165,26 +164,22 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         {
             case Receources.SEEDS:
                 return isFarmUnlocked;
-               // break;
+            // break;
             case Receources.WATER:
                 return isWaterUnlocked;
-               // break;
+            // break;
             case Receources.MONEY:
                 return isMineUnlocked;
-               // break;
+            // break;
             case Receources.INDUSTRIAL:
                 return isInvestmentUnlocked;
-                //break;
+            //break;
             default:
                 return false;
-                
+
         }
     }
 
-    void Update()
-    {
-        //Debug.Log("investment Zone status " + isInvestmentUnlocked);
-    }
     public void PlanetIsSelected()
     {
         selected = true;
@@ -202,33 +197,35 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
     public void InitializeUI()
     {
         Debug.Log("init ui");
-        if (mainUI.GetComponent<UIPlanetManager>()!=null)
+        if (mainUI.GetComponent<UIPlanetManager>() != null)
         {
-            mainUI.GetComponent<UIPlanetManager>().InitializeGeneral(planetPopulation, hungryPeople, deathRateNumber, deathRateTime, birthRateNumber, birthRateTime,seedConsumptionAmount,seedConsumptionTime);
+            Debug.Log("Birth Rate UIInformation: " + birthRateNumber.ToString() + " / " + birthRateTime.ToString() + " s");
+
+            mainUI.GetComponent<UIPlanetManager>().InitializeGeneral(planetPopulation, hungryPeople, deathRateNumber, deathRateTime, birthRateNumber, birthRateTime, seedConsumptionAmount, seedConsumptionTime);
             if (Farm != null)
             {
-                
+
 
                 mainUI.GetComponent<UIPlanetManager>().InitializeFarmZone(isFarmUnlocked, seedProductionAmount, seedProductionTime, waterConsumtionAmount, waterConsumtionTime, Farm, Farm.GetComponent<BuyZone>().GetPrice());
                 Debug.Log("init ui farm");
             }
             if (Water != null)
             {
-                
+
 
                 mainUI.GetComponent<UIPlanetManager>().InitializeWaterZone(isWaterUnlocked, waterProductionAmount, waterProductionTime, Water, Water.GetComponent<BuyZone>().GetPrice());
                 Debug.Log("init water");
             }
             if (Mine != null)
             {
-               
+
 
                 mainUI.GetComponent<UIPlanetManager>().InitializeMineralZone(isMineUnlocked, moneyProductionAmount, moneyProductionTime, Mine, Mine.GetComponent<BuyZone>().GetPrice());
                 Debug.Log("init ui mine");
             }
             if (Invest != null)
             {
-               
+
 
                 mainUI.GetComponent<UIPlanetManager>().InitializeInvestmentZone(isInvestmentUnlocked, Farm, Water, Mine, Invest, Invest.GetComponent<BuyZone>().GetPrice());
                 mainUI.GetComponent<UIPlanetManager>().InitializeTransportZone(Invest, planet);
@@ -246,14 +243,6 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         }
     }
 
-    public void initTest()
-    {
-        Debug.Log("init buttons");
-        mainUI.GetComponent<UIPlanetManager>().CheckForResourceButtons();
-        //Debug.Log(resourcesNumber[Receources.SEEDS] + "    " + resourcesNumber[Receources.WATER] + "    " + resourcesNumber[Receources.MONEY]);
-        Debug.Log(resourcesNumber);
-
-    }
 
     public void ZoneIsUnlocked(Receources Id)
     {
@@ -278,7 +267,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         planetPopulation = amount;
         if (selected)
         {
-            mainUI.GetComponent<UIPlanetManager>().UpdatePopulationNumber(amount); 
+            mainUI.GetComponent<UIPlanetManager>().UpdatePopulationNumber(amount);
         }
     }
     public void ChangeHungryPeople(int amount)
@@ -286,7 +275,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         hungryPeople = amount;
         if (selected)
         {
-            mainUI.GetComponent<UIPlanetManager>().UpdateHungryPeople(amount); 
+            mainUI.GetComponent<UIPlanetManager>().UpdateHungryPeople(amount);
         }
     }
     public void ChangeDeathRateNumber(int amount)
@@ -294,8 +283,8 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         deathRateNumber = amount;
         if (selected)
         {
-           // Debug.Log("deathrateChange");
-            mainUI.GetComponent<UIPlanetManager>().UpdateDeathRate(deathRateNumber,deathRateTime);
+            // Debug.Log("deathrateChange");
+            mainUI.GetComponent<UIPlanetManager>().UpdateDeathRate(deathRateNumber, deathRateTime);
         }
     }
     public void ChangeDeathRateTime(int amount)

@@ -31,6 +31,7 @@ public class GeneralZoneUpdater : MonoBehaviour
 
     public void Initialize(int populationNumber, int hungryPeopleNumber, int deathRateNumber, int deathRateTime, int birthRateNumber, int birthRateTime, int consumptionSeedNumber, int consumptionSeedTime)
     {
+        //Debug.Log("Birth Rate general initializer: " + birthRateNumber.ToString() + " / " + birthRateTime.ToString() + " s");
         UpdatePopulationNumber(populationNumber);
         UpdateHungryPeople(hungryPeopleNumber);
         UpdateDeathRate(deathRateNumber, deathRateTime);
@@ -56,6 +57,7 @@ public class GeneralZoneUpdater : MonoBehaviour
     }
     public void UpdateBirthRate(int newRateNumber, int newRateTime)
     {
+        Debug.Log("Birth Rate: " + newRateNumber.ToString() + " / " + newRateTime.ToString() + " s");
         birthRate.text = "Birth Rate: " + newRateNumber.ToString() + " / " + newRateTime.ToString() + " s";
     }
 

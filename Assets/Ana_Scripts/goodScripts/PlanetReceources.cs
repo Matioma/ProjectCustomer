@@ -483,6 +483,10 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     {
         return birthRateNumber;
     }
+    public int getBirthRateTime()
+    {
+        return birthRateTime;
+    }
 }
 
 
