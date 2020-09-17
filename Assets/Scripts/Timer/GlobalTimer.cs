@@ -28,9 +28,11 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
         }
     }
 
-    public bool TimerIsStarted { get; private set; } = true;
+    public bool TimerIsStarted { get; private set; } = false;
     public bool GameIsPaused { get; private set; } = false;
 
+
+    public bool GameEnded = false;
 
     public event Action OnTimerEnd;
 
@@ -95,7 +97,10 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
         }
         GameTimeLeftTimer -= DeltaTime;
         if (GameTimeLeftTimer < 0) {
-            OnTimerEnd?.Invoke();
+            if (!GameEnded) { 
+                OnTimerEnd?.Invoke();
+                GameEnded = true;
+            }
         }
     }
 

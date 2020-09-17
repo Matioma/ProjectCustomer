@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 public class replayButton : MonoBehaviour
 {
     private void Start(){
-        GetComponent<Button>().clicked += RestartGame;
+        //GetComponent<Button>().clicked += RestartGame;
     }
     public void RestartGame() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
