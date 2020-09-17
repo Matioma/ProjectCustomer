@@ -317,15 +317,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
                 }
                 else
                 {
-                    if (population >= hungryPeople)
-                    {
-                        population -= hungryPeople;
-                    }
-                    else
-                    {
-                        population = 0;
-                    }
-                    
+                    population = 0;
                     if (info != null)
                     {
                         GetComponentInParent<UIInformation>().ChangePopulationNumber(population);
@@ -494,11 +486,6 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     public int getBirthRateTime()
     {
         return birthRateTime;
-    }
-
-    public int getDeathRateInteval()
-    {
-        return deathRateInterval;
     }
 }
 

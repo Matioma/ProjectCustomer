@@ -85,7 +85,7 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
         resourcesNumber = new Dictionary<Receources, int>(planetResources.GetResouses());
         birthRateNumber = planetResources.getBirthRateNumber();
         birthRateTime = planetResources.getBirthRateTime();
-        deathRateTime = planetResources.getDeathRateInteval();
+        deathRateTime = 1;
 
         seedConsumptionAmount = planetResources.getSeedComsumptionAmount();
         seedConsumptionTime = planetResources.getSeedComsumptionTime();
