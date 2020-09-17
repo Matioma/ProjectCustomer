@@ -162,8 +162,9 @@ public class AudioManager : SingletonMenobehaviour<AudioManager>
 
     public void SetVolume(float volumeFraction) {
         if (audioMixer == null) {
-            Debug.Log("Audio Mixer is Not referened in Audio Manager");
+            Debug.LogWarning("Audio Mixer is Not referened in Audio Manager");
         }
+        currentVolume = volumeFraction;
         audioMixer.SetFloat("AudioVolume", volumeFraction*100 -80.0f);
     }
 }
