@@ -32,7 +32,7 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
     public bool TimerIsStarted { get; private set; } = false;
     public bool GameIsPaused { 
         get; private set; } = false;
-
+    
     public void SetGameIsPaused(bool value)
     {
         if (value == GameIsPaused) {
@@ -49,29 +49,20 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
         GameIsPaused = value;
     }
 
+    public bool GameEnded = false;
 
     [SerializeField]
     UnityEvent OnPauseGame;
     [SerializeField]
     UnityEvent OnContinueGame;
 
-
-
-
-
-    public bool GameEnded = false;
-
     public event Action OnTimerEnd;
-
     public event Action OnVictory;
     public event Action OnDefeat;
 
     [SerializeField]
     float GameLengthInSeconds;
     float GameTimeLeftTimer;
-
-
-
 
     public float GetTimeLeft() {
         return GameTimeLeftTimer;
@@ -81,9 +72,6 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
     int[] acelerationValues;
     int accelerationValueIndex = 0;
 
-
-
-    float multiplierBeforePause;
     [SerializeField]
     float TimeMultiplier = 1;
     public float GetTimeMultiplier() {
@@ -92,13 +80,9 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
 
     public void StopGame() {
         SetGameIsPaused(true);
-        //GameIsPaused = true;
-        //Debug.LogWarning("Game Paused"); ;
     }
-
     public void ResumeGame() {
         SetGameIsPaused(false);
-        //GameIsPaused = false;
     }
     public void AccelerateGame()
     {
@@ -113,11 +97,8 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
     {
         base.Awake();
         OnDefeat += UpdateDefeatStats;
-        //Instance = this;
-        multiplierBeforePause = TimeMultiplier;
         GameTimeEnded();
     }
-
     void Start()
     {
         GameTimeLeftTimer = GameLengthInSeconds;        
@@ -129,6 +110,10 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
             return;
         }
         GameTimeLeftTimer -= DeltaTime;
+        if (GameTimeLeftTimer < 0) {
+            GameTimeLeftTimer = 0;
+        }
+
         if (GameTimeLeftTimer < 0) {
             if (!GameEnded) { 
                 OnTimerEnd?.Invoke();
@@ -144,20 +129,12 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
             return;
         }
 
-        //Debug.Log(defeatStats[0].transform.name);
-
         var Planets = FindObjectsOfType<Planet>();
       
         foreach (var planet in Planets)
         {
-            //Debug.Log(planet.transform.name);
             PlanetReceources planetReceources = planet.GetComponentInChildren<PlanetReceources>();
-            //Debug.Log(planetReceources.getPopulation() + "SHould add A planet stats");
-            //if (planetReceources.getPopulation() < foodRequiredCondition)
-            //{
-                
             defeatStats[0].AddLostPlanet(planet.GetComponent<UIInformation>());
-            //}
         }
     }
 
@@ -175,7 +152,6 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
             }
             else
             {
-               
                 OnDefeat?.Invoke();
                 GetComponent<CanvasSwitcher>()?.OpenScreen(CanvasType.LoseScreen);
 
