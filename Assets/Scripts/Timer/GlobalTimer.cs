@@ -43,6 +43,9 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
     float GameLengthInSeconds;
     float GameTimeLeftTimer;
 
+
+
+
     public float GetTimeLeft() {
         return GameTimeLeftTimer;
     }
@@ -80,6 +83,7 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
     private void Awake()
     {
         base.Awake();
+        OnDefeat += UpdateDefeatStats;
         //Instance = this;
         multiplierBeforePause = TimeMultiplier;
         GameTimeEnded();
@@ -104,6 +108,33 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
         }
     }
 
+    public void UpdateDefeatStats() {
+        var defeatStats = Resources.FindObjectsOfTypeAll<DefeatStats>();
+        if (defeatStats.Length == 0) {
+            Debug.LogError("THe scene is missing DefeastStats object");
+            return;
+        }
+
+        //Debug.Log(defeatStats[0].transform.name);
+
+        var Planets = FindObjectsOfType<Planet>();
+      
+        foreach (var planet in Planets)
+        {
+            //Debug.Log(planet.transform.name);
+            PlanetReceources planetReceources = planet.GetComponentInChildren<PlanetReceources>();
+            Debug.Log(planetReceources.getPopulation() + "SHould add A planet stats");
+            if (planetReceources.getPopulation() < foodRequiredCondition)
+            {
+                
+                defeatStats[0].AddLostPlanet(planet.GetComponent<UIInformation>());
+            }
+        }
+    }
+
+
+
+
     void GameTimeEnded()
     {
         OnTimerEnd += () =>
@@ -115,8 +146,10 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
             }
             else
             {
+               
                 OnDefeat?.Invoke();
                 GetComponent<CanvasSwitcher>()?.OpenScreen(CanvasType.LoseScreen);
+
             }
             StopGame();
         };

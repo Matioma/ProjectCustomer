@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,10 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
 
     [SerializeField]
     string planetName;
+
+    public string GetPlanetName() {
+        return planetName;
+    }
     [SerializeField]
     string planetDescription;
     [SerializeField]
@@ -29,7 +34,16 @@ public class UIInformation : MonoBehaviour, IReceourceAddition<Receources>
     List<Goal> planetGoals;
 
     int planetPopulation;
+    public int GetPopulation()
+    {
+        return planetPopulation;
+    }
+
     int hungryPeople;
+
+    public int GetHungryPeople() {
+        return hungryPeople;
+    }
     int deathRateNumber;
     int deathRateTime;
     int birthRateNumber;

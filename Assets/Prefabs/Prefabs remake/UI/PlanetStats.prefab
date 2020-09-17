@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 311218348772839757}
   - component: {fileID: 526975935425440490}
   - component: {fileID: 3834054460128872933}
+  - component: {fileID: 5916529353384519386}
   m_Layer: 5
   m_Name: HungryPeople
   m_TagString: Untagged
@@ -134,6 +135,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5916529353384519386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3704297719857915604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5dfe3428e2c5234ca1b63350dda3f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6045433152762308112
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +158,7 @@ GameObject:
   - component: {fileID: 2188739091305544639}
   - component: {fileID: 1573877685986232614}
   - component: {fileID: 5194156358141544910}
+  - component: {fileID: 227923963919778764}
   m_Layer: 5
   m_Name: PopulationNumber
   m_TagString: Untagged
@@ -268,6 +282,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &227923963919778764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6045433152762308112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f62cf2124c61a3468df05fbc45b817d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6855588091569945243
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,6 +343,7 @@ GameObject:
   - component: {fileID: 4324532700794831285}
   - component: {fileID: 2614227088528121888}
   - component: {fileID: 1103902505105343308}
+  - component: {fileID: 8817776643038972829}
   m_Layer: 5
   m_Name: PlanetName
   m_TagString: Untagged
@@ -440,3 +467,15 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8817776643038972829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7133588828423348120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769e450641b5fc140b4f245bb8b36e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

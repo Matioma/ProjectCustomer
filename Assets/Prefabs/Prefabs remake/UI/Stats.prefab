@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 807894366419277618}
   - component: {fileID: 6126510170243329133}
+  - component: {fileID: 1399855347424382716}
   m_Layer: 5
   m_Name: Stats
   m_TagString: Untagged
@@ -60,3 +61,16 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &1399855347424382716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207220989537815340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacb6bfd0a11f8d43be2d4e6cba51856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetStatsPrefab: {fileID: 6855588091569945243, guid: d700be975813fd7488c81abbfbeead7c, type: 3}
