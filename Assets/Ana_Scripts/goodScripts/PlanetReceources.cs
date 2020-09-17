@@ -487,6 +487,11 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     {
         return birthRateTime;
     }
+
+    public int getDeathRateInteval()
+    {
+        return deathRateInterval;
+    }
 }
 
 
