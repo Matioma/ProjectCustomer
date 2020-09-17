@@ -156,6 +156,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
         birthRateTimer = birthRateTime;
         hungerTimer = hungerWarningTimer;
         deathTimer = peopleDeathTimer;
+        death = deathRateInterval;
         info = GetComponentInParent<UIInformation>();
     }
     int initialFoodProd;
@@ -276,6 +277,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
             birthRateTimer -= GlobalTimer.Instance.DeltaTime;
         }
     }
+    float death;
     void CheckHunger()
     {
         //Debug.Log("Deathrate planetReceources 1 " + deathRate);
@@ -297,21 +299,27 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
                     deathRate = (hungryPeople * deathRateInterval) / peopleDeathTimer;
                     // Debug.Log("current seeds "+receourcesNumber[Receources.SEEDS]);
                     // Debug.Log("hungry people "+peopleToDie);
-                    // Debug.Log("death rate " + deathRate);
+                     Debug.Log(deathTimer % deathRateInterval == 0f);
                     if (info != null)
                     {
                         GetComponentInParent<UIInformation>().ChangeDeathRateNumber(deathRate);
                     }
-                    if (deathTimer % deathRateInterval == 0)
+
+                    if (death< 0)
                     {
-                      //  Debug.Log("old population " + population);
+                        Debug.Log("old population " + population);
                         population -= deathRate;
-                        //  Debug.Log("new population " + population);
+                          Debug.Log("new population " + population);
                         if (info != null)
                         {
                             GetComponentInParent<UIInformation>().ChangePopulationNumber(population);
                         }
                         calculateConsumptionSeedAmount();
+                        death = deathRateInterval;
+                    }
+                    else
+                    {
+                        death-= GlobalTimer.Instance.DeltaTime;
                     }
                     deathTimer -= GlobalTimer.Instance.DeltaTime;
                 }

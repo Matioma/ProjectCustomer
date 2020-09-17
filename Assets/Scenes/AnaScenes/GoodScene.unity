@@ -10246,7 +10246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: hungerWarningTimer
-      value: 60
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: resouces.Array.data[2].amount
@@ -10258,7 +10258,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: deathRateInterval
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: population
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: seedConsumptionAmount
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: upgrades.Array.data[0].description
