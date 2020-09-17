@@ -10422,6 +10422,18 @@ PrefabInstance:
       propertyPath: upgrades.Array.data[2].description
       value: hothouse
       objectReference: {fileID: 0}
+    - target: {fileID: 2345725482877630188, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[0].productivityIncrease
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345725482877630188, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[1].productivityIncrease
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345725482877630188, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: upgrades.Array.data[2].productivityIncrease
+      value: 160
+      objectReference: {fileID: 0}
     - target: {fileID: 3228927195318960544, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 238.6
@@ -10536,7 +10548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: resouces.Array.data[0].amount
-      value: 200
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: hungerWarningTimer
@@ -10548,11 +10560,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: peopleDeathTimer
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: deathRateInterval
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3228927196431502529, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: population
@@ -10573,6 +10585,10 @@ PrefabInstance:
     - target: {fileID: 3463980182331793908, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: upgrades.Array.data[2].description
       value: remote control
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668683069815176958, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
+      propertyPath: productionNumber
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5930479947621174582, guid: 7854375e95b0d154eb0eec2faa58a11b, type: 3}
       propertyPath: m_Name
@@ -19390,7 +19406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 130470384938208327, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: GameLengthInSeconds
-      value: 1200
+      value: 900
       objectReference: {fileID: 0}
     - target: {fileID: 130470384938208327, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: OnPauseGame.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -19479,6 +19495,14 @@ PrefabInstance:
     - target: {fileID: 130470384938208327, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: acelerationValues.Array.data[3]
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 130470384938208327, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
+      propertyPath: MaxHungryPeople
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 130470384938208327, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
+      propertyPath: foodRequiredCondition
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 809283179966466752, guid: 5b413276fc16ebe4eb59f04d13c6ff0e, type: 3}
       propertyPath: m_LocalPosition.x

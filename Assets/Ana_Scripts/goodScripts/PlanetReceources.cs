@@ -227,6 +227,7 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
     }
     void FixedUpdate()
     {
+        Debug.Log(this.gameObject.name+"       " + receourcesNumber[Receources.SEEDS]);
         seedConsumption();
         if (isWaterConsuming == true)
         {
@@ -306,6 +307,8 @@ public class PlanetReceources : MonoBehaviour, IReceourceAddition<Receources>, I
                 }
                 else
                 {
+                    deathTimer = peopleDeathTimer;
+
                     Debug.Log(hungryPeople);
                     if (population > hungryPeople)
                     {
