@@ -152,12 +152,12 @@ public class GlobalTimer : SingletonMenobehaviour<GlobalTimer>
         {
             //Debug.Log(planet.transform.name);
             PlanetReceources planetReceources = planet.GetComponentInChildren<PlanetReceources>();
-            Debug.Log(planetReceources.getPopulation() + "SHould add A planet stats");
-            if (planetReceources.getPopulation() < foodRequiredCondition)
-            {
+            //Debug.Log(planetReceources.getPopulation() + "SHould add A planet stats");
+            //if (planetReceources.getPopulation() < foodRequiredCondition)
+            //{
                 
-                defeatStats[0].AddLostPlanet(planet.GetComponent<UIInformation>());
-            }
+            defeatStats[0].AddLostPlanet(planet.GetComponent<UIInformation>());
+            //}
         }
     }
 
